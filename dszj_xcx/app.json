@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/personal/personal",
+    "pages/crowdFunding/crowdFunding",
+    "pages/message/message"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "滴水之家",
+    "navigationBarBackgroundColor": "#14BAC8",
+    "backgroundColor": "#f8f8f8",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#C4C4C4",
+    "backgroundColor": "#fff",
+    "selectedColor": "#5E7E88",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "主页",
+        "iconPath": "assets/images/index1.png",
+        "selectedIconPath": "assets/images/index0.png"
+      },
+      {
+        "pagePath": "pages/crowdFunding/crowdFunding",
+        "text": "优质",
+        "iconPath": "assets/images/yz0.png",
+        "selectedIconPath": "assets/images/yz1.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "assets/images/news1.png",
+        "selectedIconPath": "assets/images/news0.png"
+      },
+      {
+        "pagePath": "pages/personal/personal",
+        "text": "个人",
+        "iconPath": "assets/images/user_1.jpg",
+        "selectedIconPath": "assets/images/user_0.jpg"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 100000,
+    "connectSocket": 10000,
+    "uploadFile": 150000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
