@@ -63,11 +63,11 @@ App({
       }
     })
   },
+
   //用户数据
   globalData: {
     userInfo: null,                 //用户数据
     openid: null,                   //微信用户id
-
     loginAppid: '3DF7469FD3A1485B95ED16ED794780A8',  //登录服务器的appid
     appid: 'wx2c5b4fc4466c3e4e',                    //小程序id
     secret: 'b2dec689f9b117a311891c6ac5ae9407',     //小程序的 app secret
