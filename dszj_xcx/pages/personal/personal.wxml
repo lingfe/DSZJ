@@ -1,2 +1,4 @@
 <!--pages/personal/personal.wxml-->
 <text>pages/personal/personal.wxml</text>
+<!-- 我的滴水的web-view -->
+<web-view src="https://www.dishuihuzhu.cn/Userlogin/index.html"></web-view>

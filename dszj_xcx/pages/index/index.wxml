@@ -1,13 +1,111 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class='page'>
+  <view class="page_wrapper">
+    <image src="/assets/images/index_0.jpg"/>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+
+  <!-- 數量  start -->
+  <view  class="page_widget">
+    <view class='page_widget_content'>
+      <view class='page_widget_content_text'>已匯聚</view>
+      <view class='page_widget_content_shuzi'>1</view>
+      <view class='page_widget_content_shuzi'>8</view>
+      <view class='page_widget_content_shuzi'>8</view>
+      <view class='page_widget_content_shuzi'>3</view>
+      <view class='page_widget_content_shuzi'>7</view>
+      <view class='page_widget_content_shuzi'>7</view>
+      <view class='page_widget_content_text'>份愛心</view>
+    </view>
   </view>
+  <!-- 數量  end -->
+
+  <!-- 電話號碼  start -->
+  <view class='page_phone'>
+    <view class="page_phone_title">大病筹款登记</view>
+    <view class='page_phone_input'>
+      <view class='page_phone_input_input'>
+        <input type='text' placeholder='請輸入您的電話號碼'></input>
+      </view>
+      <view class='page_phone_input_btn'>
+        <button>立即登記</button>
+      </view>
+    </view>
+    <view class='page_phone_remok'>
+      温馨提示：登记号码后，滴水之家客服顾问会联系您，全程指导您如何发起筹款。
+    </view>
+  </view>
+  <!-- 電話號碼  end -->
+
+  <!-- 案例  start -->
+  <view class='page_anlie'>
+    <!-- 滑动菜单 start
+        autoplay        是否自动切换
+        indicator-dots  是否显示指示点
+        circular        是否采用衔接滑动
+        interval        自动切换时间间隔
+        duration        滑动动画时长
+        vertical        滑动方向是否为纵向
+    -->
+    <swiper class='page_anlie_swiper' indicator-dots="true" circular="true"  duration="1000">
+      <swiper-item>
+      <view class='page_anlie_content'>
+        <view class='page_anlie_content_image'>
+          <image src='/assets/images/index_1.png'></image>
+        </view>
+        <view class='page_anlie_content_title'>家里不能没有妈妈，请大家帮帮我！</view>
+        <view class='page_anlie_content_data'>
+          <view class='page_anlie_content_data_text'>已经成功筹得201800</view>
+          <view class='page_anlie_content_data_image'>
+            <image src='/assets/images/index_2.png'></image>
+          </view>
+        </view>
+        <view class='page_anlie_content_shenghe'>
+          <view class='page_anlie_content_shenghe_left_image'>
+            <image src='/assets/images/index_3.png'></image>
+          </view>
+          <view class='page_anlie_content_shenghe_zhojian'>
+            <view class='page_anlie_content_shenghe_zhojian_title'>该项目已经通过滴水之家审核</view>
+            <view class='page_anlie_content_shenghe_zhojian_phone'>个人求助电话:423</view>
+          </view>
+          <view class='page_anlie_content_shenghe_right_image'>
+            <image src='/assets/images/index_4.png'></image>
+          </view>
+        </view>
+      </view>
+      </swiper-item>
+
+      <swiper-item>
+      <view class='page_anlie_content'>
+        <view class='page_anlie_content_image'>
+          <image src='/assets/images/index_1.png'></image>
+        </view>
+        <view class='page_anlie_content_title'>家里不能没有妈妈，请大家帮帮我！</view>
+        <view class='page_anlie_content_data'>
+          <view class='page_anlie_content_data_text'>已经成功筹得201800</view>
+          <view class='page_anlie_content_data_image'>
+            <image src='/assets/images/index_2.png'></image>
+          </view>
+        </view>
+        <view class='page_anlie_content_shenghe'>
+          <view class='page_anlie_content_shenghe_left_image'>
+            <image src='/assets/images/index_3.png'></image>
+          </view>
+          <view class='page_anlie_content_shenghe_zhojian'>
+            <view class='page_anlie_content_shenghe_zhojian_title'>该项目已经通过滴水之家审核</view>
+            <view class='page_anlie_content_shenghe_zhojian_phone'>个人求助电话:423</view>
+          </view>
+          <view class='page_anlie_content_shenghe_right_image'>
+            <image src='/assets/images/index_4.png'></image>
+          </view>
+        </view>
+      </view>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 案例  end -->
 </view>
+
+<!-- 浮动窗  start -->
+<view  class="bounceInLeft">
+  <view class="text" >快速发起筹款>></view>
+</view>
+<!-- 浮动窗  end -->

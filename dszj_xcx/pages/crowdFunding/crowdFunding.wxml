@@ -1,2 +1,4 @@
 <!--pages/crowdFunding/crowdFunding.wxml-->
 <text>pages/crowdFunding/crowdFunding.wxml</text>
+<!-- 指向滴水互助的web-view -->
+<web-view src="https://www.dishuihuzhu.cn/Plan/plan.html"></web-view>

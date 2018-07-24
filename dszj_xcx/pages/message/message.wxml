@@ -1,2 +1,4 @@
 <!--pages/message/message.wxml-->
 <text>pages/message/message.wxml</text>
+<!-- 指向滴水救助的web-view -->
+<web-view src="https://www.dishuihuzhu.cn/Plan/seriousillnesslist.html"></web-view>

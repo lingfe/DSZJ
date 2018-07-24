@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/logs/logs",
+    "pages/index/index",
     "pages/personal/personal",
     "pages/crowdFunding/crowdFunding",
     "pages/message/message"
@@ -19,12 +19,6 @@
     "backgroundColor": "#fff",
     "selectedColor": "#5E7E88",
     "list": [
-      {
-        "pagePath": "pages/index/index",
-        "text": "主页",
-        "iconPath": "assets/images/index1.png",
-        "selectedIconPath": "assets/images/index0.png"
-      },
       {
         "pagePath": "pages/crowdFunding/crowdFunding",
         "text": "优质",
