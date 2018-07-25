@@ -102,6 +102,104 @@
     </swiper>
   </view>
   <!-- 案例  end -->
+
+  <!-- 为什么要选择我们  start -->
+  <view class='page_Why'>
+    <view class='page_Why_title'>他们为什么选择滴水筹？</view>
+    <view class='page_Why_content'>
+      <view class='page_Why_content_top'>
+        <view class='page_Why_content_top_left'>
+          <view class='page_Why_content_top_left_image'>
+            <image src='/assets/images/index_error.png'></image>
+          </view>
+          <view class='page_Why_content_top_left_title'>客服全程帮助</view>
+          <view class='page_Why_content_top_left_text'>客服全程指导，流程简单</view>
+        </view>
+
+        <view class='page_Why_content_top_left'>
+          <view class='page_Why_content_top_left_image'>
+            <image src='/assets/images/index_error.png'></image>
+          </view>
+          <view class='page_Why_content_top_left_title'>客服全程帮助</view>
+          <view class='page_Why_content_top_left_text'>客服全程指导，流程简单</view>
+        </view>
+      </view>
+
+      <view class='page_Why_content_top'>
+        <view class='page_Why_content_top_left'>
+          <view class='page_Why_content_top_left_image'>
+            <image src='/assets/images/index_error.png'></image>
+          </view>
+          <view class='page_Why_content_top_left_title'>客服全程帮助</view>
+          <view class='page_Why_content_top_left_text'>客服全程指导，流程简单</view>
+        </view>
+
+        <view class='page_Why_content_top_left'>
+          <view class='page_Why_content_top_left_image'>
+            <image src='/assets/images/index_error.png'></image>
+          </view>
+          <view class='page_Why_content_top_left_title'>客服全程帮助</view>
+          <view class='page_Why_content_top_left_text'>客服全程指导，流程简单</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 为什么要选择我们  end -->
+
+  <!-- 基金介绍 start -->
+  <view class='page_jiejing'>
+    <view class='page_jiejing_image1'>
+      <image src='/assets/images/index_5.png'></image>
+    </view>
+    <view class='page_jiejing_image2'>
+      <image src='/assets/images/index_6.png'></image>
+    </view>
+  </view>
+  <!-- 基金介绍 start -->
+
+  <!-- 联系我们 start -->
+  <view class='page_Contact_us'>
+    <view class='page_Contact_us_title'>滴水之家客户服务</view>
+    <view class='page_Contact_us_content_content'>
+      <view class='page_Contact_us_content'>
+        <view class='page_Contact_us_content_image'>
+          <image src='/assets/images/phone.png'></image>
+        </view>
+        <view class='page_Contact_us_content_neiro'>
+          <view class='page_Contact_us_content_neiro_title'>400-6063-400</view>
+          <view class='page_Contact_us_content_neiro_text'>工作日：10:00---22:00</view>
+        </view>
+      </view>
+
+      <view class='page_Contact_us_content'>
+        <view class='page_Contact_us_content_image'>
+          <image src='/assets/images/wx.png'></image>
+        </view>
+        <view class='page_Contact_us_content_neiro'>
+          <view class='page_Contact_us_content_neiro_title'>官方公众号‘滴水之家’</view>
+          <view class='page_Contact_us_content_neiro_text'>关注公众号立即开启筹款</view>
+        </view>
+      </view>
+
+      <view class='page_Contact_us_content'>
+        <view class='page_Contact_us_content_image'>
+          <image src='/assets/images/qq.png'></image>
+        </view>
+        <view class='page_Contact_us_content_neiro'>
+          <view class='page_Contact_us_content_neiro_title'>滴水互助之家 453049599</view>
+          <view class='page_Contact_us_content_neiro_text'>加入请注明地区和疾病</view>
+        </view>
+      </view>
+    </view>
+    <view class='page_Contact_us_text'>如遇问题或需帮助时，请及时与我们联系。</view>
+  </view>
+  <!-- 联系我们 end -->
+
+  <!-- 关于我们 start -->
+  <view class='page_guangyue'>
+    <view class='page_guangyue_title'>2018贵州鑫微帮科技有限公司</view>
+  </view>
+  <!-- 关于我们 end -->
 </view>
 
 <!-- 浮动窗  start -->

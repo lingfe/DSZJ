@@ -19,8 +19,6 @@ page{
   background-color: rgb(0, 146, 255); 
   font-size: 40rpx; 
   padding: 0rpx; 
-  border-width: 1rpx; 
-  border-style: solid; 
   text-align: center; 
   line-height: 100rpx; 
   font-weight: bold;
@@ -193,6 +191,9 @@ page{
   font-size: 30rpx;
   height: 80rpx;
   line-height: 80rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
 }
 .page_anlie_content_data{
   width: 100%;
@@ -204,6 +205,9 @@ page{
   font-size: 30rpx;
   line-height: 80rpx;
   float: left;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
 }
 .page_anlie_content_data_image{
   width: 30%;
@@ -241,6 +245,9 @@ page{
   height: 50rpx;
   line-height: 50rpx;
   text-align: center;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
 }
 .page_anlie_content_shenghe_zhojian_phone{
   width: 100%;
@@ -248,6 +255,9 @@ page{
   text-align: center;
   line-height: 50rpx;
   font-size: 26rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
 }
 .page_anlie_content_shenghe_right_image{
   width: 15%;
@@ -257,4 +267,168 @@ page{
 .page_anlie_content_shenghe_right_image image{
   width: 100%;
   height: 80rpx;
+}
+
+
+/*为什么选择我们  start*/
+.page_Why{
+  margin-top: 20rpx;
+  width: 100%;
+  height: 580rpx;
+  background-color: #fff;
+  padding-top: 30rpx;
+}
+.page_Why_title{
+  width: 100%;
+  text-align: center;
+  height: 80rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+.page_Why_content{
+  width: 100%;
+  height: 300rpx;
+
+}
+.page_Why_content_top{
+  width: 100%;
+  height: 200rpx;
+  padding-top:30rpx;
+}
+.page_Why_content_top_left{
+  width: 50%;
+  height: 200rpx;
+  float: left;
+}
+.page_Why_content_top_left_image{
+  width: 32%;
+  height: 80rpx;
+  margin: 0 auto;
+}
+.page_Why_content_top_left_image image{
+  width: 100%;
+  height: 80rpx;
+}
+.page_Why_content_top_left_title{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+.page_Why_content_top_left_text{
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 26rpx;
+  text-align: center;
+}
+/*为什么选择我们  end*/
+
+/* 基金介绍 start*/
+.page_jiejing{
+  width: 100%;
+  height: 460rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding-top: 30rpx;
+}
+.page_jiejing_image1{
+  width: 100%;
+  height: 150rpx;
+}
+.page_jiejing_image1 image{
+  width: 100%;
+  height: 150rpx;
+}
+.page_jiejing_image2{
+  width: 100%;
+  height: 300rpx;
+}
+.page_jiejing_image2 image{
+  width: 100%;
+  height: 300rpx;
+}
+/* 基金介绍 end*/
+
+/*联系我们  start*/
+.page_Contact_us{
+    width: 100%;
+  height: 610rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding-top: 30rpx;
+}
+.page_Contact_us_title{
+  width: 100%;
+  height: 80rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+  color: rgb(0, 146, 255);
+  text-align: center;
+  line-height: 80rpx;
+}
+.page_Contact_us_content_content{
+  width: 100%;
+  height: 420rpx;
+}
+.page_Contact_us_content{
+ width: 80%;
+  height: 120rpx;
+  margin:0 auto;
+  margin-top:30rpx;
+}
+.page_Contact_us_content_image{
+  width: 20%;
+  height: 120rpx;
+  float: left;
+  margin: 0 auto;
+  padding-right: 50rpx;
+}
+.page_Contact_us_content_image image{
+  width: 100%;
+  height: 120rpx;
+}
+.page_Contact_us_content_neiro{
+  width: 70%;
+  height: 120rpx;
+  float: left;
+}
+.page_Contact_us_content_neiro_title{
+  width: 100%;
+  font-size: 30rpx;
+  color: rgb(0, 146, 255);
+  height: 60rpx;
+  line-height: 60rpx;
+  font-weight: bold;
+}
+.page_Contact_us_content_neiro_text{
+  width: 100%;
+  font-size: 26rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.page_Contact_us_text{
+  width: 100%;
+  height: 80rpx;
+  font-size: 30rpx;
+  color: #aaa;
+  text-align: center;
+  line-height: 80rpx;
+}
+/*联系我们 end*/
+
+/*关于我们 start*/
+.page_guangyue{
+  width: 100%;
+  height: 179rpx;
+  background-color: #fff;
+}
+.page_guangyue_title{
+  width: 100%;
+  text-align: center;
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: rgba(0, 0, 0, 0.24);
 }
