@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/logs/logs",
     "pages/index/index",
+    "pages/logs/logs",
     "pages/personal/personal",
     "pages/crowdFunding/crowdFunding",
     "pages/message/message"
@@ -9,7 +9,7 @@
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "滴水之家",
-    "navigationBarBackgroundColor": "#14BAC8",
+    "navigationBarBackgroundColor": "#0092ff",
     "backgroundColor": "#f8f8f8",
     "enablePullDownRefresh": true,
     "backgroundTextStyle": "dark"

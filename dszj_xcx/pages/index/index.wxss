@@ -10,17 +10,16 @@ page{
 /*浮动窗  start*/
 .bounceInLeft{
   width: 100%; 
-  height: 100rpx; 
-  left: -2rpx; 
+  height: 130rpx; 
   position: fixed; 
   bottom: -1rpx;
   z-index: 16; 
   color: rgb(255, 255, 255); 
-  background-color: rgb(0, 146, 255); 
+  background-color: #0092ff; 
   font-size: 40rpx; 
   padding: 0rpx; 
   text-align: center; 
-  line-height: 100rpx; 
+  line-height: 130rpx; 
   font-weight: bold;
   font-style: normal; 
   animation-delay: 1s;
@@ -200,7 +199,7 @@ page{
   height: 80rpx;
 }
 .page_anlie_content_data_text{
-  width: 70%;
+  width: 100%;
   text-align: center;
   font-size: 30rpx;
   line-height: 80rpx;
@@ -210,12 +209,14 @@ page{
   white-space: nowrap;
 }
 .page_anlie_content_data_image{
-  width: 30%;
-  height: 80rpx;
-  float: left;
+  width: 16%;
+  height: 104rpx;
+  position: absolute;
+  margin-top: -12rpx;
+  margin-left: 45%;
 }
 .page_anlie_content_data_image image{
-  height: 80rpx;
+  height: 104rpx;
   width: 100%;
 }
 .page_anlie_content_shenghe{
@@ -284,6 +285,7 @@ page{
   height: 80rpx;
   font-size: 40rpx;
   font-weight: bold;
+  color: rgb(0, 146, 255);
 }
 .page_Why_content{
   width: 100%;
@@ -421,7 +423,7 @@ page{
 /*关于我们 start*/
 .page_guangyue{
   width: 100%;
-  height: 179rpx;
+  height: 207rpx;
   background-color: #fff;
 }
 .page_guangyue_title{

@@ -6,14 +6,14 @@
   <!-- 數量  start -->
   <view  class="page_widget">
     <view class='page_widget_content'>
-      <view class='page_widget_content_text'>已匯聚</view>
+      <view class='page_widget_content_text'>已汇聚</view>
       <view class='page_widget_content_shuzi'>1</view>
       <view class='page_widget_content_shuzi'>8</view>
       <view class='page_widget_content_shuzi'>8</view>
       <view class='page_widget_content_shuzi'>3</view>
       <view class='page_widget_content_shuzi'>7</view>
       <view class='page_widget_content_shuzi'>7</view>
-      <view class='page_widget_content_text'>份愛心</view>
+      <view class='page_widget_content_text'>份爱心</view>
     </view>
   </view>
   <!-- 數量  end -->
@@ -23,10 +23,10 @@
     <view class="page_phone_title">大病筹款登记</view>
     <view class='page_phone_input'>
       <view class='page_phone_input_input'>
-        <input type='text' placeholder='請輸入您的電話號碼'></input>
+        <input type='text' placeholder='请输入您的电话号码'></input>
       </view>
       <view class='page_phone_input_btn'>
-        <button>立即登記</button>
+        <button>立即登记</button>
       </view>
     </view>
     <view class='page_phone_remok'>
@@ -105,12 +105,12 @@
 
   <!-- 为什么要选择我们  start -->
   <view class='page_Why'>
-    <view class='page_Why_title'>他们为什么选择滴水筹？</view>
+    <view class='page_Why_title'>他们为什么选择滴水之家？</view>
     <view class='page_Why_content'>
       <view class='page_Why_content_top'>
         <view class='page_Why_content_top_left'>
           <view class='page_Why_content_top_left_image'>
-            <image src='/assets/images/index_error.png'></image>
+            <image src='/assets/images/index_8.png'></image>
           </view>
           <view class='page_Why_content_top_left_title'>客服全程帮助</view>
           <view class='page_Why_content_top_left_text'>客服全程指导，流程简单</view>
@@ -118,28 +118,28 @@
 
         <view class='page_Why_content_top_left'>
           <view class='page_Why_content_top_left_image'>
-            <image src='/assets/images/index_error.png'></image>
+            <image src='/assets/images/index_7.png'></image>
           </view>
-          <view class='page_Why_content_top_left_title'>客服全程帮助</view>
-          <view class='page_Why_content_top_left_text'>客服全程指导，流程简单</view>
+          <view class='page_Why_content_top_left_title'>同步海量传播</view>
+          <view class='page_Why_content_top_left_text'>快速获得关注，快速传播</view>
         </view>
       </view>
 
       <view class='page_Why_content_top'>
         <view class='page_Why_content_top_left'>
           <view class='page_Why_content_top_left_image'>
-            <image src='/assets/images/index_error.png'></image>
+            <image src='/assets/images/index_9.png'></image>
           </view>
-          <view class='page_Why_content_top_left_title'>客服全程帮助</view>
-          <view class='page_Why_content_top_left_text'>客服全程指导，流程简单</view>
+          <view class='page_Why_content_top_left_title'>滴水平台资助</view>
+          <view class='page_Why_content_top_left_text'>特困案例可申请微资助</view>
         </view>
 
         <view class='page_Why_content_top_left'>
           <view class='page_Why_content_top_left_image'>
-            <image src='/assets/images/index_error.png'></image>
+            <image src='/assets/images/index_10.png'></image>
           </view>
-          <view class='page_Why_content_top_left_title'>客服全程帮助</view>
-          <view class='page_Why_content_top_left_text'>客服全程指导，流程简单</view>
+          <view class='page_Why_content_top_left_title'>专款专户管理</view>
+          <view class='page_Why_content_top_left_text'>第三方机构保障资金 安全</view>
         </view>
       </view>
     </view>
