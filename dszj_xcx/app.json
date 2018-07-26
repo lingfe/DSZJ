@@ -4,7 +4,8 @@
     "pages/logs/logs",
     "pages/personal/personal",
     "pages/crowdFunding/crowdFunding",
-    "pages/message/message"
+    "pages/message/message",
+    "pages/index/largeIllnessRescue/largeIllnessRescue"
   ],
   "window": {
     "navigationBarTextStyle": "white",

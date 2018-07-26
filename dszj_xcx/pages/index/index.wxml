@@ -186,7 +186,7 @@
           <image src='/assets/images/qq.png'></image>
         </view>
         <view class='page_Contact_us_content_neiro'>
-          <view class='page_Contact_us_content_neiro_title'>滴水互助之家 453049599</view>
+          <view class='page_Contact_us_content_neiro_title'>滴水之家QQ群 453049599</view>
           <view class='page_Contact_us_content_neiro_text'>加入请注明地区和疾病</view>
         </view>
       </view>
@@ -197,13 +197,13 @@
 
   <!-- 关于我们 start -->
   <view class='page_guangyue'>
-    <view class='page_guangyue_title'>2018贵州鑫微帮科技有限公司</view>
+    <view class='page_guangyue_title'>2018贵州遵义诚铭网络有限公司</view>
   </view>
   <!-- 关于我们 end -->
 </view>
 
 <!-- 浮动窗  start -->
-<view  class="bounceInLeft">
+<view  class="bounceInLeft" bindtap='bindtapBounceInLeft'>
   <view class="text" >快速发起筹款>></view>
 </view>
 <!-- 浮动窗  end -->

@@ -9,6 +9,14 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
+
+  //快速发起筹款
+  bindtapBounceInLeft:function(){
+    wx.navigateTo({
+      url: '/pages/index/largeIllnessRescue/largeIllnessRescue',
+    })
+  },
+
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({

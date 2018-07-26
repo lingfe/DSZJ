@@ -1,5 +1,6 @@
 page{
   background-color: rgb(242, 237, 237);
+  width: 80%；
 }
 
 .page{
@@ -25,6 +26,9 @@ page{
   animation-delay: 1s;
   opacity: 0.85; 
   transition: none;
+}
+.bounceInLeft:active{
+  box-shadow: 2px 2px 5px #aaa;
 }
 /*浮动窗  end*/
 
@@ -236,7 +240,7 @@ page{
   height: 80rpx;
 }
 .page_anlie_content_shenghe_zhojian{
-  width: 70%;
+  width: 67%;
   height: 100rpx;
   float: left;
 }
@@ -261,7 +265,7 @@ page{
   white-space: nowrap;
 }
 .page_anlie_content_shenghe_right_image{
-  width: 15%;
+  width: 18%;
   height: 100rpx;
   float: left;
 }
