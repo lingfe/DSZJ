@@ -3,7 +3,7 @@
 <view class='page'>
   <!-- 标题   start-->
   <view class='page_title'>
-    <view class='page_title_text'>点击此处—滴水之家帮您快速填写筹款信息</view>
+    <view class='page_title_text' bindtap='btnClose'>点击此处—滴水之家帮您快速填写筹款信息</view>
   </view>
   <!-- 标题   end-->
 
@@ -102,3 +102,84 @@
     <view class='page_text_text'>客户电话：400-6063-400</view>
   </view>
 </view>
+
+<!-- 快速填写 start -->
+<view class='page_kuaishuTianxie' wx:if="{{isDisplay}}">
+  <view class='kuaishuTianxie'>
+    <view class='kuaishuTianxie_title'>根据填写内容为你生成参考模板</view>
+    <view class='kuaishuTianxie_input'>
+      <view class='kuaishuTianxie_input_title'>您的姓名</view>
+      <view class='kuaishuTianxie_input_input'>
+        <input type='text' placeholder='填写您的姓名'></input>
+      </view>
+    </view>
+
+    <view class='kuaishuTianxie_input'>
+      <view class='kuaishuTianxie_input_title'>为谁筹款</view>
+      <view class='kuaishuTianxie_input_input'>
+        <input type='text' hidden='hidden' ></input>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{Raise_money_for_whom}}">
+          {{Raise_money_for_whom[index]}}
+        </picker>
+      </view>
+    </view>
+
+    <view class='kuaishuTianxie_input'>
+      <view class='kuaishuTianxie_input_title'>患者姓名</view>
+      <view class='kuaishuTianxie_input_input'>
+        <input type='text' placeholder='填写患者姓名'></input>
+      </view>
+    </view>
+
+    <view class='kuaishuTianxie_input'>
+      <view class='kuaishuTianxie_input_title'>患者家乡</view>
+      <view class='kuaishuTianxie_input_input'>
+        <input type='text' hidden='hidden' ></input>
+        <picker bindchange="bindPickerHome" value="{{Home_town_index}}" range="{{Home_town}}">
+          {{Home_town[Home_town_index]}}
+        </picker>
+      </view>
+    </view>
+
+    <view class='kuaishuTianxie_input'>
+      <view class='kuaishuTianxie_input_title'>疾病名称</view>
+      <view class='kuaishuTianxie_input_input'>
+        <input type='text' placeholder='填写疾病名称'></input>
+      </view>
+    </view>
+
+    <view class='kuaishuTianxie_input'>
+      <view class='kuaishuTianxie_input_title'>确诊日期</view>
+      <view class='kuaishuTianxie_input_input'>
+        <input type='text' hidden='hidden' ></input>
+        <picker mode="date" value="{{date}}" start="2018-09-01" end="2099-09-01" bindchange="bindDateChange">
+          {{date}}
+        </picker>
+      </view>
+    </view>
+
+    <view class='kuaishuTianxie_input'>
+      <view class='kuaishuTianxie_input_title'>所在医院</view>
+      <view class='kuaishuTianxie_input_input'>
+        <input type='text' placeholder='填写所在医院'></input>
+      </view>
+    </view>
+
+    <view class='kuaishuTianxie_input'>
+      <view class='kuaishuTianxie_input_title'>已花费金额</view>
+      <view class='kuaishuTianxie_input_input'>
+        <input type='text' placeholder='填写已花费金额'></input>
+      </view>
+    </view>
+
+    <view class='kuaishuTianxie_btn'>
+      <view class='kuaishuTianxie_btn_ok'>
+        <button>确定</button>
+      </view>
+      <view class="kuaishuTianxie_btn_close">
+        <button bindtap='btnClose'>取消</button>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 快速填写 end -->

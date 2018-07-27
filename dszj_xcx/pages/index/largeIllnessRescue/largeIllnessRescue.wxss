@@ -54,7 +54,7 @@ page{
   text-align: center;
 }
 /*文本框默认属性*/
-.input-placeholder {
+page_Fundraising_amount_input .input-placeholder {
   color: #0092ff;
 }
 .page_Fundraising_amount_text{
@@ -296,6 +296,110 @@ button::after {
   width: 94%;
   margin: 0 auto;
 }
+
+
+/*快速填写  start*/
+.page_kuaishuTianxie{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0rpx;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+.kuaishuTianxie{
+  width: 94%;
+  height: 940rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  z-index: 100;
+  margin-top: 100rpx;
+  border: 4rpx #0092ff solid;
+}
+.kuaishuTianxie_title{
+  width: 100%;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.kuaishuTianxie_input{
+  width: 94%;
+  margin: auto;
+  height: 60rpx;
+  margin-bottom: 30rpx;
+}
+.kuaishuTianxie_input_title{
+  font-size: 30rpx;
+  font-weight: bold;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 24%;
+  float: left;
+}
+.kuaishuTianxie_input_input{
+  width: 74%;
+  height: 60rpx;
+  border: 1rpx solid #aaa;
+  border-radius: 15rpx;
+  float: left;
+}
+.kuaishuTianxie_input_input input{
+  padding-left: 10rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 97%;
+  font-size: 30rpx;
+  color: #d9d9d9;
+}
+.kuaishuTianxie_input_input picker{
+  padding-left: 10rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 97%;
+  font-size: 30rpx;
+  color: #d9d9d9;
+}
+.kuaishuTianxie_btn{
+  width: 94%;
+  margin: auto;
+  height: 90rpx;
+  padding-top: 30rpx;
+}
+.kuaishuTianxie_btn_ok{
+  width: 50%;
+  margin: auto;
+  height: 60rpx;
+  float: left;
+}
+.kuaishuTianxie_btn_ok button{
+  background-color: #0092ff;
+  width: 60%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+.kuaishuTianxie_btn_close{
+  width: 50%;
+  margin: auto;
+  height: 60rpx;
+  float: left;
+}
+.kuaishuTianxie_btn_close button{
+  background-color: #0092ff;
+  width: 60%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+button:active{
+  opacity: 0.8;
+}
+/*
+
 
 
 

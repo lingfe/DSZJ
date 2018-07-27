@@ -11,8 +11,39 @@ Page({
     isAgree: false,  
 
     imageArray: [],                       //图片数组，原始。不包含完整url，用于储存
+    Raise_money_for_whom: ["本人","父亲","母亲","丈夫","儿子","女儿","朋友","其他"],
+    Home_town:["请选择","北京","上海"],
+    Date_of_diagnosis:["请选择"],
+    index: 0, Home_town_index: 0, date:'请选择',
+    isDisplay:false,
   },
-
+  //取消或显示
+  btnClose:function(e){
+    this.setData({
+      isDisplay:this.data.isDisplay==false?true:false,
+    })
+  },
+  //确诊日期
+  bindDateChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      date: e.detail.value
+    })
+  },
+  //患者家乡
+  bindPickerHome: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
+  //为谁筹款
+  bindPickerChange: function (e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
   //删除图片
   bindtapImageDelete: function (e) {
     var img = e.currentTarget.dataset.img;
