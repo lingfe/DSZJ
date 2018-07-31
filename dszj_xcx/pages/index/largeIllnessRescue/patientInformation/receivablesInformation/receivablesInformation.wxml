@@ -43,7 +43,7 @@
 
   <!-- 下一步 start -->
   <view class="weui-btn-area">
-    <button class="weui-btn" bindtap='bindtapSubmit' formType="submit" type="primary">下一步</button>
+    <button class="weui-btn" bindtap='bindtapSubmit' formType="submit" type="primary">发布</button>
   </view>
   <!-- 下一步  end -->
 </view>

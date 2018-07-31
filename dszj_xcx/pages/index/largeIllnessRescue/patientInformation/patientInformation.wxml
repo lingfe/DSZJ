@@ -65,15 +65,10 @@
           <view class="weui-uploader">
             <view class="weui-uploader__bd">
               <view class="weui-uploader__files" id="uploaderFiles">
-                <block wx:for="{{files}}" wx:key="*this">
-                  <view wx:if="{{item !=null}}" class="weui-uploader__file" bindlongtap="previewImage" id="{{item}}">
-                    <image class="img_tt" src="/assets/images/delete.png" bindtouchend="bindtapImageDelete" data-img="{{item}}" />
-                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  <view class="weui-uploader__file" bindtap="previewImage"
+                   id="https://www.dishuihuzhu.cn/Public/rescue/img/handheld_sample_3_3.png">
+                    <image class="weui-uploader__img" src="/assets/images/sfz_sl.png" />
                   </view>
-                </block>
-              </view>
-              <view class="weui-uploader__input-box" wx:if="{{files.length!=6}}">
-                <view class="weui-uploader__input" bindtap="chooseImage"></view>
               </view>
             </view>
           </view>
@@ -136,15 +131,10 @@
           <view class="weui-uploader">
             <view class="weui-uploader__bd">
               <view class="weui-uploader__files" id="uploaderFiles">
-                <block wx:for="{{files}}" wx:key="*this">
-                  <view wx:if="{{item !=null}}" class="weui-uploader__file" bindlongtap="previewImage" id="{{item}}">
-                    <image class="img_tt" src="/assets/images/delete.png" bindtouchend="bindtapImageDelete" data-img="{{item}}" />
-                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
-                  </view>
-                </block>
-              </view>
-              <view class="weui-uploader__input-box" wx:if="{{files.length!=6}}">
-                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                <view class="weui-uploader__file" bindtap="previewImage"
+                   id="https://www.dishuihuzhu.cn/Public/rescue/img/diagnosis_sample_4.jpeg">
+                    <image class="weui-uploader__img" src="/assets/images/zd_sl.png" mode="aspectFill" />
+                </view>
               </view>
             </view>
           </view>
@@ -194,18 +184,25 @@
         <view class="weui-cell__hd">
           <view class="weui-uploader">
             <view class="weui-uploader__bd">
-              <view class="weui-uploader__input-box" wx:if="{{files.length!=6}}">
-                <view class="weui-uploader__input" bindtap="chooseImage"></view>
-              </view>
-              <view class="weui-uploader__input-box" wx:if="{{files.length!=6}}">
-                <view class="weui-uploader__input" bindtap="chooseImage"></view>
-              </view>
-              <view class="weui-uploader__input-box" wx:if="{{files.length!=6}}">
-                <view class="weui-uploader__input" bindtap="chooseImage"></view>
-              </view>
-              <view class="weui-uploader__input-box" wx:if="{{files.length!=6}}">
-                <view class="weui-uploader__input" bindtap="chooseImage"></view>
-              </view>
+                <view class="weui-uploader__file" bindtap="previewImage"
+                   id="https://www.dishuihuzhu.cn/Public/rescue/img/jiancha.jpg">
+                    <image class="weui-uploader__img" src="/assets/images/jcbg_sl.png" mode="aspectFill" />
+                </view>
+
+                <view class="weui-uploader__file file_to" bindtap="previewImage"
+                   id="https://www.dishuihuzhu.cn/Public/rescue/img/bingli.jpg">
+                    <image class="weui-uploader__img" src="/assets/images/bl_sl.png" mode="aspectFill" />
+                </view>
+
+                <view class="weui-uploader__file file_to" bindtap="previewImage"
+                   id="https://www.dishuihuzhu.cn/Public/rescue/img/zhuyuan.jpg">
+                    <image class="weui-uploader__img" src="/assets/images/ryzm_sl.png" mode="aspectFill" />
+                </view>
+
+                <view class="weui-uploader__file file_to" bindtap="previewImage"
+                   id="https://www.dishuihuzhu.cn/Public/rescue/img/jiaofei.jpg">
+                    <image class="weui-uploader__img" src="/assets/images/sfpj_sl.png" mode="aspectFill" />
+                </view>
             </view>
           </view>
         </view>

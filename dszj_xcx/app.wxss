@@ -22,7 +22,7 @@
 }
 .weui-uploader__file {
   float:left;
-  margin-right:9px;
+  margin-right:0px;
   margin-bottom:9px;
 }
 .img_tt {

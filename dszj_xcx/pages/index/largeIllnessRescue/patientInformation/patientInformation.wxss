@@ -126,3 +126,7 @@ button::after {
 font{
   color: #0092ff;
 }
+
+.file_to{
+  margin-left: 18rpx;
+}

@@ -15,6 +15,14 @@ Page({
     })
   },
 
+  //预览
+  previewImage: function (e) {
+    wx.previewImage({
+       // 当前显示图片的http链接
+      urls: [e.currentTarget.id],
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

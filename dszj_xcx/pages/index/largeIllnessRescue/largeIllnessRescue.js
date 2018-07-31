@@ -16,6 +16,24 @@ Page({
     Date_of_diagnosis:["请选择"],
     index: 0, Home_town_index: 0, date:'请选择',
     isDisplay:false,
+    title_isDisplay:false,
+    qz_isDisplay:false,
+    image_isDisplay:false,
+  },
+  image_isDisplay: function (e) {
+    this.setData({
+      image_isDisplay: this.data.image_isDisplay == false ? true : false,
+    })
+  },
+  qz_isDisplay: function (e) {
+    this.setData({
+      qz_isDisplay: this.data.qz_isDisplay == false ? true : false,
+    })
+  },
+  bindtapTitle_isDisplay:function(e){
+    this.setData({
+      title_isDisplay: this.data.title_isDisplay == false ? true : false,
+    })
   },
   //下一步
   bindtapSubmit:function(e){

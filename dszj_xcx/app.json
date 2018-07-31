@@ -25,20 +25,20 @@
       {
         "pagePath": "pages/crowdFunding/crowdFunding",
         "text": "优质",
-        "iconPath": "assets/images/yz0.png",
-        "selectedIconPath": "assets/images/yz1.png"
+        "iconPath": "assets/images/ico/yz0.png",
+        "selectedIconPath": "assets/images/ico/yz1.png"
       },
       {
         "pagePath": "pages/message/message",
         "text": "消息",
-        "iconPath": "assets/images/news1.png",
-        "selectedIconPath": "assets/images/news0.png"
+        "iconPath": "assets/images/ico/news1.png",
+        "selectedIconPath": "assets/images/ico/news0.png"
       },
       {
         "pagePath": "pages/personal/personal",
         "text": "个人",
-        "iconPath": "assets/images/user_1.jpg",
-        "selectedIconPath": "assets/images/user_0.jpg"
+        "iconPath": "assets/images/ico/user_1.jpg",
+        "selectedIconPath": "assets/images/ico/user_0.jpg"
       }
     ]
   },

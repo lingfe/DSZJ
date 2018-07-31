@@ -181,6 +181,7 @@ page{
   padding-top:20rpx; 
   padding-bottom: 20rpx;
   background: #fff;
+  z-index: -10;
 }
 .image-iamge{
   width: 94%;
@@ -422,8 +423,33 @@ button:active{
   opacity: 0.8;
 }
 
-
-
+.sl{
+  width: 94%;
+  border-radius: 14rpx;
+  background-color: #fff;
+  margin: auto;
+}
+.ck_sl_image{
+  width: 94%;
+  height: 700rpx;
+  position: fixed;
+  top: 200rpx;
+  border-radius: 16rpx;
+}
+.qz_sl_image{
+    width: 94%;
+  height: 700rpx;
+  position: fixed;
+  top: 200rpx;
+  border-radius: 16rpx;
+}
+.image_sl_image{
+    width: 94%;
+  height: 700rpx;
+  position: fixed;
+  top: 200rpx;
+  border-radius: 16rpx;
+}
 
 
 
