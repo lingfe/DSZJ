@@ -12,7 +12,7 @@ page{
 .page_title{
   width: 100%;
   height: 80rpx;
-  padding-top: 6rpx
+  padding-top: 6rpx;
 }
 .page_title_text{
   width: 94%;
@@ -33,30 +33,33 @@ page{
 /*筹款金额  start*/
 .page_Fundraising_amount{
   width: 100%;
-  height:200rpx;
+  height:120rpx;
 }
 .page_Fundraising_amount_input{
   width: 94%;
-  height: 200rpx;
+  height: 80rpx;
   margin: auto;
   border-radius: 16rpx;
-  margin-top: 30rpx;
-  background-color: rgba(187, 187, 187, 0.57);
+  margin-top: 10rpx;
+  background-color: #fff;
 }
 .page_Fundraising_amount_input input{
-  width: 100%;
-  height: 50rpx;
+  width: 90%;
+  height: 80rpx;
   position: absolute;
-  margin-top: 10%;
-  font-size: 40rpx;
-  font-weight: bold;
+  margin-top: 0%;
+  font-size: 30rpx;
   color: #0092ff;
-  text-align: center;
+  padding-left:30rpx; 
 }
-/*文本框默认属性*/
-page_Fundraising_amount_input .input-placeholder {
-  color: #0092ff;
+.page_Fundraising_amount_input label{
+  height: 80rpx;
+  line-height: 80rpx;
+  float: right;
+  font-size: 28rpx;
+  margin-right: 20rpx;
 }
+
 .page_Fundraising_amount_text{
   width: 100%;
   height: 40rpx;
@@ -75,13 +78,15 @@ page_Fundraising_amount_input .input-placeholder {
 /*筹款标题  start*/
 .page_Fundraising_title{
     width: 100%;
-  height:250rpx;
+  height:120rpx;
   margin-top: 30rpx;
 }
 .page_Fundraising_title_text{
   width: 94%;
   height: 40rpx;
   margin: 0 auto;
+  margin-top:30rpx;
+
 }
 .page_Fundraising_title_text_title{
   width: 50%;
@@ -102,33 +107,41 @@ page_Fundraising_amount_input .input-placeholder {
   text-decoration: underline;
 }
 .page_Fundraising_title_input{
-    width: 94%;
-  height: 200rpx;
+  width: 94%;
+  height: 80rpx;
   margin: auto;
   border-radius: 16rpx;
-  border: 1rpx solid #aaa;
   margin-top: 10rpx;
   background-color: #fff;
 }
 .page_Fundraising_title_input input{
-    width: 100%;
-  height: 50rpx;
+  width: 90%;
+  height: 80rpx;
   position: absolute;
-  margin-top: 10%;
+  margin-top: 0%;
   font-size: 30rpx;
-  text-align: center;
+  padding-left:30rpx;
 }
-.page_Fundraising_title_input textarea{
-  width: 98%;
+.page_Fundraising_textarea{
+  width: 100%;
+  height:260rpx;
+  margin-top: 30rpx;
+}
+.page_Fundraising_title_input_textarea{
+    width: 94%;
+  height: 220rpx;
+  margin: auto;
+  border-radius: 16rpx;
+  margin-top: 10rpx;
+  background-color: #fff;
+}
+.page_Fundraising_title_input_textarea textarea{
+  width: 93%;
   height: 180rpx;
   font-size: 30rpx;
   padding: 14rpx;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-/*文本框默认属性*/
-.page_Fundraising_title_input .input-placeholder {
-  color: #000;
 }
 
 
@@ -138,7 +151,7 @@ page_Fundraising_amount_input .input-placeholder {
   margin-top: 50rpx;
 }
 .page_Fundraising_image_title{
-    width: 94%;
+  width: 94%;
   height: 40rpx;
   margin: 0 auto;
 }
@@ -150,7 +163,6 @@ page_Fundraising_amount_input .input-placeholder {
   color: #0092ff;
   line-height: 40rpx;
   float: left;
-  text-align: right;
 }
 .page_Fundraising_image_title_text{
   width: 42%;
@@ -166,10 +178,16 @@ page_Fundraising_amount_input .input-placeholder {
   height: 80rpx;
   font-size: 28rpx;
   margin: 0 auto;
-  overflow: hidden;
-  text-overflow: ellipsis;
   padding-top:20rpx; 
   padding-bottom: 20rpx;
+  background: #fff;
+}
+.image-iamge{
+  width: 94%;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius:16rpx;
+  margin-top: 10rpx;
 }
 .weui-uploader__hd {
   display:-webkit-box;
@@ -308,13 +326,14 @@ button::after {
   z-index: 100;
 }
 .kuaishuTianxie{
-  width: 94%;
+  position: absolute;
+  bottom: 0rpx;
+  width: 100%;
   height: 940rpx;
   margin: 0 auto;
   background-color: #fff;
   z-index: 100;
   margin-top: 100rpx;
-  border: 4rpx #0092ff solid;
 }
 .kuaishuTianxie_title{
   width: 100%;
@@ -362,7 +381,7 @@ button::after {
   color: #d9d9d9;
 }
 .kuaishuTianxie_btn{
-  width: 94%;
+  width: 100%;
   margin: auto;
   height: 90rpx;
   padding-top: 30rpx;
@@ -370,35 +389,39 @@ button::after {
 .kuaishuTianxie_btn_ok{
   width: 50%;
   margin: auto;
-  height: 60rpx;
+  height: 90rpx;
   float: left;
 }
 .kuaishuTianxie_btn_ok button{
   background-color: #0092ff;
-  width: 60%;
-  height: 60rpx;
-  line-height: 60rpx;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
   font-size: 30rpx;
   color: #fff;
+  box-sizing:unset;
+  border-radius:0;
 }
 .kuaishuTianxie_btn_close{
   width: 50%;
   margin: auto;
-  height: 60rpx;
+  height: 90rpx;
   float: left;
 }
 .kuaishuTianxie_btn_close button{
   background-color: #0092ff;
-  width: 60%;
-  height: 60rpx;
-  line-height: 60rpx;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
   font-size: 30rpx;
   color: #fff;
+  box-sizing:unset;
+  border-radius:0;
 }
 button:active{
   opacity: 0.8;
 }
-/*
+
 
 
 

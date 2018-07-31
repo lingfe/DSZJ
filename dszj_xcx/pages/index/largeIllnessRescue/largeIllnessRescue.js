@@ -17,6 +17,12 @@ Page({
     index: 0, Home_town_index: 0, date:'请选择',
     isDisplay:false,
   },
+  //下一步
+  bindtapSubmit:function(e){
+    wx.navigateTo({
+      url: '/pages/index/largeIllnessRescue/patientInformation/patientInformation',
+    })
+  },
   //取消或显示
   btnClose:function(e){
     this.setData({

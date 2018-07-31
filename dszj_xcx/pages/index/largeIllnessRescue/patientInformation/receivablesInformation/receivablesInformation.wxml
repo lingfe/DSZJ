@@ -1,0 +1,50 @@
+<!--pages/index/largeIllnessRescue/patientInformation/receivablesInformation/receivablesInformation.wxml-->
+<!-- 快速填写 start -->
+<view class='page_kuaishuTianxie'>
+  <view class='kuaishuTianxie'>
+    <view class='kuaishuTianxie_input'>
+      <view class='kuaishuTianxie_input_title'>收款人姓名</view>
+      <view class='kuaishuTianxie_input_input'>
+        <input type='text' placeholder='必须为患者直系亲属'></input>
+      </view>
+    </view>
+
+    <view class='kuaishuTianxie_input'>
+      <view class='kuaishuTianxie_input_title'>开户银行</view>
+      <view class='kuaishuTianxie_input_input'>
+        <input type='text' hidden='hidden' ></input>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{Account_opening_bank}}">
+          {{Account_opening_bank[index]}}
+        </picker>
+      </view>
+    </view>
+
+    <view class='kuaishuTianxie_input'>
+      <view class='kuaishuTianxie_input_title'>银行卡号</view>
+      <view class='kuaishuTianxie_input_input'>
+        <input type='text' placeholder='银行卡号'></input>
+      </view>
+    </view>
+
+    <view class='kuaishuTianxie_input'>
+      <view class='kuaishuTianxie_input_title'>身份证号码</view>
+      <view class='kuaishuTianxie_input_input'>
+        <input type='text' placeholder='收款人身份证号码'></input>
+      </view>
+    </view>
+
+    <view class='kuaishuTianxie_input'>
+      <view class='kuaishuTianxie_input_title'>收款人手机号</view>
+      <view class='kuaishuTianxie_input_input'>
+        <input type='text' placeholder='收款人手机号'></input>
+      </view>
+    </view>
+  </view>
+
+  <!-- 下一步 start -->
+  <view class="weui-btn-area">
+    <button class="weui-btn" bindtap='bindtapSubmit' formType="submit" type="primary">下一步</button>
+  </view>
+  <!-- 下一步  end -->
+</view>
+<!-- 快速填写 end -->

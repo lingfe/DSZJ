@@ -5,7 +5,9 @@
     "pages/personal/personal",
     "pages/crowdFunding/crowdFunding",
     "pages/message/message",
-    "pages/index/largeIllnessRescue/largeIllnessRescue"
+    "pages/index/largeIllnessRescue/largeIllnessRescue",
+    "pages/index/largeIllnessRescue/patientInformation/patientInformation",
+    "pages/index/largeIllnessRescue/patientInformation/receivablesInformation/receivablesInformation"
   ],
   "window": {
     "navigationBarTextStyle": "white",

@@ -1,0 +1,128 @@
+/* pages/index/largeIllnessRescue/patientInformation/patientInformation.wxss */
+
+page{
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page{
+  width: 100%;
+}
+
+/* input :start*/
+.page_input{
+  width: 100%;
+  border-bottom: 1rpx solid;
+  height: 80rpx;
+}
+.page_input_title{
+  font-size: 30rpx;
+  font-weight: bold;
+  width: 24%;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+  text-align: center;
+  border-right: 1rpx solid;
+}
+.page_input_input{
+  width: 70%;
+  height: 80rpx;
+  float: left;
+}
+.page_input_input input{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  padding-left: 20rpx;
+}
+/* input :end*/
+
+/* _radio :start*/
+.page_radio{
+  width: 100%;
+  border-bottom: 1rpx solid;
+  height: 80rpx;
+}
+.page_radio_title{
+  font-size: 30rpx;
+  font-weight: bold;
+  width: 24%;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+  text-align: center;
+}
+.page_radio_radio{
+  width: 70%;
+  height: 80rpx;
+  float: left;
+}
+.page_radio_radio radio{
+  width: 30%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  padding-left: 20rpx;
+}
+/* _radio end*/
+
+
+/* image start*/
+.page_image{
+  width: 100%;
+}
+.page_image_title{
+  padding-left: 25rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+.page_image_image{
+  margin-top: 5rpx;
+  width: 100%;
+}
+.page_image_text{
+  font-size: 26rpx;
+  margin-left: 25rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+/*下一步  start*/
+.weui-btn-area {
+  margin:1.17647059em 15px .3em;
+  padding-bottom: 40rpx;
+}
+
+button[type="primary"] {
+  color:#FFFFFF;
+  background-color:#0092ff;
+  border-radius: 8px;
+}
+
+.button-hover[type="primary"] {
+  background-color:#0092ff;
+}
+button::after {
+  content:" ";
+  width:200%;
+  height:200%;
+  position:absolute;
+  top:0;
+  left:0;
+  border:1px solid  #E8EFEF;
+  -webkit-transform:scale(0.5);
+  transform:scale(0.5);
+  -webkit-transform-origin:0 0;
+  transform-origin:0 0;
+  box-sizing:border-box;
+  border-radius:10px;
+}
+/*下一步  end*/
+
+font{
+  color: #0092ff;
+}

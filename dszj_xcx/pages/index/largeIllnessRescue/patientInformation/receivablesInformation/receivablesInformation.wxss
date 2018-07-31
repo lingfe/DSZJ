@@ -1,0 +1,126 @@
+/* pages/index/largeIllnessRescue/patientInformation/receivablesInformation/receivablesInformation.wxss */
+
+/*快速填写  start*/
+.kuaishuTianxie{
+  width: 100%;
+  height: 940rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  z-index: 100;
+  margin-top: 20rpx;
+}
+.kuaishuTianxie_title{
+  width: 100%;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+.kuaishuTianxie_input{
+  width: 94%;
+  margin: auto;
+  height: 60rpx;
+  margin-bottom: 30rpx;
+}
+.kuaishuTianxie_input_title{
+  font-size: 30rpx;
+  font-weight: bold;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 26%;
+  float: left;
+}
+.kuaishuTianxie_input_input{
+  width: 72%;
+  height: 60rpx;
+  border: 1rpx solid #aaa;
+  border-radius: 15rpx;
+  float: left;
+}
+.kuaishuTianxie_input_input input{
+  padding-left: 10rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 97%;
+  font-size: 30rpx;
+  color: #d9d9d9;
+}
+.kuaishuTianxie_input_input picker{
+  padding-left: 10rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 97%;
+  font-size: 30rpx;
+  color: #d9d9d9;
+}
+.kuaishuTianxie_btn{
+  width: 94%;
+  margin: auto;
+  height: 90rpx;
+  padding-top: 30rpx;
+}
+.kuaishuTianxie_btn_ok{
+  width: 50%;
+  margin: auto;
+  height: 60rpx;
+  float: left;
+}
+.kuaishuTianxie_btn_ok button{
+  background-color: #0092ff;
+  width: 60%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+.kuaishuTianxie_btn_close{
+  width: 50%;
+  margin: auto;
+  height: 60rpx;
+  float: left;
+}
+.kuaishuTianxie_btn_close button{
+  background-color: #0092ff;
+  width: 60%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  color: #fff;
+}
+button:active{
+  opacity: 0.8;
+}
+
+
+/*下一步  start*/
+.weui-btn-area {
+  margin:1.17647059em 15px .3em;
+  padding-bottom: 40rpx;
+}
+
+button[type="primary"] {
+  color:#FFFFFF;
+  background-color:#0092ff;
+  border-radius: 8px;
+}
+
+.button-hover[type="primary"] {
+  background-color:#0092ff;
+}
+button::after {
+  content:" ";
+  width:200%;
+  height:200%;
+  position:absolute;
+  top:0;
+  left:0;
+  border:1px solid  #E8EFEF;
+  -webkit-transform:scale(0.5);
+  transform:scale(0.5);
+  -webkit-transform-origin:0 0;
+  transform-origin:0 0;
+  box-sizing:border-box;
+  border-radius:10px;
+}
+/*下一步  end*/

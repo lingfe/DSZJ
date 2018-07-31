@@ -9,12 +9,13 @@
 
   <!-- 筹款金额   start-->
   <view class='page_Fundraising_amount'>
+    <view class='page_Fundraising_title_text'>
+      <view class='page_Fundraising_title_text_title'>目标金额</view>
+    </view>
     <view class='page_Fundraising_amount_input'>
       <input type='text' placeholder='请 输 入 筹 款 金 额'></input>
+      <label>元</label>
     </view>
-  </view>
-  <view class='page_Fundraising_amount_text'>
-    <view class='page_Fundraising_amount_text_text'>提示：筹款金额是否筹满，均可体现</view>
   </view>
   <!-- 筹款金额   end-->
 
@@ -25,7 +26,7 @@
       <view class='page_Fundraising_title_text_text'>参考示例</view>
     </view>
     <view class='page_Fundraising_title_input input1'>
-      <input type='text' placeholder='谷芜湖未付费维护好'></input>
+      <input type='text' placeholder='好的标题可以增加筹款金额（限30字）'></input>
     </view>
   </view>
   <!-- 筹款标题   end-->
@@ -42,15 +43,14 @@
   <!-- 联系人电话   end-->
 
   <!-- 求助说明   start-->
-  <view class='page_Fundraising_title'>
+  <view class='page_Fundraising_textarea'>
     <view class='page_Fundraising_title_text'>
       <view class='page_Fundraising_title_text_title'>求助说明</view>
       <view class='page_Fundraising_title_text_text'>参考示例</view>
     </view>
-    <view class='page_Fundraising_title_input'>
+    <view class='page_Fundraising_title_input_textarea'>
       <textarea auto-focus="true" 
-      name="content"
-      value="{{txt_textarea}}"></textarea>
+      name="content" placeholder='请详细填写筹款原因，筹款目的，自身状况和善款用途等信息。（不少于10字）'></textarea>
     </view>
   </view>
   <!-- 求助说明   end-->
@@ -61,9 +61,10 @@
       <view class='page_Fundraising_image_title_title'>上传图片</view>
       <view class='page_Fundraising_image_title_text'>参考示例</view>
     </view>
-    <view class='page_Fundraising_image_text'>真实感人的照片，更容易获得用户的信任，
-      能更快筹到钱（上传阳光的照片，切勿上传血腥等负面心情照片）
-    </view>
+    <view class="image-iamge">
+      <view class='page_Fundraising_image_text'>真实感人的照片，更容易获得用户的信任，
+        能更快筹到钱（上传阳光的照片，切勿上传血腥等负面心情照片）
+      </view>
       <!-- 上传图片  start -->
       <view class="">
         <view class="weui-cell__hd">
@@ -89,12 +90,13 @@
         </view>
       </view>
       <!-- 上传图片  end -->
+    </view>
   </view>
   <!-- 添加图片   end-->
 
   <!-- 下一步 start -->
   <view class="weui-btn-area">
-    <button class="weui-btn" formType="submit" type="primary">下一步</button>
+    <button class="weui-btn" bindtap='bindtapSubmit' formType="submit" type="primary">下一步</button>
   </view>
   <!-- 下一步  end -->
 

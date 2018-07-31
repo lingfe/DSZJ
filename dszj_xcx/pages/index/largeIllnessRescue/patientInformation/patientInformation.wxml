@@ -1,0 +1,223 @@
+<!--pages/index/largeIllnessRescue/patientInformation/patientInformation.wxml-->
+<view class='page'>
+  <!-- 真实姓名 start -->
+  <view class='page_input'>
+    <view class='page_input_title'>真实姓名</view>
+    <view class='page_input_input'>
+      <input type='text' placeholder='填写患者真实姓名'></input>
+    </view>
+  </view>
+  <!-- 真实姓名 end -->
+
+  <!-- 证件类型 start -->
+  <view class='page_radio'>
+    <view class='page_radio_title'>真实姓名</view>
+    <view class='page_radio_radio'>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <radio value="身份证" checked="true">身份证</radio>
+         <radio value="身份证" >身份证</radio>
+      </radio-group>
+    </view>
+  </view>
+  <!-- 证件类型 end -->
+
+  <!-- 真实姓名 start -->
+  <view class='page_input'>
+    <view class='page_input_title'>身份证号</view>
+    <view class='page_input_input'>
+      <input type='text' placeholder='填写患者身份证号'></input>
+    </view>
+  </view>
+  <!-- 真实姓名 end -->
+
+  <!-- 患者身份证图片 start -->
+  <view class='page_image'>
+    <view class='page_image_title'>患者手持身份证照片</view>
+    <view class='page_image_image'>
+      <!-- 上传图片  start -->
+      <view class="">
+        <view class="weui-cell__hd">
+          <view class="weui-uploader">
+            <view class="weui-uploader__bd">
+              <view class="weui-uploader__files" id="uploaderFiles">
+                <block wx:for="{{files}}" wx:key="*this">
+                  <view wx:if="{{item !=null}}" class="weui-uploader__file" bindlongtap="previewImage" id="{{item}}">
+                    <image class="img_tt" src="/assets/images/delete.png" bindtouchend="bindtapImageDelete" data-img="{{item}}" />
+                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  </view>
+                </block>
+              </view>
+              <view class="weui-uploader__input-box" wx:if="{{files.length!=6}}">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 上传图片  end -->
+    </view>
+    <view class='page_image_text'>1.身份证上的所有信息必须清晰可见，必须能看清身份证号。</view>
+    <view class='page_image_text'>2.若患者不方便手持，可将身份证放在患者胸前拍照。</view>
+    <view class='page_image_image'>
+      <!-- 上传图片  start -->
+      <view class="">
+        <view class="weui-cell__hd">
+          <view class="weui-uploader">
+            <view class="weui-uploader__bd">
+              <view class="weui-uploader__files" id="uploaderFiles">
+                <block wx:for="{{files}}" wx:key="*this">
+                  <view wx:if="{{item !=null}}" class="weui-uploader__file" bindlongtap="previewImage" id="{{item}}">
+                    <image class="img_tt" src="/assets/images/delete.png" bindtouchend="bindtapImageDelete" data-img="{{item}}" />
+                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  </view>
+                </block>
+              </view>
+              <view class="weui-uploader__input-box" wx:if="{{files.length!=6}}">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 上传图片  end -->
+    </view>
+  </view>
+  <!-- 患者身份证图片 end -->
+
+  <!-- 所患疾病 start -->
+  <view class='page_input' style='border-top:1rpx solid;'>
+    <view class='page_input_title'>所患疾病</view>
+    <view class='page_input_input'>
+      <input type='text' placeholder='填写所患疾病名称'></input>
+    </view>
+  </view>
+  <!-- 所患疾病 end -->
+
+  <!-- 医院名称 start -->
+  <view class='page_input'>
+    <view class='page_input_title'>医院名称</view>
+    <view class='page_input_input'>
+      <input type='text' placeholder='医院名称   例如：遵义人民医院'></input>
+    </view>
+  </view>
+  <!-- 医院名称 end -->
+
+  <!-- 医疗诊断证明 start -->
+  <view class='page_image'>
+    <view class='page_image_title'>医疗诊断证明</view>
+    <view class='page_image_image'>
+      <!-- 上传图片  start -->
+      <view class="">
+        <view class="weui-cell__hd">
+          <view class="weui-uploader">
+            <view class="weui-uploader__bd">
+              <view class="weui-uploader__files" id="uploaderFiles">
+                <block wx:for="{{files}}" wx:key="*this">
+                  <view wx:if="{{item !=null}}" class="weui-uploader__file" bindlongtap="previewImage" id="{{item}}">
+                    <image class="img_tt" src="/assets/images/delete.png" bindtouchend="bindtapImageDelete" data-img="{{item}}" />
+                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  </view>
+                </block>
+              </view>
+              <view class="weui-uploader__input-box" wx:if="{{files.length!=6}}">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 上传图片  end -->
+    </view>
+    <view class='page_image_text'>请提供带有医院公章的诊断证明照片</view>
+    <view class='page_image_image'>
+      <!-- 上传图片  start -->
+      <view class="">
+        <view class="weui-cell__hd">
+          <view class="weui-uploader">
+            <view class="weui-uploader__bd">
+              <view class="weui-uploader__files" id="uploaderFiles">
+                <block wx:for="{{files}}" wx:key="*this">
+                  <view wx:if="{{item !=null}}" class="weui-uploader__file" bindlongtap="previewImage" id="{{item}}">
+                    <image class="img_tt" src="/assets/images/delete.png" bindtouchend="bindtapImageDelete" data-img="{{item}}" />
+                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  </view>
+                </block>
+              </view>
+              <view class="weui-uploader__input-box" wx:if="{{files.length!=6}}">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 上传图片  end -->
+    </view>
+  </view>
+  <!-- 医疗诊断证明 end -->
+
+  <!-- 补充证明 start -->
+  <view class='page_image' style='border-top:1rpx solid;margin-top:25rpx;'>
+    <view class='page_image_title'>补充证明</view>
+    <view class='page_image_image'>
+      <!-- 上传图片  start -->
+      <view class="">
+        <view class="weui-cell__hd">
+          <view class="weui-uploader">
+            <view class="weui-uploader__bd">
+              <view class="weui-uploader__files" id="uploaderFiles">
+                <block wx:for="{{files}}" wx:key="*this">
+                  <view wx:if="{{item !=null}}" class="weui-uploader__file" bindlongtap="previewImage" id="{{item}}">
+                    <image class="img_tt" src="/assets/images/delete.png" bindtouchend="bindtapImageDelete" data-img="{{item}}" />
+                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                  </view>
+                </block>
+              </view>
+              <view class="weui-uploader__input-box" wx:if="{{files.length!=6}}">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 上传图片  end -->
+    </view>
+    <view class='page_image_text'>请上传
+      <font color="#0092ff">检查报告</font>，
+      <font color="#0092ff">病例</font>，
+      <font color="#0092ff">入院证明</font>，
+      <font color="#0092ff">收费票据</font>等补充证明图片以帮助您提高审核通过率！</view>
+    <view class='page_image_text'></view>
+    <view class='page_image_text'>注释：至少上传两张补充证明图片</view>
+    <view class='page_image_image'>
+      <!-- 上传图片  start -->
+      <view class="">
+        <view class="weui-cell__hd">
+          <view class="weui-uploader">
+            <view class="weui-uploader__bd">
+              <view class="weui-uploader__input-box" wx:if="{{files.length!=6}}">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+              <view class="weui-uploader__input-box" wx:if="{{files.length!=6}}">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+              <view class="weui-uploader__input-box" wx:if="{{files.length!=6}}">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+              <view class="weui-uploader__input-box" wx:if="{{files.length!=6}}">
+                <view class="weui-uploader__input" bindtap="chooseImage"></view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 上传图片  end -->
+    </view>
+  </view>
+  <!-- 补充证明 end -->
+
+  <!-- 下一步 start -->
+  <view class="weui-btn-area">
+    <button class="weui-btn" bindtap='bindtapSubmit' formType="submit" type="primary">下一步</button>
+  </view>
+  <!-- 下一步  end -->
+</view>
