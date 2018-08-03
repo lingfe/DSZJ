@@ -1,8 +1,8 @@
 <!--logs.wxml-->
-<view class="container log-list">
+<!-- <view class="container log-list">
   <block wx:for="{{logs}}" wx:for-item="log">
     <text class="log-item">{{index + 1}}. {{log}}</text>
   </block>
-</view>
+</view> -->
 <!-- 指向滴水互助的web-view -->
 <web-view src="https://www.dishuihuzhu.cn/Plan/plan.html"></web-view>

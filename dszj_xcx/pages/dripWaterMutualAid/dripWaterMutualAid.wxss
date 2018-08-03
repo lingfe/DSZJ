@@ -1,0 +1,148 @@
+/* pages/dripWaterMutualAid/dripWaterMutualAid.wxss */
+/* pages/dripWaterRescue/dripWaterRescue.wxss */
+
+page{
+  background-color: #efeff4;
+}
+.page{
+  padding: 0;
+  margin: 0;
+}
+.page_image{
+  width: 100%;
+  height: 155rpx;
+}
+.page_image image{
+  width: 100%;
+  height: 155rpx;
+}
+
+.page_content{
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.page_content_image{
+  width: 94%;
+  margin: 0 auto;
+  height: 240rpx;
+}
+.page_content_image image{
+  width: 100%;
+  height: 240rpx;
+}
+.page_content_content{
+  width: 100%;
+  height: 100rpx;
+  border-top: 1rpx solid #efeff4;
+}
+.page_content_content_text{
+  width: 40%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  text-align: center;
+  float: left;
+}
+font{
+  color: #ea3232;
+}
+.page_content_content_image{
+  float: right;
+  width: 60%;
+  height: 100rpx;
+}
+.page_content_content_image_text{
+  width: 30%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  float: right;
+  margin-left: 10rpx;
+}
+.image_text{
+  width: 10%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 40rpx;
+  float: right;
+  margin-left: 30rpx;
+}
+.page_content_content_image_image{
+  width: 30%;
+  height: 100rpx;
+  float: right;
+  margin-left: 10rpx;
+}
+.page_content_content_image_image image{
+  width: 33%;
+  height: 60rpx;
+  border-radius: 25rpx;
+  margin-top: 20rpx;
+}
+
+
+.page_model{
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.page_model_content{
+  width: 100%;
+  height: 290rpx;
+}
+.page_model_content_left{
+  width: 30%;
+  height: 230rpx;
+  float: left;
+  padding: 30rpx;
+  padding-bottom: 0rpx;
+}
+.page_model_content_left image{
+  width: 100%;
+  margin: auto;
+  height: 230rpx;
+}
+.page_model_content_right{
+  float: left;
+  width: 62%;
+  height: 260rpx;
+}
+.page_model_content_right_title{
+  width: 100%;
+  font-size: 40rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.page_model_content_right_text{
+  width: 100%;
+  font-size: 30rpx;
+  height: 62rpx;
+  line-height: 62rpx;
+  color: #8f8f94;
+}
+.page_model_btn{
+  width: 100%;
+  height: 80rpx;
+}
+.page_model_btn_text{
+  width: 70%;
+  font-size: 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  float: left;
+  padding-left: 30rpx;
+}
+.page_model_btn_btn{
+  width: 20%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  float: left;
+  text-align: center;
+  background: #ff9049!important;
+  border: 1px solid #ff9049!important;
+  border-radius:6rpx;
+  color: #fff;
+}
+

@@ -1,0 +1,90 @@
+<!--pages/dripWaterRescue/dripWaterRescue.wxml-->
+
+
+<view class='page'>
+  <view class='page_image'>
+    <image src='/assets/images/dripWaterRescue/customer.png'></image>
+    <image src='/assets/images/dripWaterRescue/Thank.png'></image>
+  </view>
+
+  <!--推荐展示title start-->
+  <view class='page_tuijing'>
+    <view class='page_tuijing_title'>推荐展示</view>
+    <view class='page_tuijing_text'>
+      <view class='page_tuijing_text_image'>
+        <image src='/assets/images/dripWaterRescue/Thank.png'></image>
+      </view>
+      <view class='page_tuijing_text_text'>推荐说明</view>
+    </view>
+    <view class='page_tuijing_text'>
+      <view class='page_tuijing_text_image'>
+        <image src='/assets/images/dripWaterRescue/Thank.png'></image>
+      </view>
+      <view class='page_tuijing_text_text'>申请志愿者</view>
+    </view>
+  </view>
+
+  <view class='page_model'>
+    <view class='page_model_title'>
+      <view class='page_model_title_image'>
+        <image src='/assets/images/dripWaterRescue/Thank.png'></image>
+      </view>
+      <view class='page_model_title_text'>123******231</view>
+      <view class='page_model_title_text align_right'>
+        <span style="color: #F25B4B;font-weight: 500;">54</span> 人证实
+        <span style="color: #fff;background-color: #FA9A0C;width: 40px;height: 14px;line-height: 17px;text-align: center;">已审核</span>
+      </view>
+    </view>
+    <view class='page_model_content'>
+      <view class='page_model_content_left'>
+        <image src='/assets/images/jpg/jz1.jpg'></image>
+      </view>
+      <view class='page_model_content_right'>
+        <view class='page_model_content_right_title'>中青年抗癌计划中青年抗癌计划中青年抗癌计划</view>
+        
+        <view class='page_model_content_right_text'>
+          <progress percent="20" activeColor="#0092ff" show-info />
+        </view>
+        <view class='page_model_content_right_text'>
+          目标
+          <span class="text-danger">200000.00</span>元
+          已筹
+          <span class="text-danger">16912.00</span>元
+          <span class="text-danger">735</span> 次支持
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='page_model'>
+    <view class='page_model_title'>
+      <view class='page_model_title_image'>
+        <image src='/assets/images/dripWaterRescue/Thank.png'></image>
+      </view>
+      <view class='page_model_title_text'>123******231</view>
+      <view class='page_model_title_text align_right'>
+        <span style="color: #F25B4B;font-weight: 500;">54</span> 人证实
+        <span style="color: #fff;background-color: #FA9A0C;width: 40px;height: 14px;line-height: 17px;text-align: center;">已审核</span>
+      </view>
+    </view>
+    <view class='page_model_content'>
+      <view class='page_model_content_left'>
+        <image src='/assets/images/jpg/jz2.jpg'></image>
+      </view>
+      <view class='page_model_content_right'>
+        <view class='page_model_content_right_title'>中青年抗癌计划中青年抗癌计划中青年抗癌计划</view>
+        
+        <view class='page_model_content_right_text'>
+          <progress percent="20" activeColor="#0092ff" show-info />
+        </view>
+        <view class='page_model_content_right_text'>
+          目标
+          <span class="text-danger">200000.00</span>元
+          已筹
+          <span class="text-danger">16912.00</span>元
+          <span class="text-danger">735</span> 次支持
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

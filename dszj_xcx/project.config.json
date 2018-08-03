@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 6,
 			"list": [
 				{
 					"id": -1,
@@ -56,7 +56,25 @@
 				{
 					"id": -1,
 					"name": "患者信息",
-					"pathName": "pages/index/largeIllnessRescue/patientInformation/patientInformation"
+					"pathName": "pages/index/largeIllnessRescue/patientInformation/patientInformation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "dripWaterRescue",
+					"pathName": "pages/dripWaterRescue/dripWaterRescue",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "dripWaterMutualAid",
+					"pathName": "pages/dripWaterMutualAid/dripWaterMutualAid",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "personal",
+					"pathName": "pages/personal/personal"
 				}
 			]
 		}

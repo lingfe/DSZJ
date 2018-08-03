@@ -7,7 +7,9 @@
     "pages/message/message",
     "pages/index/largeIllnessRescue/largeIllnessRescue",
     "pages/index/largeIllnessRescue/patientInformation/patientInformation",
-    "pages/index/largeIllnessRescue/patientInformation/receivablesInformation/receivablesInformation"
+    "pages/index/largeIllnessRescue/patientInformation/receivablesInformation/receivablesInformation",
+    "pages/dripWaterRescue/dripWaterRescue",
+    "pages/dripWaterMutualAid/dripWaterMutualAid"
   ],
   "window": {
     "navigationBarTextStyle": "white",
@@ -23,22 +25,28 @@
     "selectedColor": "#5E7E88",
     "list": [
       {
-        "pagePath": "pages/crowdFunding/crowdFunding",
-        "text": "优质",
-        "iconPath": "assets/images/ico/yz0.png",
-        "selectedIconPath": "assets/images/ico/yz1.png"
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/images/ico/index_1.png",
+        "selectedIconPath": "assets/images/ico/index_2.png"
       },
       {
-        "pagePath": "pages/message/message",
-        "text": "消息",
-        "iconPath": "assets/images/ico/news1.png",
-        "selectedIconPath": "assets/images/ico/news0.png"
+        "pagePath": "pages/dripWaterRescue/dripWaterRescue",
+        "text": "滴水救助",
+        "iconPath": "assets/images/ico/dsjz_2.png",
+        "selectedIconPath": "assets/images/ico/dsjz_1.png"
+      },
+      {
+        "pagePath": "pages/dripWaterMutualAid/dripWaterMutualAid",
+        "text": "滴水互助",
+        "iconPath": "assets/images/ico/dsfz_2.png",
+        "selectedIconPath": "assets/images/ico/dsfz_1.png"
       },
       {
         "pagePath": "pages/personal/personal",
         "text": "个人",
-        "iconPath": "assets/images/ico/user_1.jpg",
-        "selectedIconPath": "assets/images/ico/user_0.jpg"
+        "iconPath": "assets/images/ico/my_2.png",
+        "selectedIconPath": "assets/images/ico/my_1.png"
       }
     ]
   },

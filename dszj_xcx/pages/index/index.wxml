@@ -147,14 +147,14 @@
   <!-- 为什么要选择我们  end -->
 
   <!-- 基金介绍 start -->
-  <view class='page_jiejing'>
+  <!-- <view class='page_jiejing'>
     <view class='page_jiejing_image1'>
       <image src='/assets/images/index_5.png'></image>
     </view>
     <view class='page_jiejing_image2'>
       <image src='/assets/images/index_6.png'></image>
     </view>
-  </view>
+  </view> -->
   <!-- 基金介绍 start -->
 
   <!-- 联系我们 start -->
@@ -167,7 +167,7 @@
         </view>
         <view class='page_Contact_us_content_neiro'>
           <view class='page_Contact_us_content_neiro_title'>400-6063-400</view>
-          <view class='page_Contact_us_content_neiro_text'>工作日：10:00---22:00</view>
+          <view class='page_Contact_us_content_neiro_text'>工作日：09:00---18:00</view>
         </view>
       </view>
 
@@ -197,7 +197,7 @@
 
   <!-- 关于我们 start -->
   <view class='page_guangyue'>
-    <view class='page_guangyue_title'>2018遵义诚铭网络有限公司</view>
+    <view class='page_guangyue_title'>滴水之家</view>
   </view>
   <!-- 关于我们 end -->
 </view>

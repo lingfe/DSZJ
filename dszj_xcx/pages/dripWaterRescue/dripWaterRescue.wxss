@@ -1,0 +1,132 @@
+/* pages/dripWaterRescue/dripWaterRescue.wxss */
+
+page{
+  background-color: #efeff4;
+}
+.page{
+  padding: 0;
+  margin: 0;
+}
+.page_image{
+  width: 100%;
+  height: 200rpx;
+  background-color: #fff;
+}
+.page_image image{
+  width: 42%;
+  height: 160rpx;
+  margin-top: 20rpx;
+  margin-left: 5%;
+}
+
+/*推荐展示 start*/
+.page_tuijing{
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.page_tuijing_title{
+  width: 40%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 30rpx;
+  float: left;
+}
+.page_tuijing_text{
+  width: 30%;
+  height: 100rpx;
+  float: left;
+  color: #999;
+}
+.page_tuijing_text_image{
+  width: 16%;
+  float: left;
+  margin-right: 15rpx;
+}
+.page_tuijing_text_image image{
+  width: 100%;
+  height: 30rpx;
+  margin-top: 35rpx;
+  border-radius: 50%;
+}
+.page_tuijing_text_text{
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 70%;
+  font-size: 28rpx;
+  float: left;
+}
+
+
+
+
+.page_model{
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1rpx solid #efeff4;
+  margin-bottom: 20rpx;
+}
+.page_model_title{
+  width: 94%;
+  height: 100rpx;
+  font-size: 28rpx;
+  margin: auto;
+}
+.page_model_title_image{
+  width: 14%;
+  height: 100rpx;
+  float: left;
+}
+.page_model_title_image image{
+  width: 100%;
+  height: 80rpx;
+  margin-top: 10rpx;
+  border-radius: 50%;
+}
+.page_model_title_text{
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 40%;
+  float: left;
+  margin-left: 2%; 
+}
+.align_right{
+  text-align: right;
+}
+.page_model_content{
+  width: 100%;
+  height: 290rpx;
+}
+.page_model_content_left{
+  width: 30%;
+  height: 230rpx;
+  float: left;
+  padding: 30rpx;
+  padding-bottom: 0rpx;
+}
+.page_model_content_left image{
+  width: 100%;
+  margin: auto;
+  height: 230rpx;
+}
+.page_model_content_right{
+  float: left;
+  width: 62%;
+  height: 260rpx;
+}
+.page_model_content_right_title{
+  width: 100%;
+  font-size: 34rpx;
+  margin-top: 20rpx;
+}
+.page_model_content_right_text{
+  width: 94%;
+  font-size: 26rpx;
+  color: #8f8f94;
+  margin-top: 10rpx;
+}
+.text-danger{
+  color: #F25B4B !important
+}
