@@ -1,11 +1,21 @@
-// pages/dripWaterRescue/dripWaterRescue.js
+// pages/dripWaterRescue/applicationVolunteer/applicationVolunteer.js
+/**
+ * 申请志愿者
+ */
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+    is_display:true,
+  },
+  //取消或显示
+  bindtapis_display: function (e) {
+    this.setData({
+      is_display: this.data.is_display == false ? true : false,
+    })
   },
 
   /**
@@ -13,20 +23,6 @@ Page({
    */
   onLoad: function (options) {
   
-  },
-
-  //申请志愿者
-  applicationVolunteer:function(){
-    wx.navigateTo({
-      url: '/pages/dripWaterRescue/applicationVolunteer/applicationVolunteer',
-    })
-  },
-
-  //推荐说明
-  tuijingshouming:function(){
-    wx.navigateTo({
-      url: '/pages/dripWaterRescue/recommendation/recommendation',
-    })
   },
 
   /**

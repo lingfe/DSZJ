@@ -1,0 +1,15 @@
+<view class='page'>
+  <view class="page_content" >
+      <view class="page_content_title">滴水之家特色服务</view>
+      <view class="page_content_content">滴水之家推荐展示服务为了能更好的服务个人求助者，滴水之家特提供首页免费综合展示服务： </view>
+      <view class="page_content_content margin_top_20">
+      您的求助信息筹款金额超过1万元，系统将自动推荐到滴水之家首页展示，包括但不限于公众号、手机版、滴水之家官网等，所有进入滴水之家公众号的爱心人士都可以看到您的求助信息，从而免费给您的求助信息带来上万次的浏览量，真正让您的求助信息不仅仅只在自己的朋友圈获得帮助，还能获得滴水之家所有爱心人士的关注和帮助！</view>
+      <view class="page_content_content margin_top_20">筹款指导客服一对一服务：</view>                
+      <view class="page_content_content margin_top_none">如果您想发起筹款，但又担心自己不太会弄？</view>            
+      <view class="page_content_content margin_top_none">如果您不知道怎么转发效果更好？</view>               
+      <view class="page_content_content margin_top_none">如果您不知道怎么提现？ </view>               
+      <view class="page_content_content margin_top_none">找我们的筹款指导客服就搞定一切了，让您的筹款更简单！</view>
+      <view class="page_content_content margin_top_20">客服电话：400-6063-400 </view>
+      <view class="page_content_content">志愿者联系电话：17785773863</view>
+  </view>
+</view>

@@ -1,0 +1,49 @@
+<!--pages/dripWaterRescue/customerService/customerService.wxml-->
+<view class='page'>
+  <view class='page_content'>
+    <view class='page_content_left _left'>
+      <view class='page_content_left_title'>滴水之家爱心款发放声明！</view>
+      <view class='page_content_left_label'>置顶</view>
+      <view class='page_content_left_text'>15评论</view>
+      <view class='page_content_left_text'>95天前</view>
+      <view class='page_content_left_image'>
+        <image src='/assets/images/jpg/jz1.jpg'></image>
+      </view>
+    </view>
+    <view class='page_content_right'>
+      <view class='page_content_right_image'>
+        <image src='/assets/images/jpg/jz1.jpg'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='page_content'>
+    <view class='page_content_left'>
+      <view class='page_content_left_title'>发起筹款项目需要哪些材料？</view>
+      <view class='page_content_left_label'>置顶</view>
+      <view class='page_content_left_text'>65评论</view>
+      <view class='page_content_left_text'>23天前</view>
+      <view class='page_content_left_image'>
+        <image src='/assets/images/jpg/jz1.jpg'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='page_content'>
+    <view class='page_content_left'>
+      <view class='page_content_left_title'>再次感谢亲朋好友</view>
+      <view class='page_content_left_text'>0评论</view>
+      <view class='page_content_left_text'>23天前</view>
+      <view class='page_content_left_image'>
+        <image src='/assets/images/jpg/jz1.jpg'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 发表  start-->
+<view class='fabiao'>
+  <image class='thank-letter-icon-float' src='/assets/images/jpg/jz1.jpg'/>
+  <view class="publish-new-float">发表</view>
+</view>

@@ -9,7 +9,11 @@
     "pages/index/largeIllnessRescue/patientInformation/patientInformation",
     "pages/index/largeIllnessRescue/patientInformation/receivablesInformation/receivablesInformation",
     "pages/dripWaterRescue/dripWaterRescue",
-    "pages/dripWaterMutualAid/dripWaterMutualAid"
+    "pages/dripWaterMutualAid/dripWaterMutualAid",
+    "pages/dripWaterRescue/recommendation/recommendation",
+    "pages/dripWaterRescue/applicationVolunteer/applicationVolunteer",
+    "pages/dripWaterRescue/customerService/customerService",
+    "pages/dripWaterRescue/customerService/customerServiceDetails/customerServiceDetails"
   ],
   "window": {
     "navigationBarTextStyle": "white",

@@ -2,9 +2,9 @@
 <view class='page'>
   <view class='page_myUserInfo' style='background-image:url(/assets/images/personal/bg.png)'>
     <view class='page_myUserInfo_image' >
-      <image src='/assets/images/dripWaterRescue/customer.png'></image>
+      <image src='{{userInfo.avatarUrl}}'></image>
     </view>
-    <view class='page_myUserInfo_userName'>昵称:零风</view>
+    <view class='page_myUserInfo_userName'>昵称:{{userInfo.nickName}}</view>
     <view class='page_myUserInfo_caozou'>
       <view class='page_myUserInfo_caozou_caozou'>
         <view class='page_myUserInfo_caozou_caozou_image'>

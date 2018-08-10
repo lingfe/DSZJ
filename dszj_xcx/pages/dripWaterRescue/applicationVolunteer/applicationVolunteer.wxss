@@ -1,0 +1,69 @@
+/* pages/dripWaterRescue/applicationVolunteer/applicationVolunteer.wxss */
+
+page{
+  background-color: #fff;
+}
+
+.page{
+  margin: 0;
+  padding: 0;
+}
+.page_from{
+  width: 100%;
+  margin-top: 30rpx;
+  border-top: 1rpx solid ;
+  border-bottom: 1rpx solid;
+}
+.page_from_input{
+  width: 100%;
+  height: 80rpx;
+}
+.page_from_input_title{
+  height: 80rpx;
+  width: 40%;
+  line-height: 80rpx;
+  float: left;
+  text-align: right;
+  font-size: 30rpx;
+}
+.page_from_input_input{
+  float: left;
+  height: 80rpx;
+  width: 50%;
+  margin-left: 5%;
+}
+
+input{
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  margin-top: 9rpx;
+  border-bottom: 1rpx solid #666;
+}
+button{
+  color: #0092ff;
+}
+
+
+.page_kuaishuTianxie{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0rpx;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+.sl{
+  width: 94%;
+  border-radius: 14rpx;
+  background-color: #fff;
+  margin: auto;
+}
+.image_sl_image{
+    width: 94%;
+  height: 700rpx;
+  position: fixed;
+  top: 200rpx;
+  border-radius: 16rpx;
+}

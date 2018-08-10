@@ -1,0 +1,31 @@
+<!--pages/dripWaterRescue/applicationVolunteer/applicationVolunteer.wxml-->
+<view class='page'>
+  <view class='page_from'>
+    <view class='page_from_input'>
+      <view class='page_from_input_title'>真实姓名:</view>
+      <view class='page_from_input_input'>
+        <input placeholder='您的真实姓名'></input>
+      </view>
+    </view>
+
+    <view class='page_from_input'>
+      <view class='page_from_input_title'>手机号码:</view>
+      <view class='page_from_input_input'>
+        <input placeholder='您的手机号码'></input>
+      </view>
+    </view>
+
+    <view class='page_from_btn'>
+      <button>提交申请</button>
+    </view>
+  </view>
+</view>
+
+
+<!-- 申请志愿者 start-->
+<view class='page_kuaishuTianxie' wx:if="{{is_display}}">
+  <view class='sl'>
+    <image class='image_sl_image' bindtap='bindtapis_display' src='/assets/images/sqzyz_ls.png'></image>
+  </view>
+</view>
+<!-- 申请志愿者 end-->

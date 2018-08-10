@@ -1,4 +1,7 @@
-// pages/dripWaterRescue/dripWaterRescue.js
+/**
+ * 推荐说明
+ */
+
 Page({
 
   /**
@@ -13,20 +16,6 @@ Page({
    */
   onLoad: function (options) {
   
-  },
-
-  //申请志愿者
-  applicationVolunteer:function(){
-    wx.navigateTo({
-      url: '/pages/dripWaterRescue/applicationVolunteer/applicationVolunteer',
-    })
-  },
-
-  //推荐说明
-  tuijingshouming:function(){
-    wx.navigateTo({
-      url: '/pages/dripWaterRescue/recommendation/recommendation',
-    })
   },
 
   /**

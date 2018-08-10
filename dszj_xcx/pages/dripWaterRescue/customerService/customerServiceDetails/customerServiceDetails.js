@@ -1,32 +1,18 @@
-// pages/dripWaterRescue/dripWaterRescue.js
+// pages/dripWaterRescue/customerService/customerServiceDetails/customerServiceDetails.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
-  },
 
-  //申请志愿者
-  applicationVolunteer:function(){
-    wx.navigateTo({
-      url: '/pages/dripWaterRescue/applicationVolunteer/applicationVolunteer',
-    })
-  },
 
-  //推荐说明
-  tuijingshouming:function(){
-    wx.navigateTo({
-      url: '/pages/dripWaterRescue/recommendation/recommendation',
-    })
   },
 
   /**
