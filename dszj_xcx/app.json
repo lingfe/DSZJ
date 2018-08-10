@@ -13,7 +13,8 @@
     "pages/dripWaterRescue/recommendation/recommendation",
     "pages/dripWaterRescue/applicationVolunteer/applicationVolunteer",
     "pages/dripWaterRescue/customerService/customerService",
-    "pages/dripWaterRescue/customerService/customerServiceDetails/customerServiceDetails"
+    "pages/dripWaterRescue/customerService/customerServiceDetails/customerServiceDetails",
+    "pages/myDrippingWater/myDrippingWater"
   ],
   "window": {
     "navigationBarTextStyle": "white",
@@ -47,8 +48,8 @@
         "selectedIconPath": "assets/images/ico/dsfz_1.png"
       },
       {
-        "pagePath": "pages/personal/personal",
-        "text": "个人",
+        "pagePath": "pages/myDrippingWater/myDrippingWater",
+        "text": "我的滴水", 
         "iconPath": "assets/images/ico/my_2.png",
         "selectedIconPath": "assets/images/ico/my_1.png"
       }

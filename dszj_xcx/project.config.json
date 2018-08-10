@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 10,
+			"current": 11,
 			"list": [
 				{
 					"id": -1,
@@ -99,7 +99,13 @@
 					"id": -1,
 					"name": "12",
 					"pathName": "pages/dripWaterRescue/customerService/customerServiceDetails/customerServiceDetails",
+					"query": "",
 					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "我的滴水",
+					"pathName": "pages/myDrippingWater/myDrippingWater"
 				}
 			]
 		}

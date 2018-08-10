@@ -1,0 +1,91 @@
+<!--pages/myDrippingWater/myDrippingWater.wxml-->
+<!--pages/personal/personal.wxml-->
+<view class='page'>
+  <view class='page_myUserInfo' style='background-image:url(/assets/images/personal/bg.png)'>
+    <view class='page_myUserInfo_image' >
+      <image src='{{userInfo.avatarUrl}}'></image>
+    </view>
+    <view class='page_myUserInfo_userName'>昵称:{{userInfo.nickName}}</view>
+    <view class='page_myUserInfo_caozou'>
+      <view class='page_myUserInfo_caozou_caozou'>
+        <view class='page_myUserInfo_caozou_caozou_image'>3</view>
+        <view class='page_myUserInfo_caozou_caozou_title'>帮助次数</view>
+      </view>
+
+      <view class='page_myUserInfo_caozou_caozou'>
+        <view class='page_myUserInfo_caozou_caozou_image'>120.00</view>
+        <view class='page_myUserInfo_caozou_caozou_title'>爱心金额(元)</view>
+      </view>
+
+      <view class='page_myUserInfo_caozou_caozou'>
+        <view class='page_myUserInfo_caozou_caozou_image'>120.00</view>
+        <view class='page_myUserInfo_caozou_caozou_title'>滴水爱心值</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 菜单  start-->
+  <view class='page_useCaidang'>
+    <view class='page_caidang'>
+      <view class='page_caidang_caidang'>
+        <view class='page_caidang_caidang_image'>
+          <image src='/assets/images/my/my_fq.png'></image>
+        </view>
+        <view class='page_caidang_caidang_title'>我的发起</view>
+        <view class='page_caidang_caidang_text'>祈福、救助 ></view>
+      </view>
+
+      <view class='page_caidang_caidang'>
+        <view class='page_caidang_caidang_image'>
+          <image src='/assets/images/my/my_gz.png'></image>
+        </view>
+        <view class='page_caidang_caidang_title'>我的关注</view>
+        <view class='page_caidang_caidang_text'>关注的项目 ></view>
+      </view>
+
+      <view class='page_caidang_caidang'>
+        <view class='page_caidang_caidang_image'>
+          <image src='/assets/images/my/my_ye.png'></image>
+        </view>
+        <view class='page_caidang_caidang_title'>我的余额</view>
+        <view class='page_caidang_caidang_text'>0.00元 ></view>
+      </view>
+
+      <view class='page_caidang_caidang border-no'>
+        <view class='page_caidang_caidang_image'>
+          <image src='/assets/images/my/my_yhk.png'></image>
+        </view>
+        <view class='page_caidang_caidang_title'>我的银行卡</view>
+        <view class='page_caidang_caidang_text'>未绑定 ></view>
+      </view>
+    </view>
+
+    <view class='page_caidang'>
+      <view class='page_caidang_caidang'>
+        <view class='page_caidang_caidang_image'>
+          <image src='/assets/images/my/zyzzx.png'></image>
+        </view>
+        <view class='page_caidang_caidang_title'>志愿者中心</view>
+        <view class='page_caidang_caidang_text'>成为爱心天使 ></view>
+      </view>
+
+      <view class='page_caidang_caidang'>
+        <view class='page_caidang_caidang_image'>
+          <image src='/assets/images/my/dsqt.png'></image>
+        </view>
+        <view class='page_caidang_caidang_title'>滴水请柬</view>
+        <view class='page_caidang_caidang_text'>请柬、礼单、礼金.. ></view>
+      </view>
+
+      <view class='page_caidang_caidang border-no'>
+        <view class='page_caidang_caidang_image'>
+          <image src='/assets/images/my/hepl.png'></image>
+        </view>
+        <view class='page_caidang_caidang_title'>帮助中心</view>
+        <view class='page_caidang_caidang_text'>如何筹款、提现.. ></view>
+      </view>
+    </view>
+
+  </view>
+</view>
+
