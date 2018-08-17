@@ -1,0 +1,184 @@
+// pages/dripLove/dripLove.js
+/**
+ * 滴水爱心
+ */
+var app= getApp();
+
+
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+    tabs: ["滴水救助", "滴水祈福", "滴水互助","+发起"],   //tab菜单列
+    activeIndex: 0,         //tab切换下标
+    sliderOffset: 0,        //坐标x
+    sliderLeft: 0,          //坐标y
+
+    pageSize: 10,            //每页显示的记录数量。
+    pageIndex:1,              //所在页页码，从1开始。
+    dsqz_list:[],               //滴水求助数据    
+  },
+
+  /**
+   * 请求获取滴水求助数据，
+   * 
+   * that: 当前page
+   */
+  getQiuzhuInfo:function(that){
+    //url
+    var url = app.config.dszjPath_web + "api/SeriousIllness/Paging";
+    //参数
+    var data={
+      token: wx.getStorageSync("token"),
+      "pageSize": that.data.pageSize,
+      "pageIndex": that.data.pageIndex
+    }
+    //发送请求
+    app.request.reqGet(url,data,function(res){
+      console.log(res);
+      var pageList = that.data.dsqz_list;
+      //得到数据
+      var list = res.data.Content.Records;
+      if (list == null || list.length == 0) {
+        //提示
+        wx.showToast({
+          title: '没有更多了!',
+          icon: 'loading',
+          duration: 1000,
+        });
+        return;
+      }
+
+      //循环遍历操作
+      for (var i = 0, lenI = list.length; i < lenI; ++i) {
+        if (!app.checkInput(list[i].cover)) 
+          list[i].cover = app.config.domain + list[i].cover.split(',')[0];
+        if (!app.checkInput(list[i].avatar))
+          list[i].avatar = app.config.domain + list[i].avatar;
+        
+        //添加到当前数组
+        pageList.push(list[i]);
+      }
+      //设置数据，提示框
+      that.setData({
+        dsqz_list: pageList
+      });
+    },function(res){
+      console.log(res);
+    });
+  },
+
+
+  //用户下拉动作
+  onPullDownRefresh: function () {
+    var that = this;
+    that.setData({
+      pageIndex: 1,         //所在页页码，从1开始。
+      dsqz_list: []        //滴水求助数据       
+    });
+    //请求获取滴水求助数据，
+    that.getQiuzhuInfo(that);
+    //下拉完成后执行回退
+    wx.stopPullDownRefresh();
+  },
+
+  //页面上拉触底事件的处理函数
+  onReachBottom: function () {
+    var that = this;
+    var num = that.data.pageIndex;
+    num++;
+    that.setData({
+      pageIndex: num,
+    });
+    //请求获取滴水求助数据，
+    that.getQiuzhuInfo(that);
+
+    //提示
+    wx.showToast({
+      title: '正在加载..',
+      icon: 'loading',
+      duration: 2000,
+    });
+  },
+
+  //tab点击切换
+  tabClick: function (e) {
+    //当前
+    var that = this;
+    // var name = e.currentTarget.dataset.name;
+    // if (name == "未处理") {
+    //   //未处理
+    //   that.getlemonRecovery(that, 0);
+    // } else if (name == "已处理") {
+    //   //已处理
+    //   that.getlemonRecovery(that, 1);
+    // } else if (name == "不处理") {
+    //   //不处理
+    //   that.getlemonRecovery(that, 2);
+    // }
+
+    //设置
+    that.setData({
+      list: null,
+      sliderOffset: e.currentTarget.offsetLeft,
+      activeIndex: e.currentTarget.id
+    });
+  },
+
+  //页面加载
+  onLoad: function (options) {
+    var that = this;
+    //请求获取滴水求助数据，
+    that.getQiuzhuInfo(that);
+
+    //设置tab
+    var sliderWidth = 50;
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          sliderLeft: (res.windowWidth / that.data.tabs.length - sliderWidth) / 2,
+          sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex
+        });
+      }
+    });
+  },
+
+  
+
+  /**
+   * 生命周期函数--监听页面初次渲染完成
+   */
+  onReady: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面显示
+   */
+  onShow: function () {
+
+  },
+
+  /**
+   * 生命周期函数--监听页面隐藏
+   */
+  onHide: function () {
+  
+  },
+
+  /**
+   * 生命周期函数--监听页面卸载
+   */
+  onUnload: function () {
+  
+  },
+
+  /**
+   * 用户点击右上角分享
+   */
+  onShareAppMessage: function () {
+  
+  }
+})

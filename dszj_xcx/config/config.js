@@ -9,9 +9,11 @@ export default {
 	// 本地环境
   //basePath_web: 'http://web.echsoft.cn/',
   //basePath_sys: 'http://sys.echsoft.cn/',
+  dszjPath_web:'http://192.168.3.4:8020/',
+
   // 上传图片地址   
   //domain: 'http://web.echsoft.cn/upload/doUpload',
-  
+  domain:'https://www.dishuihuzhu.cn',
   
   //获取图片
 	domainImage: "https://static.daho.club/static/upload/",

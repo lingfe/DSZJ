@@ -14,7 +14,10 @@
     "pages/dripWaterRescue/applicationVolunteer/applicationVolunteer",
     "pages/dripWaterRescue/customerService/customerService",
     "pages/dripWaterRescue/customerService/customerServiceDetails/customerServiceDetails",
-    "pages/myDrippingWater/myDrippingWater"
+    "pages/myDrippingWater/myDrippingWater",
+    "pages/dripLove/dripLove",
+    "pages/wxUserinfoLogin/wxUserinfoLogin",
+    "pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing"
   ],
   "window": {
     "navigationBarTextStyle": "white",
@@ -22,7 +25,8 @@
     "navigationBarBackgroundColor": "#0092ff",
     "backgroundColor": "#f8f8f8",
     "enablePullDownRefresh": true,
-    "backgroundTextStyle": "dark"
+    "backgroundTextStyle": "dark",
+    "onReachBottomDistance": "10"
   },
   "tabBar": {
     "color": "#C4C4C4",
@@ -48,8 +52,14 @@
         "selectedIconPath": "assets/images/ico/dsfz_1.png"
       },
       {
+        "pagePath": "pages/dripLove/dripLove",
+        "text": "滴水爱心",
+        "iconPath": "assets/images/ico/dsax2.png",
+        "selectedIconPath": "assets/images/ico/dsax1.png"
+      },
+      {
         "pagePath": "pages/myDrippingWater/myDrippingWater",
-        "text": "我的滴水", 
+        "text": "我的滴水",
         "iconPath": "assets/images/ico/my_2.png",
         "selectedIconPath": "assets/images/ico/my_1.png"
       }

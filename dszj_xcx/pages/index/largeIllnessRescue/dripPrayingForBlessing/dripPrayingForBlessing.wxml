@@ -1,0 +1,82 @@
+<!--pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing.wxml-->
+<view class='page'>
+  <!-- 项目信息 start-->
+  <view class='page_ProjectInfo'>
+    <view class="page_ProjectInfo_statu">该祈福未认证</view>
+    <view class='page_ProjectInfo_content'>
+      <view class='page_ProjectInfo_content_title'>
+        <view class='page_ProjectInfo_content_title_image'>
+          <image src='http://qzapp.qlogo.cn/qzapp/101414596/E9478CCDFC315EF3A583B83432A9C9C5/100'></image>
+        </view>
+        <view class='page_ProjectInfo_content_title_text'>零风</view>
+        <view class='page_ProjectInfo_content_title_text_last'>
+          祈福<span style="color: #F25B4B;font-weight: 500;">54</span>天
+        </view>
+      </view>
+
+      <view class='page_ProjectInfo_content_content'>
+        <view class='page_ProjectInfo_content_content_image'>
+          <image src='http://qzapp.qlogo.cn/qzapp/101414596/E9478CCDFC315EF3A583B83432A9C9C5/100'></image>
+        </view>
+        <view class='page_ProjectInfo_content_content_title'>3423423</view>
+      </view>
+      
+      <view class='page_ProjectInfo_content_content_remark'>祈福介绍：
+        <span style="color:#979797;">page_ProjectInfo_content_content_title_width_100page_ProjectInfo_content_content_title_width_100page_ProjectInfo_content_content_title_width_100</span>
+      </view>
+      <view class='page_ProjectInfo_content_content_image_width_100'>
+        <image src='https://www.dishuihuzhu.cn/uploads/User_cert/20180816/s_1405262_5b7530de5c182.jpg'></image>
+      </view>
+        
+      <view class='page_ProjectInfo_content_content_title_width_100'>资料证明</view>
+      <view class='page_ProjectInfo_content_content_bgText'>
+        <view class='page_ProjectInfo_content_content_bgText_title'>姓名：11</view>
+        <view class='page_ProjectInfo_content_content_bgText_text'>资料证明正在审核中</view>
+      </view>
+    </view>
+  </view>
+  <!-- 项目信息 end -->
+
+  <!-- 项目动态 start -->
+  <view class='page_dynamic'>
+    <view class='page_dynamic_'>
+        <view class='page_dynamic_image'>
+          <image src='http://qzapp.qlogo.cn/qzapp/101414596/E9478CCDFC315EF3A583B83432A9C9C5/100'></image>
+        </view>
+        <view class='page_dynamic_text'>
+          <view class='page_dynamic_text_title'>零风</view>
+          <view class='page_dynamic_text_text'>5分钟前</view>
+          <view class='page_dynamic_text_text'>祈福发起</view>
+          <view class='page_dynamic_text_image'>
+            <image src='http://qzapp.qlogo.cn/qzapp/101414596/E9478CCDFC315EF3A583B83432A9C9C5/100'></image>
+          </view>
+        </view>
+    </view>
+  </view>
+  <!-- 项目动态 end -->
+
+  <!-- ta的祈福 start -->
+  <view class='page_tadeQfu'>
+    <view class='page_tadeQfu_title'>
+      已获得<abbr>0</abbr>人帮助 / 爱心款<abbr>0.00</abbr>元
+    </view>
+    <view class='page_tadeQfu_text'>
+      <view class='page_tadeQfu_text_title'>TA的祈福：</view>
+      <view class='page_tadeQfu_text_text'>已有<abbr>0</abbr>人为TA祈福</view>
+    </view>
+    <view class='page_tadeQfu_txtButton'>暂无祈福记录</view>
+  </view>
+  <!-- ta的祈福 end -->
+</view>
+
+<!-- 为ta祈福  start-->
+<view class="button-box">
+    <view class="btnToThankLetter">
+      <image src='http://qzapp.qlogo.cn/qzapp/101414596/E9478CCDFC315EF3A583B83432A9C9C5/100'></image>
+    </view>
+    <view class="btnToThankLetter">
+      <image src='http://qzapp.qlogo.cn/qzapp/101414596/E9478CCDFC315EF3A583B83432A9C9C5/100'></image>
+    </view>
+    <view class="button-pray">为TA祈福</view>
+</view>
+<!-- 为ta祈福  end>

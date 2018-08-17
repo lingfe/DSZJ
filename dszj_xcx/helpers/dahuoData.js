@@ -1,5 +1,26 @@
 
 export default {
+  indexData:[{
+    img:'http://pic.yupoo.com/lingfe/abf32a04/14181035.jpg',
+    title:'意外受伤，病魔无情！请求好心人大家帮帮我年迈的父亲！',
+    prices: 502115
+  }, {
+      img: 'http://pic.yupoo.com/lingfe/7c5347ec/a6cb160e.jpg',
+      title: '百善孝为先！恳求好心人帮帮我急需做手术的父亲！',
+      prices: 351202
+  }, {
+      img: 'http://pic.yupoo.com/lingfe/a1dca7db/6645467a.jpg',
+      title: '百善孝为先，妈妈您要坚强，爸爸和我还有妹妹会一直陪着你！',
+      prices: 305210
+  }, {
+      img: 'http://pic.yupoo.com/lingfe/23ad9e20/10fd84f2.jpg',
+      title: '母亲 儿女再苦再难 也要治好你 报答母亲的养育之恩!',
+      prices: 452153
+  }, {
+      img: 'http://pic.yupoo.com/lingfe/ca5c8178/701f4a72.jpg',
+      title: '我在与这该死的癌症病魔做斗争，大家帮帮我吧！',
+      prices: 206530
+  }],
   throwInTheCityData: [{        //投放城市数据   
     name: "华东地区",
     index: 0,

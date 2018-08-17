@@ -1,108 +1,238 @@
 
 
 <view class='page'>
-  <!-- 标题   start-->
-  <view class='page_title'>
-    <view class='page_title_text' bindtap='btnClose'>点击此处—滴水之家帮您快速填写筹款信息</view>
-  </view>
-  <!-- 标题   end-->
+    <!-- 菜单  start -->
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" 
+        class="weui-navbar__item {{activeIndex == index ? 'select_text' : ''}}" 
+        data-name="{{item}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" 
+      style="background-color:#0092ff;left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <!-- 菜单  end -->
 
-  <!-- 筹款金额   start-->
-  <view class='page_Fundraising_amount'>
-    <view class='page_Fundraising_title_text'>
-      <view class='page_Fundraising_title_text_title'>目标金额</view>
-    </view>
-    <view class='page_Fundraising_amount_input'>
-      <input type='text' placeholder='请 输 入 筹 款 金 额'></input>
-      <label>元</label>
-    </view>
-  </view>
-  <!-- 筹款金额   end-->
+    <!-- 内容  start-->
+    <view class="weui-tab__panel">
+      <!-- 大病救助  start-->
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <view class='page'>
+          <!-- 标题   start-->
+          <view class='page_title'>
+            <view class='page_title_text' bindtap='btnClose'>点击此处—滴水之家帮您快速填写筹款信息</view>
+          </view>
+          <!-- 标题   end-->
 
-  <!-- 筹款标题   start-->
-  <view class='page_Fundraising_title'>
-    <view class='page_Fundraising_title_text'>
-      <view class='page_Fundraising_title_text_title'>筹款标题</view>
-      <view class='page_Fundraising_title_text_text' bindtap='bindtapTitle_isDisplay'>参考示例</view>
-    </view>
-    <view class='page_Fundraising_title_input input1'>
-      <input type='text' placeholder='好的标题可以增加筹款金额（限30字）'></input>
-    </view>
-  </view>
-  <!-- 筹款标题   end-->
-
-  <!-- 联系人电话   start-->
-  <view class='page_Fundraising_title'>
-    <view class='page_Fundraising_title_text'>
-      <view class='page_Fundraising_title_text_title'>联系人电话</view>
-    </view>
-    <view class='page_Fundraising_title_input input2'>
-      <input type='text' placeholder='请输入联系人手机号码'></input>
-    </view>
-  </view>
-  <!-- 联系人电话   end-->
-
-  <!-- 求助说明   start-->
-  <view class='page_Fundraising_textarea'>
-    <view class='page_Fundraising_title_text'>
-      <view class='page_Fundraising_title_text_title'>求助说明</view>
-      <view class='page_Fundraising_title_text_text' bindtap='qz_isDisplay'>参考示例</view>
-    </view>
-    <view class='page_Fundraising_title_input_textarea'>
-      <textarea auto-focus="true" 
-      name="content" placeholder='请详细填写筹款原因，筹款目的，自身状况和善款用途等信息。（不少于10字）'></textarea>
-    </view>
-  </view>
-  <!-- 求助说明   end-->
-
-  <!-- 添加图片 start-->
-  <view class='page_Fundraising_image'>
-    <view class='page_Fundraising_image_title'>
-      <view class='page_Fundraising_image_title_title'>上传图片</view>
-      <view class='page_Fundraising_image_title_text' bindtap='image_isDisplay'>参考示例</view>
-    </view>
-    <view class="image-iamge">
-      <view class='page_Fundraising_image_text'>真实感人的照片，更容易获得用户的信任，
-        能更快筹到钱（上传阳光的照片，切勿上传血腥等负面心情照片）
-      </view>
-      <!-- 上传图片  start -->
-      <view class="">
-        <view class="weui-cell__hd">
-          <view class="weui-uploader">
-            <view class="weui-uploader__hd">
-              <view class="weui-uploader__title title"></view>
-              <view class="weui-uploader__info">{{files.length}}/6</view>
+          <!-- 筹款金额   start-->
+          <view class='page_Fundraising_amount'>
+            <view class='page_Fundraising_title_text'>
+              <view class='page_Fundraising_title_text_title'>目标金额</view>
             </view>
-            <view class="weui-uploader__bd">
-              <view class="weui-uploader__files" id="uploaderFiles">
-                <block wx:for="{{files}}" wx:key="*this">
-                  <view wx:if="{{item !=null}}" class="weui-uploader__file" bindlongtap="previewImage" id="{{item}}">
-                    <image class="img_tt" src="/assets/images/delete.png" bindtouchend="bindtapImageDelete" data-img="{{item}}" />
-                    <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+            <view class='page_Fundraising_amount_input'>
+              <input type='text' placeholder='请 输 入 筹 款 金 额'></input>
+              <label>元</label>
+            </view>
+          </view>
+          <!-- 筹款金额   end-->
+
+          <!-- 筹款标题   start-->
+          <view class='page_Fundraising_title'>
+            <view class='page_Fundraising_title_text'>
+              <view class='page_Fundraising_title_text_title'>筹款标题</view>
+              <view class='page_Fundraising_title_text_text' bindtap='bindtapTitle_isDisplay'>参考示例</view>
+            </view>
+            <view class='page_Fundraising_title_input input1'>
+              <input type='text' placeholder='好的标题可以增加筹款金额（限30字）'></input>
+            </view>
+          </view>
+          <!-- 筹款标题   end-->
+
+          <!-- 联系人电话   start-->
+          <view class='page_Fundraising_title'>
+            <view class='page_Fundraising_title_text'>
+              <view class='page_Fundraising_title_text_title'>联系人电话</view>
+            </view>
+            <view class='page_Fundraising_title_input input2'>
+              <input type='text' placeholder='请输入联系人手机号码'></input>
+            </view>
+          </view>
+          <!-- 联系人电话   end-->
+
+          <!-- 求助说明   start-->
+          <view class='page_Fundraising_textarea'>
+            <view class='page_Fundraising_title_text'>
+              <view class='page_Fundraising_title_text_title'>求助说明</view>
+              <view class='page_Fundraising_title_text_text' bindtap='qz_isDisplay'>参考示例</view>
+            </view>
+            <view class='page_Fundraising_title_input_textarea'>
+              <textarea auto-focus="true" 
+              name="content" placeholder='请详细填写筹款原因，筹款目的，自身状况和善款用途等信息。（不少于10字）'></textarea>
+            </view>
+          </view>
+          <!-- 求助说明   end-->
+
+          <!-- 添加图片 start-->
+          <view class='page_Fundraising_image'>
+            <view class='page_Fundraising_image_title'>
+              <view class='page_Fundraising_image_title_title'>上传图片</view>
+              <view class='page_Fundraising_image_title_text' bindtap='image_isDisplay'>参考示例</view>
+            </view>
+            <view class="image-iamge">
+              <view class='page_Fundraising_image_text'>真实感人的照片，更容易获得用户的信任，
+                能更快筹到钱（上传阳光的照片，切勿上传血腥等负面心情照片）
+              </view>
+              <!-- 上传图片  start -->
+              <view class="">
+                <view class="weui-cell__hd">
+                  <view class="weui-uploader">
+                    <view class="weui-uploader__hd">
+                      <view class="weui-uploader__title title"></view>
+                      <view class="weui-uploader__info">{{files.length}}/6</view>
+                    </view>
+                    <view class="weui-uploader__bd">
+                      <view class="weui-uploader__files" id="uploaderFiles">
+                        <block wx:for="{{files}}" wx:key="*this">
+                          <view wx:if="{{item !=null}}" class="weui-uploader__file" bindlongtap="previewImage" id="{{item}}">
+                            <image class="img_tt" src="/assets/images/delete.png" bindtouchend="bindtapImageDelete" data-img="{{item}}" />
+                            <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                          </view>
+                        </block>
+                      </view>
+                      <view class="weui-uploader__input-box" wx:if="{{files.length!=6}}">
+                        <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                      </view>
+                    </view>
                   </view>
-                </block>
+                </view>
               </view>
-              <view class="weui-uploader__input-box" wx:if="{{files.length!=6}}">
-                <view class="weui-uploader__input" bindtap="chooseImage"></view>
-              </view>
+              <!-- 上传图片  end -->
             </view>
+          </view>
+          <!-- 添加图片   end-->
+
+          <!-- 下一步 start -->
+          <view class="weui-btn-area">
+            <button class="weui-btn" bindtap='bindtapSubmit' formType="submit" type="primary">下一步</button>
+          </view>
+          <!-- 下一步  end -->
+
+          <view class='page_text'>
+            <view class='page_text_text'>客户电话：400-6063-400</view>
           </view>
         </view>
       </view>
-      <!-- 上传图片  end -->
+      <!-- 大病救助  end>
+
+      <!-- 发起祈福  start-->
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        <view class='page'>
+          <!-- 祈福标题   start-->
+          <view class='page_Fundraising_title'>
+            <view class='page_Fundraising_title_text'>
+              <view class='page_Fundraising_title_text_title'>祈福标题</view>
+            </view>
+            <view class='page_Fundraising_title_input input1'>
+              <input type='text' placeholder='好标题可以收到更多人的祈福'></input>
+            </view>
+          </view>
+          <!-- 祈福标题   end-->
+
+          <!-- 祈福人姓名   start-->
+          <view class='page_Fundraising_title'>
+            <view class='page_Fundraising_title_text'>
+              <view class='page_Fundraising_title_text_title'>祈福人姓名</view>
+            </view>
+            <view class='page_Fundraising_title_input input1'>
+              <input type='text' placeholder='请输入祈福人姓名'></input>
+            </view>
+          </view>
+          <!-- 祈福人姓名   end-->
+
+          <!-- 祈福人手机号  start-->
+          <view class='page_Fundraising_title'>
+            <view class='page_Fundraising_title_text'>
+              <view class='page_Fundraising_title_text_title'>祈福人手机号</view>
+            </view>
+            <view class='page_Fundraising_title_input input2'>
+              <input type='text' placeholder='请输入祈福人手机号'></input>
+            </view>
+          </view>
+          <!-- 祈福人手机号   end-->
+
+          <!-- 祈福人地址   start-->
+          <view class='page_Fundraising_title'>
+            <view class='page_Fundraising_title_text'>
+              <view class='page_Fundraising_title_text_title'>祈福人地址</view>
+            </view>
+            <view class='page_Fundraising_title_input input1'>
+              <input type='text' placeholder='请输入祈福人地址'></input>
+            </view>
+          </view>
+          <!-- 祈福人地址   end-->
+
+          <!-- 祈福说明   start-->
+          <view class='page_Fundraising_textarea'>
+            <view class='page_Fundraising_title_text'>
+              <view class='page_Fundraising_title_text_title'>祈福说明</view>
+            </view>
+            <view class='page_Fundraising_title_input_textarea'>
+              <textarea auto-focus="true" 
+              name="content" placeholder='请详细描述祈福人情况，这样能收获更多人的关心。（不少于10个字）'></textarea>
+            </view>
+          </view>
+          <!-- 求助说明   end-->
+
+          <!-- 添加图片 start-->
+          <view class='page_Fundraising_image'>
+            <view class='page_Fundraising_image_title'>
+              <view class='page_Fundraising_image_title_title'>上传图片</view>
+            </view>
+            <view class="image-iamge">
+              <view class='page_Fundraising_image_text'>
+                请上传真实感人的照片，这样能收获更多人的祈福。
+              </view>
+              <!-- 上传图片  start -->
+              <view class="">
+                <view class="weui-cell__hd">
+                  <view class="weui-uploader">
+                    <view class="weui-uploader__hd">
+                      <view class="weui-uploader__title title"></view>
+                      <view class="weui-uploader__info">{{files.length}}/6</view>
+                    </view>
+                    <view class="weui-uploader__bd">
+                      <view class="weui-uploader__files" id="uploaderFiles">
+                        <block wx:for="{{files}}" wx:key="*this">
+                          <view wx:if="{{item !=null}}" class="weui-uploader__file" bindlongtap="previewImage" id="{{item}}">
+                            <image class="img_tt" src="/assets/images/delete.png" bindtouchend="bindtapImageDelete" data-img="{{item}}" />
+                            <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                          </view>
+                        </block>
+                      </view>
+                      <view class="weui-uploader__input-box" wx:if="{{files.length!=6}}">
+                        <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <!-- 上传图片  end -->
+            </view>
+          </view>
+          <!-- 添加图片   end-->
+
+          <!-- 提交 start -->
+          <view class="weui-btn-area">
+            <button class="weui-btn" bindtap='bindtapSubmit' formType="submit" type="primary">提交</button>
+          </view>
+          <!-- 提交  end -->
+        </view>
+      </view>
+      <!-- 发起祈福  end-->
     </view>
-  </view>
-  <!-- 添加图片   end-->
-
-  <!-- 下一步 start -->
-  <view class="weui-btn-area">
-    <button class="weui-btn" bindtap='bindtapSubmit' formType="submit" type="primary">下一步</button>
-  </view>
-  <!-- 下一步  end -->
-
-  <view class='page_text'>
-    <view class='page_text_text'>客户电话：400-6063-400</view>
-  </view>
+    <!-- 内容  end-->
 </view>
 
 <!-- 快速填写 start -->

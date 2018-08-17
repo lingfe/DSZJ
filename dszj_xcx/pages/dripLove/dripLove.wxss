@@ -1,0 +1,421 @@
+/* pages/dripLove/dripLove.wxss */
+
+ /*菜单  start*/
+.select_text{
+  text-align: center;
+  color: #0092ff;
+}
+.weui-navbar__title {
+  display:inline-block;
+  font-size:26rpx;
+  max-width:8em;
+  width:auto;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  word-wrap:normal;
+
+}
+.weui-navbar__item {
+  position:relative;
+  display:block;
+  -webkit-box-flex:1;
+  -webkit-flex:1;
+  flex:1;
+  padding:6px 0;
+  text-align:center;
+  font-size:0;
+  border-right: 1rpx #eee solid;
+}
+.weui-navbar__slider {
+  position:absolute;
+  content:" ";
+  left:0;
+  bottom:0;
+  width:2.5em;
+  height:4rpx;
+  background-color:#1aad19;
+  -webkit-transition:-webkit-transform .3s;
+  transition:-webkit-transform .3s;
+  transition:transform .3s;
+  transition:transform .3s,-webkit-transform .3s;
+}
+/* 菜单  end*/
+
+/* 滴水救助 start*/
+.dripWaterRescue_page{
+  padding: 0;
+  margin: 0;
+}
+.dripWaterRescue_page_image{
+  width: 100%;
+  height: 200rpx;
+  background-color: #fff;
+}
+.dripWaterRescue_page_image image{
+  width: 42%;
+  height: 160rpx;
+  margin-top: 20rpx;
+  margin-left: 5%;
+}
+
+/*推荐展示 start*/
+.page_tuijing{
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+  border-bottom: 1rpx solid #efeff4;
+}
+.page_tuijing_title{
+  width: 40%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 30rpx;
+  float: left;
+}
+.page_tuijing_text{
+  width: 30%;
+  height: 100rpx;
+  float: left;
+  color: #999;
+}
+.page_tuijing_text_image{
+  width: 16%;
+  float: left;
+  margin-right: 15rpx;
+}
+.page_tuijing_text_image image{
+  width: 100%;
+  height: 30rpx;
+  margin-top: 35rpx;
+  border-radius: 50%;
+}
+.page_tuijing_text_text{
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 70%;
+  font-size: 28rpx;
+  float: left;
+}
+
+/*模块*/
+.page_model{
+  width: 94%;
+  background-color: #fff;
+  border: 1rpx solid #efeff4;
+  border-radius: 10rpx;
+  margin: auto;
+  margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+.page_model_title{
+  width: 94%;
+  height: 100rpx;
+  font-size: 28rpx;
+  margin: auto;
+}
+.page_model_title_image{
+  width: 14%;
+  height: 100rpx;
+  float: left;
+}
+.page_model_title_image image{
+  width: 100%;
+  height: 80rpx;
+  margin-top: 10rpx;
+  border-radius: 50%;
+}
+.page_model_title_text{
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 40%;
+  float: left;
+  margin-left: 2%; 
+}
+.align_right{
+  text-align: right;
+}
+.page_model_content{
+  width: 100%;
+  height: 510rpx;
+}
+.page_model_content_left{
+  width: 100%;
+  height: 300rpx;
+  padding-bottom: 0rpx;
+}
+.page_model_content_left image{
+  width: 100%;
+  margin: auto;
+  height: 300rpx;
+}
+.page_model_content_right{
+  width:100%;
+  height: 220rpx;
+
+}
+.page_model_content_right_title{
+  width: 94%;
+  font-size: 34rpx;
+  margin: auto;
+  margin-top: 10rpx;
+}
+.page_model_content_right_text{
+  width: 94%;
+  font-size: 26rpx;
+  color: #8f8f94;
+  margin: auto;
+  margin-top: 10rpx;
+
+}
+.page_model_content_right_text_text{
+  width: 33%;
+  text-align: center;
+  float: left;
+  border-right: 1rpx solid;
+}
+.no-right{
+  border-right:none;
+}
+.text-danger{
+  color: #F25B4B !important
+}
+/* 第水救助 end*/
+
+
+/* 滴水祈福 start*/
+.dripQifu_page_model{
+  width: 94%;
+  background-color: #fff;
+  border: 1rpx solid #efeff4;
+  border-radius: 10rpx;
+  margin: auto;
+  margin-bottom: 20rpx;
+  padding-bottom: 20rpx;
+}
+.dripQifu_page_model_title{
+  width: 94%;
+  height: 100rpx;
+  font-size: 28rpx;
+  margin: auto;
+}
+.dripQifu_page_model_title_image{
+  width: 14%;
+  height: 100rpx;
+  float: left;
+}
+.dripQifu_page_model_title_image image{
+  width: 100%;
+  height: 80rpx;
+  margin-top: 10rpx;
+  border-radius: 50%;
+}
+.dripQifu_page_model_title_text{
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 40%;
+  float: left;
+  margin-left: 2%; 
+}
+.dripQifu_page_align_right{
+  text-align: right;
+}
+.dripQifu_page_model_content{
+  width: 100%;
+  height: 450rpx;
+}
+.dripQifu_page_model_content_left{
+  width: 100%;
+  height: 220rpx;
+  padding-bottom: 0rpx;
+}
+.dripQifu_page_model_content_left image{
+  width: 30%;
+  margin: auto;
+  height: 200rpx;
+  margin-left: 2.5%;
+  margin-top: 10rpx;
+}
+.dripQifu_page_model_content_right{
+  width:100%;
+  height: 260rpx;
+
+}
+.dripQifu_page_model_content_right_title{
+  width: 94%;
+  font-size: 34rpx;
+  margin: auto;
+  margin-top: 10rpx;
+}
+.dripQifu_page_model_content_right_text{
+  width: 94%;
+  font-size: 26rpx;
+  color: #8f8f94;
+  margin: auto;
+  margin-top: 10rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #efeff4;
+}
+.dripQifu_page_model_content_right_text_text{
+  width: 33%;
+  text-align: center;
+  float: left;
+}
+.dripQifu_page_no-right{
+  border-right:none;
+}
+.dripQifu_page_text-danger{
+  color: #F25B4B !important
+}
+/* 滴水祈福 end*/
+
+
+/* 滴水互助 start*/
+
+.dripWaterMutualAid_page{
+  padding: 0;
+  margin: 0;
+  background-color: #efeff4;
+}
+.dripWaterMutualAid_page_image{
+  width: 100%;
+  height: 155rpx;
+}
+.dripWaterMutualAid_page_image image{
+  width: 100%;
+  height: 155rpx;
+}
+
+.dripWaterMutualAid_page_content{
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.dripWaterMutualAid_page_content_image{
+  width: 94%;
+  margin: 0 auto;
+  height: 240rpx;
+}
+.dripWaterMutualAid_page_content_image image{
+  width: 100%;
+  height: 240rpx;
+}
+.dripWaterMutualAid_page_content_content{
+  width: 100%;
+  height: 100rpx;
+  border-top: 1rpx solid #efeff4;
+}
+.dripWaterMutualAid_page_content_content_text{
+  width: 40%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  text-align: center;
+  float: left;
+}
+font{
+  color: #ea3232;
+}
+.dripWaterMutualAid_page_content_content_image{
+  float: right;
+  width: 60%;
+  height: 100rpx;
+}
+.dripWaterMutualAid_page_content_content_image_text{
+  width: 30%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  float: right;
+  margin-left: 10rpx;
+}
+.dripWaterMutualAid_page_image_text{
+  width: 10%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 40rpx;
+  float: right;
+  margin-left: 30rpx;
+}
+.dripWaterMutualAid_page_content_content_image_image{
+  width: 30%;
+  height: 100rpx;
+  float: right;
+  margin-left: 10rpx;
+}
+.dripWaterMutualAid_page_content_content_image_image image{
+  width: 33%;
+  height: 60rpx;
+  border-radius: 25rpx;
+  margin-top: 20rpx;
+}
+
+
+.dripWaterMutualAid_page_model{
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.dripWaterMutualAid_page_model_content{
+  width: 100%;
+  height: 290rpx;
+}
+.dripWaterMutualAid_page_model_content_left{
+  width: 30%;
+  height: 230rpx;
+  float: left;
+  padding: 30rpx;
+  padding-bottom: 0rpx;
+}
+.dripWaterMutualAid_page_model_content_left image{
+  width: 100%;
+  margin: auto;
+  height: 230rpx;
+}
+.dripWaterMutualAid_page_model_content_right{
+  float: left;
+  width: 62%;
+  height: 260rpx;
+}
+.dripWaterMutualAid_page_model_content_right_title{
+  width: 100%;
+  font-size: 40rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.dripWaterMutualAid_page_model_content_right_text{
+  width: 100%;
+  font-size: 30rpx;
+  height: 62rpx;
+  line-height: 62rpx;
+  color: #8f8f94;
+}
+.dripWaterMutualAid_page_model_btn{
+  width: 100%;
+  height: 80rpx;
+}
+.dripWaterMutualAid_page_model_btn_text{
+  width: 70%;
+  font-size: 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  float: left;
+  padding-left: 30rpx;
+}
+.dripWaterMutualAid_page_model_btn_btn{
+  width: 20%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  float: left;
+  text-align: center;
+  background: #ff9049!important;
+  border: 1px solid #ff9049!important;
+  border-radius:6rpx;
+  color: #fff;
+}
+/* 滴水互助 end*/

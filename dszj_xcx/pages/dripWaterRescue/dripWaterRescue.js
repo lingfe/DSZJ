@@ -1,4 +1,7 @@
 // pages/dripWaterRescue/dripWaterRescue.js
+/**
+ * 滴水救助
+ */
 Page({
 
   /**

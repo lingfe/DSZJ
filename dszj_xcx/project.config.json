@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 11,
+			"current": 14,
 			"list": [
 				{
 					"id": -1,
@@ -105,7 +105,26 @@
 				{
 					"id": -1,
 					"name": "我的滴水",
-					"pathName": "pages/myDrippingWater/myDrippingWater"
+					"pathName": "pages/myDrippingWater/myDrippingWater",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "滴水爱心",
+					"pathName": "pages/dripLove/dripLove",
+					"query": ""
+				},
+				{
+					"id": 13,
+					"name": "登陆",
+					"pathName": "pages/wxUserinfoLogin/wxUserinfoLogin",
+					"query": "",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "滴水祈福",
+					"pathName": "pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing"
 				}
 			]
 		}

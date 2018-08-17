@@ -19,7 +19,37 @@ Page({
     title_isDisplay:false,
     qz_isDisplay:false,
     image_isDisplay:false,
+
+    tabs: ["大病救助", "发起祈福"],   //tab菜单列
+    activeIndex: 0,         //tab切换下标
+    sliderOffset: 0,        //坐标x
+    sliderLeft: 0,          //坐标y
   },
+
+  //tab点击切换
+  tabClick: function (e) {
+    //当前
+    var that = this;
+    // var name = e.currentTarget.dataset.name;
+    // if (name == "未处理") {
+    //   //未处理
+    //   that.getlemonRecovery(that, 0);
+    // } else if (name == "已处理") {
+    //   //已处理
+    //   that.getlemonRecovery(that, 1);
+    // } else if (name == "不处理") {
+    //   //不处理
+    //   that.getlemonRecovery(that, 2);
+    // }
+
+    //设置
+    that.setData({
+      list: null,
+      sliderOffset: e.currentTarget.offsetLeft,
+      activeIndex: e.currentTarget.id
+    });
+  },
+
   image_isDisplay: function (e) {
     this.setData({
       image_isDisplay: this.data.image_isDisplay == false ? true : false,
@@ -150,7 +180,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this;
+
+    //设置tab
+    var sliderWidth = 50;
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          sliderLeft: (res.windowWidth / that.data.tabs.length - sliderWidth) / 2,
+          sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex
+        });
+      }
+    });
   },
 
   /**

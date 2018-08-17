@@ -1,0 +1,233 @@
+<!--pages/dripLove/dripLove.wxml-->
+<view class='page'>
+    <!-- 菜单  start -->
+    <view class="weui-navbar" style="border-bottom:none;padding-top:20rpx;">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" 
+        class="weui-navbar__item {{activeIndex == index ? 'select_text' : ''}}" 
+        data-name="{{item}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" 
+      style="background-color:#0092ff;left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <!-- 菜单  end -->
+
+    <!-- 内容  start-->
+    <view class="weui-tab__panel">
+      <!-- 滴水救助  start-->
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <view class='dripWaterRescue_page'>
+          <view class='dripWaterRescue_page_image'>
+            <image src='/assets/images/dripWaterRescue/customer.png'></image>
+            <image src='/assets/images/dripWaterRescue/Thank.png'></image>
+          </view>
+
+          <!--推荐展示title start-->
+          <view class='page_tuijing'>
+            <view class='page_tuijing_title'>推荐展示</view>
+            <view class='page_tuijing_text'>
+              <view class='page_tuijing_text_image'>
+                <image src='/assets/images/dripWaterRescue/Thank.png'></image>
+              </view>
+              <view class='page_tuijing_text_text' bindtap='tuijingshouming'>推荐说明</view>
+            </view>
+            <view class='page_tuijing_text'>
+              <view class='page_tuijing_text_image'>
+                <image src='/assets/images/dripWaterRescue/Thank.png'></image>
+              </view>
+              <view class='page_tuijing_text_text' bindtap='applicationVolunteer'>申请志愿者</view>
+            </view>
+          </view>
+
+          <view class='page_model' wx:for="{{dsqz_list}}" wx:key="*this">
+            <view class='page_model_content'>
+              <view class='page_model_content_left'>
+                <image src='{{item.cover}}'></image>
+              </view>
+              <view class='page_model_content_right'>
+                <view class='page_model_content_right_title'>{{item.title}}</view>
+                
+                <view class='page_model_content_right_text'>
+                  <progress percent="{{item.percent}}" activeColor="#0092ff" />
+                </view>
+                <view class='page_model_content_right_text'>
+                  <view class='page_model_content_right_text_text'>
+                    目标<span class="text-danger">{{item.total_amount}}</span>元
+                  </view>
+                  <view class='page_model_content_right_text_text'>
+                    已筹<span class="text-danger">{{item.total_money}}</span>元
+                  </view>
+                  <view class='page_model_content_right_text_text no-right'>
+                    <span class="text-danger">{{item.total_num}}</span> 次支持
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class='page_model_title'>
+              <view class='page_model_title_image'>
+                <image name="referrer" content="no-referrer" src='{{item.avatar}}'></image>
+              </view>
+              <view class='page_model_title_text'>{{item.mobile}}</view>
+              <view class='page_model_title_text align_right'>
+                <span style="color: #F25B4B;font-weight: 500;">{{item.verify_count}}</span> 人证实
+                <span style="color: #fff;background-color: #FA9A0C;width: 40px;height: 14px;line-height: 17px;text-align: center;">
+                  已审核
+                </span>
+              </view>
+            </view>
+          </view>
+
+          <view class='page_model'>
+            <view class='page_model_content'>
+              <view class='page_model_content_left'>
+                <image src='/assets/images/jpg/jz1.jpg'></image>
+              </view>
+              <view class='page_model_content_right'>
+                <view class='page_model_content_right_title'>中青年抗癌计划中青年抗癌计划中青年抗癌计划</view>
+                
+                <view class='page_model_content_right_text'>
+                  <progress percent="20" activeColor="#0092ff"/>
+                </view>
+                <view class='page_model_content_right_text'>
+                  <view class='page_model_content_right_text_text'>
+                    目标<span class="text-danger">200000.00</span>元
+                  </view>
+                  <view class='page_model_content_right_text_text'>
+                    已筹<span class="text-danger">16912.00</span>元
+                  </view>
+                  <view class='page_model_content_right_text_text no-right'>
+                    <span class="text-danger">735</span> 次支持
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class='page_model_title'>
+              <view class='page_model_title_image'>
+                <image src='/assets/images/dripWaterRescue/Thank.png'></image>
+              </view>
+              <view class='page_model_title_text'>123******231</view>
+              <view class='page_model_title_text align_right'>
+                <span style="color: #F25B4B;font-weight: 500;">54</span> 人证实
+                <span style="color: #fff;background-color: #FA9A0C;width: 40px;height: 14px;line-height: 17px;text-align: center;">
+                  已审核
+                </span>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <!-- 滴水救助  end-->
+
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class='dripQifu_page_model'>
+            <view class='dripQifu_page_model_content'>
+              <view class='dripQifu_page_model_content_left'>
+                <image src='/assets/images/jpg/jz1.jpg'></image>
+                <image src='/assets/images/jpg/jz1.jpg'></image>
+                <image src='/assets/images/jpg/jz1.jpg'></image>
+              </view>
+              <view class='dripQifu_page_model_content_right'>
+                <view class='dripQifu_page_model_content_right_title'>中青年抗癌计划中青年抗癌计划中青年抗癌计划</view>
+                <view class='dripQifu_page_model_content_right_text'>
+                  <view class='dripQifu_page_model_content_right_text_text'>
+                    目标<span class="dripQifu_page_text-danger">200000.00</span>元
+                  </view>
+                  <view class='dripQifu_page_model_content_right_text_text'>
+                    已筹<span class="dripQifu_page_text-danger">16912.00</span>元
+                  </view>
+                  <view class='dripQifu_page_model_content_right_text_text dripQifu_page_no-right'>
+                    <span class="dripQifu_page_text-danger">735</span> 次支持
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class='dripQifu_page_model_title'>
+              <view class='dripQifu_page_model_title_image'>
+                <image src='/assets/images/dripWaterRescue/Thank.png'></image>
+              </view>
+              <view class='dripQifu_page_model_title_text'>123******231</view>
+              <view class='dripQifu_page_model_title_text dripQifu_page_align_right'>
+                <span style="color: #F25B4B;font-weight: 500;">54</span> 人证实
+                <span style="color: #fff;background-color: #FA9A0C;width: 40px;height: 14px;line-height: 17px;text-align: center;">
+                  已审核
+                </span>
+              </view>
+            </view>
+          </view>
+      </view>
+
+      <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+        <view class='dripWaterMutualAid_page'>
+          <view class='dripWaterMutualAid_page_image'>
+            <image src='/assets/images/dripWaterRescue/0.png'></image>
+          </view>
+
+          <view class='dripWaterMutualAid_page_content'>
+            <view class='dripWaterMutualAid_page_content_image'>
+              <image src='/assets/images/dripWaterRescue/1.png'></image>
+            </view>
+            <view class='dripWaterMutualAid_page_content_content'>
+              <view class='dripWaterMutualAid_page_content_content_text'>
+                <font>2342523</font>已经加入
+              </view>
+              <view class='dripWaterMutualAid_page_content_content_image'>
+                <view class='dripWaterMutualAid_page_image_text'>></view>
+                <view class='dripWaterMutualAid_page_content_content_image_image'>
+                  <image src='http://thirdwx.qlogo.cn/mmopen/vi_32/JOEowvPQeAf0qJKY7eFB6dgcQE9vCHNuGQ4IOYiayq9unYexBUCN7LoWxbRBBzu7NxCdJibppfBXWeZibCqCyliavw/132'></image>
+                  <image src='http://thirdwx.qlogo.cn/mmopen/vi_32/4gV1O4eXicKuKlmuG5aniaNVD0DQBialkAB1aOvh2g4GxKEzbP5GECicekWhlNYNuBC0bLQNb5hrySAjIYasQoNbCQ/132'></image>
+                  <image src='http://thirdwx.qlogo.cn/mmopen/vi_32/teT3APhD93MLia1veaibMKOA2HghibriaCfNaZHgNwe5biaXibQsCooFsuOJrxQlO6jJ4l3WtuABfXP3Edh2yANFKQ2w/132'></image>
+                </view>
+                <view class='dripWaterMutualAid_page_content_content_image_text'>最新加入</view>
+              </view>
+            </view>
+          </view>
+
+          <view class='dripWaterMutualAid_page_model'>
+            <view class='dripWaterMutualAid_page_model_content'>
+              <view class='dripWaterMutualAid_page_model_content_left'>
+                <image src='/assets/images/jpg/fz1.jpg'></image>
+              </view>
+              <view class='dripWaterMutualAid_page_model_content_right'>
+                <view class='dripWaterMutualAid_page_model_content_right_title'>中青年抗癌计划</view>
+                <view class='dripWaterMutualAid_page_model_content_right_text'>
+                预存<span style="color:#ff9049">9元</span>
+                ,最高可得<span style="color:#ff9049">30万元</span>
+                互助金
+                </view>
+                <view class='dripWaterMutualAid_page_model_content_right_text'>胃癌、肝癌等各种癌症</view>
+                <view class='dripWaterMutualAid_page_model_content_right_text'>18-50周岁</view>
+              </view>
+            </view>
+            <view class='dripWaterMutualAid_page_model_btn'>
+              <view class='dripWaterMutualAid_page_model_btn_text'>拼搏,别忘了关心自己</view>
+              <view class='dripWaterMutualAid_page_model_btn_btn'>加入计划</view>
+            </view>
+          </view>
+
+          <view class='dripWaterMutualAid_page_model'>
+            <view class='dripWaterMutualAid_page_model_content'>
+              <view class='dripWaterMutualAid_page_model_content_left'>
+                <image src='/assets/images/jpg/fz2.jpg'></image>
+              </view>
+              <view class='dripWaterMutualAid_page_model_content_right'>
+                <view class='dripWaterMutualAid_page_model_content_right_title'>中青年抗癌计划</view>
+                <view class='dripWaterMutualAid_page_model_content_right_text'>
+                预存<span style="color:#ff9049">9元</span>
+                ,最高可得<span style="color:#ff9049">30万元</span>
+                互助金
+                </view>
+                <view class='dripWaterMutualAid_page_model_content_right_text'>胃癌、肝癌等各种癌症</view>
+                <view class='dripWaterMutualAid_page_model_content_right_text'>18-50周岁</view>
+              </view>
+            </view>
+            <view class='dripWaterMutualAid_page_model_btn'>
+              <view class='dripWaterMutualAid_page_model_btn_text'>拼搏,别忘了关心自己</view>
+              <view class='dripWaterMutualAid_page_model_btn_btn'>加入计划</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+</view>
