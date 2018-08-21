@@ -1,4 +1,4 @@
-// pages/dripWaterMutualAid/dripWaterMutualAid.js
+// pages/dripLove/thankGuys/thankGuysIn/thankGuyslnDetails/thankGuyslnDetails.js
 Page({
 
   /**

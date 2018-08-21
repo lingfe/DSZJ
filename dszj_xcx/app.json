@@ -9,7 +9,6 @@
     "pages/index/largeIllnessRescue/patientInformation/patientInformation",
     "pages/index/largeIllnessRescue/patientInformation/receivablesInformation/receivablesInformation",
     "pages/dripWaterRescue/dripWaterRescue",
-    "pages/dripWaterMutualAid/dripWaterMutualAid",
     "pages/dripWaterRescue/recommendation/recommendation",
     "pages/dripWaterRescue/applicationVolunteer/applicationVolunteer",
     "pages/dripWaterRescue/customerService/customerService",
@@ -17,7 +16,12 @@
     "pages/myDrippingWater/myDrippingWater",
     "pages/dripLove/dripLove",
     "pages/wxUserinfoLogin/wxUserinfoLogin",
-    "pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing"
+    "pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing",
+    "pages/bindingPhone/bindingPhone",
+    "pages/dripLove/thankGuys/thankGuys",
+    "pages/dripLove/thankGuys/thankGuysIn/thankGuyslnDetails/thankGuyslnDetails",
+    "pages/dripWaterRescue/customerService/releaseProblem/releaseProblem",
+    "pages/dripLove/thankGuys/thankGuysIn/publishThank/publishThank"
   ],
   "window": {
     "navigationBarTextStyle": "white",
@@ -44,12 +48,6 @@
         "text": "滴水救助",
         "iconPath": "assets/images/ico/dsjz_2.png",
         "selectedIconPath": "assets/images/ico/dsjz_1.png"
-      },
-      {
-        "pagePath": "pages/dripWaterMutualAid/dripWaterMutualAid",
-        "text": "滴水互助",
-        "iconPath": "assets/images/ico/dsfz_2.png",
-        "selectedIconPath": "assets/images/ico/dsfz_1.png"
       },
       {
         "pagePath": "pages/dripLove/dripLove",

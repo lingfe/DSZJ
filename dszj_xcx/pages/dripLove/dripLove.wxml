@@ -20,8 +20,8 @@
       <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
         <view class='dripWaterRescue_page'>
           <view class='dripWaterRescue_page_image'>
-            <image src='/assets/images/dripWaterRescue/customer.png'></image>
-            <image src='/assets/images/dripWaterRescue/Thank.png'></image>
+            <image bindtap='bindTab_Service' src='/assets/images/dripWaterRescue/customer.png'></image>
+            <image bindtap='bindtab_gxqm' src='/assets/images/dripWaterRescue/Thank.png'></image>
           </view>
 
           <!--推荐展示title start-->
@@ -44,7 +44,7 @@
           <view class='page_model' wx:for="{{dsqz_list}}" wx:key="*this">
             <view class='page_model_content'>
               <view class='page_model_content_left'>
-                <image src='{{item.cover}}'></image>
+                <image src='{{item.cover}}' mode='aspectFill'></image>
               </view>
               <view class='page_model_content_right'>
                 <view class='page_model_content_right_title'>{{item.title}}</view>
@@ -67,7 +67,7 @@
             </view>
             <view class='page_model_title'>
               <view class='page_model_title_image'>
-                <image name="referrer" content="no-referrer" src='{{item.avatar}}'></image>
+                <image src='{{item.avatar}}'></image>
               </view>
               <view class='page_model_title_text'>{{item.mobile}}</view>
               <view class='page_model_title_text align_right'>
@@ -82,7 +82,7 @@
           <view class='page_model'>
             <view class='page_model_content'>
               <view class='page_model_content_left'>
-                <image src='/assets/images/jpg/jz1.jpg'></image>
+                <image src='/assets/images/jpg/jz1.jpg' mode='aspectFill'></image>
               </view>
               <view class='page_model_content_right'>
                 <view class='page_model_content_right_title'>中青年抗癌计划中青年抗癌计划中青年抗癌计划</view>

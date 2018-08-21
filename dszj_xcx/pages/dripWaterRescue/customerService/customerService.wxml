@@ -1,6 +1,7 @@
 <!--pages/dripWaterRescue/customerService/customerService.wxml-->
 <view class='page'>
-  <view class='page_content'>
+
+  <view class='page_content' bindtap='bindtap_Info'>
     <view class='page_content_left _left'>
       <view class='page_content_left_title'>滴水之家爱心款发放声明！</view>
       <view class='page_content_left_label'>置顶</view>
@@ -44,6 +45,6 @@
 
 <!-- 发表  start-->
 <view class='fabiao'>
-  <image class='thank-letter-icon-float' src='/assets/images/jpg/jz1.jpg'/>
-  <view class="publish-new-float">发表</view>
+  <image class='thank-letter-icon-float' bindtap='bindtab_gxqm' src='http://pic.yupoo.com/lingfe/b606071c/132e13b7.png'/>
+  <view class="publish-new-float" bindtap='bindtab_releaseProblem'>发表</view>
 </view>

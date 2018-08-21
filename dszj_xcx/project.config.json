@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 14,
+			"current": 17,
 			"list": [
 				{
 					"id": -1,
@@ -124,7 +124,25 @@
 				{
 					"id": -1,
 					"name": "滴水祈福",
-					"pathName": "pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing"
+					"pathName": "pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "绑定手机号",
+					"pathName": "pages/bindingPhone/bindingPhone",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "感谢亲们",
+					"pathName": "pages/dripLove/thankGuys/thankGuys",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "发布问题",
+					"pathName": "pages/dripWaterRescue/customerService/releaseProblem/releaseProblem"
 				}
 			]
 		}

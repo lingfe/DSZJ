@@ -1,8 +1,4 @@
-
-/**
- * 客服服务
- */
-
+// pages/dripLove/thankGuys/thankGuys.js
 Page({
 
   /**
@@ -12,24 +8,24 @@ Page({
   
   },
 
-  //跳转到发布问题页面
-  bindtab_releaseProblem:function(){
+  //跳转到发表感谢
+  bindtap_publishThank:function(){
     wx.navigateTo({
-      url: '/pages/dripWaterRescue/customerService/releaseProblem/releaseProblem',
-    })
-  },
-
-  //跳转到感谢亲们页面
-  bindtab_gxqm: function () {
-    wx.navigateTo({
-      url: '/pages/dripLove/thankGuys/thankGuys',
+      url: '/pages/dripLove/thankGuys/thankGuysIn/publishThank/publishThank',
     })
   },
 
   //跳转到详情
-  bindtap_Info:function(){
+  bindtap_thankGuyslnDetails: function () {
     wx.navigateTo({
-      url: '/pages/dripWaterRescue/customerService/customerServiceDetails/customerServiceDetails',
+      url: '/pages/dripLove/thankGuys/thankGuysIn/thankGuyslnDetails/thankGuyslnDetails',
+    })
+  },
+
+  //跳转到客服服务页面
+  bindTab_Service: function () {
+    wx.navigateTo({
+      url: '/pages/dripWaterRescue/customerService/customerService',
     })
   },
 

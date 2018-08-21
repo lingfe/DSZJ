@@ -21,6 +21,33 @@ Page({
     dsqz_list:[],               //滴水求助数据    
   },
 
+  //申请志愿者
+  applicationVolunteer: function (e) {
+    wx.navigateTo({
+      url: '/pages/dripWaterRescue/applicationVolunteer/applicationVolunteer',
+    });
+  },
+
+  //推荐说明
+  tuijingshouming: function (e) {
+    wx.navigateTo({
+      url: '/pages/dripWaterRescue/recommendation/recommendation',
+    });
+  },
+
+  //跳转到客服服务页面
+  bindTab_Service: function () {
+    wx.navigateTo({
+      url: '/pages/dripWaterRescue/customerService/customerService',
+    })
+  },
+  //跳转到感谢亲们页面
+  bindtab_gxqm:function(){
+    wx.navigateTo({
+      url: '/pages/dripLove/thankGuys/thankGuys',
+    })
+  },
+
   /**
    * 请求获取滴水求助数据，
    * 
@@ -40,7 +67,7 @@ Page({
       console.log(res);
       var pageList = that.data.dsqz_list;
       //得到数据
-      var list = res.data.Content.Records;
+      var list = res.data.data.Records;
       if (list == null || list.length == 0) {
         //提示
         wx.showToast({
@@ -55,8 +82,12 @@ Page({
       for (var i = 0, lenI = list.length; i < lenI; ++i) {
         if (!app.checkInput(list[i].cover)) 
           list[i].cover = app.config.domain + list[i].cover.split(',')[0];
-        if (!app.checkInput(list[i].avatar))
-          list[i].avatar = app.config.domain + list[i].avatar;
+        if (!app.checkInput(list[i].avatar)){
+          //匹配是否包含http://
+          if(list[i].avatar.indexOf("http://") == -1){
+            list[i].avatar = app.config.domain + list[i].avatar;
+          }
+        }
         
         //添加到当前数组
         pageList.push(list[i]);
@@ -107,17 +138,14 @@ Page({
   tabClick: function (e) {
     //当前
     var that = this;
-    // var name = e.currentTarget.dataset.name;
-    // if (name == "未处理") {
-    //   //未处理
-    //   that.getlemonRecovery(that, 0);
-    // } else if (name == "已处理") {
-    //   //已处理
-    //   that.getlemonRecovery(that, 1);
-    // } else if (name == "不处理") {
-    //   //不处理
-    //   that.getlemonRecovery(that, 2);
-    // }
+    var name = e.currentTarget.dataset.name;
+    if (name == "+发起") {
+      //跳转到+发起页面
+      wx.navigateTo({
+        url: '/pages/index/largeIllnessRescue/largeIllnessRescue',
+      })
+      return;
+    } 
 
     //设置
     that.setData({

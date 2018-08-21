@@ -1,0 +1,53 @@
+<!--pages/dripLove/thankGuys/thankGuys.wxml-->
+<!--pages/dripWaterRescue/customerService/customerService.wxml-->
+<view class='page'>
+
+  <view class='page_content' bindtap='bindtap_thankGuyslnDetails'>
+    <view class='page_content_title'>为了更好的服务用户，关于支付宝支付的问题？</view>
+    <view class='page_content_image'>
+        <image src='/assets/images/jpg/jz1.jpg'></image>
+        <image src='/assets/images/jpg/jz1.jpg'></image>
+        <image src='/assets/images/jpg/jz1.jpg'></image>
+    </view>
+    <view class='page_content_content'>
+      <view class='page_content_left_label'>置顶</view>
+      <view class='page_content_left_text'>滴水之家客服</view>
+      <view class='page_content_left_text'>15评论</view>
+      <view class='page_content_left_text'>95天前</view>
+      <view class='page_content_left_image'>
+        <image src='/assets/images/jpg/jz1.jpg'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='page_content'>
+    <view class='page_content_title'>一个滴水之家志愿者的心得体会！</view>
+    <view class='page_content_content'>
+      <view class='page_content_left_label'>置顶</view>
+      <view class='page_content_left_text'>65评论</view>
+      <view class='page_content_left_text'>23天前</view>
+      <view class='page_content_left_image'>
+        <image src='/assets/images/jpg/jz1.jpg'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class='page_content'>
+    <view class='page_content_title'>希望我哥战胜病魔，相信他好人有好报！</view>
+    <view class='page_content_content'>
+      <view class='page_content_left_text'>偃师雷博飞织---刘利香151******03</view>
+      <view class='page_content_left_text'>0评论</view>
+      <view class='page_content_left_text'>23天前</view>
+      <view class='page_content_left_image'>
+        <image src='/assets/images/jpg/jz1.jpg'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<!-- 发表  start-->
+<view class='fabiao'>
+  <image class='thank-letter-icon-float' bindtap='bindTab_Service' src='http://pic.yupoo.com/lingfe/8f4610c0/8d5340c2.png'/>
+  <view class="publish-new-float" bindtap='bindtap_publishThank'>发表</view>
+</view>

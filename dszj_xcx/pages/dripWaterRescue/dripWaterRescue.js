@@ -11,6 +11,20 @@ Page({
   
   },
 
+  //申请志愿者
+  bindtap_applicationVolunteer: function (e) {
+    wx.navigateTo({
+      url: '/pages/dripWaterRescue/applicationVolunteer/applicationVolunteer',
+    });
+  },
+
+  //推荐说明
+  bindtap_tuijingshouming: function (e) {
+    wx.navigateTo({
+      url: '/pages/dripWaterRescue/recommendation/recommendation',
+    });
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -18,19 +32,7 @@ Page({
   
   },
 
-  //申请志愿者
-  applicationVolunteer:function(){
-    wx.navigateTo({
-      url: '/pages/dripWaterRescue/applicationVolunteer/applicationVolunteer',
-    })
-  },
 
-  //推荐说明
-  tuijingshouming:function(){
-    wx.navigateTo({
-      url: '/pages/dripWaterRescue/recommendation/recommendation',
-    })
-  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

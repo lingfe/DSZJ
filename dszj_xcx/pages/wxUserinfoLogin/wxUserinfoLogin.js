@@ -43,8 +43,6 @@ Page({
           userInfo: e.detail.userInfo,
           
         }
-        //请求头
-        //var header = { "Content-Type": "application/x-www-form-urlencoded" };
 
         //发送请求
         app.request.reqGet(url,  data,
@@ -56,7 +54,27 @@ Page({
           app.token = token;
           //存到缓存中
           wx.setStorageSync("token", app.token);
-          
+
+          //验证是否已经绑定手机号码0(未设置), 1(已设置)
+          var isMobiled = res.data.data.isMobiled;
+          if(isMobiled == 0 || isMobiled == '0' ){
+            wx.showModal({
+              title: '提示',
+              content: '发现您还没绑定手机号，是否绑定？',
+              confirmText: "是",
+              cancelText: "否",
+              success: function (res) {
+                if (res.confirm) {
+                  //跳转页面
+                  wx.navigateTo({
+                    url: '/pages/bindingPhone/bindingPhone',
+                  })
+                  return;
+                }
+              }
+            });
+          }
+
           //返回上一页
           //得到打开的页面
           var pages = getCurrentPages();

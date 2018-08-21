@@ -1,0 +1,93 @@
+/* pages/dripWaterRescue/customerService/releaseProblem/releaseProblem.wxss */
+
+.page{
+  padding: 0rpx;
+  margin: 0rpx;
+}
+.page_input{
+  width: 94%;
+  height: 100rpx;
+  margin: auto;
+  border-bottom: 1rpx solid #d4d4d4;
+}
+.page_input_input{
+  width: 90%;
+  height: 100rpx;
+  float: left;
+}
+.page_input_input input{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 14px;
+  color: #333;
+}
+.page_input_text{
+  width:10%;
+  height: 100rpx;
+  font-size: 14px;
+  line-height: 100rpx;
+  float: left;
+}
+.page_remark {
+  width: 100%;
+  color: #808080;
+  font-size: 25rpx;
+  background-color: #fff;
+  height: 200rpx;
+  padding: 14rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.text {
+    box-sizing: border-box;
+    height: 100px;
+    padding: 0 10px 10px 10px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+    border: none;
+  width: 94%;
+}
+.page_image{
+  display: block;
+  width: 100%;
+  margin-top: 30rpx;
+}
+
+
+/*下一步  start*/
+.weui-btn-area {
+  width: 100%;
+  margin:auto;
+  position: fixed;
+  bottom: 20rpx;
+}
+
+button[type="primary"] {
+  color:#FFFFFF;
+  background-color:#0092ff;
+  border-radius: 8px;
+  width: 94%;
+  margin: auto;
+}
+
+.button-hover[type="primary"] {
+  background-color:#0092ff;
+}
+button::after {
+  content:" ";
+  width:200%;
+  height:200%;
+  position:absolute;
+  top:0;
+  left:0;
+  border:1px solid  #E8EFEF;
+  -webkit-transform:scale(0.5);
+  transform:scale(0.5);
+  -webkit-transform-origin:0 0;
+  transform-origin:0 0;
+  box-sizing:border-box;
+  border-radius:10px;
+}
+/*下一步  end*/

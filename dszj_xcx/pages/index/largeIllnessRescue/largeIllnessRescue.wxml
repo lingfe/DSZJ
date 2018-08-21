@@ -32,7 +32,7 @@
               <view class='page_Fundraising_title_text_title'>目标金额</view>
             </view>
             <view class='page_Fundraising_amount_input'>
-              <input type='text' placeholder='请 输 入 筹 款 金 额'></input>
+              <input type='digit' value='{{form.total_amount}}' bindinput='bindinput_total_amount' placeholder='请 输 入 筹 款 金 额'></input>
               <label>元</label>
             </view>
           </view>
@@ -45,7 +45,10 @@
               <view class='page_Fundraising_title_text_text' bindtap='bindtapTitle_isDisplay'>参考示例</view>
             </view>
             <view class='page_Fundraising_title_input input1'>
-              <input type='text' placeholder='好的标题可以增加筹款金额（限30字）'></input>
+              <input type='text' 
+              value='{{form.title}}' 
+              bindinput='bindinput_title' 
+              placeholder='好的标题可以增加筹款金额（限30字）'></input>
             </view>
           </view>
           <!-- 筹款标题   end-->
@@ -56,7 +59,11 @@
               <view class='page_Fundraising_title_text_title'>联系人电话</view>
             </view>
             <view class='page_Fundraising_title_input input2'>
-              <input type='text' placeholder='请输入联系人手机号码'></input>
+              <input type='number' 
+              value='{{form.mobile}}' 
+              bindinput='bindinput_mobile' 
+              maxlength='11' 
+              placeholder='请输入联系人手机号码'></input>
             </view>
           </view>
           <!-- 联系人电话   end-->
@@ -69,7 +76,11 @@
             </view>
             <view class='page_Fundraising_title_input_textarea'>
               <textarea auto-focus="true" 
-              name="content" placeholder='请详细填写筹款原因，筹款目的，自身状况和善款用途等信息。（不少于10字）'></textarea>
+              value='{{form.description}}' 
+              bindinput='bindinput_description'
+              name="content" 
+              maxlength='1000'
+              placeholder='请详细填写筹款原因，筹款目的，自身状况和善款用途等信息。（不少于10字）'></textarea>
             </view>
           </view>
           <!-- 求助说明   end-->
@@ -225,7 +236,7 @@
 
           <!-- 提交 start -->
           <view class="weui-btn-area">
-            <button class="weui-btn" bindtap='bindtapSubmit' formType="submit" type="primary">提交</button>
+            <button class="weui-btn" bindtap='bindTab_QF' formType="submit" type="primary">提交</button>
           </view>
           <!-- 提交  end -->
         </view>
@@ -237,19 +248,30 @@
 
 <!-- 快速填写 start -->
 <view class='page_kuaishuTianxie' wx:if="{{isDisplay}}">
+  <form bindsubmit="formSubmit">
   <view class='kuaishuTianxie'>
     <view class='kuaishuTianxie_title'>根据填写内容为你生成参考模板</view>
     <view class='kuaishuTianxie_input'>
       <view class='kuaishuTianxie_input_title'>您的姓名</view>
       <view class='kuaishuTianxie_input_input'>
-        <input type='text' placeholder='填写您的姓名'></input>
+        <input type='text' name="userName" placeholder='填写您的姓名'></input>
+      </view>
+    </view>
+
+    <view class='kuaishuTianxie_input'>
+      <view class='kuaishuTianxie_input_title'>患者家乡</view>
+      <view class='kuaishuTianxie_input_input'>
+        <input type='text' value='{{Home_town[Home_town_index]}}' name="address" hidden='hidden' ></input>
+        <picker bindchange="bindPickerHome" value="{{Home_town_index}}" range="{{Home_town}}">
+          {{Home_town[Home_town_index]}}
+        </picker>
       </view>
     </view>
 
     <view class='kuaishuTianxie_input'>
       <view class='kuaishuTianxie_input_title'>为谁筹款</view>
       <view class='kuaishuTianxie_input_input'>
-        <input type='text' hidden='hidden' ></input>
+        <input type='text' value='{{Raise_money_for_whom[index]}}' name="weishei" hidden='hidden' ></input>
         <picker bindchange="bindPickerChange" value="{{index}}" range="{{Raise_money_for_whom}}">
           {{Raise_money_for_whom[index]}}
         </picker>
@@ -264,26 +286,16 @@
     </view>
 
     <view class='kuaishuTianxie_input'>
-      <view class='kuaishuTianxie_input_title'>患者家乡</view>
-      <view class='kuaishuTianxie_input_input'>
-        <input type='text' hidden='hidden' ></input>
-        <picker bindchange="bindPickerHome" value="{{Home_town_index}}" range="{{Home_town}}">
-          {{Home_town[Home_town_index]}}
-        </picker>
-      </view>
-    </view>
-
-    <view class='kuaishuTianxie_input'>
       <view class='kuaishuTianxie_input_title'>疾病名称</view>
       <view class='kuaishuTianxie_input_input'>
-        <input type='text' placeholder='填写疾病名称'></input>
+        <input type='text' name="jiebingName" placeholder='填写疾病名称'></input>
       </view>
     </view>
 
     <view class='kuaishuTianxie_input'>
       <view class='kuaishuTianxie_input_title'>确诊日期</view>
       <view class='kuaishuTianxie_input_input'>
-        <input type='text' hidden='hidden' ></input>
+        <input type='text' value='{{date}}' name="dateTime" hidden='hidden' ></input>
         <picker mode="date" value="{{date}}" start="2018-09-01" end="2099-09-01" bindchange="bindDateChange">
           {{date}}
         </picker>
@@ -293,26 +305,27 @@
     <view class='kuaishuTianxie_input'>
       <view class='kuaishuTianxie_input_title'>所在医院</view>
       <view class='kuaishuTianxie_input_input'>
-        <input type='text' placeholder='填写所在医院'></input>
+        <input type='text' name="souzaiYyuan" placeholder='填写所在医院'></input>
       </view>
     </view>
 
     <view class='kuaishuTianxie_input'>
       <view class='kuaishuTianxie_input_title'>已花费金额</view>
       <view class='kuaishuTianxie_input_input'>
-        <input type='text' placeholder='填写已花费金额'></input>
+        <input type='digit' name="yihuafeiJE" placeholder='填写已花费金额'></input>
       </view>
     </view>
 
     <view class='kuaishuTianxie_btn'>
       <view class='kuaishuTianxie_btn_ok'>
-        <button>确定</button>
+        <button form-type='submit'>确定</button>
       </view>
       <view class="kuaishuTianxie_btn_close">
         <button bindtap='btnClose'>取消</button>
       </view>
     </view>
   </view>
+  </form>
 </view>
 <!-- 快速填写 end -->
 

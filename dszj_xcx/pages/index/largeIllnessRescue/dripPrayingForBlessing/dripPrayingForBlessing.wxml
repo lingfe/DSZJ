@@ -71,7 +71,7 @@
 
 <!-- 为ta祈福  start-->
 <view class="button-box">
-    <view class="btnToThankLetter">
+    <view class="btnToThankLetter" bindtap='bindTab_GXQM'>
       <image src='http://qzapp.qlogo.cn/qzapp/101414596/E9478CCDFC315EF3A583B83432A9C9C5/100'></image>
     </view>
     <view class="btnToThankLetter">

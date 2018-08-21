@@ -1,6 +1,6 @@
 <view class='page'>
   <view class="page_wrapper">
-    <image src="/assets/images/index_0.jpg"/>
+    <image src="http://pic.yupoo.com/lingfe/a44600b2/7c06deb0.jpg"/>
   </view>
 
   <!-- 數量  start -->
@@ -86,7 +86,7 @@
       <view class='page_Why_content_top'>
         <view class='page_Why_content_top_left'>
           <view class='page_Why_content_top_left_image'>
-            <image src='/assets/images/index_8.png'></image>
+            <image src='http://pic.yupoo.com/lingfe/b93c0652/162f9ccb.png'></image>
           </view>
           <view class='page_Why_content_top_left_title'>客服全程帮助</view>
           <view class='page_Why_content_top_left_text'>客服全程指导，流程简单</view>
@@ -94,7 +94,7 @@
 
         <view class='page_Why_content_top_left'>
           <view class='page_Why_content_top_left_image'>
-            <image src='/assets/images/index_7.png'></image>
+            <image src='http://pic.yupoo.com/lingfe/7bf345ff/8c11e887.png'></image>
           </view>
           <view class='page_Why_content_top_left_title'>同步海量传播</view>
           <view class='page_Why_content_top_left_text'>快速获得关注，快速传播</view>
@@ -104,7 +104,7 @@
       <view class='page_Why_content_top'>
         <view class='page_Why_content_top_left'>
           <view class='page_Why_content_top_left_image'>
-            <image src='/assets/images/index_9.png'></image>
+            <image src='http://pic.yupoo.com/lingfe/901733c1/690efad0.png'></image>
           </view>
           <view class='page_Why_content_top_left_title'>滴水平台资助</view>
           <view class='page_Why_content_top_left_text'>特困案例可申请微资助</view>
@@ -112,7 +112,7 @@
 
         <view class='page_Why_content_top_left'>
           <view class='page_Why_content_top_left_image'>
-            <image src='/assets/images/index_10.png'></image>
+            <image src='http://pic.yupoo.com/lingfe/43588b7a/6ff59c68.png'></image>
           </view>
           <view class='page_Why_content_top_left_title'>专款专户管理</view>
           <view class='page_Why_content_top_left_text'>第三方机构保障资金 安全</view>
@@ -139,7 +139,7 @@
     <view class='page_Contact_us_content_content'>
       <view class='page_Contact_us_content'>
         <view class='page_Contact_us_content_image'>
-          <image src='/assets/images/phone.png'></image>
+          <image src='http://pic.yupoo.com/lingfe/4f879287/7e942364.png'></image>
         </view>
         <view class='page_Contact_us_content_neiro'>
           <view class='page_Contact_us_content_neiro_title'>400-6063-400</view>
@@ -149,7 +149,7 @@
 
       <view class='page_Contact_us_content'>
         <view class='page_Contact_us_content_image'>
-          <image src='/assets/images/wx.png'></image>
+          <image src='http://pic.yupoo.com/lingfe/94e727aa/bc1e2e27.png'></image>
         </view>
         <view class='page_Contact_us_content_neiro'>
           <view class='page_Contact_us_content_neiro_title'>官方公众号‘滴水之家’</view>
@@ -159,7 +159,7 @@
 
       <view class='page_Contact_us_content'>
         <view class='page_Contact_us_content_image'>
-          <image src='/assets/images/qq.png'></image>
+          <image src='http://pic.yupoo.com/lingfe/78ca7e7a/45f18843.png'></image>
         </view>
         <view class='page_Contact_us_content_neiro'>
           <view class='page_Contact_us_content_neiro_title'>滴水之家QQ群 453049599</view>
