@@ -10,6 +10,19 @@ App({
   md5,    //md5加密
   service,//位置服务
   dahuoData, //筛选数据
+
+  //跳转到登陆
+  btnLogin:function(code){
+
+    if(code=="401"||code==401){
+      this.showToast("回话失效！请重新登陆。","none");
+      wx.navigateTo({
+        url: '/pages/wxUserinfoLogin/wxUserinfoLogin',
+      });
+    }
+    
+  },
+
   //验证非空
   checkInput: function (data) {
     if (data == null || data == undefined || data == "" || data == 'null') {

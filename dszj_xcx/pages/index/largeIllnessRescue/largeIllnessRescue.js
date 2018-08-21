@@ -190,12 +190,16 @@ Page({
         filePath: path[0],                          //要上传文件资源的路径
         name: 'file',                                //文件对应的 key , 开发者在服务器端通过这个 key 可以获取到文件二进制内容
         header: {                                   //HTTP 请求 Header , header 中不能设置 Referer
-          token: wx.getStorageSync("token"),
+          Token: wx.getStorageSync("token"),
         },
         formData: null,                             //参数(HTTP 请求中其他额外的 form data)
         success: (resp) => {                         //接口调用成功的回调函数
+
           var json = JSON.parse(resp.data);
-          pathArr.push(json[0])
+          //验证状态
+          app.btnLogin(json.code);
+          
+          pathArr.push(json.data[0].url);
           if (dataArr.length > 0) {
             //递归
             uploadimg(dataArr.splice(0, 1), pathArr, dataArr);
@@ -215,11 +219,11 @@ Page({
     var url = app.config.dszjPath_web + "api/UserSeriousIllness/add";
     //请求头
     var header = {
-      token: wx.getStorageSync("token")
+      Token: wx.getStorageSync("token")
     }
     //参数
-    that.form.pic=images;
-    var data = that.form;
+    that.data.form.pic=images;
+    var data = that.data.form;
 
     //发送请求
     app.request.reqPost(url, header, data, function (res) {

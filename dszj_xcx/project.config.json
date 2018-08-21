@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 17,
+			"current": 18,
 			"list": [
 				{
 					"id": -1,
@@ -142,7 +142,13 @@
 				{
 					"id": -1,
 					"name": "发布问题",
-					"pathName": "pages/dripWaterRescue/customerService/releaseProblem/releaseProblem"
+					"pathName": "pages/dripWaterRescue/customerService/releaseProblem/releaseProblem",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "救助项目详情",
+					"pathName": "pages/dripLove/rescueDetails/rescueDetails"
 				}
 			]
 		}

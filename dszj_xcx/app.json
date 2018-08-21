@@ -21,7 +21,8 @@
     "pages/dripLove/thankGuys/thankGuys",
     "pages/dripLove/thankGuys/thankGuysIn/thankGuyslnDetails/thankGuyslnDetails",
     "pages/dripWaterRescue/customerService/releaseProblem/releaseProblem",
-    "pages/dripLove/thankGuys/thankGuysIn/publishThank/publishThank"
+    "pages/dripLove/thankGuys/thankGuysIn/publishThank/publishThank",
+    "pages/dripLove/rescueDetails/rescueDetails"
   ],
   "window": {
     "navigationBarTextStyle": "white",

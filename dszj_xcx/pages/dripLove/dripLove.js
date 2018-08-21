@@ -21,6 +21,13 @@ Page({
     dsqz_list:[],               //滴水求助数据    
   },
 
+  //跳转到救助详情页面
+  bindtap_rescueDetails:function(e){
+    wx.navigateTo({
+      url: '',
+    })
+  },
+
   //申请志愿者
   applicationVolunteer: function (e) {
     wx.navigateTo({
