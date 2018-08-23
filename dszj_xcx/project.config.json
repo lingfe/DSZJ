@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 8,
+			"current": 17,
 			"list": [
 				{
 					"id": -1,
@@ -138,6 +138,13 @@
 					"name": "救助项目详情",
 					"pathName": "pages/dripLove/rescueDetails/rescueDetails",
 					"query": ""
+				},
+				{
+					"id": 17,
+					"name": "大病救助-发布页面",
+					"pathName": "pages/index/largeIllnessRescue/patientInformation/receivablesInformation/receivablesInformation",
+					"query": "",
+					"scene": "1001"
 				}
 			]
 		}

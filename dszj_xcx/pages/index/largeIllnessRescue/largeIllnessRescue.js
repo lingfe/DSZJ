@@ -159,18 +159,33 @@ Page({
   //下一步
   bindtapSubmit:function(e){ 
     var that=this;
-    
+    if (app.checkInput(that.data.form.total_amount)){
+      app.showToast("请填写目标金额！","none");
+      return;
+    }
+    if (app.checkInput(that.data.form.title)){
+      app.showToast("筹款标题不能为空!","none");
+      return;
+    }
+    if (app.checkInput(that.data.form.mobile)){
+      app.showToast("联系人电话不能为空!","none");
+      return;
+    }
+    if (app.checkInput(that.data.form.description)){
+      app.showToast("求助说明不能为空!","none");
+      return;
+    }
     //上传图片
     var imageArray = [];
     if (that.data.arr == null || that.data.arr.length == 0) {
-      that.showModal("请上传图片!");
+      app.showToast("请上传图片!","none");
       return;
     }else{
       //imageArray = that.data.imageArray;
       imageArray = that.data.arr;
     }
     if (imageArray.length > 6) {
-      that.showModal("图片最多只能上传六张!");
+      app.showToast("图片最多只能上传六张!","none");
       return;
     }
 
@@ -228,7 +243,8 @@ Page({
     //发送请求
     app.request.reqPost(url, header, data, function (res) {
       console.log(res);
-
+      //将id保存到缓存
+      wx.setStorageSync("id", res.data.data);
     }, function (res) {
       console.log(res);
     })
@@ -252,6 +268,7 @@ Page({
       date: e.detail.value
     })
   },
+
   //患者家乡
   bindPickerHome: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -259,6 +276,7 @@ Page({
       Home_town_index: e.detail.value
     })
   },
+
   //为谁筹款
   bindPickerChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -266,6 +284,7 @@ Page({
       index: e.detail.value
     })
   },
+
   //删除图片
   bindtapImageDelete: function (e) {
     var img = e.currentTarget.dataset.img;
@@ -362,52 +381,4 @@ Page({
     });
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

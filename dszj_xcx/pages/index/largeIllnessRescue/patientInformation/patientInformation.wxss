@@ -61,7 +61,6 @@ page{
   float: left;
 }
 .page_radio_radio radio{
-  width: 30%;
   height: 80rpx;
   line-height: 80rpx;
   font-size: 30rpx;
@@ -76,7 +75,7 @@ page{
 }
 .page_image_title{
   padding-left: 25rpx;
-  height: 80rpx;
+  height: 100rpx;
   font-size: 30rpx;
   line-height: 80rpx;
 }
