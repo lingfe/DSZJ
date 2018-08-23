@@ -8,7 +8,7 @@
       <view class='page_content_left_text'>15评论</view>
       <view class='page_content_left_text'>95天前</view>
       <view class='page_content_left_image'>
-        <image src='/assets/images/jpg/jz1.jpg'></image>
+        <image src='http://pic.yupoo.com/lingfe/648a9559/3cfc611a.png'></image>
       </view>
     </view>
     <view class='page_content_right'>
@@ -25,7 +25,7 @@
       <view class='page_content_left_text'>65评论</view>
       <view class='page_content_left_text'>23天前</view>
       <view class='page_content_left_image'>
-        <image src='/assets/images/jpg/jz1.jpg'></image>
+        <image src='http://pic.yupoo.com/lingfe/648a9559/3cfc611a.png'></image>
       </view>
     </view>
   </view>
@@ -36,7 +36,7 @@
       <view class='page_content_left_text'>0评论</view>
       <view class='page_content_left_text'>23天前</view>
       <view class='page_content_left_image'>
-        <image src='/assets/images/jpg/jz1.jpg'></image>
+        <image src='http://pic.yupoo.com/lingfe/648a9559/3cfc611a.png'></image>
       </view>
     </view>
   </view>

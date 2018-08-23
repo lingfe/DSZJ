@@ -14,8 +14,8 @@
     <view class='page_radio_title'>真实姓名</view>
     <view class='page_radio_radio'>
       <radio-group class="radio-group" bindchange="radioChange">
-        <radio value="身份证" checked="true">身份证</radio>
-         <radio value="身份证" >身份证</radio>
+        <radio value="身份证" color='#0099ff' checked="true">身份证</radio>
+         <radio value="身份证" color='#0099ff' >身份证</radio>
       </radio-group>
     </view>
   </view>

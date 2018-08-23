@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 18,
+			"current": 8,
 			"list": [
 				{
 					"id": -1,
@@ -60,44 +60,32 @@
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "dripWaterRescue",
+					"id": 4,
+					"name": "滴水救助页面",
 					"pathName": "pages/dripWaterRescue/dripWaterRescue",
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "dripWaterMutualAid",
-					"pathName": "pages/dripWaterMutualAid/dripWaterMutualAid",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "personal",
-					"pathName": "pages/personal/personal",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "recommendation",
+					"id": 5,
+					"name": "推荐说明页面",
 					"pathName": "pages/dripWaterRescue/recommendation/recommendation",
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "applicationVolunteer",
+					"id": 6,
+					"name": "申请自愿者页面",
 					"pathName": "pages/dripWaterRescue/applicationVolunteer/applicationVolunteer",
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "customerService",
+					"id": 7,
+					"name": "客服服务页面",
 					"pathName": "pages/dripWaterRescue/customerService/customerService",
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "12",
+					"id": 8,
+					"name": "客服服务详情页面",
 					"pathName": "pages/dripWaterRescue/customerService/customerServiceDetails/customerServiceDetails",
 					"query": "",
 					"scene": "1001"
@@ -148,7 +136,8 @@
 				{
 					"id": -1,
 					"name": "救助项目详情",
-					"pathName": "pages/dripLove/rescueDetails/rescueDetails"
+					"pathName": "pages/dripLove/rescueDetails/rescueDetails",
+					"query": ""
 				}
 			]
 		}

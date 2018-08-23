@@ -12,6 +12,19 @@ page{
   background-color: #fff;
   height:auto;
 }
+
+/* 广告图 start */
+.page_guanggaoImg{
+  width: 100%;
+  height: 150rpx;
+}
+.page_guanggaoImg image{
+  width: 100%;
+  height: 150rpx;
+}
+/* 广告图 end*/
+
+/* 项目发布者信息 start */
 .page_title{
   width: 94%;
   margin: auto;
@@ -20,46 +33,55 @@ page{
   height: 100rpx;
   background-color: #fff;
 }
-.page_title_image{
+
+.page_title_content_title_image{
+  width: 14%;
   height: 100rpx;
-  width: auto;
   float: left;
 }
-.page_title_image image{
-  width: 100rpx;
-  height: 100rpx;
+.page_title_content_title_image image{
+  min-width: 80rpx;
+  max-width: 80rpx;
+  height: 80rpx;
   border-radius: 50%;
+  margin-top: 10rpx;
 }
-.page_title_content{
-  height:100rpx;
+.page_title_content_title_text{
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 66%;
   float: left;
-  margin-left: 5%;
 }
-.page_title_content_title{
-  height: 60rpx;
-  line-height: 60rpx;
-  font-size: 40rpx;
+.page_title_content_title_text_last{
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 20%;
+  float: left;
+  font-size: 28rpx;
+  color: #969696; 
 }
-.page_title_content_text{
-  height: 40rpx;
-  line-height: 40rpx;
-  font-size: 26rpx;
-}
+/* 项目发布者信息 end */
 
-
-
+/* 项目内容 start */
 .page_content{
   width: 94%;
   margin: auto;
   padding-bottom: 20rpx;
   height: auto;
 }
-.page_content_title{
+.page_content_title1{
   font-size: 40rpx;
   font-weight: bold;
   width: 100%;
 }
-/* 项目参数 statr*/
+.page_content_title2{
+  width: 100%;
+  font-size: 36rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 30rpx;
+}
+/* _项目参数 statr*/
 .page_content_xmParam{
   width: 100%;
   height: auto;
@@ -67,7 +89,7 @@ page{
   background-color: #f7f7f7;
   margin-top: 30rpx;  
 }
-/* _金额 start */
+/* _._金额 start */
 .page_content_xmParam_paramInfo{
   width: 100%;
   height: 100rpx;
@@ -93,17 +115,17 @@ page{
 .txt-red{
   color: red;
 }
-/* _金额 end */
+/* _._金额 end */
 
-/* _进度条百分比 start */
+/* _._进度条百分比 start */
 .page_content_xmParam_progress{
   width: 94%;
   margin: auto;
   margin-top: 20rpx;
 }
-/* _进度条百分比 end */
+/* _._进度条百分比 end */
 
-/* _项目近况 start */
+/* _._项目近况 start */
 .page_content_xmParam_xmjkuang{
   width: 100%;
 }
@@ -131,24 +153,11 @@ page{
   color: #4fb4ff;
   margin-top: 5px;
 }
-/* _项目近况 end */
+/* _._项目近况 end */
 
-/* 项目参数 end*/
+/* _项目参数 end*/
 
-
-/* 项目说明 start */
-.page_content_text{
-  margin-top: 30rpx;
-}
-rich-text{
-    word-break: break-all;
-    word-wrap: break-word;
-    color: #101010;
-    font-size: 16px;
-}
-/* 项目说明 end */
-
-/*爱心贡献榜 start*/
+/* _爱心贡献榜 start*/
 .page_content_aixingxbang{
   width: 100%;
   height: 80rpx;
@@ -172,7 +181,22 @@ rich-text{
   height: 80rpx;
   line-height: 80rpx;
 }
+/* _爱心贡献榜 end*/
 
+/* _项目详情 start */
+.page_content_text{
+  width: 100%;
+  padding-bottom: 30rpx;
+}
+rich-text{
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #101010;
+    font-size: 16px;
+}
+/* _项目详情 end */
+
+/* _项目图片 start*/
 .page_content_image{
   width: 50%;
   margin-top: 30rpx;
@@ -182,13 +206,203 @@ rich-text{
   width: 100%;
   height: 500rpx;
 }
+/* _项目图片 end*/
 
+/* _资料证明 :start*/
+.page_content_ziliaoZming{
+  width: 100%;
+  height: auto;
+  padding-bottom: 20rpx;
+  background-color: #f7f7f7;
+}
+.page_content_ziliaoZming_title{
+  width: 94%;
+  margin: auto;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 36rpx;
+  margin-top: 20rpx;
+}
+.page_content_ziliaoZming_zhengming{
+  background-image: url('http://pic.yupoo.com/lingfe/f81db0f3/25f4c034.png');
+  background-repeat: no-repeat;
+  width: 90%;
+  margin: auto;
+  height: 30rpx;
+  font-size: 24rpx;
+  color: #4fb4ff;
+  line-height: 30rpx;
+  padding-left: 36rpx;
+}
+.page_content_ziliaoZming_border{
+  border-bottom: 1rpx solid #ebebeb;
+  height: 30rpx;
+  width: 94%;
+  margin: auto;
+}
+.page_content_ziliaoZming_text{
+  width: 94%;
+  font-size: 28rpx;
+  margin: auto;
+}
+.page_content_jiubao{
+  text-decoration: underline;
+  color: #fda268;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 24rpx;
+  width: 94%;
+}
+/* _资料证明 end*/
 
-/*  全部评价 start*/
+/* _我也来证明 start*/
+.page_content_myZhengMing{
+  width: 100%;
+  padding-top: 30rpx;
+}
+.page_content_myZhengMing_title{
+  width: 100%;
+  font-size: 34rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.page_content_myZhengMing_title_title{
+  width: 70%;
+  float: left;
+}
+.color-red{
+  color: #fda268;
+}
+.page_content_myZhengMing_title_text{
+  width: 30%;
+  float: left;
+  text-align: right;
+}
+.page_content_myZhengMing_image{
+  width: 85%;
+  height: 80rpx;
+  margin: auto;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.page_content_myZhengMing_image_image{
+  width: 15%;
+  float: left;
+}
+.page_content_myZhengMing_image_image image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.right_image{
+  float: right;
+}
+.page_content_myZhengMing_image_image_triangle {
+    position: relative;
+    top: -4rpx;
+    left: 32%;
+    bottom: 0 !important;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #f5f5f5;
+}
+.page_content_myZhengMing_content{
+  background-color: #f5f5f5;
+  font-size: 26rpx;
+  width: 85%;
+  margin: auto;
+  padding: 10rpx;
+}
+/* 项目内容 end */
+
+/* 筹款动态 start*/
+.page_choukuangdotai{
+  width: 100%;
+  margin: auto;
+  border-top: 30rpx solid #efeff4;
+  padding-bottom: 30rpx;
+}
+.page_choukuangdotai_title{
+  width: 94%;
+  margin: auto;
+  font-size: 36rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 10rpx;
+}
+.page_choukuangdotai_content{
+  width: 94%;
+  margin: auto;
+  padding-top: 10rpx;
+  padding-bottom: 20rpx;
+  height: 100rpx;
+  background-color: #fff;
+}
+.page_choukuangdotai_content_image{
+  height: 100rpx;
+  width: auto;
+  float: left;
+}
+.page_choukuangdotai_content_image image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.page_choukuangdotai_content_content{
+  height:100rpx;
+  float: left;
+  margin-left: 5%;
+}
+.page_choukuangdotai_content_content_title{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 30rpx;
+  color: #0092FF;
+}
+.page_choukuangdotai_content_content_text{
+  height: 30rpx;
+  line-height: 30rpx;
+  font-size: 26rpx;
+}
+.font_size_22{
+  font-size: 22rpx;
+}
+.page_choukuangdotai_buttons{
+  width: 94%;
+  margin: auto;
+  height: 80rpx;
+  font-size: 30rpx;
+}
+.page_choukuangdotai_buttons_btnThanks{
+  width: 35%;
+  border-radius: 10rpx;
+  background-color: #0092FF;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+  color: #fff;
+}
+.page_choukuangdotai_buttons_weiTaQifu{
+  width: 35%;
+  border-radius: 10rpx;
+  background-color: #0092FF;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: right;
+  color: #fff;
+}
+/* 筹款动态 end*/
+
+/* 爱心帮助记录 start*/
 .page_Allevaluate{
   width: 100%;
   margin-top: 30rpx;
   background-color: #fff;
+  padding-bottom: 100rpx;
 }
 .page_Allevaluate_title{
   height: 80rpx;
@@ -198,6 +412,23 @@ rich-text{
   padding-left: 20rpx;
   border-bottom: 1rpx #efeff4 solid;
 }
+.page_Allevaluate_data{
+  
+  width: 60%;
+  margin: auto;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 32rpx;
+  background-color: #f7f7f7;
+  margin-top:20rpx;
+  border-radius: 10rpx;
+
+}
+abbr{
+  color: #0092FF;
+}
+
 .page_Allevaluate_evaluate{
   width: 94%;
   margin: auto;
@@ -205,17 +436,17 @@ rich-text{
   padding-top: 20rpx;
 }
 .page_Allevaluate_evaluate_image{
-  width: 12%;
+  width: 10%;
   height: 100rpx;
   float: left;
 }
 .page_Allevaluate_evaluate_image image{
-  width: 100rpx;
-  height: 100rpx;
+  width: 80rpx;
+  height: 80rpx;
   border-radius: 50%;
 }
 .page_Allevaluate_evaluate_content{
-  width: 80%;
+  width: 82%;
   height:auto;
   float: left;
   margin-left: 5%;
@@ -228,21 +459,12 @@ rich-text{
   width: 70%;
   height: 60rpx;
   line-height: 60rpx;
-  font-size: 40rpx;
+  font-size: 30rpx;
   float: left;
-  color: #3681B7;
-}
-.page_Allevaluate_evaluate_content_title_image{
-  width: 10%;
-  height: 40rpx;
-  float: left;
-}
-.page_Allevaluate_evaluate_content_title_image image{
-  height: 40rpx;
-  width: 100%;
+  color: #0099ff;
 }
 .page_Allevaluate_evaluate_content_title_text{
-  width: 10%;
+  width: 30%;
   height: 60rpx;
   line-height: 60rpx;
   font-size: 26rpx;
@@ -296,11 +518,87 @@ rich-text{
   font-size: 30rpx;
 }
 span{
-  color: #0092FF;
+  color: #0099FF;
 }
+.page_Allevaluate_selectHelp{
+  width: 100%;
+  border-top: 1px solid #f0f0f0;
+  margin: auto;
+  text-align: center;
+  color: #0099FF;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+}
+/* 爱心帮助记录 end*/
+
+
+/* 客服信息 start */
+.fabiao{
+  position: fixed;
+  right: 0rpx;
+  bottom: 20rpx;
+}
+.thank-letter-icon-float {
+    position: absolute;
+    right: 8px;
+    bottom: 120px;
+    cursor: pointer;
+    width: 80rpx;
+    height: 80rpx;
+}
+.publish-new-float {
+    position: absolute;
+    right: 10px;
+    bottom: 70px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    user-select: none;
+}
+/* 客服信息 end*/
+
+/*帮助ta  start*/
+.button-box {
+    position: fixed;
+    bottom: 0rpx;
+    background: #fff;
+    width: 100%;
+    height: 100rpx;
+    border-top: 1rpx solid #efeff4;
+}
+.btnToThankLetter{
+  width: 10%;
+  height: 100rpx;
+  float: left;
+  margin-left: 13%;
+}
+.btnToThankLetter image{
+  width: 70%;
+  height: 40rpx;
+  margin-top: 20rpx;
+}
+.btnToThankLetter_text{
+  width: 70%;
+  font-size: 20rpx;
+  text-align: center;
+  margin-top: -10rpx;
+}
+.button-pray {
+    width: 38%;
+    height: 100rpx;
+    line-height: 100rpx;
+    background-color: #0092FF;
+    color: #fff;
+    font-size: 16px;
+    float: right;
+    text-align: center;
+}
+/*帮助ta  end*/
 
 /* 评论框框  start*/
 .evaluate{
+  display: none;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -331,3 +629,4 @@ span{
   height: 80rpx;
   font-size: 26rpx;
 }
+/* 评论框框  end*/

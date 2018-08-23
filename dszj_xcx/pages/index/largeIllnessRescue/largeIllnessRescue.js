@@ -27,7 +27,7 @@ Page({
     sliderOffset: 0,        //坐标x
     sliderLeft: 0,          //坐标y
     form:{
-      step:0,               //Int请求步骤。
+      step:1,               //Int请求步骤。
       mobile:null,          //	Int联系人手机号。
       total_amount:null,    //	Double筹款金额。
       title:null,           //	String	求助标题。

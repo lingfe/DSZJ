@@ -256,9 +256,9 @@ abbr{
   margin-left: 13%;
 }
 .btnToThankLetter image{
-  width: 100%;
-  height: 60rpx;
-  margin-top: 10rpx;
+  width: 90%;
+  height: 50rpx;
+  margin-top: 15rpx;
 }
 .button-pray {
     width: 38%;

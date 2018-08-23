@@ -68,11 +68,11 @@
 /*发表*/
 .thank-letter-icon-float {
     position: absolute;
-    right: 17px;
+    right: 8px;
     bottom: 120px;
     cursor: pointer;
-    width: 48rpx;
-    height: 48rpx;
+    width: 80rpx;
+    height: 80rpx;
 }
 .publish-new-float {
     position: absolute;

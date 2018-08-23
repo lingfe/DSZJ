@@ -16,7 +16,7 @@
 
       <view class='page_ProjectInfo_content_content'>
         <view class='page_ProjectInfo_content_content_image'>
-          <image src='http://qzapp.qlogo.cn/qzapp/101414596/E9478CCDFC315EF3A583B83432A9C9C5/100'></image>
+          <image src='http://pic.yupoo.com/lingfe/0441df88/f4676b6a.png'></image>
         </view>
         <view class='page_ProjectInfo_content_content_title'>3423423</view>
       </view>
@@ -47,8 +47,8 @@
           <view class='page_dynamic_text_title'>零风</view>
           <view class='page_dynamic_text_text'>5分钟前</view>
           <view class='page_dynamic_text_text'>祈福发起</view>
-          <view class='page_dynamic_text_image'>
-            <image src='http://qzapp.qlogo.cn/qzapp/101414596/E9478CCDFC315EF3A583B83432A9C9C5/100'></image>
+          <view class='page_dynamic_text_image' >
+            <image src='http://pic.yupoo.com/lingfe/64a27743/d4214f5b.png' style='border-radius: 0rpx;'></image>
           </view>
         </view>
     </view>
@@ -72,10 +72,10 @@
 <!-- 为ta祈福  start-->
 <view class="button-box">
     <view class="btnToThankLetter" bindtap='bindTab_GXQM'>
-      <image src='http://qzapp.qlogo.cn/qzapp/101414596/E9478CCDFC315EF3A583B83432A9C9C5/100'></image>
+      <image src='http://pic.yupoo.com/lingfe/e7d5c834/feb9fe4a.png' style='margin-top: 13rpx;height:54rpx;'></image>
     </view>
     <view class="btnToThankLetter">
-      <image src='http://qzapp.qlogo.cn/qzapp/101414596/E9478CCDFC315EF3A583B83432A9C9C5/100'></image>
+      <image src='http://pic.yupoo.com/lingfe/865d5cf6/cc93a34e.png'></image>
     </view>
     <view class="button-pray">为TA祈福</view>
 </view>
