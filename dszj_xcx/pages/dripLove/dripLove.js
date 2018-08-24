@@ -24,7 +24,7 @@ Page({
   //跳转到救助详情页面
   bindtap_rescueDetails:function(e){
     wx.navigateTo({
-      url: '',
+      url: '/pages/dripLove/rescueDetails/rescueDetails',
     })
   },
 

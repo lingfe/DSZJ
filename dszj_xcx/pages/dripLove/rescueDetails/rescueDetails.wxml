@@ -177,7 +177,7 @@
   </view>
 
 
-  <!-- 全部评价   start -->
+  <!-- 爱心帮助记录   start -->
   <view class='page_Allevaluate'>
     <view class='page_Allevaluate_title'>爱心帮助记录</view>
     
@@ -244,7 +244,7 @@
     </view>
     <view class='page_Allevaluate_selectHelp'>查看所有帮助 ></view>
   </view>
-  <!-- 全部评价   end -->
+  <!-- 爱心帮助记录   end -->
 </view>
 
 <!-- 客服信息  start-->

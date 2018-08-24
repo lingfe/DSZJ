@@ -1,0 +1,106 @@
+<!--pages/dripLove/prayingForBlessingDetails/prayingForBlessingDetails.wxml-->
+<view class='page'>
+  <!-- 项目信息 start-->
+  <view class='page_ProjectInfo'>
+    <view class='page_ProjectInfo_content'>
+      <view class='page_ProjectInfo_content_title'>
+        <view class='page_ProjectInfo_content_title_image'>
+          <image src='http://qzapp.qlogo.cn/qzapp/101414596/E9478CCDFC315EF3A583B83432A9C9C5/100'></image>
+        </view>
+        <view class='page_ProjectInfo_content_title_text'>零风</view>
+        <view class='page_ProjectInfo_content_title_text_last'>
+          祈福<span style="color: #F25B4B;font-weight: 500;">54</span>天
+        </view>
+      </view>
+
+      <view class='page_ProjectInfo_content_content'>
+        <view class='page_ProjectInfo_content_content_image'>
+          <image src='http://pic.yupoo.com/lingfe/0441df88/f4676b6a.png'></image>
+        </view>
+        <view class='page_ProjectInfo_content_content_title'>3423423</view>
+      </view>
+      
+      <view class='page_ProjectInfo_content_content_remark'>祈福介绍：
+        <span style="color:#979797;">page_ProjectInfo_content_content_title_width_100page_ProjectInfo_content_content_title_width_100page_ProjectInfo_content_content_title_width_100</span>
+      </view>
+      <view class='page_ProjectInfo_content_content_image_width_100'>
+        <image src='https://www.dishuihuzhu.cn/uploads/User_cert/20180816/s_1405262_5b7530de5c182.jpg'></image>
+      </view>
+    </view>
+  </view>
+  <!-- 项目信息 end -->
+
+  <!-- ta的祈福标题 start -->
+  <view class='page_tadeQfu'>
+    <view class='page_tadeQfu_title'>
+      已获得<abbr>0</abbr>人帮助 / 爱心款<abbr>0.00</abbr>元
+    </view>
+    <view class='page_tadeQfu_text'>
+      <view class='page_tadeQfu_text_title'>TA的祈福：</view>
+      <view class='page_tadeQfu_text_text'>已有<abbr>0</abbr>人为TA祈福</view>
+    </view>
+    <!-- <view class='page_tadeQfu_txtButton'>暂无祈福记录</view> -->
+  </view>
+  <!-- ta的祈福标题 end -->
+
+  <!-- ta的祈福内容   start -->
+  <view class='page_Allevaluate'>
+    <view class='page_Allevaluate_evaluate'>
+      <view class='page_Allevaluate_evaluate_image'>
+        <image src='/assets/images/jpg/jz1.jpg'></image>
+      </view>
+      <view class='page_Allevaluate_evaluate_content'>
+        <view class='page_Allevaluate_evaluate_content_title'>
+          <view class='page_Allevaluate_evaluate_content_title_name'>一竿一线钓江湖</view>
+        </view>
+        <view class='page_Allevaluate_evaluate_content_text'>
+          感谢您们建了这样一个平台帮了感谢您们建了这样一个平台帮了无助的人。感谢您们建了这样一个平台帮了无助的人。无助的人。
+        </view>
+        <view class='page_Allevaluate_evaluate_content_canshu'>
+          <!-- <view class='page_content_left_label'>置顶</view> -->
+          <view class='page_content_left_text'>23天前</view>
+          <view class='page_content_left_image' style="float:right;">
+            <image src='http://pic.yupoo.com/lingfe/64a27743/d4214f5b.png'></image>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='page_Allevaluate_evaluate'>
+      <view class='page_Allevaluate_evaluate_image'>
+        <image src='/assets/images/jpg/jz1.jpg'></image>
+      </view>
+      <view class='page_Allevaluate_evaluate_content'>
+        <view class='page_Allevaluate_evaluate_content_title'>
+          <view class='page_Allevaluate_evaluate_content_title_name'>巴拉巴拉</view>
+          <view class='page_Allevaluate_evaluate_content_title_text'>
+            帮助了: <abbr class="color-red">5.00</abbr>元
+          </view>
+        </view>
+        <view class='page_Allevaluate_evaluate_content_text'>
+          祝你早日康复
+        </view>
+        <view class='page_Allevaluate_evaluate_content_canshu'>
+          <!-- <view class='page_content_left_label'>置顶</view> -->
+          <view class='page_content_left_text'>23天前</view>
+          <view class='page_content_left_image' style="float:right;">
+            <image src='http://pic.yupoo.com/lingfe/64a27743/d4214f5b.png'></image>
+          </view>
+        </view>
+        <view class='page_Allevaluate_evaluate_content_huifu'>
+          <view class='page_Allevaluate_evaluate_content_huifu_content'>
+            <span>滴水之家客服</span>:您加我们客服微信下YK1063130945客服会帮您处理的
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- ta的祈福内容   end -->
+</view>
+
+<!-- 为ta祈福,为ta献爱心  start-->
+<view class="button-box">
+  <view class="button-left">为TA祈福</view>
+  <view class="button-right">为ta献爱心</view>
+</view>
+<!-- 为ta祈福  end>

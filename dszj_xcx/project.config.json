@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 17,
+			"current": 12,
 			"list": [
 				{
 					"id": -1,
@@ -48,10 +48,11 @@
 					"query": ""
 				},
 				{
-					"id": -1,
-					"name": "快速筹款",
+					"id": 2,
+					"name": "（快速筹款,+发起，大病救助,发起祈福）页面",
 					"pathName": "pages/index/largeIllnessRescue/largeIllnessRescue",
-					"query": ""
+					"query": "",
+					"scene": "1001"
 				},
 				{
 					"id": -1,
@@ -110,10 +111,11 @@
 					"scene": "1001"
 				},
 				{
-					"id": -1,
-					"name": "滴水祈福",
+					"id": 12,
+					"name": "快速筹款-+发起发起祈福-祈福详情页面",
 					"pathName": "pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing",
-					"query": ""
+					"query": "",
+					"scene": "1001"
 				},
 				{
 					"id": -1,
@@ -143,6 +145,13 @@
 					"id": 17,
 					"name": "大病救助-发布页面",
 					"pathName": "pages/index/largeIllnessRescue/patientInformation/receivablesInformation/receivablesInformation",
+					"query": "",
+					"scene": "1001"
+				},
+				{
+					"id": -1,
+					"name": "滴水爱心-滴水祈福-祈福详情页面",
+					"pathName": "pages/dripLove/prayingForBlessingDetails/prayingForBlessingDetails",
 					"query": "",
 					"scene": "1001"
 				}

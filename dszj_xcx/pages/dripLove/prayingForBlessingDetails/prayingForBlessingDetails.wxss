@@ -1,0 +1,280 @@
+/* pages/dripLove/prayingForBlessingDetails/prayingForBlessingDetails.wxss */
+
+
+page{
+  background-color: #fff;
+}
+
+.page{
+  padding: 0;
+  margin: 0;
+}
+
+
+/* 项目信息 start*/
+.page_ProjectInfo{
+  width: 100%;
+  background-color: #fff;
+}
+.page_ProjectInfo_content{
+  width: 90%;
+  height: auto;
+  margin: auto;
+  padding-bottom: 30rpx;
+}
+.page_ProjectInfo_content_title{
+  width: 100%;
+  height: 100rpx;
+  font-size: 28rpx;
+  margin: auto;
+  margin-top: 10rpx;
+}
+.page_ProjectInfo_content_title_image{
+  width: 14%;
+  height: 100rpx;
+  float: left;
+}
+.page_ProjectInfo_content_title_image image{
+  min-width: 80rpx;
+  max-width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-top: 10rpx;
+}
+.page_ProjectInfo_content_title_text{
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 60%;
+  float: left;
+  margin-left: 2%; 
+}
+.page_ProjectInfo_content_title_text_last{
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 20%;
+  float: left;
+  margin-left: 2%; 
+}
+.page_ProjectInfo_content_content{
+  width: 100%;
+  margin: auto;
+  margin-top: 10rpx;
+  height: 60rpx;
+}
+.page_ProjectInfo_content_content_image{
+  width: 10%;
+  float: left;
+  height: 60rpx;
+}
+.page_ProjectInfo_content_content_image image{
+  width: 60rpx;
+  height: 60rpx;
+  cursor: pointer;
+}
+.page_ProjectInfo_content_content_title{
+  width: 90%;
+  font-size: 40rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  cursor: pointer;
+  float: left;
+}
+.page_ProjectInfo_content_content_remark{
+  width: 100%;
+  font-size: 30rpx;
+  margin: auto;
+  margin-top: 20rpx;
+  display:block;word-break: break-all;word-wrap: break-word;
+}
+.page_ProjectInfo_content_content_image_width_100{
+  width: 100%;
+  margin-top: 20rpx;
+  height: 160rpx;
+}
+.page_ProjectInfo_content_content_image_width_100 image{
+  width: 30%;
+  height: 160rpx;
+  border-radius: 8rpx;
+  margin-left: 3.3%;
+}
+/* 项目信息 end*/
+
+/* ta的祈福 start*/
+.page_tadeQfu{
+  width: 100%;
+  padding-top: 20rpx;
+  border-top: 10rpx solid #efeff4;
+}
+.page_tadeQfu_title{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    font-size: 16px;
+    color: #636363;
+    background: #F7F7F7;
+    border-radius: 6px;
+    padding: 10px 0;
+}
+.page_tadeQfu_text{
+  width: 94%;
+  height: 80rpx;
+  margin: auto;
+  line-height: 80rpx;
+  margin-top: 10rpx;
+}
+.page_tadeQfu_text_title{
+  font-size: 30rpx;
+  width: 50%;
+  float: left;
+}
+.page_tadeQfu_text_text{
+  font-size: 26rpx;
+  width: 50%;
+  float: left;
+  text-align: right;
+}
+abbr{
+  color: #0099ff;
+}
+.page_tadeQfu_txtButton{
+  width: 90%;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin: auto;
+  color: #C7C7CD;
+  text-align: center;
+  font-size: 24rpx;
+}
+/* ta的祈福 end*/
+
+
+/* 爱心帮助记录 start*/
+.page_Allevaluate{
+  width: 100%;
+  background-color: #fff;
+  padding-bottom: 200rpx;
+}
+.page_Allevaluate_evaluate{
+  width: 94%;
+  margin: auto;
+  height: 200rpx;
+  padding-top: 20rpx;
+}
+.page_Allevaluate_evaluate_image{
+  width: 10%;
+  height: 100rpx;
+  float: left;
+}
+.page_Allevaluate_evaluate_image image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.page_Allevaluate_evaluate_content{
+  width: 82%;
+  height:auto;
+  float: left;
+  margin-left: 5%;
+}
+.page_Allevaluate_evaluate_content_title{
+  width: 100%;
+  height: 60rpx;
+}
+.page_Allevaluate_evaluate_content_title_name{
+  width: 70%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  float: left;
+  color: #0099ff;
+}
+.page_Allevaluate_evaluate_content_title_text{
+  width: 30%;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+  text-align: center;
+  float: left;
+}
+.page_Allevaluate_evaluate_content_text{
+  width: 100%;
+  height: auto;
+  font-size: 26rpx;
+}
+.page_Allevaluate_evaluate_content_canshu{
+  width: 100%;
+  height: 60rpx;
+}
+.page_content_left_label{
+  font-size: 28rpx;
+  border-radius: 6rpx;
+  border: 1rpx solid #E51C23;
+  width: 60rpx;
+  float: left;
+  color: #E51C23;
+  margin-right: 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-top: 10rpx;
+}
+.page_content_left_text{
+  height: 40rpx;
+  line-height:40rpx;
+  font-size: 26rpx;
+  margin-right: 20rpx;
+  color: #979797;
+  float: left;
+  margin-top: 10rpx;
+}
+.page_content_left_image{
+  height: 40rpx;
+  float: left;
+}
+.page_content_left_image image{
+  height: 30rpx;
+  width: 30rpx;
+}
+.page_Allevaluate_evaluate_content_huifu{
+  width: 100%;
+  background-color: #F0F0F0;
+  padding: 10rpx;
+}
+.page_Allevaluate_evaluate_content_huifu_content{
+  font-size: 30rpx;
+}
+span{
+  color: #0099FF;
+}
+/* 爱心帮助记录 end*/
+
+/*为ta祈福  start*/
+.button-box {
+    position: fixed;
+    bottom: 0rpx;
+    background: #fff;
+    width: 100%;
+    height: 80rpx;
+}
+.button-left{
+  width: 40%;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #0092FF;
+  color: #fff;
+  font-size: 16px;
+  float: left;
+  text-align: center;
+  border-radius: 40px 0 0 40px;
+  margin-left: 10%;
+}
+.button-right {
+    width: 40%;
+    height: 80rpx;
+    line-height: 80rpx;
+    background-color: #7DC8FF;
+    color: #fff;
+    font-size: 16px;
+    float: left;
+    text-align: center;
+    border-radius: 0 40px 40px 0;
+}
