@@ -13,40 +13,40 @@
     <!-- 项目发布者信息 start -->
     <view class='page_title'>
       <view class='page_title_content_title_image'>
-          <image src='http://qzapp.qlogo.cn/qzapp/101414596/E9478CCDFC315EF3A583B83432A9C9C5/100'></image>
+          <image src='{{detailsData.member.headerpic}}'></image>
       </view>
-      <view class='page_title_content_title_text'>155******39</view>
+      <view class='page_title_content_title_text'>{{detailsData.member.mobile}}</view>
       <view class='page_title_content_title_text_last'>
-          祈福<span style="color: #F25B4B;font-weight: 500;">54</span>天
+          祈福<span style="color: #F25B4B;font-weight: 500;">{{detailsData.days}}</span>天
       </view>
     </view>
     <!-- 项目发布者信息 end -->
 
     <!-- 项目内容 start -->
     <view class='page_content'>
-      <view class='page_content_title'>求求你们给我一个孝敬的父母的机会！我还想活下去！</view>
+      <view class='page_content_title'>{{detailsData.title}}</view>
       <!-- 项目参数 start -->
       <view class='page_content_xmParam'>
         <!-- 金额 start -->
         <view class='page_content_xmParam_paramInfo'>
           <view class='page_content_xmParam_paramInfo_model'>
             <view class='page_content_xmParam_paramInfo_model_text'>目标金额(元)</view>
-            <view class='page_content_xmParam_paramInfo_model_text txt-red'>100000.00</view>
+            <view class='page_content_xmParam_paramInfo_model_text txt-red'>{{detailsData.total_amount}}</view>
           </view>
           <view class='page_content_xmParam_paramInfo_model'>
             <view class='page_content_xmParam_paramInfo_model_text'>已筹金额(元)</view>
-            <view class='page_content_xmParam_paramInfo_model_text txt-red'>13012.00</view>
+            <view class='page_content_xmParam_paramInfo_model_text txt-red'>{{detailsData.total_money}}</view>
           </view>
           <view class='page_content_xmParam_paramInfo_model border_right_none'>
             <view class='page_content_xmParam_paramInfo_model_text'>帮助人数</view>
-            <view class='page_content_xmParam_paramInfo_model_text txt-red'>103</view>
+            <view class='page_content_xmParam_paramInfo_model_text txt-red'>{{detailsData.total_num}}</view>
           </view>
         </view>
         <!-- 金额 end -->
 
         <!-- 进度条百分比 start -->
         <view class='page_content_xmParam_progress'>
-          <progress percent="40" activeColor="#0092ff" show-info/>
+          <progress percent="{{detailsData.percent}}" activeColor="#0092ff" show-info/>
         </view>
         <!-- 进度条百分比 end -->
 
@@ -54,7 +54,7 @@
         <view class='page_content_xmParam_xmjkuang'>
           <view class='page_content_xmParam_xmjkuang_shoming'>
             <view class='page_content_xmParam_xmjkuang_shoming_title'>该项目已通过滴水之家审核</view>
-            <view class='page_content_xmParam_xmjkuang_shoming_text'>资金流向说明 ></view>
+            <view class='page_content_xmParam_xmjkuang_shoming_text' bindtap='zjlxsm_isDiaplay_Btn'>资金流向说明 ></view>
           </view>
           <view class='page_content_xmParam_xmjkuang_text'>滴水之家个人求助电话:400-6063-400</view>
         </view>
@@ -68,17 +68,13 @@
           <image src='http://pic.yupoo.com/lingfe/edacb18f/51db0e8e.png'></image>
         </view>
         <view class='page_content_aixingxbang_text'>爱心贡献榜</view>
-        <view class='page_content_aixingxbang_image'>
-          <image src='http://pic.yupoo.com/lingfe/edacb18f/51db0e8e.png'></image>
+        <view class='page_content_aixingxbang_image' wx:for="{{dataList.Records}}" wx:key="*this">
+          <image src='{{item.member.headerpic}}'></image>
         </view>
         <view class='page_content_aixingxbang_image'>
-          <image src='http://pic.yupoo.com/lingfe/edacb18f/51db0e8e.png'></image>
-        </view>
-        <view class='page_content_aixingxbang_image'>
-          <image src='http://pic.yupoo.com/lingfe/edacb18f/51db0e8e.png'></image>
-        </view>
-        <view class='page_content_aixingxbang_image'>
-          <image src='http://pic.yupoo.com/lingfe/c338ec00/4ceb65ad.png'></image>
+          <navigator url='/pages/dripLove/rescueDetails/loveContributionList/loveContributionList?id={{detailsData.id}}'>
+            <image src='http://pic.yupoo.com/lingfe/c338ec00/4ceb65ad.png'></image>
+          </navigator>
         </view>
       </view>
       <!-- 爱心贡献榜 end-->
@@ -86,25 +82,24 @@
       <!-- 项目详情 start-->
       <view class='page_content_title2'>项目详情</view>
       <view class='page_content_text'>
-        <rich-text nodes="社会上的爱心人士你们好！当你看到这封求助信的时候，我正在饱受病魔带给我的痛苦，我叫叶助芳，今年31岁，来自江西省贵溪市志光镇柏山村，我们一家生活非常平淡，但是一家人能平平安安的是我最大的心愿。2018年月8月14，我因为呼吸困难，被送到温州医科大学附属第二医院进行抢救，本身因为反复咳嗽5年，呼吸困难1年，因为家里经济比较困难，我一直坚持保守治疗，我以为，就这样保守治疗能延续我的生命，没想到厄运再次降临到我身上！治疗的巨额费用是我这个极为普通的家庭承受了巨大的压力，这5年多的反反复复治疗，治疗费用已经花费了10多万元，我父母一辈子的积蓄已经花完了，还借遍了亲朋好友。我父亲已经58岁了，妈妈56岁，妈妈患有肾病，也常年需要药物治疗，5年前，我有过一段短暂的恋爱，因为检查发现患病后，男朋友便拒绝了来往。失去联络！父亲在医院里每天照顾我，58岁的他，白发苍苍，看到老父亲忙前忙后，换药喂饭，因为请护工很贵，每天都是老父亲帮我拍背，我抱怨上天的不公！为什么不给我一个健康的身体！每天的压力像座大山一样压在我父亲身上，医生说我后期治疗费用还需要10万左右，建议转去上海治疗，但费用有限！因为我只有农保，我用的很多药物都是不报销的，很多治疗都是需要自费的。这对于我这样的家庭来真的很绝望，但是我不能倒下！目前治疗费用已经耗尽了我们的全部积蓄。恳请亲朋好友社会上的爱心人士给予帮助，希望能帮助我们这家渡过难关，无论后期如何，以后我们将尽最大努力去回报社会，去帮助别人，您的一笔善款，一次转发，一次证实，都是支撑起我们这个家的精神支柱，谢谢大家，感谢感谢恳请各位好心人士伸手相助，多多转发，您的每一次转发对我们都至关重要，每一次转发对我们来说都是莫大的帮助!万般无奈，特此借助公益筹款平台向您发起求助，盼望您能伸出援手，助我们一家度过危难，也希望您能帮忙转发扩散这条求助信息，让爱心传递到每个角落。在这里，深深的感谢每一位帮助过我们的亲朋好友，感谢每一位无私转发的爱心人士，让生命得以延续，让爱心充满人间，感激不尽！也希望每一位看到这篇文章的朋友都能注意身体，健康才是真正的财富，愿好人一生平安！恳请各位好心人士伸手相助，多多转发，您的每一次转发对我们都至关重要，每一次转发对我们来说都是莫大的帮助!" bindtap="tap"></rich-text>
+        <rich-text nodes="{{detailsData.description}}" bindtap="tap"></rich-text>
       </view>
       <!-- 项目详情 end -->
 
       <!-- 项目图片 start-->
       <view class='page_content_image'>
-        <image src='/assets/images/jpg/jz1.jpg'></image>
-        <image src='/assets/images/jpg/jz1.jpg'></image>
-        <image src='/assets/images/jpg/jz1.jpg'></image>
-        <image src='/assets/images/jpg/jz1.jpg'></image>
+        <image wx:for="{{detailsData.pictures}}"  wx:key="*this"
+        bindtap='previewImage' 
+        id="{{imgPass}}{{item}}" data-imgarr='{{detailsData.pictures}}'  src='{{imgPass}}{{item}}'></image>
       </view>
       <!-- 项目图片 end-->
 
       <!-- 资料证明 start-->
       <view class='page_content_title2'>资料证明</view>
       <view class='page_content_ziliaoZming'>
-        <view class='page_content_ziliaoZming_title'>患者：叶祝芳</view>
+        <view class='page_content_ziliaoZming_title'>患者：{{detailsData.aided_name}}</view>
         <view class='page_content_ziliaoZming_zhengming'>身份证已审核</view>
-        <view class='page_content_ziliaoZming_title'>所患疾病：支气管扩张伴感染   <span style="color:#0099ff;">已审核</span></view>
+        <view class='page_content_ziliaoZming_title'>所患疾病：{{detailsData.disease}}   <span style="color:#0099ff;">已审核</span></view>
         <view class='page_content_ziliaoZming_zhengming'>诊断证明已提交</view>
         <view class='page_content_ziliaoZming_zhengming'>诊断医院：温州医科大学附属第二医院</view>
         <view class='page_content_ziliaoZming_zhengming'>专业医生评估，确认初始治疗费用合理</view>
@@ -120,36 +115,30 @@
         <view class='page_content_ziliaoZming_text'>
           该求助信息不属于慈善公开募捐，真实性由信息发布者个人负责，滴水之家提示您了解详情后再进行帮助。</view>
       </view>
-      <view class='page_content_jiubao'>质疑/举报</view>
+      <view class='page_content_jiubao'>
+        <navigator url='/pages/dripLove/rescueDetails/questionReport/questionReport?id={{detailsData.id}}'>质疑/举报</navigator>
+      </view>
       <!-- 资料证明 end-->
 
       <!-- 我也来证明 start -->
       <view class='page_content_myZhengMing'>
         <view class='page_content_myZhengMing_title'>
-          <view class='page_content_myZhengMing_title_title'>已有<abbr class="color-red">3</abbr>人证明情况属实</view>
-          <view class='page_content_myZhengMing_title_text color-red'>我也来证明</view>
+          <view class='page_content_myZhengMing_title_title'>已有<abbr class="color-red">{{detailsData.verify_count}}</abbr>人证明情况属实</view>
+          <view class='page_content_myZhengMing_title_text color-red'>
+            <navigator url='/pages/dripLove/rescueDetails/myAlsoComeProve/myAlsoComeProve'>我也来证明</navigator>
+          </view>
         </view>
         <view class='page_content_myZhengMing_image'>
-          <view class='page_content_myZhengMing_image_image'>
-            <image src='http://thirdwx.qlogo.cn/mmopen/vi_32/W0gEs5T7XLMCZZicLBwyVmqiaPDvpuHsdN3NslXXJiaVFO03E7MvdHqfuFtgMv4R5uicoCb8RMqKQpIwx7vN5efShg/132'></image>
-            <view class='page_content_myZhengMing_image_image_triangle'></view>
-          </view>
-          <view class='page_content_myZhengMing_image_image'>
-            <image src='http://thirdwx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTK4tsu9z0efKG8ARus8VqqhLuib68loEJRH4J63Uy9fib6P00U6TJwTExdq7sGTHNHFA0iaU1lIoTy9A/132'></image>
-          </view>
-          <view class='page_content_myZhengMing_image_image'>
-            <image src='http://thirdwx.qlogo.cn/mmopen/vi_32/DYAIOgq83epJauZzyEhXQ5eTT6ibQabPf3ro9DLUypfUZ8d32s7tOBEbV6L0TxxZ6TPJweSXpptKImRJzvt9CPg/132'></image>
-          </view>
-          <view class='page_content_myZhengMing_image_image'>
-            <image src='http://pic.yupoo.com/lingfe/edacb18f/51db0e8e.png'></image>
+          <view wx:for="{{detailsData.verifies}}" wx:key="*this" class='page_content_myZhengMing_image_image'>
+            <image src='{{item.headerpic}}' bindtap='imgInfo' id="{{index}}"  data-info='{{item.info}}'></image>
           </view>
           <view class='page_content_myZhengMing_image_image right_image'>
-            <image src='http://pic.yupoo.com/lingfe/c338ec00/4ceb65ad.png'></image>
+            <navigator url='/pages/dripLove/rescueDetails/confirmRecord/confirmRecord?id={{detailsData.id}}'>
+              <image src='http://pic.yupoo.com/lingfe/c338ec00/4ceb65ad.png'></image>
+            </navigator>
           </view>
         </view>
-        <view class='page_content_myZhengMing_content'>
-          我们是同一天住进温州附二医的，每天都是她爸爸陪着的，她妈本身的身体就不好还天天晚上来陪护，除了去方便氧气是不离身，瘦的连张脸都没有我的手掌大，天天都在咳，小孩子咳的声音都比她大，住院五天花了一万多。
-        </view>
+        <view class='page_content_myZhengMing_content'>{{detailsData.verifies[0].info}}</view>
       </view>
       <!-- 我也来证明 end -->
     </view>
@@ -158,94 +147,99 @@
     <!-- 筹款动态 start -->
     <view class='page_choukuangdotai'>
       <view class='page_choukuangdotai_title'>筹款动态</view>
-      <view class='page_choukuangdotai_content'>
+      
+      <view wx:for="{{detailsData.member}}" wx:key="*this" class='page_choukuangdotai_content'>
         <view class='page_choukuangdotai_content_image'>
-          <image src='/assets/images/jpg/jz1.jpg'></image>
+          <image src='{{detailsData.member.headerpic}}'></image>
         </view>
         <view class='page_choukuangdotai_content_content'>
-          <view class='page_choukuangdotai_content_content_title'>137******61</view>
-          <view class='page_choukuangdotai_content_content_text'>目标金额： <span style="color:red;">100000.00</span></view>
-          <view class='page_choukuangdotai_content_content_text font_size_22'>08月20日  项目发起</view>
+          <view class='page_choukuangdotai_content_content_title'>{{detailsData.member.mobile}}</view>
+          <view class='page_choukuangdotai_content_content_text'>{{item.info}}</view>
+          <view class='page_choukuangdotai_content_content_text font_size_22'>08月20日  项目更新</view>
         </view>
       </view>
+
+      <view class='page_choukuangdotai_content'>
+        <view class='page_choukuangdotai_content_image'>
+          <image src='{{detailsData.member.headerpic}}'></image>
+        </view>
+        <view class='page_choukuangdotai_content_content'>
+          <view class='page_choukuangdotai_content_content_title'>{{detailsData.member.mobile}}</view>
+          <view class='page_choukuangdotai_content_content_text'>目标金额： <span style="color:red;">{{detailsData.total_amount}}</span></view>
+          <view class='page_choukuangdotai_content_content_text font_size_22'>{{detailsData.addtime}}  项目发起</view>
+        </view>
+      </view>
+
       <view class='page_choukuangdotai_buttons'>
-        <view class='page_choukuangdotai_buttons_btnThanks'>感谢亲们</view>
-        <view class='page_choukuangdotai_buttons_weiTaQifu'>为Ta祈福</view>
+        <navigator url='pages/dripLove/thankGuys/thankGuysIn/thankGuyslnDetails/thankGuyslnDetails?id={{detailsData.id}}' 
+          class='page_choukuangdotai_buttons_btnThanks'>感谢亲们</navigator>
+        <navigator class='page_choukuangdotai_buttons_weiTaQifu'>为Ta祈福</navigator>
       </view>
     </view>
     <!-- 筹款动态 end -->
   </view>
 
-
   <!-- 爱心帮助记录   start -->
   <view class='page_Allevaluate'>
     <view class='page_Allevaluate_title'>爱心帮助记录</view>
-    
     <view class='page_Allevaluate_data'>
       <abbr>68</abbr>次转发 / <abbr id="lblDonationCount">133</abbr>次爱心帮助
     </view>
 
-    <view class='page_Allevaluate_evaluate'>
+    <!-- 有回复的 start-->
+    <view wx:for="{{list_hepl}}" wx:key="*this" wx:for-item="st" class='page_Allevaluate_evaluate'>
       <view class='page_Allevaluate_evaluate_image'>
-        <image src='/assets/images/jpg/jz1.jpg'></image>
+        <image src='{{st.avatar}}'></image>
       </view>
       <view class='page_Allevaluate_evaluate_content'>
         <view class='page_Allevaluate_evaluate_content_title'>
-          <view class='page_Allevaluate_evaluate_content_title_name'>一竿一线钓江湖</view>
-        </view>
-        <view class='page_Allevaluate_evaluate_content_text'>
-          感谢您们建了这样一个平台帮了感谢您们建了这样一个平台帮了无助的人。感谢您们建了这样一个平台帮了无助的人。无助的人。
-        </view>
-        <view class='page_Allevaluate_evaluate_content_canshu'>
-          <!-- <view class='page_content_left_label'>置顶</view> -->
-          <view class='page_content_left_text'>23天前</view>
-          <view class='page_content_left_image'>
-            <image src='http://pic.yupoo.com/lingfe/7cf66693/4025569a.png'></image>
-          </view>
-          <view class='page_content_left_text'>10滴爱心记录</view>
-          <view class='page_content_left_image' style="float:right;">
-            <image src='http://pic.yupoo.com/lingfe/64a27743/d4214f5b.png'></image>
-          </view>
-        </view>
-      </view>
-    </view>
-
-    <view class='page_Allevaluate_evaluate'>
-      <view class='page_Allevaluate_evaluate_image'>
-        <image src='/assets/images/jpg/jz1.jpg'></image>
-      </view>
-      <view class='page_Allevaluate_evaluate_content'>
-        <view class='page_Allevaluate_evaluate_content_title'>
-          <view class='page_Allevaluate_evaluate_content_title_name'>巴拉巴拉</view>
+          <view class='page_Allevaluate_evaluate_content_title_name'>{{st.nickname}}</view>
           <view class='page_Allevaluate_evaluate_content_title_text'>
-            帮助了: <abbr class="color-red">5.00</abbr>元
+            帮助了: <abbr class="color-red">{{st.money}}</abbr>元
           </view>
         </view>
         <view class='page_Allevaluate_evaluate_content_text'>
-          祝你早日康复
+          {{st.info}}
         </view>
         <view class='page_Allevaluate_evaluate_content_canshu'>
           <!-- <view class='page_content_left_label'>置顶</view> -->
-          <view class='page_content_left_text'>23天前</view>
+          <view class='page_content_left_text'>{{st.addtime}}</view>
           <view class='page_content_left_image'>
             <image src='http://pic.yupoo.com/lingfe/7cf66693/4025569a.png'></image>
           </view>
-          <view class='page_content_left_text'>5滴爱心记录</view>
+          <view class='page_content_left_text'>{{st.money}}滴爱心记录</view>
           <view class='page_content_left_image' style="float:right;">
             <image src='http://pic.yupoo.com/lingfe/64a27743/d4214f5b.png'></image>
           </view>
         </view>
-        <view class='page_Allevaluate_evaluate_content_huifu'>
+        <!-- 回复内容 start -->
+        <view wx:for="{{st.replies}}" wx:key="*this" wx:for-item="huifu" class='page_Allevaluate_evaluate_content_huifu'>
           <view class='page_Allevaluate_evaluate_content_huifu_content'>
-            <span>滴水之家客服</span>:您加我们客服微信下YK1063130945客服会帮您处理的
+            <span wx:if="{{huifu.nickname==''}}">{{huifu.mobile}}</span>
+            <span wx:else >{{huifu.nickname}}</span>
+            :{{huifu.info }}
           </view>
         </view>
+        <!-- 回复内容 end -->
       </view>
     </view>
-    <view class='page_Allevaluate_selectHelp'>查看所有帮助 ></view>
+    <!-- 有回复的 end -->
+
+    <view class='page_Allevaluate_selectHelp'>
+      <navigator url='/pages/dripLove/rescueDetails/taHepl/taHepl?id={{detailsData.id}}'>查看所有帮助 ></navigator>
+    </view>
   </view>
   <!-- 爱心帮助记录   end -->
+
 </view>
+
+<!-- 资金流向说明 start-->
+<view class='page_zjlxsm' wx:if="{{zjlxsm_isDiaplay}}">
+  <view class='sl'>
+    <image class='zjlxsm_sl_image' bindtap='zjlxsm_isDiaplay_Btn' src='http://pic.yupoo.com/lingfe/db150a15/18da7159.png'></image>
+  </view>
+</view>
+<!-- 资金流向说明 end-->
 
 <!-- 客服信息  start-->
 <view class='fabiao'>
@@ -259,11 +253,11 @@
 <view class="button-box">
     <view class="btnToThankLetter" bindtap='bindTab_GXQM'>
       <image src='http://pic.yupoo.com/lingfe/f48be2a5/bd128165.png'></image>
-      <view class='btnToThankLetter_text'>66</view>
+      <view class='btnToThankLetter_text'>{{count}}</view>
     </view>
     <view class="btnToThankLetter">
       <image src='http://pic.yupoo.com/lingfe/865d5cf6/cc93a34e.png'></image>
-      <view class='btnToThankLetter_text'>177</view>
+      <view class='btnToThankLetter_text'>{{detailsData.share_count}}</view>
     </view>
     <view class="button-pray">帮助TA</view>
 </view>

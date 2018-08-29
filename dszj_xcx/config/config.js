@@ -11,6 +11,7 @@ export default {
   //basePath_sys: 'http://sys.echsoft.cn/',
   dszjPath_web:'http://120.78.13.232/',
 
+
   // 上传图片地址   
   //domain: 'http://web.echsoft.cn/upload/doUpload',
   domain:'https://www.dishuihuzhu.cn',

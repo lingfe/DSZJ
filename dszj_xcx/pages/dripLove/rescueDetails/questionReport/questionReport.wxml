@@ -1,0 +1,59 @@
+<!--pages/dripLove/rescueDetails/questionReport/questionReport.wxml-->
+<view class='page'>
+
+  <form bindsubmit="setAddDoubt">
+  <view class='page_input'>
+    <view class='page_input_title'>真实姓名</view>
+    <view class='page_input_input'>
+      <input placeholder='请填写您的真实姓名' name="name" value='{{form.name}}' type='text'></input>
+    </view>
+  </view>
+
+  <view class='page_input'>
+    <view class='page_input_title'>手机号</view>
+    <view class='page_input_input'>
+      <input placeholder='请填写您的手机号' name="mobile" value='{{form.mobile}}' type='text'></input>
+    </view>
+  </view>
+
+  <view class='page_input'>
+    <view class='page_input_title'>身份证号</view>
+    <view class='page_input_input'>
+      <input placeholder='请填写您的身份证号' name="identityCard" value='{{form.identityCard}}' type='text'></input>
+    </view>
+  </view>
+
+  <view class='page_title'>举报理由</view>
+  <view class='page_textarea'>
+    <textarea placeholder='请填写举报该救助项目的理由(30个字以上)' name="description" value='{{form.description}}'></textarea>
+  </view>
+
+  <view class='page_title'>上传图片</view>
+  
+  <!-- 添加图片 start-->
+  
+  <!-- 上传图片  start -->
+  <view class="page_Fundraising_image">
+    <view class="weui-uploader__bd">
+      <view class="weui-uploader__files" id="uploaderFiles">
+        <block wx:for="{{arr}}" wx:key="*this">
+          <view wx:if="{{item !=null}}" class="weui-uploader__file" bindlongtap="previewImage" id="{{item}}">
+              <image class="img_tt" src="/assets/images/delete.png" bindtouchend="bindtapImageDelete" data-img="{{item}}" />
+              <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+          </view>
+        </block>
+      </view>
+      <view class="weui-uploader__input-box" wx:if="{{arr.length!=6}}">
+        <view class="weui-uploader__input" bindtap="chooseImage"></view>
+      </view>
+    </view>     
+  </view>
+  <!-- 上传图片  end -->
+
+  <!-- 提交 start -->
+  <view class="weui-btn-area">
+    <button class="weui-btn" formType="submit" type="primary">提交</button>
+  </view>
+  <!-- 提交  end -->
+  </form>
+</view>

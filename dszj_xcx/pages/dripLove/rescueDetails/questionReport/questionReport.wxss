@@ -1,0 +1,214 @@
+/* pages/dripLove/rescueDetails/questionReport/questionReport.wxss */
+
+.page{
+  margin: 0;
+  padding: 0;
+}
+
+
+.page_input{
+  width: 90%;
+  margin: auto;
+  height: 100rpx;
+  border-bottom: 1rpx solid #dadada;
+}
+.page_input_title{
+  width: 30%;
+  height: 100rpx;
+  line-height: 100rpx;
+  float: left;
+  font-size: 30rpx;
+}
+.page_input_input{
+  width: 70%;
+  height: 100rpx;
+  float: right;
+}
+.page_input_input input{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+  text-align: right;
+}
+.page_title{
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 90%;
+  margin: auto;
+  font-size: 30rpx;
+}
+.page_textarea{
+  height: 240rpx;
+  width: 90%;
+  margin: auto;
+  font-size: 30rpx;
+}
+.page_textarea textarea{
+  width: 90%;
+  height: 200rpx;
+  padding-top: 20rpx;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 20rpx;
+  background-color: #f0f0f0;
+}
+
+
+/*添加图片*/
+.page_Fundraising_image{
+  width: 90%;
+  margin-top: 20rpx;
+  margin: auto;
+}
+.page_Fundraising_image_title{
+  width: 94%;
+  height: 40rpx;
+  margin: 0 auto;
+}
+.page_Fundraising_image_title_title{
+    width: 58%;
+  height: 40rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #0092ff;
+  line-height: 40rpx;
+  float: left;
+}
+.page_Fundraising_image_title_text{
+  width: 42%;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 26rpx;
+  float: right;
+  text-align: right;
+  text-decoration: underline;
+}
+.page_Fundraising_image_text{
+  width: 94%;
+  height: 80rpx;
+  font-size: 28rpx;
+  margin: 0 auto;
+  padding-top:20rpx; 
+  padding-bottom: 20rpx;
+  background: #fff;
+  z-index: -10;
+}
+.image-iamge{
+  width: 94%;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius:16rpx;
+  margin-top: 10rpx;
+}
+.weui-uploader__hd {
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:flex;
+  padding-bottom:10px;
+  -webkit-box-align:center;
+  -webkit-align-items:center;
+  align-items:center;
+}
+.weui-uploader__bd {
+  margin-bottom:-4px;
+  margin-right:-9px;
+  overflow:hidden;
+}
+.weui-uploader__file {
+  margin-top:0rpx;
+  margin-left:25rpx;
+}
+.weui-uploader__file {
+  float:left;
+  margin-right:9px;
+  margin-bottom:9px;
+}
+.img_tt {
+  z-index:3;
+  position:absolute;
+  width:40rpx;
+  height:40rpx;
+  margin-left:128rpx;
+  margin-top:-25rpx;
+}
+.weui-uploader__img {
+  display:block;
+  width:79px;
+  height:79px;
+}
+.weui-uploader__input-box {
+  margin-left:0rpx;
+}
+.weui-uploader__input-box {
+  float:left;
+  position:relative;
+  margin-right:9px;
+  margin-bottom:9px;
+  width:77px;
+  height:77px;
+  border:1px solid #d9d9d9;
+}
+.weui-uploader__input {
+  position:absolute;
+  z-index:1;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  opacity:0;
+}
+
+.weui-uploader__title {
+  margin-left:25rpx;
+  margin-top:16rpx;
+}
+.title {
+  font-size:26rpx;
+  font-family:"黑体";
+}
+.weui-uploader__title {
+  -webkit-box-flex:1;
+  -webkit-flex:1;
+  flex:1;
+}
+.weui-uploader__info {
+  margin-right:25rpx;
+  margin-top:16rpx;
+}
+.weui-uploader__info {
+  color:#b2b2b2;
+}
+/*添加图片 end*/
+
+/*提交  start*/
+.weui-btn-area {
+  margin:1.17647059em 15px .3em;
+  padding-bottom: 40rpx;
+}
+
+button[type="primary"] {
+  color:#FFFFFF;
+  background-color:#0092ff;
+  border-radius: 8px;
+}
+
+.button-hover[type="primary"] {
+  background-color:#0092ff;
+}
+button::after {
+  content:" ";
+  width:200%;
+  height:200%;
+  position:absolute;
+  top:0;
+  left:0;
+  border:1px solid  #E8EFEF;
+  -webkit-transform:scale(0.5);
+  transform:scale(0.5);
+  -webkit-transform-origin:0 0;
+  transform-origin:0 0;
+  box-sizing:border-box;
+  border-radius:10px;
+}
+/*提交  end*/

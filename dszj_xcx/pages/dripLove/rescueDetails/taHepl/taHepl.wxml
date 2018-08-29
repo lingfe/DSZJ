@@ -1,0 +1,47 @@
+<!--pages/dripLove/rescueDetails/taHepl/taHepl.wxml-->
+<view class='page'>
+  <!-- 爱心帮助记录   start -->
+  <view class='page_Allevaluate'>
+    <!-- 有回复的 start-->
+    <view wx:for="{{list_hepl}}" wx:key="*this" wx:for-item="st" class='page_Allevaluate_evaluate'>
+      <view class='page_Allevaluate_evaluate_image'>
+        <image wx:if="{{st.is_anonymous !=1}}" src='{{st.avatar}}'></image>
+        <image wx:else  src='https://www.dishuihuzhu.cn/Public/images/default-avatar.png'></image>
+      </view>
+      <view class='page_Allevaluate_evaluate_content'>
+        <view class='page_Allevaluate_evaluate_content_title'>
+          <view class='page_Allevaluate_evaluate_content_title_name' wx:if="{{st.is_anonymous !=1}}">{{st.nickname}}</view>
+          <view class='page_Allevaluate_evaluate_content_title_name' wx:else>滴水之家爱心人士</view>
+          <view class='page_Allevaluate_evaluate_content_title_text'>
+            帮助了: <abbr class="color-red">{{st.money}}</abbr>元
+          </view>
+        </view>
+        <view class='page_Allevaluate_evaluate_content_text'>
+          {{st.info}}
+        </view>
+        <view class='page_Allevaluate_evaluate_content_canshu'>
+          <!-- <view class='page_content_left_label'>置顶</view> -->
+          <view class='page_content_left_text'>{{st.addtime}}</view>
+          <view class='page_content_left_image'>
+            <image src='http://pic.yupoo.com/lingfe/7cf66693/4025569a.png'></image>
+          </view>
+          <view class='page_content_left_text'>{{st.money}}滴爱心记录</view>
+          <view class='page_content_left_image' style="float:right;">
+            <image src='http://pic.yupoo.com/lingfe/64a27743/d4214f5b.png'></image>
+          </view>
+        </view>
+        <!-- 回复内容 start -->
+        <view wx:for="{{st.replies}}" wx:key="*this" wx:for-item="huifu" class='page_Allevaluate_evaluate_content_huifu'>
+          <view class='page_Allevaluate_evaluate_content_huifu_content'>
+            <span wx:if="{{huifu.nickname==''}}">{{huifu.mobile}}</span>
+            <span wx:else >{{huifu.nickname}}</span>
+            :{{huifu.info }}
+          </view>
+        </view>
+        <!-- 回复内容 end -->
+      </view>
+    </view>
+    <!-- 有回复的 end -->
+  </view>
+  <!-- 爱心帮助记录   end -->
+</view>

@@ -44,7 +44,7 @@
           <view class='page_model'
            bindtap='bindtap_rescueDetails'
            wx:for="{{dsqz_list}}"
-           wx:key="*this">
+           wx:key="*this" id='{{item.id}}'>
             <view class='page_model_content'>
               <view class='page_model_content_left'>
                 <image src='{{item.cover}}' mode='aspectFill'></image>

@@ -33,7 +33,15 @@ Page({
     imageArray: [],                 //图片数组，原始。不包含完整url，用于储存
   },
 
-
+  /**
+   * 页面加载
+   */
+  onLoad: function (options) {
+    var that = this;
+    that.setData({
+      "form.id": options.id,
+    });
+  },
 
   //下一步
   formSubmit:function(e){
@@ -182,14 +190,12 @@ Page({
     //发起请求
     app.request.reqPost(url, header, data, function (res) {
       console.log(res);
-      //将id保存到缓存
-      wx.setStorageSync("id", res.data);
+      //跳转到下一步
+      wx.navigateTo({
+        url: '/pages/index/largeIllnessRescue/patientInformation/receivablesInformation/receivablesInformation?id='+res.data.data,
+      })
     }, function (res) {
       console.log(res);
-    })
-
-    wx.navigateTo({
-      url: '/pages/index/largeIllnessRescue/patientInformation/receivablesInformation/receivablesInformation',
     })
   },
   
@@ -285,12 +291,4 @@ Page({
       urls: [e.currentTarget.id],
     })
   },
-
-  onLoad:function(e){
-    var that=this;
-    that.setData({
-      "form.id": wx.getStorageSync("id"),
-    });
-  }
-
 })

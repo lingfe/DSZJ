@@ -1,0 +1,82 @@
+/* pages/dripLove/rescueDetails/confirmRecord/confirmRecord.wxss */
+
+
+/* 筹款动态 start*/
+.page_choukuangdotai{
+  width: 100%;
+  margin: auto;
+  padding-bottom: 30rpx;
+}
+.page_choukuangdotai_title{
+  width: 94%;
+  padding: 8px 10px;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(0,0,0,.15);
+  position: relative;
+}
+.page_choukuangdotai_text{
+  width: 100%;
+  margin: auto;
+  font-size: 26rpx;
+  text-align: center;
+  color: #929292;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top: 1px solid rgba(0,0,0,.15);
+}
+.page_choukuangdotai_content{
+  width: 100%;
+  margin: auto;
+  padding-top: 10rpx;
+  padding-bottom: 20rpx;
+  height: 180rpx;
+  background-color: #fff;
+  border-top: 1px solid rgba(0,0,0,.15);
+  overflow: auto;
+	display:block;
+}
+.page_choukuangdotai_content_image{
+  height: 100rpx;
+  width: 10%;
+  float: left;
+  margin-top: 3%;
+  margin-left: 3%;
+}
+.page_choukuangdotai_content_image image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.page_choukuangdotai_content_content{
+  height:auto;
+  float: left;
+  margin-left: 3%;
+  width: 80%;
+  margin-top: 3%;
+}
+.page_choukuangdotai_content_content_title{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 30rpx;
+}
+small{
+    font-size: 10px !important;
+    color: #0092ff !important;
+    border: 1px solid #0092ff;
+    margin-left: 5px;
+    border-radius: 50px;
+    padding: 0 3px;
+    position: relative;
+    top: -1px;
+}
+.page_choukuangdotai_content_content_text{
+  height: auto;
+  font-size: 15px;
+  color: #222;
+}
+.font_size_22{
+  font-size: 11px;
+  color: #999;
+  position: relative;
+}
+/* 筹款动态 end*/

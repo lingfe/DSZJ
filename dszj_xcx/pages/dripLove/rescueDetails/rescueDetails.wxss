@@ -277,6 +277,7 @@ rich-text{
   width: 30%;
   float: left;
   text-align: right;
+  text-decoration: underline;
 }
 .page_content_myZhengMing_image{
   width: 85%;
@@ -286,7 +287,7 @@ rich-text{
   padding-bottom: 20rpx;
 }
 .page_content_myZhengMing_image_image{
-  width: 15%;
+  width: 14%;
   float: left;
 }
 .page_content_myZhengMing_image_image image{
@@ -307,6 +308,10 @@ rich-text{
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-bottom: 6px solid #f5f5f5;
+    display: none;
+}
+.info{
+  display: block;
 }
 .page_content_myZhengMing_content{
   background-color: #f5f5f5;
@@ -432,7 +437,7 @@ abbr{
 .page_Allevaluate_evaluate{
   width: 94%;
   margin: auto;
-  height: 300rpx;
+  height: auto;
   padding-top: 20rpx;
 }
 .page_Allevaluate_evaluate_image{
@@ -446,7 +451,7 @@ abbr{
   border-radius: 50%;
 }
 .page_Allevaluate_evaluate_content{
-  width: 82%;
+  width: 84%;
   height:auto;
   float: left;
   margin-left: 5%;
@@ -456,15 +461,18 @@ abbr{
   height: 60rpx;
 }
 .page_Allevaluate_evaluate_content_title_name{
-  width: 70%;
+  width: 60%;
   height: 60rpx;
   line-height: 60rpx;
   font-size: 30rpx;
   float: left;
   color: #0099ff;
+  word-break:keep-all;/* 不换行 */
+  white-space:nowrap;/* 强制在同一行内显示所有文本，直到文本结束或者遭遇 br 对象。不换行 */
+  overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
 }
 .page_Allevaluate_evaluate_content_title_text{
-  width: 30%;
+  width: 40%;
   height: 60rpx;
   line-height: 60rpx;
   font-size: 26rpx;
@@ -521,17 +529,39 @@ span{
   color: #0099FF;
 }
 .page_Allevaluate_selectHelp{
-  width: 100%;
-  border-top: 1px solid #f0f0f0;
+  width: 94%;
   margin: auto;
+  height: auto;
+  line-height: 80rpx;
   text-align: center;
   color: #0099FF;
-  height: 80rpx;
-  line-height: 80rpx;
   font-size: 30rpx;
 }
 /* 爱心帮助记录 end*/
 
+/* 资金流向说明 start */
+.page_zjlxsm{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0rpx;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+}
+.sl{
+  width: 80%;
+  border-radius: 14rpx;
+  background-color: #fff;
+  margin: auto;
+}
+.zjlxsm_sl_image{
+  width: 80%;
+  height: 700rpx;
+  position: fixed;
+  top: 200rpx;
+  border-radius: 16rpx;
+}
+/* 资金流向说明 end */
 
 /* 客服信息 start */
 .fabiao{

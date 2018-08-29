@@ -24,7 +24,7 @@ Page({
   //跳转到救助详情页面
   bindtap_rescueDetails:function(e){
     wx.navigateTo({
-      url: '/pages/dripLove/rescueDetails/rescueDetails',
+      url: '/pages/dripLove/rescueDetails/rescueDetails?id=' + e.currentTarget.id,
     })
   },
 
@@ -48,6 +48,7 @@ Page({
       url: '/pages/dripWaterRescue/customerService/customerService',
     })
   },
+
   //跳转到感谢亲们页面
   bindtab_gxqm:function(){
     wx.navigateTo({
@@ -65,7 +66,6 @@ Page({
     var url = app.config.dszjPath_web + "api/SeriousIllness/Paging";
     //参数
     var data={
-      token: wx.getStorageSync("token"),
       "pageSize": that.data.pageSize,
       "pageIndex": that.data.pageIndex
     }
@@ -107,7 +107,6 @@ Page({
       console.log(res);
     });
   },
-
 
   //用户下拉动作
   onPullDownRefresh: function () {
@@ -180,40 +179,4 @@ Page({
     });
   },
 
-  
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

@@ -12,7 +12,18 @@ Page({
     index:0,
   },
 
-  //下一步
+
+  /**
+   * 页面加载
+   */
+  onLoad: function (options) {
+    var that = this;
+    that.setData({
+      "id": options.id,
+    });
+  },
+
+  //发布
   formSubmit: function (e) {
     var that = this;
     //验证是否为空  
@@ -34,7 +45,7 @@ Page({
     }else{
         that.data.form={
           step: 3,          //	Int请求步骤。
-          id: wx.getStorageSync("id"),             //	Int	项目id。
+          id: that.data.id,             //	Int	项目id。
           bank: e.detail.value.bank,           //Double	银行名称
           card_name: e.detail.value.card_name,   //	String	银行卡姓名
           cardNo: e.detail.value.cardNo,      //	String	银行卡号
@@ -66,15 +77,12 @@ Page({
     //发起请求
     app.request.reqPost(url, header, data, function (res) {
       console.log(res);
-      //将id保存到缓存
-      wx.setStorageSync("id", res.data);
+      //跳转到项目详情
+      wx.navigateTo({
+        url: '/pages/dripLove/rescueDetails/rescueDetails?id='+res.data.data,
+      })
     }, function (res) {
       console.log(res);
-    })
-
-    //跳转到详情
-    wx.navigateTo({
-      url: '/pages/index/largeIllnessRescue/patientInformation/receivablesInformation/receivablesInformation',
     })
   },
 
@@ -85,13 +93,4 @@ Page({
     })
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    var that = this;
-    that.setData({
-      "form.id": wx.getStorageSync("id"),
-    });
-  },
 })

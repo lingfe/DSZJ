@@ -243,15 +243,15 @@ Page({
     //发送请求
     app.request.reqPost(url, header, data, function (res) {
       console.log(res);
-      //将id保存到缓存
-      wx.setStorageSync("id", res.data.data);
+      //跳转到下一步
+      wx.navigateTo({
+        url: '/pages/index/largeIllnessRescue/patientInformation/patientInformation?id=' + res.data.data,
+      })
     }, function (res) {
       console.log(res);
     })
 
-    wx.navigateTo({
-      url: '/pages/index/largeIllnessRescue/patientInformation/patientInformation',
-    })
+    
   },
 
   //取消或显示

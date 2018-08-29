@@ -1,0 +1,35 @@
+<!--pages/dripLove/rescueDetails/myAlsoComeProve/myAlsoComeProve.wxml-->
+<view class='page'>
+  <form bindsubmit="setAddVerify">
+    <view class='page_topText'>
+      提示：感谢您的爱心，如果您参与探访，深入了解过此项目，希望您如实填写以下真实身份，真实情况，这将为受助人赢得更多信任。
+    </view>
+    <view class='page_title'>与受助人关系</view>
+    <view class='page_input'>
+      <picker bindchange="bind_myACP" value="{{myACP_index}}" range="{{myACP}}">
+        <input type='text' name="relation" value='{{myACP[myACP_index]}}'></input>
+      </picker>     
+    </view>
+    
+    <view class='page_title'>姓名</view>
+    <view class='page_input'>
+      <input type='text' name="name" value='{{form.name}}' placeholder='请填写真实姓名'></input>
+    </view>
+
+    <view class='page_title'>身份证号</view>
+    <view class='page_input'>
+      <input type='text' name="identityCard" value='{{form.identityCard}}' placeholder='请填写您的身份证号'></input>
+    </view>
+
+    <view class='page_title'>证实内容</view>
+    <view class='page_textarea'>
+      <textarea placeholder='请填写举报该救助项目的理由(30个字以上)' name="description" value='{{form.description}}'></textarea>
+    </view>
+
+    <!-- 证实 start -->
+    <view class="weui-btn-area">
+      <button class="weui-btn" formType="submit">证实</button>
+    </view>
+    <!-- 证实  end -->
+  </form>
+</view>

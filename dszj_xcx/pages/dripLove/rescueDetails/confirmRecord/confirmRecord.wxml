@@ -1,0 +1,17 @@
+<!--pages/dripLove/rescueDetails/confirmRecord/confirmRecord.wxml-->
+<view class='page'>
+  <view class='page_choukuangdotai'>
+      <view class='page_choukuangdotai_title'><span style="color:red;">{{RecordCount}}</span>人实名认证</view>
+      <view  class='page_choukuangdotai_content' wx:for="{{list_zhengshi}}" wx:key="*this">
+        <view class='page_choukuangdotai_content_image'>
+          <image src='{{item.avatar}}' />
+        </view>
+        <view class='page_choukuangdotai_content_content'>
+          <view class='page_choukuangdotai_content_content_title'>{{item.name}}<small>已实名</small></view>
+          <view class='page_choukuangdotai_content_content_text font_size_22'>{{item.relation}}</view>
+          <view class='page_choukuangdotai_content_content_text'>{{item.content}}</view>
+        </view>
+      </view>
+      <view wx:if="{{isShow}}" class='page_choukuangdotai_text'>没有更多了</view>
+  </view>
+</view>

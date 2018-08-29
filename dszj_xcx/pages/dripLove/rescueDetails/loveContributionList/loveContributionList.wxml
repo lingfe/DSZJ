@@ -1,0 +1,78 @@
+<!--pages/dripLove/rescueDetails/loveContributionList/loveContributionList.wxml-->
+
+<view class="page">
+   
+   <!-- 前三名 start -->
+   <view class="content-wrapper">
+    <view class="page_title">爱心榜：仅用于用户对此项目的爱心帮助排行！</view>
+    <view class="page_ranking">
+      <view class="page_ranking_amount_1">
+        <view class='page_ranking_amount_image'>
+          <image src='{{info_0.member.headerpic}}' />
+        </view>
+        <view class='page_ranking_amount_text'>1.{{info_0.member.nickname}}</view>
+        <view class='page_ranking_amount_param'>
+          <view class='page_ranking_amount_param_text'>爱心总额</view>
+          <view class='page_ranking_amount_param_text'><span class="total-amount">{{info_0.project_total}}</span>  元</view>
+        </view>
+      </view>
+
+      <view class="page_ranking_amount_2">
+        <view class='page_ranking_amount_image'>
+          <image src='{{info_1.member.headerpic}}' />
+        </view>
+        <view class='page_ranking_amount_text'>2.{{info_1.member.nickname}}</view>
+        <view class='page_ranking_amount_param'>
+          <view class='page_ranking_amount_param_text'>爱心总额</view>
+          <view class='page_ranking_amount_param_text'><span class="total-amount">{{info_1.project_total}}</span>  元</view>
+        </view>
+      </view>
+
+      <view class="page_ranking_amount_3">
+        <view class='page_ranking_amount_image'>
+          <image src='{{info_2.member.headerpic}}' />
+        </view>
+        <view class='page_ranking_amount_text'>3.{{info_2.member.nickname}}</view>
+        <view class='page_ranking_amount_param'>
+          <view class='page_ranking_amount_param_text'>爱心总额</view>
+          <view class='page_ranking_amount_param_text'><span class="total-amount">{{info_2.project_total}}</span>  元</view>
+        </view>
+      </view>
+    </view>
+    <!-- 前三名 end -->
+
+    <!-- 后七名 start-->
+    <view style='padding-bottom:100rpx;'>
+      <view class='page_Allevaluate_evaluate' wx:for="{{dataList.Records}}" wx:key="*this" wx:if="{{index>=3}}">
+        <view class='page_Allevaluate_evaluate_paiming'>{{index+1}}</view>
+        <view class='page_Allevaluate_evaluate_image'>
+          <image src='{{item.member.headerpic}}'></image>
+        </view>
+        <view class='page_Allevaluate_evaluate_content'>
+          <view class='page_Allevaluate_evaluate_content_title'>
+            <view class='page_Allevaluate_evaluate_content_title_name'>{{item.member.nickname}}</view>
+            <view class='page_content_left_image'>
+              <image src='http://pic.yupoo.com/lingfe/7cf66693/4025569a.png'></image>
+            </view>
+            <view class='page_content_left_text'><span style="color:#74C3FF;">{{item.project_total}}</span>滴爱心记录</view>
+          </view>
+          <view class='page_Allevaluate_evaluate_content_title_text'>
+              <abbr class="total-amount">{{item.project_total}}</abbr>元
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 后七名 end -->
+   </view>
+
+   <!-- 我要上榜 start -->
+   <view class="footer-bar">
+    <view class="self-box">
+     <image class="avatar-img" src='http://qzapp.qlogo.cn/qzapp/101414596/E9478CCDFC315EF3A583B83432A9C9C5/100' />
+     <view class="user-name">lingfe</view>
+     <view class="love-amount"><span style="font-size:40rpx;">0</span>元</view>
+    </view>
+    <navigator class='my_shangbang' url="/WxPay/pay?id=7191">我要上榜</navigator>
+   </view>
+   <!-- 我要上榜 end -->
+</view>
