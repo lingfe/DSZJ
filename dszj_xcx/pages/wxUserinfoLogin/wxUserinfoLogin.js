@@ -40,8 +40,8 @@ Page({
         //参数
         var data = {
           code: logRes.code,
-          userInfo: e.detail.userInfo,
-          
+          nickname: e.detail.userInfo.nickName,
+          headimgurl: e.detail.userInfo.avatarUrl
         }
 
         //发送请求

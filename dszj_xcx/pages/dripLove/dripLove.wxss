@@ -342,16 +342,16 @@ font{
   margin-left: 30rpx;
 }
 .dripWaterMutualAid_page_content_content_image_image{
-  width: 30%;
+  width: 33%;
   height: 100rpx;
   float: right;
   margin-left: 10rpx;
 }
 .dripWaterMutualAid_page_content_content_image_image image{
-  width: 33%;
-  height: 60rpx;
-  border-radius: 25rpx;
-  margin-top: 20rpx;
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  margin-top: 28rpx;
 }
 
 

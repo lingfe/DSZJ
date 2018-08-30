@@ -32,7 +32,7 @@ Page({
       total_amount:null,    //	Double筹款金额。
       title:null,           //	String	求助标题。
       description:null,     //	String	描述。
-      pic:null,             // 選項	Json项目图片。
+      pictures:null,             // 選項	Json项目图片。
       address:null,         // 選項	String	地址。
       qrcode:null,          // 選項	String	志愿者code。
     }
@@ -201,7 +201,7 @@ Page({
     //多张图片上传
     function uploadimg(path, pathArr, dataArr) {
       wx.uploadFile({
-        url: app.config.dszjPath_web +"api/UserSeriousIllness/imageUpload",                       //开发者服务器 url
+        url: app.config.dszjPath_web + "api/UserSeriousIllness/uploadPicture",//上传大病救助图片 开发者服务器 url
         filePath: path[0],                          //要上传文件资源的路径
         name: 'file',                                //文件对应的 key , 开发者在服务器端通过这个 key 可以获取到文件二进制内容
         header: {                                   //HTTP 请求 Header , header 中不能设置 Referer
@@ -220,7 +220,7 @@ Page({
             uploadimg(dataArr.splice(0, 1), pathArr, dataArr);
           } else {
             //调用请求发布
-            that.reqSetData(pathArr.join(","));
+            that.reqSetData(pathArr);
           }
         }
       });
@@ -237,7 +237,7 @@ Page({
       Token: wx.getStorageSync("token")
     }
     //参数
-    that.data.form.pic=images;
+    that.data.form.pictures=images;
     var data = that.data.form;
 
     //发送请求

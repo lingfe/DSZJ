@@ -183,7 +183,7 @@
   <view class='page_Allevaluate'>
     <view class='page_Allevaluate_title'>爱心帮助记录</view>
     <view class='page_Allevaluate_data'>
-      <abbr>68</abbr>次转发 / <abbr id="lblDonationCount">133</abbr>次爱心帮助
+      <abbr>{{detailsData.share_count}}</abbr>次转发 / <abbr id="lblDonationCount">{{RecordCount}}</abbr>次爱心帮助
     </view>
 
     <!-- 有回复的 start-->

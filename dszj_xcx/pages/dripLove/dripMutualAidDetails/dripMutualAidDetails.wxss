@@ -1,0 +1,263 @@
+/* pages/dripLove/dripMutualAidDetails/dripMutualAidDetails.wxss */
+page{
+      background-color: #fff3e5;
+}
+.page{
+  padding: 0;
+  margin: 0;
+}
+
+.page_img{
+  width: 100%;
+  height: 200rpx;
+}
+.page_img image{
+  width: 100%;
+  height: 200rpx;
+}
+.page_img_bannerInfo {
+    left: 20px;
+    position: relative;
+    top: -100px;
+    z-index: 999;
+}
+.page_img_bannerInfo_title {
+    color: #0092ff;
+    font-size: 22px;
+    font-weight: bold;
+}
+.page_img_bannerInfo_text{
+  color: #0092ff;
+  font-size: 16px;
+}
+
+/*  值   :start */
+.page_titleText{
+  width: 100%;
+  height: 140rpx;
+  background: -webkit-gradient(linear,left top,right bottom,color-stop(0, #218bfe),color-stop(100%, #4b59d9));
+}
+.page_titleText_content{
+    color: #6a6868;
+    width: 49%;
+    float: left;
+    height: 140rpx;
+}
+.page_titleText_border{
+    height: 100rpx;
+    margin: 10px 0 0 5px;
+    width: 1px;
+    background: #6a9fe3; 
+    float: left;
+}
+.page_titleText_content_title{
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    height: 90rpx;
+    line-height: 90rpx;
+}
+.page_titleText_content_text{
+  color: #bcd1f1;
+  font-size: 14px;
+  height: 50rpx;
+    line-height: 30rpx;
+  text-align: center;
+}
+
+.page_infoImg{
+  width: 100%;
+  height: 800rpx;
+}
+.page_infoImg image{
+  width: 100%;
+  height: 100%;
+}
+.img{
+  width: 90%;
+  margin: auto;
+  height: 500rpx;
+}
+image{
+  width: 100%;
+  height: 100%;
+}
+
+/* tab start*/
+.page_tab{
+  width: 94%;
+  background-color: #ffffff;
+  margin: auto;
+  -moz-box-shadow: 3px 3px 2px #d7d7d7;
+  box-shadow: 3px 3px 2px #d7d7d7;
+  margin-bottom: 10rpx;
+  margin-top: 20rpx;
+  padding-bottom: 10rpx;
+}
+.page_tab_title{
+  width: 94%;
+  margin: auto;
+  color: #000;
+  font-size: 34rpx;
+  font-weight: bold;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.page_tab_content{
+  width: 94%;
+  margin: auto;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-top: 1rpx solid #c8c7cc;
+  font-size: 30rpx;
+  text-align: right;
+}
+.page_tab_content_title{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  color: inherit;
+  float: left;
+  text-align: left;
+  margin-right: 5%;
+}
+.page_tab_content_text{
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #666666;
+  float: left;
+  text-align: left;
+}
+.page_tab_content_image{
+  height: 80rpx;
+  line-height: 80rpx;
+  float: right;
+}
+.page_tab_content_image image{
+  height: 20rpx;
+  width: 20rpx;
+}
+.page_tab_rich-text{
+  width: 94%;
+  margin: auto;
+  color: #8f8f94;
+  font-size: 28rpx;
+  background: #fff;
+  padding-bottom: 10rpx;
+}
+.false{
+  display: none;
+}
+.true{
+  display: block;
+}
+.bor{
+  border-top: none;
+}
+.class_div{
+  color:#FF9900;font-size: 14px;
+}
+
+/* 互助服务  start*/
+.page_tab_serviser{
+  border-top: 1rpx solid #c8c7cc;
+  width: 94%;
+  margin: auto;
+  height: 240rpx;
+  background-color: #fff;
+}
+.page_tab_serviser_model{
+  width: 50%;
+  height: 100rpx;
+  float: left;
+  margin-top: 20rpx;
+}
+.page_tab_serviser_model_image{
+  background-image:url(https://www.dishuihuzhu.cn/Public/weixin/images/ptkk.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 15%;
+  height: 50rpx;
+  float: left;
+}
+.page_tab_serviser_model_title{
+  width: 80%;
+      font-size: 16px;
+    color: #4eb3ff;
+    line-height: 50rpx;
+    margin-left: 5%;
+  height: 50rpx;
+  float: left;
+}
+.page_tab_serviser_model_text{
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 20rpx;
+  display: block;
+  text-overflow: ellipsis;
+  color: #333;
+  float: left;
+  
+}
+
+/* 互助申请流程 start */
+.page_tab_shengqingliucheng{
+  width: 94%;
+  margin: auto;
+  height: 100rpx;
+  background-color: #fff;
+}
+.page_tab_shengqingliucheng_title{
+  color: #4fb4ff;
+  font-size: 14px;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.page_tab_shengqingliucheng_text{
+  color: #666;
+  font-size: 14px;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+
+.plan-info-msg .plan-table {
+    border: 1px solid #979797;
+    color: #6a6868;
+    font-size: 0.6rem;
+    margin: 0 auto 0.5rem;
+    text-align: center;
+    width: 95%;
+}
+.plan-info-msg .plan-table th {
+    border: 1px solid #979797;
+    height: 20px;
+    width: 60px;
+}
+.plan-info-msg .plan-table td {
+    border: 1px solid #979797;
+    height: 20px;
+    font-weight: normal;
+}
+
+.page_text{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  color: #0092ff;
+  font-size: 28rpx;
+  padding-bottom: 100rpx;
+}
+.page_btn {
+    position: fixed;
+    bottom: 0rpx;
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 30rpx;
+    color: #fff;
+    text-align: center;
+    background: #0092ff none repeat scroll 0 0;
+}

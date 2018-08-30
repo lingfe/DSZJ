@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 23,
+			"current": 24,
 			"list": [
 				{
 					"id": -1,
@@ -182,7 +182,13 @@
 				{
 					"id": -1,
 					"name": "我也来证明页面",
-					"pathName": "pages/dripLove/rescueDetails/myAlsoComeProve/myAlsoComeProve"
+					"pathName": "pages/dripLove/rescueDetails/myAlsoComeProve/myAlsoComeProve",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "12",
+					"pathName": "pages/dripLove/dripMutualAidDetails/dripMutualAidDetails"
 				}
 			]
 		}

@@ -171,7 +171,8 @@ Page({
       }
       //设置数据，提示框
       that.setData({
-        list_hepl: pageList
+        list_hepl: pageList,
+        RecordCount: res.data.data.RecordCount
       });
     }, function (res) {
 

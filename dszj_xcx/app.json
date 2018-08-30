@@ -28,7 +28,8 @@
     "pages/dripLove/rescueDetails/confirmRecord/confirmRecord",
     "pages/dripLove/rescueDetails/loveContributionList/loveContributionList",
     "pages/dripLove/rescueDetails/questionReport/questionReport",
-    "pages/dripLove/rescueDetails/myAlsoComeProve/myAlsoComeProve"
+    "pages/dripLove/rescueDetails/myAlsoComeProve/myAlsoComeProve",
+    "pages/dripLove/dripMutualAidDetails/dripMutualAidDetails"
   ],
   "window": {
     "navigationBarTextStyle": "white",

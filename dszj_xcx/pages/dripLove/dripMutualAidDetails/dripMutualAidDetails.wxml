@@ -1,0 +1,145 @@
+<!--pages/dripLove/dripMutualAidDetails/dripMutualAidDetails.wxml-->
+<view class='page'>
+
+  <view class='page_img'>
+    <image src='https://www.dishuihuzhu.cn/Public/weixin/images/zongheyiwai_top.png'></image>
+    <view class="page_img_bannerInfo">
+      <view class='page_img_bannerInfo_title'>综合意外互助计划</view>
+      <view class='page_img_bannerInfo_text'>最高可得10万元互助金</view>
+      <view class='page_img_bannerInfo_text'>1-65周岁</view>
+    </view>
+  </view>
+
+  <view class='page_titleText'>
+    <view class='page_titleText_content'>
+      <view class='page_titleText_content_title'>56445</view>
+      <view class='page_titleText_content_text'>已加入会员(人)</view>
+    </view>
+    <view class='page_titleText_border'></view>
+    <view class='page_titleText_content'>
+      <view class='page_titleText_content_title'>56445</view>
+      <view class='page_titleText_content_text'>近3日新增(人)</view>
+    </view>
+  </view>
+
+  <view class='page_infoImg'>
+    <image src='https://www.dishuihuzhu.cn/Public/weixin/images/cpys_zhyw.png'></image>
+  </view>
+  
+  <!-- 互助规则 start -->
+  <view class='page_tab'>
+    <view class='page_tab_title'>互助规则</view>
+    <view wx:for="{{isTuou_List}}" wx:key="*this">
+      <view style='width:100%;background:{{isTuou == item.id ?"#F7F7F7":"" }};'>
+        <view class='page_tab_content {{isTuou == item.id ? "bor":"" }}'>
+          <view class='page_tab_content_title'>{{item.title}}</view>
+          <view class='page_tab_content_text'><rich-text nodes='{{item.text}}'></rich-text></view>
+          <view class='page_tab_content_image'>
+            <image src='http://pic.yupoo.com/lingfe/40a19117/8ae082f7.png' bindtap='bind_isTuou' id="{{item.id}}"></image>
+          </view>
+        </view>
+      </view>
+      <view class='page_tab_rich-text {{isTuou == item.id ?true:false }}'  style='background-color: #fff;'>
+        <rich-text nodes ='{{item.content}}'></rich-text>
+        <image wx:if="{{item.tableImg !=null}}" src='{{item.tableImg}}' style='{{item.imgStyle}}'></image>
+      </view> 
+    </view>
+  </view>
+  <!-- 互助规则 end -->
+
+  <!-- 互助服务 start -->
+  <view class='page_tab'>
+    <view class='page_tab_title'>互助服务</view>
+    <view class='page_tab_serviser'>
+
+      <view class='page_tab_serviser_model'>
+        <view class='page_tab_serviser_model_image'></view>
+        <view class='page_tab_serviser_model_title'>平台可靠</view>
+        <view class='page_tab_serviser_model_text'>滴水资本战略投资</view>
+      </view>
+
+      <view class='page_tab_serviser_model' style='float:right;'>
+        <view class='page_tab_serviser_model_image'></view>
+        <view class='page_tab_serviser_model_title'>平台可靠</view>
+        <view class='page_tab_serviser_model_text'>滴水资本战略投资</view>
+      </view>
+
+      <view class='page_tab_serviser_model'>
+        <view class='page_tab_serviser_model_image'></view>
+        <view class='page_tab_serviser_model_title'>平台可靠</view>
+        <view class='page_tab_serviser_model_text'>滴水资本战略投资</view>
+      </view>
+
+      <view class='page_tab_serviser_model' style='float:right;'>
+        <view class='page_tab_serviser_model_image'></view>
+        <view class='page_tab_serviser_model_title'>平台可靠</view>
+        <view class='page_tab_serviser_model_text'>滴水资本战略投资</view>
+      </view>
+    </view>
+  </view>
+  <!-- 互助服务 end -->
+
+  <!-- 互助申请流程 start -->
+  <view class='page_tab'>
+    <view class='page_tab_title' style='color:#4fb4ff;'>互助申请流程</view>
+    <view class='page_tab_shengqingliucheng'>
+      <view class='page_tab_shengqingliucheng_title'>1，申请互助</view>
+      <view class='page_tab_shengqingliucheng_text'>拨打客服热线400-6063-400，填写相关资料</view>
+    </view>
+    <view class='page_tab_shengqingliucheng'>
+      <view class='page_tab_shengqingliucheng_title'>2，事件调查</view>
+      <view class='page_tab_shengqingliucheng_text'>平台初审并交付第三方权威调查机构调查</view>
+    </view>
+    <view class='page_tab_shengqingliucheng'>
+      <view class='page_tab_shengqingliucheng_title'>3，事件公示</view>
+      <view class='page_tab_shengqingliucheng_text'>公示期内接受所有互助会员拨打客服电话对事件进行合理质疑</view>
+    </view>
+    <view class='page_tab_shengqingliucheng'>
+      <view class='page_tab_shengqingliucheng_title'>4，资金划筹</view>
+      <view class='page_tab_shengqingliucheng_text'>公示无异议后，建设银行直接拨款</view>
+    </view>
+  </view>
+  <!-- 互助申请流程 end -->
+
+  <!-- 常见问题 start -->
+  <view class='page_tab'>
+    <view class='page_tab_title'>常见问题</view>
+    <view wx:for="{{commonProblem_List}}" wx:key="*this">
+      <view style='width:100%;background:{{isTuou == item.id ?"#F7F7F7":"" }};'>
+        <view class='page_tab_content {{isTuou == item.id ? "bor":"" }}'>
+          <view class='page_tab_content_title'>{{item.title}}</view>
+          <view class='page_tab_content_image'>
+            <image src='http://pic.yupoo.com/lingfe/40a19117/8ae082f7.png' bindtap='bind_isTuou' id="{{item.id}}"></image>
+          </view>
+        </view>
+      </view>
+      <view class='page_tab_rich-text {{isTuou == item.id ?true:false }}'  style='background-color: #fff;'>
+        <rich-text nodes ='{{item.content}}'></rich-text>
+      </view>
+    </view>
+    <view class='page_tab_content'>
+      <image style='width:60rpx;height:60rpx;float:left;margin-top:20rpx;' 
+        src='https://www.dishuihuzhu.cn/Public/weixin/images/tel.png'></image>
+      <text style="float:left;line-height:100rpx;margin-left:20rpx;">电话咨询</text>
+    </view>
+  </view>
+  <!-- 常见问题 end -->
+
+  <!-- 公约 start -->
+  <view class='page_tab'>
+    <view wx:for="{{goyue_list}}" wx:key="*this">
+      <view style='width:100%;'>
+        <view class='page_tab_content {{item.page_tab_content_class}}'>
+          <view class='page_tab_content_title'>{{item.title}}</view>
+          <view class='page_tab_content_image'>
+            <image src='http://pic.yupoo.com/lingfe/40a19117/8ae082f7.png' bindtap='bind_isTuou' id="{{item.id}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 公约 end -->
+
+  <view class='page_text'>查看其他计划</view>
+  <view class='page_btn'>立即加入</view>
+</view>

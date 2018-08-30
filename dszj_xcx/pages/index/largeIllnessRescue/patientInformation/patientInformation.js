@@ -100,7 +100,7 @@ Page({
     //多张图片上传
     function uploadimg(j,path, pathArr, dataArr) {
       wx.uploadFile({
-        url: app.config.dszjPath_web + "api/UserSeriousIllness/imageUpload",                       //开发者服务器 url
+        url: app.config.dszjPath_web + "api/UserSeriousIllness/uploadPicture",//上传大病救助图片 开发者服务器 url
         filePath: path[0],                          //要上传文件资源的路径
         name: 'file',                                //文件对应的 key , 开发者在服务器端通过这个 key 可以获取到文件二进制内容
         header: {                                   //HTTP 请求 Header , header 中不能设置 Referer
@@ -144,7 +144,7 @@ Page({
             uploadimg(3, dataArr.img3.splice(0, 1), pathArr, dataArr);
           } else {
             if(j==3){
-              that.data.form.hospital_diagnosis_pic = pathArr.join(",");
+              that.data.form.hospital_diagnosis_pic = pathArr;
               pathArr = [];
               j = 4;
             }
@@ -156,7 +156,7 @@ Page({
             uploadimg(4, dataArr.img4.splice(0, 1), pathArr, dataArr);
           } else {
             if(j==4){
-              that.data.form.hospital_supplement_pic = pathArr.join(",");
+              that.data.form.hospital_supplement_pic = pathArr;
               pathArr = [];
               j = 5;
             }
