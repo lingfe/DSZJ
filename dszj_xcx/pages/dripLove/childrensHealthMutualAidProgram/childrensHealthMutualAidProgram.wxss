@@ -1,0 +1,6 @@
+/* pages/dripLove/childrensHealthMutualAidProgram/childrensHealthMutualAidProgram.wxss */
+@import '/pages/dripLove/dripMutualAidDetails/dripMutualAidDetails.wxss';
+
+page{
+  background-color: #fff;
+}

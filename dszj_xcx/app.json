@@ -29,7 +29,13 @@
     "pages/dripLove/rescueDetails/loveContributionList/loveContributionList",
     "pages/dripLove/rescueDetails/questionReport/questionReport",
     "pages/dripLove/rescueDetails/myAlsoComeProve/myAlsoComeProve",
-    "pages/dripLove/dripMutualAidDetails/dripMutualAidDetails"
+    "pages/dripLove/dripMutualAidDetails/dripMutualAidDetails",
+    "pages/dripLove/dripMutualAidDetails/webView/webView",
+    "pages/dripLove/dripMutualAidDetails/immediatelyJoin/immediatelyJoin",
+    "pages/dripLove/dripMutualAidDetails/immediatelyJoin/nextContinue/nextContinue",
+    "pages/dripLove/inYouthNnticancerPlan/inYouthNnticancerPlan",
+    "pages/dripLove/middleAndOldAgeAnticancerPlan/middleAndOldAgeAnticancerPlan",
+    "pages/dripLove/childrensHealthMutualAidProgram/childrensHealthMutualAidProgram"
   ],
   "window": {
     "navigationBarTextStyle": "white",

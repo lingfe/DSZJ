@@ -7,13 +7,14 @@ page{
   margin: 0;
 }
 
+/*<!-- 计划图  start -->*/
 .page_img{
   width: 100%;
-  height: 200rpx;
+  height: 250rpx;
 }
 .page_img image{
   width: 100%;
-  height: 200rpx;
+  height: 250rpx;
 }
 .page_img_bannerInfo {
     left: 20px;
@@ -30,8 +31,9 @@ page{
   color: #0092ff;
   font-size: 16px;
 }
+/*<!-- 计划图  end -->*/
 
-/*  值   :start */
+/*  数据   :start */
 .page_titleText{
   width: 100%;
   height: 140rpx;
@@ -64,7 +66,9 @@ page{
     line-height: 30rpx;
   text-align: center;
 }
+/* 数据 end */
 
+/* 说明图 start */
 .page_infoImg{
   width: 100%;
   height: 800rpx;
@@ -73,15 +77,7 @@ page{
   width: 100%;
   height: 100%;
 }
-.img{
-  width: 90%;
-  margin: auto;
-  height: 500rpx;
-}
-image{
-  width: 100%;
-  height: 100%;
-}
+/* 说明图 start */
 
 /* tab start*/
 .page_tab{
@@ -112,6 +108,8 @@ image{
   font-size: 30rpx;
   text-align: right;
 }
+
+/*互助规则 start */
 .page_tab_content_title{
   height: 80rpx;
   line-height: 80rpx;
@@ -155,9 +153,13 @@ image{
 .bor{
   border-top: none;
 }
+.der_bottom{
+  border-bottom: 1rpx solid #c8c7cc;
+}
 .class_div{
   color:#FF9900;font-size: 14px;
 }
+/*互助规则 end */
 
 /* 互助服务  start*/
 .page_tab_serviser{
@@ -183,10 +185,10 @@ image{
 }
 .page_tab_serviser_model_title{
   width: 80%;
-      font-size: 16px;
-    color: #4eb3ff;
-    line-height: 50rpx;
-    margin-left: 5%;
+  font-size: 16px;
+  color: #4eb3ff;
+  line-height: 50rpx;
+  margin-left: 5%;
   height: 50rpx;
   float: left;
 }
@@ -199,14 +201,13 @@ image{
   text-overflow: ellipsis;
   color: #333;
   float: left;
-  
 }
+/* 互助服务  end*/
 
 /* 互助申请流程 start */
 .page_tab_shengqingliucheng{
   width: 94%;
   margin: auto;
-  height: 100rpx;
   background-color: #fff;
 }
 .page_tab_shengqingliucheng_title{
@@ -218,29 +219,10 @@ image{
 .page_tab_shengqingliucheng_text{
   color: #666;
   font-size: 14px;
-  height: 50rpx;
-  line-height: 50rpx;
 }
+/* 互助申请流程 end */
 
-.plan-info-msg .plan-table {
-    border: 1px solid #979797;
-    color: #6a6868;
-    font-size: 0.6rem;
-    margin: 0 auto 0.5rem;
-    text-align: center;
-    width: 95%;
-}
-.plan-info-msg .plan-table th {
-    border: 1px solid #979797;
-    height: 20px;
-    width: 60px;
-}
-.plan-info-msg .plan-table td {
-    border: 1px solid #979797;
-    height: 20px;
-    font-weight: normal;
-}
-
+/* 操作 start */
 .page_text{
   width: 100%;
   height: 100rpx;
@@ -261,3 +243,5 @@ image{
     text-align: center;
     background: #0092ff none repeat scroll 0 0;
 }
+/* 操作 end */
+/* tab end*/

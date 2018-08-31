@@ -193,7 +193,7 @@
           <view class='dripWaterMutualAid_page_model' wx:for="{{mutuaAid_list}}" wx:key="*this">
             <view class='dripWaterMutualAid_page_model_content'>
               <view class='dripWaterMutualAid_page_model_content_left'>
-                <image src='{{mutuaAid_imgArr_list[index]}}'></image>
+                <image src='{{mutuaAid_imgArr_list[index].imgUrl}}'></image>
               </view>
               <view class='dripWaterMutualAid_page_model_content_right'>
                 <view class='dripWaterMutualAid_page_model_content_right_title'>{{item.name}}</view>
@@ -208,7 +208,9 @@
             </view>
             <view class='dripWaterMutualAid_page_model_btn'>
               <view class='dripWaterMutualAid_page_model_btn_text'>{{item.tips}}</view>
-              <view class='dripWaterMutualAid_page_model_btn_btn'>加入计划</view>
+              <view class='dripWaterMutualAid_page_model_btn_btn'>
+                <navigator url='{{mutuaAid_imgArr_list[index].url}}?id={{item.id}}'>加入计划</navigator>
+              </view>
             </view>
           </view>
           <!-- 滴水互助计划信息 end -->

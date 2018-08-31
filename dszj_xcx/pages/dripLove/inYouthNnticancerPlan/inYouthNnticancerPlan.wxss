@@ -1,0 +1,8 @@
+/* pages/dripLove/inYouthNnticancerPlan/inYouthNnticancerPlan.wxss */
+
+@import '/pages/dripLove/dripMutualAidDetails/dripMutualAidDetails.wxss';
+
+page{
+  background-color: #fff;
+}
+

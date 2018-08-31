@@ -1,0 +1,33 @@
+<!--pages/dripLove/dripMutualAidDetails/immediatelyJoin/immediatelyJoin.wxml-->
+<view class='page'>
+  <!-- 计划图  start -->
+  <view class='page_img'>
+    <image src='{{immediatelyJoin_list.imgUrl}}'></image>
+    <view class="page_img_bannerInfo">
+      <view class='page_img_bannerInfo_title'>{{immediatelyJoin_list.title}}</view>
+      <view class='page_img_bannerInfo_text'>{{immediatelyJoin_list.title_text}}</view>
+    </view>
+  </view>
+  <!-- 计划图  start -->
+
+  <!-- 文本内容  start-->
+  <view class='page_textarea'>
+    {{immediatelyJoin_list.textarea}}
+  </view>
+  <!-- 文本内容  end-->
+
+  <!-- 富文本 start -->
+  <view class='page_richText'>
+    <rich-text nodes='{{immediatelyJoin_list.content}}'></rich-text>
+  </view>
+  <!-- 富文本 end -->
+
+  <!--操作  start -->
+  <view class='page_btn'>
+    <navigator class='page_btn_noExit' bindtap='noExit'>部分不符合</navigator>
+    <navigator class='page_btn_Next' url='/pages/dripLove/dripMutualAidDetails/immediatelyJoin/nextContinue/nextContinue?id={{id}}'>
+      符合条件,继续
+    </navigator>
+  </view>
+  <!--操作  start -->
+</view>

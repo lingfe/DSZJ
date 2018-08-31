@@ -9,17 +9,17 @@
     <view class='page_myUserInfo_userName'>昵称:<open-data type="userNickName"></open-data></view>
     <view class='page_myUserInfo_caozou'>
       <view class='page_myUserInfo_caozou_caozou'>
-        <view class='page_myUserInfo_caozou_caozou_image'>3</view>
+        <view class='page_myUserInfo_caozou_caozou_image'>{{helpInfo.count}}</view>
         <view class='page_myUserInfo_caozou_caozou_title'>帮助次数</view>
       </view>
 
       <view class='page_myUserInfo_caozou_caozou'>
-        <view class='page_myUserInfo_caozou_caozou_image'>120.00</view>
+        <view class='page_myUserInfo_caozou_caozou_image'>{{helpInfo.sum}}</view>
         <view class='page_myUserInfo_caozou_caozou_title'>爱心金额(元)</view>
       </view>
 
       <view class='page_myUserInfo_caozou_caozou'>
-        <view class='page_myUserInfo_caozou_caozou_image'>120.00</view>
+        <view class='page_myUserInfo_caozou_caozou_image'>{{helpInfo.sum}}</view>
         <view class='page_myUserInfo_caozou_caozou_title'>滴水爱心值</view>
       </view>
     </view>

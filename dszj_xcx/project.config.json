@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 24,
+			"current": 29,
 			"list": [
 				{
 					"id": -1,
@@ -186,9 +186,39 @@
 					"query": ""
 				},
 				{
+					"id": 24,
+					"name": "综合意外互助计划",
+					"pathName": "pages/dripLove/dripMutualAidDetails/dripMutualAidDetails",
+					"query": ""
+				},
+				{
 					"id": -1,
-					"name": "12",
-					"pathName": "pages/dripLove/dripMutualAidDetails/dripMutualAidDetails"
+					"name": "综合意外互助计划-立即加入",
+					"pathName": "pages/dripLove/dripMutualAidDetails/immediatelyJoin/immediatelyJoin",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "互助计划-立即加入-充值",
+					"pathName": "pages/dripLove/dripMutualAidDetails/immediatelyJoin/nextContinue/nextContinue",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "中青年抗癌计划",
+					"pathName": "pages/dripLove/inYouthNnticancerPlan/inYouthNnticancerPlan",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "中老年抗癌计划",
+					"pathName": "pages/dripLove/middleAndOldAgeAnticancerPlan/middleAndOldAgeAnticancerPlan",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "少儿健康互助计划",
+					"pathName": "pages/dripLove/childrensHealthMutualAidProgram/childrensHealthMutualAidProgram"
 				}
 			]
 		}

@@ -1,24 +1,20 @@
-// pages/dripLove/prayingForBlessingDetails/prayingForBlessingDetails.js
+// pages/dripLove/dripMutualAidDetails/webView/webView.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+  
   },
-
-  //跳转到感谢亲们页面
-  bindTab_GXQM: function () {
-    wx.navigateTo({
-      url: '/pages/dripWaterRescue/customerService/customerService',
-    })
-  },
-
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      webView:options.url
+    });
   },
 
   /**

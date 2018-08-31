@@ -1,0 +1,2 @@
+<!--pages/dripLove/dripMutualAidDetails/webView/webView.wxml-->
+<web-view src="{{webView}}"></web-view>

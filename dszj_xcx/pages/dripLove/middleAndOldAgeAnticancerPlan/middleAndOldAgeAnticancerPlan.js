@@ -1,13 +1,12 @@
-// pages/dripLove/dripMutualAidDetails/dripMutualAidDetails.js
+// pages/dripLove/middleAndOldAgeAnticancerPlan/middleAndOldAgeAnticancerPlan.js
 var app=getApp();
-
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    id:null,
+    id: null,
     mutualServer_list: app.dahuoData.mutualServer_list,
     goyue_list: app.dahuoData.goyue_list,
     commonProblem_List: app.dahuoData.commonProblem_List,
@@ -18,43 +17,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that=this;
-    that.setData({id: options.id,});
-
-    //获取最新加入互助计划用户,获取加入互助计划总人数
-    that.getlatestUserCount(that);
-  },
-
-  //获取加入互助计划总人数
-  getlatestUserCount: function (that) {
-    //url
-    var url = app.config.dszjPath_web + "api/Plan/count";
-    //参数
-    var data = {
-      id:that.data.id,
-    }
-    //发送请求
-    app.request.reqGet(url, data, function (res) {
-      console.log(res);
-      //设置数据，提示框
-      that.setData({
-        latestUserCount: res.data.data.count,
-        threeday_count: res.data.data.threeday_count,
-      });
-    }, function (res) {
-      console.log(res);
+    this.setData({
+      id:options.id,
     });
   },
 
   //tab 展开操作
-  bind_isTuou:function(e){
-    var that=this;
+  bind_isTuou: function (e) {
+    var that = this;
 
-    if(that.data.isTuou == e.currentTarget.id){
+    if (that.data.isTuou == e.currentTarget.id) {
       this.setData({
         isTuou: '',
       });
-    }else{
+    } else {
       this.setData({
         isTuou: e.currentTarget.id
       });

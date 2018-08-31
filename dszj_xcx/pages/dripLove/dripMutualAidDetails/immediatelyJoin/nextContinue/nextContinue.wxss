@@ -1,0 +1,119 @@
+/* pages/dripLove/dripMutualAidDetails/immediatelyJoin/nextContinue/nextContinue.wxss */
+
+page{
+  background-color: #efeff4;
+}
+
+.page{
+  padding: 0;
+  margin: 0;
+}
+
+/* 步骤 start */
+.step-wrap {
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 1px solid #ccc;
+    color: #999;
+    font-size: 14px;
+    height: 45px;
+    padding-left: 10rpx;
+    line-height: 45px;
+}
+.step-first {
+    color: #ff9812;
+}
+em {
+    border-right: 1px solid #bbb;
+    border-top: 1px solid #bbb;
+    display: inline-block;
+    height: 6px;
+    margin: 0 15px 0 10px;
+    transform: rotate(45deg);
+    vertical-align: 2px;
+    width: 6px;
+}
+span {
+    display: inline-block;
+}
+/* 步骤 end */
+
+/* 充值表单 start */
+.page_form {
+  width: 100%;
+  margin-top: 20rpx;
+  background-color: #fff;
+  border-top: 1px solid #bbb;
+}
+.page_form_input{
+  width: 94%;
+  margin: auto;
+  border-bottom: 1px solid #bbb;
+  height: 100rpx;
+
+}
+.page_form_input_label{
+  width: 30%;
+  font-size: 28rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  float: left;
+}
+.page_form_input_input{
+  width: 70%;
+  font-size: 28rpx;
+  height: 100rpx;
+  float: left;
+}
+
+.page_form_button{
+  width: 100%;
+  height: 100rpx;
+  margin-top: 20rpx;
+  border-bottom: 1rpx solid #bbb;
+}
+.page_form_button button{
+  color: #fff;
+    border: 1rpx solid #007aff;
+    background-color: #007aff;
+    font-size: 18px;
+    display: block;
+    width: 94%;
+    margin: auto;
+}
+/* 充值表单 end */
+
+/* 图文说明 start*/
+.page_smingModle{
+  width: 100%;
+  height: 140rpx;
+  background-color: #fff;
+  padding-top: 10rpx;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #bbb;
+  text-align: center;
+}
+.page_smingModle_model{
+  float: left;
+  width: 50%;
+  height: 140rpx;
+}
+.page_smingModle_model_image{
+  width: 10%;
+  margin-top: 10rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+.page_smingModle_model_label{
+  height: 50rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  width: 100%;
+}
+.page_smingModle_model_text{
+  font-size: 28rpx;
+  width: 100%;
+  height: 50rpx;
+  line-height: 30rpx;
+  color: #999;
+}
+/* 图文说明 end*/

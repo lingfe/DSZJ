@@ -20,12 +20,7 @@ Page({
     pageIndex:1,              //所在页页码，从1开始。
     dsqz_list:[],               //滴水救助数据
     mutuaAid_list:[],         //滴水互助数据    
-    mutuaAid_imgArr_list:[
-      "https://www.dishuihuzhu.cn/Public/weixin/images/yiwai.jpg",
-      "https://www.dishuihuzhu.cn/Public/weixin/images/zq.jpg",
-      "https://www.dishuihuzhu.cn/Public/weixin/images/ln.jpg",
-      "https://www.dishuihuzhu.cn/Public/weixin/images/se.jpg"
-    ],    //图片
+    mutuaAid_imgArr_list: app.dahuoData.mutuaAid_imgArr_list,    //图片
     latestUserList:[],          //最新加入计划的用户
     latestUserCount:0,        //加入互助计划总人数
   },
@@ -35,7 +30,10 @@ Page({
     var that = this;
     //请求获取滴水求助数据，
     that.getQiuzhuInfo(that);
-
+    //验证非空
+    if(!app.checkInput(options.activeIndex)){
+      that.data.activeIndex = options.activeIndex;
+    }
     //设置tab
     var sliderWidth = 50;
     wx.getSystemInfo({

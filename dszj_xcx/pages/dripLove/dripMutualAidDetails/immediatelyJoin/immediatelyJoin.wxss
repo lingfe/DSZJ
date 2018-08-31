@@ -1,0 +1,82 @@
+/* pages/dripLove/dripMutualAidDetails/immediatelyJoin/immediatelyJoin.wxss */
+page{
+      background-color: #fff;
+}
+.page{
+  padding: 0;
+  margin: 0;
+}
+
+/*<!-- 计划图  start -->*/
+.page_img{
+  width: 100%;
+  height: 250rpx;
+}
+.page_img image{
+  width: 100%;
+  height: 250rpx;
+}
+.page_img_bannerInfo {
+    left: 20px;
+    position: relative;
+    top: -100px;
+    z-index: 999;
+}
+.page_img_bannerInfo_title {
+    color: #0092ff;
+    font-size: 22px;
+    font-weight: bold;
+}
+.page_img_bannerInfo_text{
+  color: #0092ff;
+  font-size: 16px;
+}
+/*<!-- 计划图  end -->*/
+
+/* 文本内容 start */
+.page_textarea{
+  font-size: 28rpx;
+  background: #fff none repeat scroll 0 0;
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  padding: 10px;
+  color: #8f8f94;
+}
+/* 文本内容 end */
+
+/* 富文本 start */
+.page_richText{
+  padding-top: 10rpx;
+  padding-bottom: 120rpx;
+}
+.inform-item{
+  font-size: 14px;
+  padding: 0 10px;
+}
+/* 富文本 end */
+
+/*操作  start */
+.page_btn {
+    position: fixed;
+    bottom: 0rpx;
+    width: 100%;
+    height: 100rpx;
+    line-height: 100rpx;
+    font-size: 30rpx;
+    color: #fff;
+    text-align: center;
+    background: #0092ff none repeat scroll 0 0;
+}
+.page_btn_noExit{
+  width: 50%;
+  float: left;
+  background-color: #ffc245;
+}
+.page_btn_Next{
+  width: 50%;
+  float: right;
+  background-color: #0092ff;
+}
+
+/*操作  end */

@@ -1,12 +1,12 @@
-<!--pages/dripLove/dripMutualAidDetails/dripMutualAidDetails.wxml-->
+<!--pages/dripLove/childrensHealthMutualAidProgram/childrensHealthMutualAidProgram.wxml-->
 <view class='page'>
   <!-- 计划图  start -->
   <view class='page_img'>
-    <image src='https://www.dishuihuzhu.cn/Public/weixin/images/zongheyiwai_top.png'></image>
+    <image src='https://www.dishuihuzhu.cn/Public/weixin/images/shaoerjiankang_top.png'></image>
     <view class="page_img_bannerInfo">
-      <view class='page_img_bannerInfo_title'>综合意外互助计划</view>
-      <view class='page_img_bannerInfo_text'>最高可得10万元互助金</view>
-      <view class='page_img_bannerInfo_text'>1-65周岁</view>
+      <view class='page_img_bannerInfo_title'>少儿健康互助计划</view>
+      <view class='page_img_bannerInfo_text'>最高可得30万元互助金</view>
+      <view class='page_img_bannerInfo_text'>出生后30天-17周岁</view>
     </view>
   </view>
   <!-- 计划图  start -->
@@ -14,27 +14,28 @@
   <!-- 数据  start -->
   <view class='page_titleText'>
     <view class='page_titleText_content'>
-      <view class='page_titleText_content_title'>{{latestUserCount}}</view>
+      <view class='page_titleText_content_title'>56445</view>
       <view class='page_titleText_content_text'>已加入会员(人)</view>
     </view>
     <view class='page_titleText_border'></view>
     <view class='page_titleText_content'>
-      <view class='page_titleText_content_title'>{{threeday_count}}</view>
+      <view class='page_titleText_content_title'>56445</view>
       <view class='page_titleText_content_text'>近3日新增(人)</view>
     </view>
   </view>
   <!-- 数据  end -->
 
   <!-- 说明图  start -->
+  <view class='page_tab_title der_bottom'>了解互助</view>
   <view class='page_infoImg'>
-    <image src='https://www.dishuihuzhu.cn/Public/weixin/images/cpys_zhyw.png'></image>
+    <image src='http://pic.yupoo.com/lingfe/968e1ee6/3146ac17.png'></image>
   </view>
   <!-- 说明图  end -->
-  
+
   <!-- 互助规则 start -->
   <view class='page_tab'>
     <view class='page_tab_title'>互助规则</view>
-    <view wx:for="{{isTuou_List.zhohe}}" wx:key="*this">
+    <view wx:for="{{isTuou_List.shao}}" wx:key="*this">
       <view style='width:100%;background:{{isTuou == item.id ?"#F7F7F7":"" }};'>
         <view class='page_tab_content {{isTuou == item.id ? "bor":"" }}'>
           <view class='page_tab_content_title'>{{item.title}}</view>
@@ -51,7 +52,7 @@
     </view>
   </view>
   <!-- 互助规则 end -->
-
+  
   <!-- 互助服务 start -->
   <view class='page_tab'>
     <view class='page_tab_title'>互助服务</view>
@@ -90,7 +91,7 @@
   <!-- 常见问题 start -->
   <view class='page_tab'>
     <view class='page_tab_title'>常见问题</view>
-    <view wx:for="{{commonProblem_List.zhohe}}" wx:key="*this">
+    <view wx:for="{{commonProblem_List.shao}}" wx:key="*this">
       <view style='width:100%;background:{{isTuou == item.id ?"#F7F7F7":"" }};'>
         <view class='page_tab_content {{isTuou == item.id ? "bor":"" }}'>
           <view class='page_tab_content_title'>{{item.title}}</view>
@@ -114,7 +115,7 @@
   <!-- 公约 start -->
   <view class='page_tab'>
     <navigator wx:for="{{goyue_list}}" wx:key="*this" 
-    wx:if="{{item.zhohe}}"
+    wx:if="{{item.shao}}"
     url='/pages/dripLove/dripMutualAidDetails/webView/webView?url={{item.url}}'>
       <view style='width:100%;'>
         <view class='page_tab_content {{item.page_tab_content_class}}'>
@@ -133,8 +134,8 @@
     <navigator open-type='switchTab' url='/pages/dripLove/dripLove?activeIndex=3'>查看其他互助计划</navigator>
   </view>
   <view class='page_btn'>
-    <navigator url='/pages/dripLove/dripMutualAidDetails/immediatelyJoin/immediatelyJoin?type=zhohe&id={{id}}'>立即加入</navigator>
+    <navigator url='/pages/dripLove/dripMutualAidDetails/immediatelyJoin/immediatelyJoin?type=shao&id={{id}}'>立即加入</navigator>
   </view>
   <!-- 操作 end -->
-
 </view>
+

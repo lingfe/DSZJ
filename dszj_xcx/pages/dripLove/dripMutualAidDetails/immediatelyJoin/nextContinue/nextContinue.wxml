@@ -1,0 +1,47 @@
+<!--pages/dripLove/dripMutualAidDetails/immediatelyJoin/nextContinue/nextContinue.wxml-->
+<view class='page'>
+  <!-- 步骤 start  -->
+  <view class='step-wrap'>
+    <span class="step-first">1.填写信息</span>
+    <em></em>
+    <span>2.验证手机号并充值</span>
+    <em></em>
+    <span>3.成功</span>
+  </view>
+  <!-- 步骤 end  -->
+
+  <!-- 充值表单 start -->
+  <view class='page_form'>
+    <form>
+      <view class="page_form_input">
+        <label class='page_form_input_label'>真实姓名</label>
+        <input class='page_form_input_input' placeholder="与身份证姓名保持一致"  />
+      </view>
+
+      <view class="page_form_input">
+        <label class='page_form_input_label'>身份证号</label>
+        <input class='page_form_input_input' placeholder="用于申请互助，会严格保密" />
+      </view>
+
+      <view class="page_form_button">
+        <button form-type='' >微信充值9.00元</button>
+      </view>
+    </form>
+  </view>
+  <!-- 充值表单 end -->
+
+  <!-- 图文说明 start -->
+  <view class="page_smingModle">
+    <view class="page_smingModle_model">
+      <image class="page_smingModle_model_image" src="https://www.dishuihuzhu.cn/Public/weixin/images/q1.png" />
+      <view class='page_smingModle_model_label'>平台可靠</view>
+      <view class="page_smingModle_model_text">滴水资本战略投资</view>
+    </view>
+    <view class="page_smingModle_model">
+      <image class="page_smingModle_model_image" src="https://www.dishuihuzhu.cn/Public/weixin/images/q2.png" />
+      <view class='page_smingModle_model_label'>资金安全</view>
+      <view class="page_smingModle_model_text">民生银行专户托管</view>
+    </view>
+  </view>
+  <!-- 图文说明 end -->
+</view>
