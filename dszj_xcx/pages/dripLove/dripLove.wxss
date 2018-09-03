@@ -271,6 +271,14 @@
 .dripQifu_page_text-danger{
   color: #F25B4B !important
 }
+.shenghe_span{
+  border-radius:10rpx;color: #fff;background-color: #FA9A0C;
+  padding-top: 3rpx;
+  padding-bottom: 3rpx;
+  padding-left: 8rpx;
+  padding-right: 8rpx;
+  text-align: center;
+}
 /* 滴水祈福 end*/
 
 

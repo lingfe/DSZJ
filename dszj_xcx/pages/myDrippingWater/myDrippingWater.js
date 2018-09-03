@@ -13,6 +13,15 @@ Page({
     
   },
 
+  /**
+   * 页面加载
+   */
+  onLoad:function(options){
+    var that=this;
+    //获取当前用户信息，比如:余额
+    that.getUserInfo(that);
+  },
+
   //获取爱心统计信息
   gethelpInfo:function(that){
     //url
@@ -39,6 +48,23 @@ Page({
     }, function (res) {
       console.log(res);
     });
+  },
+
+  //获取当前用户信息，比如:余额
+  getUserInfo:function(that){
+    wx.request({
+      url: app.config.dszjPath_web +'api/User/info',
+      method:"GET",
+      header:{
+        Token:wx.getStorageSync("token")
+      },
+      success:function(res){
+        console.log(res);
+        that.setData({
+          user:res.data.data
+        });
+      }
+    })
   },
 
   /**

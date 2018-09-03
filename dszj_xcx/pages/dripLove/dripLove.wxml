@@ -75,9 +75,7 @@
               <view class='page_model_title_text'>{{item.mobile}}</view>
               <view class='page_model_title_text align_right'>
                 <span style="color: #F25B4B;font-weight: 500;">{{item.verify_count}}</span> 人证实
-                <span style="color: #fff;background-color: #FA9A0C;width: 40px;height: 14px;line-height: 17px;text-align: center;">
-                  已审核
-                </span>
+                <span class="shenghe_span">已审核</span>
               </view>
             </view>
           </view>
@@ -125,41 +123,41 @@
 
       <!-- 滴水祈福 start -->
       <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        <navigator wx:for="{{qf_list}}" wx:key="*this" 
+          url='/pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing?id={{item.id}}'>
           <view class='dripQifu_page_model' >
             <view class='dripQifu_page_model_content'>
               <view class='dripQifu_page_model_content_left'>
-                <image src='/assets/images/jpg/jz1.jpg'></image>
-                <image src='/assets/images/jpg/jz1.jpg'></image>
-                <image src='/assets/images/jpg/jz1.jpg'></image>
+                <image wx:for="{{item.pictures}}"  wx:for-item="img" wx:if="{{ index <3}}" src='{{imgPath}}{{img}}'></image>
               </view>
               <view class='dripQifu_page_model_content_right'>
-                <view class='dripQifu_page_model_content_right_title'>中青年抗癌计划中青年抗癌计划中青年抗癌计划</view>
+                <view class='dripQifu_page_model_content_right_title'>{{item.title}}</view>
                 <view class='dripQifu_page_model_content_right_text'>
                   <view class='dripQifu_page_model_content_right_text_text'>
-                    目标<span class="dripQifu_page_text-danger">200000.00</span>元
+                    {{item.addtime}}
                   </view>
                   <view class='dripQifu_page_model_content_right_text_text'>
-                    已筹<span class="dripQifu_page_text-danger">16912.00</span>元
+                    已获得<span class="dripQifu_page_text-danger">{{item.total_num}}</span>祈福
                   </view>
                   <view class='dripQifu_page_model_content_right_text_text dripQifu_page_no-right'>
-                    <span class="dripQifu_page_text-danger">735</span> 次支持
+                    爱心款<span class="dripQifu_page_text-danger">{{item.total_money}}</span>元
                   </view>
                 </view>
               </view>
             </view>
             <view class='dripQifu_page_model_title'>
               <view class='dripQifu_page_model_title_image'>
-                <image src='/assets/images/dripWaterRescue/Thank.png'></image>
+                <image src='{{item.avatar}}'></image>
               </view>
-              <view class='dripQifu_page_model_title_text'>123******231</view>
+              <view class='dripQifu_page_model_title_text'>{{item.mobile}}</view>
               <view class='dripQifu_page_model_title_text dripQifu_page_align_right'>
-                <span style="color: #F25B4B;font-weight: 500;">54</span> 人证实
-                <span style="color: #fff;background-color: #FA9A0C;width: 40px;height: 14px;line-height: 17px;text-align: center;">
-                  已审核
-                </span>
+                <span style="margin-right:10rpx;" wx:if="{{item.type==0}}">项目祈福</span>
+                <span style="margin-right:10rpx;" wx:if="{{item.type==1}}">个人祈福</span>
+                <span class="shenghe_span">已审核</span>
               </view>
             </view>
           </view>
+        </navigator>
       </view>
       <!-- 滴水祈福 end -->
 

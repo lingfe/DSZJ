@@ -11,8 +11,8 @@ Page({
     files: [],                            //选择图片的数组，原始。包含完整的图片url，以及现在编辑数据，用于预览
     arr: [],                              //选择图片的数组，预留。不包含编辑之前的数据，用于组装
     isAgree: false,  
-
     imageArray: [],                       //图片数组，原始。不包含完整url，用于储存
+
     Raise_money_for_whom: ["本人","父亲","母亲","丈夫","儿子","女儿","朋友","其他"],
     Home_town:["请选择","北京","上海"],
     Date_of_diagnosis:["请选择"],
@@ -26,6 +26,8 @@ Page({
     activeIndex: 0,         //tab切换下标
     sliderOffset: 0,        //坐标x
     sliderLeft: 0,          //坐标y
+    
+    //大病救助表单
     form:{
       step:1,               //Int请求步骤。
       mobile:null,          //	Int联系人手机号。
@@ -35,7 +37,128 @@ Page({
       pictures:null,             // 選項	Json项目图片。
       address:null,         // 選項	String	地址。
       qrcode:null,          // 選項	String	志愿者code。
+    },
+
+    //发起祈福表单
+    qf_form:{
+      title:null,//	String祈福标题。
+      name:null,//	String	祈福人姓名。
+      mobile:null,//	String	祈福人手机号。
+      address:null,//	String	祈福人地址。
+      description:null,//	String	祈福说明。
+      pictures:null,//	Array	祈福图片列表。
+      qrcode:null,//	String	志愿者code。
     }
+  },
+
+  //祈福表单提交
+  qf_formSubmit:function(e){
+    var that=this;
+    //验证是否为空
+    if(app.checkInput(e.detail.value.title)){
+      app.showToast("祈福标题不能为空!","none");
+      return;
+    }
+    if(app.checkInput(e.detail.value.name)){
+      app.showToast("祈福人姓名不能为空!","none");
+      return;
+    }
+    if(app.checkInput(e.detail.value.mobile)){
+      app.showToast("祈福人手机号!","none");
+      return;
+    }
+    if(app.checkInput(e.detail.value.address)){
+      app.showToast("祈福人地址不能为空!","none");
+      return;
+    }
+    if(app.checkInput(e.detail.value.description)){
+      app.showToast("祈福说明不能为空","none");
+      return;
+    }else{
+      //赋值
+      that.data.qf_form={
+        title: e.detail.value.title,//	String祈福标题。
+        name: e.detail.value.name,//	String	祈福人姓名。
+        mobile: e.detail.value.mobile,//	String	祈福人手机号。
+        address: e.detail.value.address,//	String	祈福人地址。
+        description: e.detail.value.description,//	String	祈福说明。
+      }
+    }
+
+    //上传图片
+    var imageArray = [];
+    if (that.data.arr == null || that.data.arr.length == 0) {
+      app.showToast("请上传图片!", "none");
+      return;
+    } else {
+      imageArray = that.data.arr;
+    }
+    if (imageArray.length > 6) {
+      app.showToast("图片最多只能上传六张!", "none");
+      return;
+    }
+
+    //提示
+    app.showToast('正在上传','loading');
+
+    //上传图片数组
+    uploadimg(imageArray.splice(0, 1), [], imageArray);
+    //多张图片上传
+    function uploadimg(path, pathArr, dataArr) {
+      wx.uploadFile({
+        url: app.config.dszjPath_web + "api/UserPray/uploadPicture",//上传祈福图 开发者服务器 url
+        filePath: path[0],                          //要上传文件资源的路径
+        name: 'file',                                //文件对应的 key , 开发者在服务器端通过这个 key 可以获取到文件二进制内容
+        header: {                                   //HTTP 请求 Header , header 中不能设置 Referer
+          Token: wx.getStorageSync("token"),
+        },
+        formData: null,                             //参数(HTTP 请求中其他额外的 form data)
+        success: (resp) => {                         //接口调用成功的回调函数
+
+          var json = JSON.parse(resp.data);
+          if(resp.data.code=="401"){
+            //验证状态
+            app.btnLogin(json.code);
+            
+          }else{
+
+            pathArr.push(json.data[0].url);
+            if (dataArr.length > 0) {
+              //递归
+              uploadimg(dataArr.splice(0, 1), pathArr, dataArr);
+            } else {
+              //调用请求,提交
+              that.qf_reqSetData(pathArr);
+            }
+          }
+        }
+      });
+    }
+  },
+
+  //调用请求,提交
+  qf_reqSetData: function (images) {
+    var that = this;
+    //url
+    var url = app.config.dszjPath_web + "api/UserPray/add";
+    //请求头
+    var header = {
+      Token: wx.getStorageSync("token")
+    }
+    //参数
+    that.data.qf_form.pictures = images;
+    var data = that.data.qf_form;
+
+    //发送请求
+    app.request.reqPost(url, header, data, function (res) {
+      console.log(res);
+      //跳转到下一步
+      wx.navigateTo({
+        url: '/pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing?id=' + res.data.data,
+      })
+    }, function (res) {
+      console.log(res);
+    })
   },
 
   //快速生成表单
@@ -115,13 +238,6 @@ Page({
     });
   },
 
-  //滴水祈福提交跳转
-  bindTab_QF:function(e){
-    wx.navigateTo({
-      url: '/pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing',
-    })
-  },
-
   //tab点击切换
   tabClick: function (e) {
     //当前
@@ -131,7 +247,8 @@ Page({
     that.setData({
       list: null,
       sliderOffset: e.currentTarget.offsetLeft,
-      activeIndex: e.currentTarget.id
+      activeIndex: e.currentTarget.id,
+      arr: [],                              //选择图片的数组，预留。不包含编辑之前的数据，用于组装
     });
   },
 
@@ -156,7 +273,7 @@ Page({
     })
   },
 
-  //下一步
+  //大病救助-下一步
   bindtapSubmit:function(e){ 
     var that=this;
     if (app.checkInput(that.data.form.total_amount)){

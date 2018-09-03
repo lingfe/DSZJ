@@ -20,6 +20,29 @@ Page({
     this.setData({
       id: options.id,
     });
+    //获取最新加入互助计划用户,加入互助计划总人数
+    that.getlatestUserCount(that);
+  },
+
+  //获取加入互助计划总人数,加入互助计划总人数
+  getlatestUserCount: function (that) {
+    //url
+    var url = app.config.dszjPath_web + "api/Plan/count";
+    //参数
+    var data = {
+      id: that.data.id,
+    }
+    //发送请求
+    app.request.reqGet(url, data, function (res) {
+      console.log(res);
+      //设置数据，提示框
+      that.setData({
+        latestUserCount: res.data.data.count,
+        threeday_count: res.data.data.threeday_count,
+      });
+    }, function (res) {
+      console.log(res);
+    });
   },
 
   //tab 展开操作

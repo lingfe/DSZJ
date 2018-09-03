@@ -14,12 +14,12 @@
   <!-- 数据  start -->
   <view class='page_titleText'>
     <view class='page_titleText_content'>
-      <view class='page_titleText_content_title'>56445</view>
+      <view class='page_titleText_content_title'>{{latestUserCount}}</view>
       <view class='page_titleText_content_text'>已加入会员(人)</view>
     </view>
     <view class='page_titleText_border'></view>
     <view class='page_titleText_content'>
-      <view class='page_titleText_content_title'>56445</view>
+      <view class='page_titleText_content_title'>{{threeday_count}}</view>
       <view class='page_titleText_content_text'>近3日新增(人)</view>
     </view>
   </view>

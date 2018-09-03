@@ -61,44 +61,43 @@ Page({
       return;
     }
 
-    //修改电话号码
-    var url = app.config.basePath_sys + "api/plug/save";
-    //请求头
-    var header = {
-      cookie: wx.getStorageSync('cookie') + ";" + that.data.user_verify_sys,
-      "Content-Type": "application/x-www-form-urlencoded"
-    };
-    //参数
-    var data = {
-      timeStamp: wx.getStorageSync('time'),
-      token: wx.getStorageSync('token'),
-      reqJson: JSON.stringify({
-        nameSpace: 'sys_userinfo',       //个人信息表
-        scriptName: 'com.echsoft.common.plugin.impl.BindPhone4UserPlugin',
-        nameSpaceMap: {
-          rows: [{
-            mobile: that.data.phone,
-            verifyCode: that.data.yzm,
-            id: wx.getStorageSync('personalId')   //个人资料id
-          }],
-        }
-      })
-    };
+    //3.验证绑定手机号短信验证码，得到令牌
+    wx.request({
+      url: app.config.dszjPath_web + "api/User/verifyMobileCode",
+      header: {
+        Token: wx.getStorageSync('token')
+      },
+      data: {
+        mobile: that.data.phone,
+      },
+      method:"GET",
+      success:function(res1){
+        console.log(res1);
+        if(res1.data.code == 1){
 
-    //发送请求
-    app.request.reqPost(url, header, data, function (res) {
-      console.log(res);
-      wx.showToast({
-        title: res.data.message,
-        icon: 'Ok',
-        duration: 1000,
-        success: function (res) {
-          wx.switchTab({
-            url: '/pages/personal/personal',
-          });
+          //4.绑定手机号
+          wx.request({
+            url: app.config.dszjPath_web +"api/User/bindingMobile",
+            data:{
+              mobile:that.data.phone,
+              access:res1.data.data,
+              code:that.data.yzm
+            },
+            header:{
+              Token:wx.getStorageSync('token'),
+            },
+            method:"POST",
+            success:function(res2){
+              console.log(res2);
+              if(res2.data.code == 1){
+                app.showToast(res2.data.msg,"none");
+              }
+            }
+          })
+
         }
-      });
-    });
+      }
+    })
   },
 
   //获取验证码
@@ -115,28 +114,37 @@ Page({
     //冷冻
     countdown(that);
 
-    //获取验证码
-    var url = app.config.basePath_sys + "api/exe/sendVerificationCode";
-    //请求头
-    var header = {
-      cookie: wx.getStorageSync('cookie'),
-      "Content-Type": "application/x-www-form-urlencoded"
-    };
-    //参数
-    var data = {
-      timeStamp: wx.getStorageSync('time'),
-      token: wx.getStorageSync('token'),
-      reqJson: that.data.phone,
-    };
-
-    //发送请求
-    app.request.reqPost(url, header, data, function (res) {
-      console.log(res);
-      var cookie = res.header["Set-Cookie"].split(",")[0].split(";")[0];
-      that.setData({
-        user_verify_sys: cookie
-      });
+    //1.检查手机号是否被使用
+    wx.request({
+      url: app.config.dszjPath_web + 'api/User/checkMobile',
+      method:"POST",
+      header:{
+        Token: wx.getStorageSync('token'),
+      },
+      data:{
+        mobile: that.data.phone,
+      },
+      success:function(res1){
+        console.log(res1);
+        if(!res1.data.data){
+          //2.像手机号发送验证码
+          wx.request({
+            url: app.config.dszjPath_web + "api/User/sendMobileCode",
+            data: {
+              mobile: that.data.phone,
+            },
+            header: {
+              Token: wx.getStorageSync('token'),
+            },
+            method: "POST",
+            success: function (res2) {
+              console.log(res2);
+            }
+          });
+        }
+      }
     });
+
   },
 });
 

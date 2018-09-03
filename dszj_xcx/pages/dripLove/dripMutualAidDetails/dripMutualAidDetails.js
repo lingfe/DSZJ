@@ -21,11 +21,11 @@ Page({
     var that=this;
     that.setData({id: options.id,});
 
-    //获取最新加入互助计划用户,获取加入互助计划总人数
+    //获取最新加入互助计划用户,加入互助计划总人数
     that.getlatestUserCount(that);
   },
 
-  //获取加入互助计划总人数
+  //获取加入互助计划总人数,加入互助计划总人数
   getlatestUserCount: function (that) {
     //url
     var url = app.config.dszjPath_web + "api/Plan/count";

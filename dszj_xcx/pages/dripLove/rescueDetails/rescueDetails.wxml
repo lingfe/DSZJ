@@ -171,9 +171,10 @@
       </view>
 
       <view class='page_choukuangdotai_buttons'>
-        <navigator url='pages/dripLove/thankGuys/thankGuysIn/thankGuyslnDetails/thankGuyslnDetails?id={{detailsData.id}}' 
+        <navigator url='/pages/dripLove/thankGuys/thankGuysIn/thankGuyslnDetails/thankGuyslnDetails?id={{detailsData.id}}' 
           class='page_choukuangdotai_buttons_btnThanks'>感谢亲们</navigator>
-        <navigator class='page_choukuangdotai_buttons_weiTaQifu'>为Ta祈福</navigator>
+        <navigator url='/pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing?id={{detailsData.id}}' 
+          class='page_choukuangdotai_buttons_weiTaQifu'>为Ta祈福</navigator>
       </view>
     </view>
     <!-- 筹款动态 end -->

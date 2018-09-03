@@ -2,50 +2,68 @@
 <view class='page'>
   <!-- 项目信息 start-->
   <view class='page_ProjectInfo'>
-    <view class="page_ProjectInfo_statu">该祈福未认证</view>
+    <view class="page_ProjectInfo_statu" wx:if="{{info.if_renzheng == 0}}">该祈福未认证</view>
+    <view class="page_ProjectInfo_statu" style='background:#0099ff;color:#fff;' wx:if="{{info.if_renzheng == 1}}">该祈福认证成功</view>
+    <view class="page_ProjectInfo_statu" wx:if="{{info.if_renzheng == 2}}">该祈福认证失败</view>
+
     <view class='page_ProjectInfo_content'>
       <view class='page_ProjectInfo_content_title'>
         <view class='page_ProjectInfo_content_title_image'>
-          <image src='http://qzapp.qlogo.cn/qzapp/101414596/E9478CCDFC315EF3A583B83432A9C9C5/100'></image>
+          <image  src='{{info.avatar}}'></image>
         </view>
-        <view class='page_ProjectInfo_content_title_text'>零风</view>
+        <view class='page_ProjectInfo_content_title_text'>{{info.nickname !=''?info.nickname:info.mobile}}</view>
         <view class='page_ProjectInfo_content_title_text_last'>
-          祈福<span style="color: #F25B4B;font-weight: 500;">54</span>天
+          祈福<span style="color: #F25B4B;font-weight: 500;">{{info.days}}</span>天
         </view>
       </view>
 
       <view class='page_ProjectInfo_content_content'>
+        <view class='page_ProjectInfo_content_content_title'>
         <view class='page_ProjectInfo_content_content_image'>
-          <image src='http://pic.yupoo.com/lingfe/0441df88/f4676b6a.png'></image>
-        </view>
-        <view class='page_ProjectInfo_content_content_title'>3423423</view>
+          <button open-type="share"><image  src='http://pic.yupoo.com/lingfe/0441df88/f4676b6a.png'></image></button>
+        </view>{{info.title_front}}{{info.title}}
+        {{info.title_behind != ''?info.title_behind:' ，为了给TA增强治病信心，与滴水之家一起来为TA祈福吧！'}}</view>
       </view>
       
       <view class='page_ProjectInfo_content_content_remark'>祈福介绍：
-        <span style="color:#979797;">page_ProjectInfo_content_content_title_width_100page_ProjectInfo_content_content_title_width_100page_ProjectInfo_content_content_title_width_100</span>
+        <span style="color:#979797;">{{info.description}}</span>
       </view>
       <view class='page_ProjectInfo_content_content_image_width_100'>
-        <image src='https://www.dishuihuzhu.cn/uploads/User_cert/20180816/s_1405262_5b7530de5c182.jpg'></image>
+        <image wx:for="{{info.pictures}}" wx:key="*this" src='{{imgPath}}{{item}}'></image>
       </view>
         
-      <view class='page_ProjectInfo_content_content_title_width_100'>资料证明</view>
-      <view class='page_ProjectInfo_content_content_bgText'>
-        <view class='page_ProjectInfo_content_content_bgText_title'>姓名：11</view>
-        <view class='page_ProjectInfo_content_content_bgText_text'>资料证明正在审核中</view>
+      <view wx:if="{{info.type==1}}">
+        <view class='page_ProjectInfo_content_content_title_width_100'>资料证明</view>
+        <view class='page_ProjectInfo_content_content_bgText'>
+          <view class='page_ProjectInfo_content_content_bgText_title'>姓名：{{info.aided_name}}</view>
+          <view class='page_ProjectInfo_content_content_bgText_text' wx:if="{{info.if_renzheng == 0}}">资料证明正在审核中</view>
+        </view>
       </view>
     </view>
   </view>
   <!-- 项目信息 end -->
 
   <!-- 项目动态 start -->
-  <view class='page_dynamic'>
+  <view class='page_dynamic' wx:if="{{info.type == 1}}">
+    <view class='page_choukuangdotai_title'>祈福动态</view>
+    <view wx:for="{{info.replies}}" wx:key="*this" class='page_choukuangdotai_content'>
+        <view class='page_choukuangdotai_content_image'>
+          <image src='{{info.headerpic}}'></image>
+        </view>
+        <view class='page_choukuangdotai_content_content'>
+          <view class='page_choukuangdotai_content_content_title'>{{info.mobile}}</view>
+          <view class='page_choukuangdotai_content_content_text'>{{item.info}}</view>
+          <view class='page_choukuangdotai_content_content_text font_size_22'>祈福更新</view>
+        </view>
+    </view>
+
     <view class='page_dynamic_'>
         <view class='page_dynamic_image'>
-          <image src='http://qzapp.qlogo.cn/qzapp/101414596/E9478CCDFC315EF3A583B83432A9C9C5/100'></image>
+          <image src='{{info.avatar}}'></image>
         </view>
         <view class='page_dynamic_text'>
-          <view class='page_dynamic_text_title'>零风</view>
-          <view class='page_dynamic_text_text'>5分钟前</view>
+          <view class='page_dynamic_text_title'>{{info.nickname !=''?info.nickname:info.mobile}}</view>
+          <view class='page_dynamic_text_text'>{{info.addtime}}</view>
           <view class='page_dynamic_text_text'>祈福发起</view>
           <view class='page_dynamic_text_image' >
             <image src='http://pic.yupoo.com/lingfe/64a27743/d4214f5b.png' style='border-radius: 0rpx;'></image>
@@ -58,25 +76,71 @@
   <!-- ta的祈福 start -->
   <view class='page_tadeQfu'>
     <view class='page_tadeQfu_title'>
-      已获得<abbr>0</abbr>人帮助 / 爱心款<abbr>0.00</abbr>元
+      已获得<abbr>{{info.pray_count}}</abbr>人帮助 / 爱心款<abbr>{{info.total_money}}</abbr>元
     </view>
     <view class='page_tadeQfu_text'>
       <view class='page_tadeQfu_text_title'>TA的祈福：</view>
-      <view class='page_tadeQfu_text_text'>已有<abbr>0</abbr>人为TA祈福</view>
+      <view class='page_tadeQfu_text_text'>已有<abbr>{{info.pray_count}}</abbr>人为TA祈福</view>
     </view>
-    <view class='page_tadeQfu_txtButton'>暂无祈福记录</view>
+    
+    <!-- 有回复的 start-->
+    <view wx:for="{{paging_list}}" wx:key="*this" wx:for-item="st" class='page_Allevaluate_evaluate'>
+      <view class='page_Allevaluate_evaluate_image'>
+        <image src='{{st.avatar}}'></image>
+      </view>
+      <view class='page_Allevaluate_evaluate_content'>
+        <view class='page_Allevaluate_evaluate_content_title'>
+          <view class='page_Allevaluate_evaluate_content_title_name'>{{st.nickname}}</view>
+          <view class='page_Allevaluate_evaluate_content_title_text'>
+            为ta献爱心: <abbr class="color-red">{{st.money}}</abbr>元
+          </view>
+        </view>
+        <view class='page_Allevaluate_evaluate_content_text'>
+          {{st.info}}
+        </view>
+        <view class='page_Allevaluate_evaluate_content_canshu'>
+          <!-- <view class='page_content_left_label'>置顶</view> -->
+          <view class='page_content_left_text'>{{st.time}}</view>
+          <view class='page_content_left_image'>
+            <image src='http://pic.yupoo.com/lingfe/7cf66693/4025569a.png'></image>
+          </view>
+          <view class='page_content_left_text'>{{st.money}}滴爱心记录</view>
+          <view class='page_content_left_image' style="float:right;">
+            <image src='http://pic.yupoo.com/lingfe/64a27743/d4214f5b.png'></image>
+          </view>
+        </view>
+        <!-- 回复内容 start -->
+        <view wx:for="{{st.replies}}" wx:key="*this" wx:for-item="huifu" class='page_Allevaluate_evaluate_content_huifu'>
+          <view class='page_Allevaluate_evaluate_content_huifu_content'>
+            <span wx:if="{{huifu.nickname==''}}">{{huifu.mobile}}</span>
+            <span wx:else >{{huifu.nickname}}</span>
+            :{{huifu.info }}
+          </view>
+        </view>
+        <!-- 回复内容 end -->
+
+      </view>
+    </view>
+    <!-- 有回复的 end -->
   </view>
   <!-- ta的祈福 end -->
 </view>
 
 <!-- 为ta祈福  start-->
-<view class="button-box">
+<view class="button-box" wx:if="{{info.type==1}}">
     <view class="btnToThankLetter" bindtap='bindTab_GXQM'>
       <image src='http://pic.yupoo.com/lingfe/e7d5c834/feb9fe4a.png' style='margin-top: 13rpx;height:54rpx;'></image>
     </view>
     <view class="btnToThankLetter">
-      <image src='http://pic.yupoo.com/lingfe/865d5cf6/cc93a34e.png'></image>
+      <button open-type="share"><image src='http://pic.yupoo.com/lingfe/865d5cf6/cc93a34e.png'></image></button>
     </view>
     <view class="button-pray">为TA祈福</view>
+</view>
+<!-- 为ta祈福  end>
+
+<!-- 为ta祈福,为ta献爱心  start-->
+<view class="button-box" wx:if="{{info.type==0}}">
+  <navigator class="button-left">为TA祈福</navigator>
+  <navigator url='/pages/dripLove/rescueDetails/rescueDetails?id={{info.id}}' class="button-right">为ta献爱心</navigator>
 </view>
 <!-- 为ta祈福  end>

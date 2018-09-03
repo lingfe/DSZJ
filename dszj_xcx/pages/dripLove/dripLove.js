@@ -15,11 +15,13 @@ Page({
     activeIndex: 0,         //tab切换下标
     sliderOffset: 0,        //坐标x
     sliderLeft: 0,          //坐标y
+    imgPath:app.config.domain,//图片地址
 
     pageSize: 10,            //每页显示的记录数量。
     pageIndex:1,              //所在页页码，从1开始。
     dsqz_list:[],               //滴水救助数据
-    mutuaAid_list:[],         //滴水互助数据    
+    mutuaAid_list:[],         //滴水互助数据 
+    qf_list:[],                 //滴水祈福   
     mutuaAid_imgArr_list: app.dahuoData.mutuaAid_imgArr_list,    //图片
     latestUserList:[],          //最新加入计划的用户
     latestUserCount:0,        //加入互助计划总人数
@@ -71,16 +73,65 @@ Page({
       //请求获取滴水救助数据，
       that.getQiuzhuInfo(that);
     }else if(name == "滴水祈福"){
-      
+      //获取祈福分页列表
+      that.getQF_PrayPaging(that);
     }
 
     //设置
     that.setData({
       dsqz_list: [],               //滴水救助数据
       mutuaAid_list: [],         //滴水互助数据   
+      qf_list: [],                 //滴水祈福  
       sliderOffset: e.currentTarget.offsetLeft,
       activeIndex: e.currentTarget.id
     });
+  },
+
+  //获取祈福分页列表
+  getQF_PrayPaging:function(that){
+    wx.request({
+      url: app.config.dszjPath_web +'api/Pray/paging',
+      method:"GET",
+      header:{
+        Token:wx.getStorageSync("token")
+      },
+      data:{
+        "pageSize": that.data.pageSize,
+        "pageIndex": that.data.pageIndex
+      },
+      success:function(res){
+        console.log(res);
+        var pageList = that.data.qf_list;
+        //得到数据
+        var list = res.data.data.Records;
+        if (list == null || list.length == 0) {
+          //提示
+          wx.showToast({
+            title: '没有更多了!',
+            icon: 'loading',
+            duration: 1000,
+          });
+          return;
+        }
+
+        //循环遍历操作
+        for (var i = 0, lenI = list.length; i < lenI; ++i) {
+          if (!app.checkInput(list[i].avatar)) {
+            //匹配是否包含http://
+            if (list[i].avatar.indexOf("http://") == -1) {
+              list[i].avatar = app.config.domain + list[i].avatar;
+            }
+          }
+          //添加到当前数组
+          pageList.push(list[i]);
+        }
+
+        //设置数据，提示框
+        that.setData({
+          qf_list: pageList
+        });
+      }
+    })
   },
 
   //请求获取滴水救助数据，
@@ -263,6 +314,8 @@ Page({
     that.getlatestUser(that);
     //获取加入互助计划总人数
     that.getlatestUserCount(that);
+    //获取祈福分页列表
+    that.getQF_PrayPaging(that);
 
     //下拉完成后执行回退
     wx.stopPullDownRefresh();
@@ -284,6 +337,8 @@ Page({
     that.getlatestUser(that);
     //获取加入互助计划总人数
     that.getlatestUserCount(that);
+    //获取祈福分页列表
+    that.getQF_PrayPaging(that);
 
     //提示
     wx.showToast({

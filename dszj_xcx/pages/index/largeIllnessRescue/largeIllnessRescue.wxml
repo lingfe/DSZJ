@@ -139,14 +139,14 @@
 
       <!-- 发起祈福  start-->
       <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
-        <view class='page'>
+        <form bindsubmit="qf_formSubmit">
           <!-- 祈福标题   start-->
           <view class='page_Fundraising_title'>
             <view class='page_Fundraising_title_text'>
               <view class='page_Fundraising_title_text_title'>祈福标题</view>
             </view>
             <view class='page_Fundraising_title_input input1'>
-              <input type='text' placeholder='好标题可以收到更多人的祈福'></input>
+              <input type='text' name="title" value='{{qf_form.title}}' placeholder='好标题可以收到更多人的祈福'></input>
             </view>
           </view>
           <!-- 祈福标题   end-->
@@ -157,7 +157,7 @@
               <view class='page_Fundraising_title_text_title'>祈福人姓名</view>
             </view>
             <view class='page_Fundraising_title_input input1'>
-              <input type='text' placeholder='请输入祈福人姓名'></input>
+              <input type='text' name="name" value='{{qf_form.name}}' placeholder='请输入祈福人姓名'></input>
             </view>
           </view>
           <!-- 祈福人姓名   end-->
@@ -168,7 +168,7 @@
               <view class='page_Fundraising_title_text_title'>祈福人手机号</view>
             </view>
             <view class='page_Fundraising_title_input input2'>
-              <input type='text' placeholder='请输入祈福人手机号'></input>
+              <input type='text' name="mobile" value='{{qf_form.mobile}}' placeholder='请输入祈福人手机号'></input>
             </view>
           </view>
           <!-- 祈福人手机号   end-->
@@ -179,7 +179,7 @@
               <view class='page_Fundraising_title_text_title'>祈福人地址</view>
             </view>
             <view class='page_Fundraising_title_input input1'>
-              <input type='text' placeholder='请输入祈福人地址'></input>
+              <input type='text' name="address" value='{{qf_form.address}}' placeholder='请输入祈福人地址'></input>
             </view>
           </view>
           <!-- 祈福人地址   end-->
@@ -191,7 +191,8 @@
             </view>
             <view class='page_Fundraising_title_input_textarea'>
               <textarea auto-focus="true" 
-              name="content" placeholder='请详细描述祈福人情况，这样能收获更多人的关心。（不少于10个字）'></textarea>
+              name="content" name="description" value='{{qf_form.description}}' 
+              placeholder='请详细描述祈福人情况，这样能收获更多人的关心。（不少于10个字）'></textarea>
             </view>
           </view>
           <!-- 求助说明   end-->
@@ -236,10 +237,10 @@
 
           <!-- 提交 start -->
           <view class="weui-btn-area">
-            <button class="weui-btn" bindtap='bindTab_QF' formType="submit" type="primary">提交</button>
+            <button class="weui-btn" formType="submit" type="primary">提交</button>
           </view>
           <!-- 提交  end -->
-        </view>
+        </form>
       </view>
       <!-- 发起祈福  end-->
     </view>
