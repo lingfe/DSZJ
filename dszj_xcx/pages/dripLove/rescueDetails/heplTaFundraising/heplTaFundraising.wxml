@@ -1,0 +1,54 @@
+<!--pages/dripLove/rescueDetails/heplTaFundraising/heplTaFundraising.wxml-->
+<view class='page'>
+  <view class='page_top'>
+    <view class='page_top_image'>
+      <image src='https://www.dishuihuzhu.cn/Public/Images/head01.png'></image>
+    </view>
+    <view class='page_top_content'>
+      <view class='page_top_content_title'><span>139******74</span>项目发起人</view>
+      <view class='page_top_content_text'>{{detailsData.title}}</view>
+    </view>
+  </view>
+  <view class='page_border'></view>
+  <view class="page_moneyItems">
+    <view bindtap='bindtapAmount' data-amount="{{item}}" wx:for="{{jingE_list}}" wx:key="*this"  class="page_moneyItems_item">{{item}}元</view>
+  </view>
+  <view class='page_input'>
+    <input bindinput='bindtapAmount' type='text' placeholder='其他金额'></input>
+    <span class="page_input_span">元</span>
+  </view>
+
+  <view class="page_jindutiao">
+    <view class="page_jindutiao_title">贡献值</view>
+    <view class="page_jindutiao_progress">
+      <progress percent="{{percent}}" show-info activeColor="#0092ff" />
+    </view>
+    <view class="page_jindutiao_baifengbi">您的善举已经超过了
+      <span>{{percent== null?0:percent}}%</span>的用户
+    </view>
+  </view>
+
+  <view class='page_zhufuyue'>
+    <view class="page_jindutiao_title">祝福语</view>
+    <view class='page_zhufuyue_textarea'>
+      <textarea bindinput='bindTextarea'  placeholder='对Ta说一句鼓励的话吧~'></textarea>
+    </view>
+  </view>
+
+  <view class="page_checkbox">
+    <checkbox value="name"  bindtap='bindtapCheckbox' checked='{{checkbox}}' /><span>匿名帮助</span>
+  </view>
+  <view class='page_text'>
+    <navigator  url='/pages/dripLove/dripMutualAidDetails/webView/webView?url=https://www.dishuihuzhu.cn/Index/agree'>
+      我已阅读并同意《用户协议》  
+    </navigator>
+  </view>
+
+</view>
+
+<!-- 确定支付 start -->
+<view class='payView'>
+  <view class='payView_text'>合计:  {{jingE}}元</view>
+  <view class='payView_btn' bindtap='setUserPayOrder'>确认支付</view>
+</view>
+<!-- 确定支付 end -->

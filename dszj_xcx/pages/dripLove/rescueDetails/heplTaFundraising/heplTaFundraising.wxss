@@ -1,0 +1,189 @@
+/* pages/dripLove/rescueDetails/heplTaFundraising/heplTaFundraising.wxss */
+
+
+.page{
+  margin: 0;padding: 0;
+}
+
+.page_top{
+  width: 90%;
+  margin: auto;
+  margin-top: 30rpx;
+  height: 130rpx;
+}
+
+.page_top_image{
+  width: 100rpx;
+  float: left;
+  height:100rpx;
+}
+.page_top_image image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.page_top_content{
+  width: 80%;
+  float: left;
+  height: 100rpx;
+  margin-left: 20rpx;
+}
+.page_top_content_title{
+  width: 100%;
+  height: 50rpx;
+  color: #0092ff;
+  font-size: 30rpx;
+}
+.page_top_content_text{
+  width: 100%;
+  height: 50rpx;
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.page_border{
+   border-bottom: 1px dashed #bbb;
+   width: 100%;
+
+}
+
+.page_moneyItems{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20rpx;
+}
+
+.page_moneyItems_item{
+  color: #0092ff;
+    font-size: 30rpx;
+    border: 1px solid #0092ff;
+    text-align: center;
+    height: 50rpx;
+    line-height: 50rpx;
+    width: 22%;
+    margin: 1%;
+}
+.page_moneyItems_item:active{
+  opacity: 0.5;
+}
+.page_moneyItems_item:hover{
+  background: #0092ff;
+  color: #fff;
+}
+
+.page_input{
+  width: 90%;
+  margin: auto;
+  height: 80rpx;
+  background: #f0f0f0;
+  margin-top: 20rpx;
+  border: 1px solid #0092FF;
+}
+.page_input input{
+    background: #f0f0f0;
+    height: 80rpx;
+    line-height: 80rpx;
+    width: 90%;
+    font-size: 30rpx;
+    padding-left: 20rpx;
+    float: left;
+}
+.page_input_span{
+  position: relative;
+  color: #74C3FF;
+  font-size: 30rpx;
+}
+
+
+ .page_jindutiao{
+   width: 90%;
+   margin: auto;
+   margin-top: 30rpx;
+   border-top: 1rpx solid #bbb;
+   border-bottom: 1rpx solid #bbb;
+ }   
+ .page_jindutiao_title{
+   width: 100%;
+   height: 80rpx;
+   line-height: 80rpx;
+   font-size: 30rpx;
+ }
+.page_jindutiao_progress{
+  width: 100%;
+  font-size: 26rpx;
+  color: #8f8f94;
+  margin: auto;
+  margin-top: 10rpx;
+}
+.page_jindutiao_baifengbi{
+     width: 100%;
+   height: 80rpx;
+   line-height: 80rpx;
+   font-size: 28rpx;
+}
+
+/* 祝福语 start */
+.page_zhufuyue{
+  width: 90%;
+  margin: auto;
+}
+.page_zhufuyue_textarea{
+  height: 220rpx;
+  outline: none;
+  font-size: 30rpx;
+  padding: 10rpx;
+  background-color: #f0f0f0;
+  box-shadow: 0px 0px 4px 0px #aaa;
+  border: 1px solid #bbb;
+  resize: none;
+  line-height: 1.4;
+}
+
+.page_checkbox{
+  width: 90%;
+  margin: auto;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+
+.page_text{
+  width: 90%;
+  margin: auto;
+  font-size: 28rpx;
+  margin-top: 20rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-bottom: 100rpx;
+  text-align: center;
+}
+
+.payView{
+  position: fixed;
+  bottom: 0rpx;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #fff;
+  border-top: 1px solid #bbb;
+}
+.payView_text{
+  width: 60%;
+  float: left;
+ padding-left: 5%;
+ font-size: 32rpx; 
+ color: #0092FF;
+}
+.payView_btn{
+  width: 35%;
+  background: #0092FF;
+  float: right;
+  color: #fff;
+  text-align: center;
+  font-size: 32rpx;
+}

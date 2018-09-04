@@ -260,7 +260,9 @@
       <image src='http://pic.yupoo.com/lingfe/865d5cf6/cc93a34e.png'></image>
       <view class='btnToThankLetter_text'>{{detailsData.share_count}}</view>
     </view>
-    <view class="button-pray">帮助TA</view>
+    <view class="button-pray" bindtap='bindtapPay'>
+      帮助TA
+    </view>
 </view>
 <!-- 帮助ta  end>
 

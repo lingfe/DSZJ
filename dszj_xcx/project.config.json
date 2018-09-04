@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 29,
+			"current": 30,
 			"list": [
 				{
 					"id": -1,
@@ -218,7 +218,13 @@
 				{
 					"id": -1,
 					"name": "少儿健康互助计划",
-					"pathName": "pages/dripLove/childrensHealthMutualAidProgram/childrensHealthMutualAidProgram"
+					"pathName": "pages/dripLove/childrensHealthMutualAidProgram/childrensHealthMutualAidProgram",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "帮助ta",
+					"pathName": "pages/dripLove/rescueDetails/heplTaFundraising/heplTaFundraising"
 				}
 			]
 		}

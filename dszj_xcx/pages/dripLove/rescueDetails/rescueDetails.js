@@ -37,6 +37,14 @@ Page({
     that.getCollectInfo(that);
   },
 
+  //帮助ta
+  bindtapPay:function(e){
+    var detailsData = this.data.detailsData;
+    wx.navigateTo({
+      url: "/pages/dripLove/rescueDetails/heplTaFundraising/heplTaFundraising?detailsData=" + JSON.stringify(detailsData),
+    })
+  },
+
   //图片预览
   previewImage: function (e) {
     wx.previewImage({

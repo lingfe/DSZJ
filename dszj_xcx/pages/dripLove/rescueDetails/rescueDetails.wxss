@@ -556,7 +556,7 @@ span{
 }
 .zjlxsm_sl_image{
   width: 80%;
-  height: 700rpx;
+  height: 750rpx;
   position: fixed;
   top: 200rpx;
   border-radius: 16rpx;

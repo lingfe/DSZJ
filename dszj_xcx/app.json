@@ -35,7 +35,8 @@
     "pages/dripLove/dripMutualAidDetails/immediatelyJoin/nextContinue/nextContinue",
     "pages/dripLove/inYouthNnticancerPlan/inYouthNnticancerPlan",
     "pages/dripLove/middleAndOldAgeAnticancerPlan/middleAndOldAgeAnticancerPlan",
-    "pages/dripLove/childrensHealthMutualAidProgram/childrensHealthMutualAidProgram"
+    "pages/dripLove/childrensHealthMutualAidProgram/childrensHealthMutualAidProgram",
+    "pages/dripLove/rescueDetails/heplTaFundraising/heplTaFundraising"
   ],
   "window": {
     "navigationBarTextStyle": "white",
