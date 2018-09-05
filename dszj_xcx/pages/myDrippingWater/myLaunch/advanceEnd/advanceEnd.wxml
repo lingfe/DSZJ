@@ -1,0 +1,27 @@
+<!--pages/myDrippingWater/myLaunch/advanceEnd/advanceEnd.wxml-->
+<view class='page'>
+    <form bindsubmit='reqSetData'>
+          <!-- 提前结束的理由   start-->
+          <view class='page_Fundraising_textarea'>
+            <view class='page_Fundraising_title_text'>
+              <view class='page_Fundraising_title_text_title'>提前结束的理由</view>
+              <view class='page_Fundraising_title_text_text' bindtap='qz_isDisplay'></view>
+            </view>
+            <view class='page_Fundraising_title_input_textarea'>
+              <textarea auto-focus="true" 
+              value='{{form.description}}' 
+              bindinput='bindinput_description'
+              name="description" 
+              maxlength='1000'
+              placeholder='填写提前结束祈福的理由 (内容会更新到祈福动态)'></textarea>
+            </view>
+          </view>
+          <!-- 提前结束的理由   end-->
+
+          <!-- 提交 start -->
+          <view class="weui-btn-area">
+            <button class="weui-btn" formType="submit" type="primary">提交</button>
+          </view>
+          <!-- 提交  end -->
+    </form>
+</view>

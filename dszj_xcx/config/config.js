@@ -15,6 +15,7 @@ export default {
   // 上传图片地址   
   //domain: 'http://web.echsoft.cn/upload/doUpload',
   domain:'https://www.dishuihuzhu.cn',
+  domain_bd: 'http://120.78.13.232/',
   
   //获取图片
 	domainImage: "https://static.daho.club/static/upload/",

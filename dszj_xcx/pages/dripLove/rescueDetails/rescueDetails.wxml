@@ -71,7 +71,7 @@
         <view class='page_content_aixingxbang_image' wx:for="{{dataList.Records}}" wx:key="*this">
           <image src='{{item.member.headerpic}}'></image>
         </view>
-        <view class='page_content_aixingxbang_image'>
+        <view class='page_content_aixingxbang_image' style='float:right;'>
           <navigator url='/pages/dripLove/rescueDetails/loveContributionList/loveContributionList?id={{detailsData.id}}'>
             <image src='http://pic.yupoo.com/lingfe/c338ec00/4ceb65ad.png'></image>
           </navigator>

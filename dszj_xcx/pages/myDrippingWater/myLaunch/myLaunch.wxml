@@ -1,0 +1,138 @@
+<!--pages/myDrippingWater/myLaunch/myLaunch.wxml-->
+<view class='page'>
+    <!-- 菜单  start -->
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" 
+        class="weui-navbar__item {{activeIndex == index ? 'select_text' : ''}}" 
+        data-name="{{item}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" 
+      style="background-color:#0092ff;left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <!-- 菜单  end -->
+
+    <!-- 内容  start-->
+    <view class="weui-tab__panel">
+      <!-- 大病救助项目信息  start-->
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        
+        <view class='page_model'
+           bindtap='bindtap_rescueDetails'
+           wx:for="{{dsqz_list}}"
+           wx:key="*this" id='{{item.id}}'>
+            <view class='page_model_title'>
+              <view class='page_model_title_image'>
+                <image src='{{item.avatar}}'></image>
+              </view>
+              <view class='page_model_title_text'>{{item.mobile == ''?item.nickname:item.mobile}}</view>
+              <view class='page_model_title_text align_right'>
+                <span style="color: #0092ff;font-weight: 500;">{{item.verify_count}}</span> 人证实
+                <span class="shenghe_span" wx:if="{{item.if_renzheng == 0}}">未认证</span>
+                <span class="shenghe_span" wx:if="{{item.if_renzheng == 1}}">已认证</span>
+                <span class="shenghe_span" wx:if="{{item.if_renzheng == 2}}">认证失败</span>
+              </view>
+            </view>
+            <view class='page_model_content_left'>
+              <image mode='aspectFill' wx:for="{{item.pictures}}"  wx:for-item="img" wx:if="{{ index <3}}" src='{{imgPath}}{{img}}'></image>
+            </view>
+
+            <view class='page_model_content_right'>
+                <view class='page_model_content_right_title'>{{item.title}}</view>
+                <view class='page_model_content_right_text'>
+                  <view class='page_model_content_right_text_text'>
+                    目标<span class="text-danger">{{item.total_amount}}</span>元
+                  </view>
+                  <view class='page_model_content_right_text_text right_text' >
+                    已筹<span class="text-danger">{{item.total_money}}</span>元
+                  </view>
+                  <view class='page_model_content_right_text_text no-right'>
+                    <span class="text-danger" style="color:#0099ff;">{{item.total_num}}</span> 次支持
+                  </view>
+                </view>
+            </view>
+
+            <view class='page_model_content_caozhou'>
+                <navigator url="/pages/myDrippingWater/myLaunch/toUpdateDynamic/toUpdateDynamic?id={{item.id}}&type=0"
+                  class='page_model_content_caozhou_image image_width'>
+                  <image style='width:64%;' src='http://pic.yupoo.com/lingfe/ca1b87ed/3aa061c2.png'></image>
+                </navigator>
+                <view class='page_model_content_caozhou_image image_width'>
+                  <image style='width:64%;' src='http://pic.yupoo.com/lingfe/7f0646a1/81aace19.png'></image>
+                </view>
+                <view class='page_model_content_caozhou_image image_width'>
+                  <image style='width:64%;' src='http://pic.yupoo.com/lingfe/e8c6de73/5abf4985.png'></image>
+                </view>
+                <navigator url="/pages/myDrippingWater/myLaunch/advanceEnd/advanceEnd?id={{item.id}}&zt={{item.if_renzheng}}"
+                  class='page_model_content_caozhou_image image_width'>
+                  <image style='width:64%;' src='http://pic.yupoo.com/lingfe/b8689e16/2a1262bd.png'></image>
+                </navigator>
+            </view>
+            
+            <view class='page_model_content_btn'>请务必点击此处获得您的转发链接页面</view>
+        </view>
+      </view>
+      <!-- 大病救助项目信息  end>
+
+      <!-- 发起祈福项目信息  start-->
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">        
+        <navigator wx:for="{{qf_list}}" wx:key="*this" 
+          url='/pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing?id={{item.id}}'>
+          <view class='dripQifu_page_model' >
+            <view class='page_model_title'>
+              <view class='page_model_title_image'>
+                <image src='{{item.avatar}}'></image>
+              </view>
+              <view class='page_model_title_text'>{{item.mobile == ''?item.nickname:item.mobile}}</view>
+              <view class='page_model_title_text align_right'>
+                <span class="shenghe_span" wx:if="{{item.if_renzheng == 0}}">未认证</span>
+                <span class="shenghe_span" wx:if="{{item.if_renzheng == 1}}">已认证</span>
+                <span class="shenghe_span" wx:if="{{item.if_renzheng == 2}}">认证失败</span>
+              </view>
+            </view>
+
+            <view class='dripQifu_page_model_content'>
+              <view class='dripQifu_page_model_content_right_title'>{{item.title}}</view>
+              <view class='dripQifu_page_model_content_left'>
+                <image wx:for="{{item.pictures}}"  wx:for-item="img" wx:if="{{ index <3}}" src='{{imgPath}}{{img}}'></image>
+              </view>
+              <view class='dripQifu_page_model_content_right'>
+
+                <view class='dripQifu_page_model_content_right_text'>
+                  <view class='dripQifu_page_model_content_right_text_text'>
+                    {{item.addtime}}
+                  </view>
+                  <view class='dripQifu_page_model_content_right_text_text'>
+                    已获得<span class="dripQifu_page_text-danger">{{item.pray_count}}</span>人祈福
+                  </view>
+                  <view class='dripQifu_page_model_content_right_text_text dripQifu_page_no-right'>
+                    爱心款<span class="dripQifu_page_text-danger">{{item.total_money}}</span>元
+                  </view>
+                </view>
+              </view>
+            </view>
+
+            <view class='page_model_content_caozhou'>
+                <navigator url="/pages/myDrippingWater/myLaunch/toUpdateDynamic/toUpdateDynamic?id={{item.id}}&type=1"
+                  class='page_model_content_caozhou_image'>
+                  <image src='http://pic.yupoo.com/lingfe/ca1b87ed/3aa061c2.png'></image>
+                </navigator>
+                <view class='page_model_content_caozhou_image'>
+                  <image src='http://pic.yupoo.com/lingfe/1cba13fe/c4231efc.png'></image>
+                </view>
+                <navigator url="/pages/myDrippingWater/myLaunch/advanceEnd/advanceEnd?id={{item.id}}&zt={{item.if_renzheng}}" 
+                  class='page_model_content_caozhou_image'>
+                  <image src='http://pic.yupoo.com/lingfe/b8689e16/2a1262bd.png'></image>
+                </navigator>
+            </view>
+
+            <view class='page_model_content_btn'>请务必点击此处获得您的转发链接页面</view>
+          </view>
+        </navigator>
+      </view>
+      <!-- 发起祈福项目信息  end-->
+    </view>
+    <!-- 内容  end-->
+</view>

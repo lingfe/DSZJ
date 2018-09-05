@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 30,
+			"current": 32,
 			"list": [
 				{
 					"id": -1,
@@ -224,7 +224,19 @@
 				{
 					"id": -1,
 					"name": "帮助ta",
-					"pathName": "pages/dripLove/rescueDetails/heplTaFundraising/heplTaFundraising"
+					"pathName": "pages/dripLove/rescueDetails/heplTaFundraising/heplTaFundraising",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的发起",
+					"pathName": "pages/myDrippingWater/myLaunch/myLaunch",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "更新动态页面",
+					"pathName": "pages/myDrippingWater/myLaunch/toUpdateDynamic/toUpdateDynamic"
 				}
 			]
 		}

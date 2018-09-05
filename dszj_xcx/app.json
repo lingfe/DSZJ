@@ -36,7 +36,10 @@
     "pages/dripLove/inYouthNnticancerPlan/inYouthNnticancerPlan",
     "pages/dripLove/middleAndOldAgeAnticancerPlan/middleAndOldAgeAnticancerPlan",
     "pages/dripLove/childrensHealthMutualAidProgram/childrensHealthMutualAidProgram",
-    "pages/dripLove/rescueDetails/heplTaFundraising/heplTaFundraising"
+    "pages/dripLove/rescueDetails/heplTaFundraising/heplTaFundraising",
+    "pages/myDrippingWater/myLaunch/myLaunch",
+    "pages/myDrippingWater/myLaunch/toUpdateDynamic/toUpdateDynamic",
+    "pages/myDrippingWater/myLaunch/advanceEnd/advanceEnd"
   ],
   "window": {
     "navigationBarTextStyle": "white",

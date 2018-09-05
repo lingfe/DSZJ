@@ -1,0 +1,62 @@
+<!--pages/myDrippingWater/myLaunch/toUpdateDynamic/toUpdateDynamic.wxml-->
+<view class='page'>
+    <form bindsubmit='bindtapSubmit'>
+          <!-- 更新内容   start-->
+          <view class='page_Fundraising_textarea'>
+            <view class='page_Fundraising_title_text'>
+              <view class='page_Fundraising_title_text_title'>更新内容</view>
+              <view class='page_Fundraising_title_text_text' bindtap='qz_isDisplay'></view>
+            </view>
+            <view class='page_Fundraising_title_input_textarea'>
+              <textarea auto-focus="true" 
+              value='{{form.description}}' 
+              bindinput='bindinput_description'
+              name="description" 
+              maxlength='1000'
+              placeholder='请填写更新内容'></textarea>
+            </view>
+          </view>
+          <!-- 更新内容   end-->
+
+          <!-- 添加图片 start-->
+          <view class='page_Fundraising_image'>
+            <view class="image-iamge">
+              <view class='page_Fundraising_image_text'>
+                请勿在更新内容中上传支付二维码或引导用户发微信、支付宝红包、私人账号汇款等信息，一经发现，将严肃处理。
+              </view>
+              <!-- 上传图片  start -->
+              <view class="">
+                <view class="weui-cell__hd">
+                  <view class="weui-uploader">
+                    <view class="weui-uploader__hd">
+                      <view class="weui-uploader__title title"></view>
+                      <view class="weui-uploader__info">{{arr.length}}/8</view>
+                    </view>
+                    <view class="weui-uploader__bd">
+                      <view class="weui-uploader__files" id="uploaderFiles">
+                        <block wx:for="{{arr}}" wx:key="*this">
+                          <view wx:if="{{item !=null}}" class="weui-uploader__file" bindlongtap="previewImage" id="{{item}}">
+                            <image class="img_tt" src="/assets/images/delete.png" bindtouchend="bindtapImageDelete" data-img="{{item}}" />
+                            <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
+                          </view>
+                        </block>
+                      </view>
+                      <view class="weui-uploader__input-box" wx:if="{{arr.length!=6}}">
+                        <view class="weui-uploader__input" bindtap="chooseImage"></view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <!-- 上传图片  end -->
+            </view>
+          </view>
+          <!-- 添加图片   end-->
+
+          <!-- 更新 start -->
+          <view class="weui-btn-area">
+            <button class="weui-btn" formType="submit" type="primary">更新</button>
+          </view>
+          <!-- 更新  end -->
+    </form>
+</view>

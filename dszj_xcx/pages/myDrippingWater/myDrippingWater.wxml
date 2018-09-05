@@ -33,7 +33,7 @@
           <image src='/assets/images/my/my_fq.png'></image>
         </view>
         <view class='page_caidang_caidang_title'>我的发起</view>
-        <view class='page_caidang_caidang_text'>祈福、救助 ></view>
+        <navigator url='/pages/myDrippingWater/myLaunch/myLaunch?user_id={{info.id}}' class='page_caidang_caidang_text'>祈福、救助 ></navigator>
       </view>
 
       <view class='page_caidang_caidang'>

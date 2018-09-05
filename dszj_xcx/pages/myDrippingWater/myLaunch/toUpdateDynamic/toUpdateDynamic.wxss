@@ -1,0 +1,10 @@
+/* pages/myDrippingWater/myLaunch/toUpdateDynamic/toUpdateDynamic.wxss */
+
+@import '/pages/index/largeIllnessRescue/largeIllnessRescue.wxss';
+
+page{
+  background: #fff;
+}
+.page_Fundraising_image_text {
+  color: red;
+}
