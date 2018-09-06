@@ -1,0 +1,38 @@
+/* pages/myDrippingWater/myBank/myBank.wxss */
+
+.page_input{
+  width: 100%;
+  height: 80rpx;
+}
+.page_input_title{
+  width: 30%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  float: left;
+  text-align: right;
+}
+.page_input_input{
+  width: 70%;
+  height: 80rpx;
+  font-size: 28rpx;
+  float: left;
+}
+.page_input_input input{
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #bbb;
+}
+
+.page_picker{
+  width: 100%;
+  height: 80rpx;
+}
+.page_picker input{
+  width: 70%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #bbb;
+  float: left;
+}

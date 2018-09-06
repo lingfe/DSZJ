@@ -2,7 +2,6 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/personal/personal",
     "pages/crowdFunding/crowdFunding",
     "pages/message/message",
     "pages/index/largeIllnessRescue/largeIllnessRescue",
@@ -39,7 +38,13 @@
     "pages/dripLove/rescueDetails/heplTaFundraising/heplTaFundraising",
     "pages/myDrippingWater/myLaunch/myLaunch",
     "pages/myDrippingWater/myLaunch/toUpdateDynamic/toUpdateDynamic",
-    "pages/myDrippingWater/myLaunch/advanceEnd/advanceEnd"
+    "pages/myDrippingWater/myLaunch/advanceEnd/advanceEnd",
+    "pages/myDrippingWater/myLaunch/rescueEdit/rescueEdit",
+    "pages/myDrippingWater/myLaunch/qfEdit/qfEdit",
+    "pages/myDrippingWater/myLaunch/verificationProject/verificationProject",
+    "pages/myDrippingWater/myFollow/myFollow",
+    "pages/myDrippingWater/myBalance/myBalance",
+    "pages/myDrippingWater/myBank/myBank"
   ],
   "window": {
     "navigationBarTextStyle": "white",

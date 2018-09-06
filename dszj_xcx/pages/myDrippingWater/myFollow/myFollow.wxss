@@ -1,0 +1,69 @@
+/* pages/myDrippingWater/myFollow/myFollow.wxss */
+
+.page_model{
+  width: 100%;
+  height: 150rpx;
+  padding-top: 30rpx;
+  border-bottom: 1rpx solid #bbb;
+  padding-bottom: 30rpx;
+}
+
+.page_model_image{
+  width: 20%;
+  height: 150rpx;
+  float: left;
+  margin-left: 3.3%;
+}
+.page_model_image image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 10rpx;
+}
+.page_model_content{
+  width: 60%;
+  height: 150rpx;
+  float: left;
+  margin-left: 3.3%;
+}
+.page_model_content_title{
+  font-size: 30rpx;
+  width: 100%;
+  word-break:keep-all;/* 不换行 */
+  white-space:nowrap;/* 强制在同一行内显示所有文本，直到文本结束或者遭遇 br 对象。不换行 */
+  overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.page_model_content_status{
+  width: 100%;
+  font-size: 26rpx;
+  color: #0099ff;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.page_model_content_time{
+  font-size: 26rpx;
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+}
+.page_model_lastImg{
+  width: 10%;
+  height: 150rpx;
+  float: left;
+  text-align: right;
+}
+.page_model_lastImg image{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 50rpx;
+}
+
+.page_text{
+  font-size: 26rpx;
+  width: 100%;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: #bbb;
+}

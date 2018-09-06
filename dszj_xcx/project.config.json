@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 32,
+			"current": 35,
 			"list": [
 				{
 					"id": -1,
@@ -236,7 +236,25 @@
 				{
 					"id": -1,
 					"name": "更新动态页面",
-					"pathName": "pages/myDrippingWater/myLaunch/toUpdateDynamic/toUpdateDynamic"
+					"pathName": "pages/myDrippingWater/myLaunch/toUpdateDynamic/toUpdateDynamic",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "救助项目修改",
+					"pathName": "pages/myDrippingWater/myLaunch/rescueEdit/rescueEdit",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "验证项目",
+					"pathName": "pages/myDrippingWater/myLaunch/verificationProject/verificationProject",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的关注",
+					"pathName": "pages/myDrippingWater/myFollow/myFollow"
 				}
 			]
 		}

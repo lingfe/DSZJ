@@ -1,0 +1,42 @@
+/* pages/myDrippingWater/myLaunch/verificationProject/verificationProject.wxss */
+
+.page{
+padding: 0;
+margin: 0;
+padding-top: 100rpx;
+}
+
+.page_image{
+  
+    background: url(https://www.dishuihuzhu.cn/Public/Images/icon-msg.png?201606052211) no-repeat;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: 300px;
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 20px auto;
+    
+}
+.page_title{
+  width: 100%;
+  font-size: 40rpx;
+  text-align: center;
+  color: #0099ff;
+  margin-top: 50rpx;
+}
+
+.page_button{
+  width: 90%;
+  margin: auto;
+  margin-top: 50rpx;
+
+}
+.page_text{
+  color: red;
+  width: 90%;
+  margin: auto;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  text-align: center;
+}

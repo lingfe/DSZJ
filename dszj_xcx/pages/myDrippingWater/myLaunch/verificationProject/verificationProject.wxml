@@ -1,0 +1,22 @@
+<!--pages/myDrippingWater/myLaunch/verificationProject/verificationProject.wxml-->
+<view class='page'>
+  <view wx:if="{{ type == 0}}" >
+    <view class='page_image' style="background-position: -200px 0;"></view>
+    <view class='page_title'  >您的项目正在审核中,请耐心等待...</view>
+  </view>
+
+  <view wx:if="{{ type == 1}}" >
+    <view class='page_image' style="background-position: 0px 0;"></view>
+    <view class='page_title'  >感谢你，审核通过!</view>
+  </view>
+
+  <view wx:if="{{ type == 2}}" >
+    <view class='page_image' style="background-position: -100px 0;"></view>
+    <view class='page_title'  >审核失败!</view>
+  </view>
+
+  <view class='page_button'>
+    <button bindtap='bindtapDeitls'>查看项目</button>
+  </view>
+  <view class='page_text'>项目审核通过后，请及时转发到朋友圈，以便及时获得爱心人士的帮助。</view>
+</view>

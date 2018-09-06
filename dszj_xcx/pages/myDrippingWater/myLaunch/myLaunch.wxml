@@ -59,12 +59,15 @@
                   class='page_model_content_caozhou_image image_width'>
                   <image style='width:64%;' src='http://pic.yupoo.com/lingfe/ca1b87ed/3aa061c2.png'></image>
                 </navigator>
-                <view class='page_model_content_caozhou_image image_width'>
+                <navigator  url="/pages/myDrippingWater/myLaunch/rescueEdit/rescueEdit?id={{item.id}}"
+                  class='page_model_content_caozhou_image image_width'>
                   <image style='width:64%;' src='http://pic.yupoo.com/lingfe/7f0646a1/81aace19.png'></image>
-                </view>
-                <view class='page_model_content_caozhou_image image_width'>
+                </navigator>
+                <navigator 
+                  url="/pages/myDrippingWater/myLaunch/verificationProject/verificationProject?id={{item.id}}&type={{item.if_renzheng}}" 
+                  class='page_model_content_caozhou_image image_width'>
                   <image style='width:64%;' src='http://pic.yupoo.com/lingfe/e8c6de73/5abf4985.png'></image>
-                </view>
+                </navigator>
                 <navigator url="/pages/myDrippingWater/myLaunch/advanceEnd/advanceEnd?id={{item.id}}&zt={{item.if_renzheng}}"
                   class='page_model_content_caozhou_image image_width'>
                   <image style='width:64%;' src='http://pic.yupoo.com/lingfe/b8689e16/2a1262bd.png'></image>
@@ -119,9 +122,10 @@
                   class='page_model_content_caozhou_image'>
                   <image src='http://pic.yupoo.com/lingfe/ca1b87ed/3aa061c2.png'></image>
                 </navigator>
-                <view class='page_model_content_caozhou_image'>
+                <navigator url="/pages/myDrippingWater/myLaunch/qfEdit/qfEdit?id={{item.id}}"
+                  class='page_model_content_caozhou_image'>
                   <image src='http://pic.yupoo.com/lingfe/1cba13fe/c4231efc.png'></image>
-                </view>
+                </navigator>
                 <navigator url="/pages/myDrippingWater/myLaunch/advanceEnd/advanceEnd?id={{item.id}}&zt={{item.if_renzheng}}" 
                   class='page_model_content_caozhou_image'>
                   <image src='http://pic.yupoo.com/lingfe/b8689e16/2a1262bd.png'></image>

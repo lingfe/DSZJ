@@ -41,7 +41,7 @@
           <image src='/assets/images/my/my_gz.png'></image>
         </view>
         <view class='page_caidang_caidang_title'>我的关注</view>
-        <view class='page_caidang_caidang_text'>关注的项目 ></view>
+        <navigator url="/pages/myDrippingWater/myFollow/myFollow?user_id={{info.id}}" class='page_caidang_caidang_text'>关注的项目 ></navigator>
       </view>
 
       <view class='page_caidang_caidang'>
@@ -49,7 +49,8 @@
           <image src='/assets/images/my/my_ye.png'></image>
         </view>
         <view class='page_caidang_caidang_title'>我的余额</view>
-        <view class='page_caidang_caidang_text'>{{user.balance}}元 ></view>
+        <navigator url="/pages/myDrippingWater/myBalance/myBalance?user_id={{info.id}}" 
+        class='page_caidang_caidang_text'>{{user.balance}}元 ></navigator>
       </view>
 
       <view class='page_caidang_caidang border-no'>
@@ -57,7 +58,7 @@
           <image src='/assets/images/my/my_yhk.png'></image>
         </view>
         <view class='page_caidang_caidang_title'>我的银行卡</view>
-        <view class='page_caidang_caidang_text'>未绑定 ></view>
+        <navigator url="/pages/myDrippingWater/myBank/myBank?user_id={{info.id}}" class='page_caidang_caidang_text'>未绑定 ></navigator>
       </view>
     </view>
 

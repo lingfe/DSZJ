@@ -1,0 +1,24 @@
+/* pages/myDrippingWater/myBalance/myBalance.wxss */
+
+@import '/pages/myDrippingWater/myLaunch/verificationProject/verificationProject.wxss';
+page{
+  background-color: #efeff4;
+}
+.page_image{
+    background: url(https://www.dishuihuzhu.cn/Public/weixin/images/noplan.png) no-repeat scroll 0 0 / 100% auto;
+    display: block;
+    height: 50px;
+    margin: 0 auto;
+    width: 65px;
+}
+.page_title{
+      color: #333;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    font-size: 30rpx;
+}
+
+.page_text{
+  color: #0099ff;
+  font-size: 26rpx;
+}

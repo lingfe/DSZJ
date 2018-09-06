@@ -1,0 +1,7 @@
+/* pages/myDrippingWater/myLaunch/rescueEdit/rescueEdit.wxss */
+
+@import '/pages/index/largeIllnessRescue/largeIllnessRescue.wxss';
+
+page{
+  background: #fff;
+}

@@ -1,0 +1,31 @@
+<!--pages/myDrippingWater/myFollow/myFollow.wxml-->
+<view class='page'>
+  <view class='page_model' wx:for="{{list.Records}}" wx:key="*this">
+    <view class='page_model_image'>
+      <image src='{{item.cover}}'></image>
+    </view>
+    <view class='page_model_content'>
+      <view class='page_model_content_title'>{{item.title}}</view>
+      <view class='page_model_content_status' > {{ item.if_stop ==0 ?'进行中':'已结束'}}</view>
+      <view class='page_model_content_time'>{{item.raise_time}}</view>
+    </view>
+    <view class='page_model_lastImg'>
+      <image src='http://pic.yupoo.com/lingfe/dd8aec0d/53cd7818.png'></image>
+    </view>
+  </view>
+
+  <view class='page_model'>
+    <view class='page_model_image'>
+      <image src='https://www.dishuihuzhu.cn/uploads/User_cert/20180827/s_1781335_5b8394c8d2988.jpg'></image>
+    </view>
+    <view class='page_model_content'>
+      <view class='page_model_content_title'>六年病魔！癌症不断！望广大爱心人士帮我度过难关！</view>
+      <view class='page_model_content_status'>已结束</view>
+      <view class='page_model_content_time'>21天前</view>
+    </view>
+    <view class='page_model_lastImg'>
+      <image src='http://pic.yupoo.com/lingfe/dd8aec0d/53cd7818.png'></image>
+    </view>
+  </view>
+  <view class='page_text'>木有了，再去关注一些项目吧！</view>
+</view>
