@@ -1,0 +1,64 @@
+/* pages/myDrippingWater/volunteerCenter/volunteerCenter.wxss */
+
+.page_imageBg{
+    height: 260rpx;
+    background: #fff url(https://www.dishuihuzhu.cn/Public/images/tzz.jpg) no-repeat scroll center top/100%;
+}
+.page_titleBg{
+    margin-top: 50rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-weight: bold;
+    color: #0066FF !important;
+    background: transparent url(https://www.dishuihuzhu.cn/Public/weixin/images/99.png) no-repeat scroll center/50% auto;
+    font-size: 30rpx;
+    text-align: center;
+}
+
+.page_image{
+  width: 100%;
+  text-align: center;
+  height: 200rpx;
+  margin-top: 10rpx;
+}
+.page_image image{
+  height: 200rpx;
+  width: 200rpx;
+}
+
+.page_text{
+  width: 100%;
+  color: red;
+  text-align: center;
+  font-size: 26rpx;
+  margin-top: 20rpx;
+}
+
+.page_buttons{
+  margin-top: 80rpx;
+  width: 100%;
+  height: 80rpx;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+.page_buttons navigator{
+  position: relative;
+  display: table-cell;
+  width: 50%;
+  text-align: center;
+  color: #1f8cff;
+  font-size: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  float: left;
+}
+
+.page_buttons navigator:first-of-type::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 1px;
+    background: #eee;
+}

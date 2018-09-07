@@ -1,1 +1,8 @@
 /* pages/dripLove/dripMutualAidDetails/webView/webView.wxss */
+
+header{
+  display: none;
+}
+.mui-bar mui-bar-nav{
+  display: none;
+}

@@ -44,7 +44,11 @@
     "pages/myDrippingWater/myLaunch/verificationProject/verificationProject",
     "pages/myDrippingWater/myFollow/myFollow",
     "pages/myDrippingWater/myBalance/myBalance",
-    "pages/myDrippingWater/myBank/myBank"
+    "pages/myDrippingWater/myBank/myBank",
+    "pages/myDrippingWater/volunteerCenter/volunteerCenter",
+    "pages/myDrippingWater/volunteerCenter/accountRegistration/accountRegistration",
+    "pages/myDrippingWater/volunteerCenter/myRecommend/myRecommend",
+    "pages/myDrippingWater/dripInvitation/dripInvitation"
   ],
   "window": {
     "navigationBarTextStyle": "white",

@@ -32,6 +32,7 @@ Page({
     var that = this;
     //请求获取滴水求助数据，
     that.getQiuzhuInfo(that);
+    
     //验证非空
     if(!app.checkInput(options.activeIndex)){
       that.data.activeIndex = options.activeIndex;

@@ -1,0 +1,410 @@
+<!--pages/myDrippingWater/dripInvitation/dripInvitation.wxml-->
+<view class='page'>
+  <!-- 菜单  start -->
+    <view class="weui-navbar" style="border-bottom:none;padding-top:20rpx;">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" 
+        class="weui-navbar__item {{activeIndex == index ? 'select_text' : ''}}" 
+        data-name="{{item}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" 
+      style="background-color:#0092ff;left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <!-- 菜单  end -->
+
+    <!-- 内容  start-->
+    <view class="weui-tab__panel">
+      <!-- 滴水请柬  start-->
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <view wx:for="{{qf_list}}" wx:key="*this" 
+          url='/pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing?id={{item.id}}'>
+          <view class='dripQifu_page_model' >
+            <view class='page_model_title'>
+              <view class='page_model_title_image'>
+                <image src='{{item.avatar}}'></image>
+              </view>
+              <view class='page_model_title_text'>{{item.mobile == ''?item.nickname:item.mobile}}</view>
+              <view class='page_model_title_text align_right'>
+                <span class="shenghe_span" wx:if="{{item.if_renzheng == 0}}">未认证</span>
+                <span class="shenghe_span" wx:if="{{item.if_renzheng == 1}}">已认证</span>
+                <span class="shenghe_span" wx:if="{{item.if_renzheng == 2}}">认证失败</span>
+              </view>
+            </view>
+
+            <view class='dripQifu_page_model_content'>
+              <view class='dripQifu_page_model_content_right_title'>{{item.title}}</view>
+              <view class='dripQifu_page_model_content_left'>
+                <image wx:for="{{item.pictures}}"  wx:for-item="img" wx:if="{{ index <3}}" src='{{imgPath}}{{img}}'></image>
+              </view>
+              <view class='dripQifu_page_model_content_text'>总礼金:   
+                <text style='color:red;'>\t0</text>元
+              </view>
+            </view>
+
+            <view class='page_model_content_caozhou'>
+                <navigator url="/pages/myDrippingWater/myLaunch/toUpdateDynamic/toUpdateDynamic?id={{item.id}}&type=1"
+                  class='page_model_content_caozhou_image'>
+                  <image src='http://pic.yupoo.com/lingfe/ca1b87ed/3aa061c2.png'></image>
+                </navigator>
+                <navigator url="/pages/myDrippingWater/myLaunch/qfEdit/qfEdit?id={{item.id}}"
+                  class='page_model_content_caozhou_image'>
+                  <image src='http://pic.yupoo.com/lingfe/1cba13fe/c4231efc.png'></image>
+                </navigator>
+                <navigator url="/pages/myDrippingWater/myLaunch/advanceEnd/advanceEnd?id={{item.id}}&zt={{item.if_renzheng}}" 
+                  class='page_model_content_caozhou_image'>
+                  <image src='http://pic.yupoo.com/lingfe/b8689e16/2a1262bd.png'></image>
+                </navigator>
+            </view>
+
+            <view class='page_model_content_btn'>请务必点击此处获得您的转发链接页面</view>
+          </view>
+        </view>
+      </view>
+      <!-- 滴水请柬  end>
+
+      <!-- 线上礼单  start-->
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        <view class='page_model'>
+          <view class='page_model_text'>
+            <view class="page_model_text_text">姓名：测试盐</view>
+            <view class="page_model_text_text">金额：1.00元</view>
+            <view class="page_model_text_text">日期：2018.06.30</view>
+          </view>
+          <view class='page_model_invitationText'>
+            请柬：我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。
+          </view>
+          <view class='page_model_remark'>
+            <text style='color:#0099ff;'>备注：</text>
+            <text>一天送一块钱</text>
+          </view>
+        </view>
+
+        <view class='page_model'>
+          <view class='page_model_text'>
+            <view class="page_model_text_text">姓名：测试盐</view>
+            <view class="page_model_text_text">金额：1.00元</view>
+            <view class="page_model_text_text">日期：2018.06.30</view>
+          </view>
+          <view class='page_model_invitationText'>
+            请柬：我要建大别墅啦，明天开始动工啦。。
+          </view>
+          <view class='page_model_remark'>
+            <text style='color:#0099ff;'>备注：</text>
+            <text>一天送一块钱</text>
+          </view>
+        </view>
+
+        <view class='page_model'>
+          <view class='page_model_text'>
+            <view class="page_model_text_text">姓名：测试盐</view>
+            <view class="page_model_text_text">金额：1.00元</view>
+            <view class="page_model_text_text">日期：2018.06.30</view>
+          </view>
+          <view class='page_model_invitationText'>
+            请柬：我要建大别墅啦，明天开始动工啦。。。
+          </view>
+          <view class='page_model_remark'>
+            <text style='color:#0099ff;'>备注：</text>
+            <text>。我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。</text>
+          </view>
+        </view>
+
+        <view class='page_text'>
+          没有更多了
+        </view>
+      </view>
+      <!-- 线上礼单  end>
+
+      <!-- 线下礼单  start-->
+      <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+        <view class='page_model'>
+          <view class='page_model_text'>
+            <view class="page_model_text_text">姓名：测试盐</view>
+            <view class="page_model_text_text">金额：1.00元</view>
+            <view class="page_model_text_text">日期：2018.06.30</view>
+          </view>
+          <view class='page_model_invitationText'>
+            请柬：我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。
+          </view>
+          <view class='page_model_remark'>
+            <text style='color:#0099ff;'>备注：</text>
+            <text>一天送一块钱</text>
+          </view>
+        </view>
+
+        <view class='page_model'>
+          <view class='page_model_text'>
+            <view class="page_model_text_text">姓名：测试盐</view>
+            <view class="page_model_text_text">金额：1.00元</view>
+            <view class="page_model_text_text">日期：2018.06.30</view>
+          </view>
+          <view class='page_model_invitationText'>
+            请柬：我要建大别墅啦，明天开始动工啦。。
+          </view>
+          <view class='page_model_remark'>
+            <text style='color:#0099ff;'>备注：</text>
+            <text>一天送一块钱</text>
+          </view>
+        </view>
+
+        <view class='page_model'>
+          <view class='page_model_text'>
+            <view class="page_model_text_text">姓名：测试盐</view>
+            <view class="page_model_text_text">金额：1.00元</view>
+            <view class="page_model_text_text">日期：2018.06.30</view>
+          </view>
+          <view class='page_model_invitationText'>
+            请柬：我要建大别墅啦，明天开始动工啦。。。
+          </view>
+          <view class='page_model_remark'>
+            <text style='color:#0099ff;'>备注：</text>
+            <text>。我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。</text>
+          </view>
+        </view>
+
+        <view class='page_model'>
+          <view class='page_model_text'>
+            <view class="page_model_text_text">姓名：测试盐</view>
+            <view class="page_model_text_text">金额：1.00元</view>
+            <view class="page_model_text_text">日期：2018.06.30</view>
+          </view>
+          <view class='page_model_invitationText'>
+            请柬：我要建大别墅啦，明天开始动工啦。。。
+          </view>
+          <view class='page_model_remark'>
+            <text style='color:#0099ff;'>备注：</text>
+            <text>。我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。</text>
+          </view>
+        </view>
+        <view class='page_model'>
+          <view class='page_model_text'>
+            <view class="page_model_text_text">姓名：测试盐</view>
+            <view class="page_model_text_text">金额：1.00元</view>
+            <view class="page_model_text_text">日期：2018.06.30</view>
+          </view>
+          <view class='page_model_invitationText'>
+            请柬：我要建大别墅啦，明天开始动工啦。。。
+          </view>
+          <view class='page_model_remark'>
+            <text style='color:#0099ff;'>备注：</text>
+            <text>。我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。我要建大别墅啦，明天开始动工啦。。。。</text>
+          </view>
+        </view>
+        <view class='page_text text_bottom'>
+          没有更多了
+        </view>
+
+        <view class='page_xinxia_buttons'>
+          <view class='page_xinxia_buttons_btn'>添加礼单</view>
+        </view>
+      </view>
+      <!-- 线下礼单  end>
+
+      <!-- 礼金提现  start-->
+      <view class="weui-tab__content" hidden="{{activeIndex != 3}}">
+        <view class='page_lijingtix_title'>
+          <view class='page_lijingtix_title_zhoshu'>
+            <text class='text_zho'>5\n</text>
+            <text>总数</text>
+          </view>
+          <view class='page_lijingtix_title_zhoLj'>
+            <text class='text_zho'>￥5\n</text>
+            <text>总礼金</text>
+          </view>
+        </view>
+        <view class='page_lijingtix_bg'></view>
+
+        <view class='page_lijingtix_model'>
+          <view class='page_lijingtix_model_title'>
+            <text>测试盐发起个人请柬630</text>
+            <text style='color:#0099ff;float:right;'>可提现</text>
+          </view>
+          <view class='page_lijingtix_model_content'>
+            <view class='page_lijingtix_model_content_text'>
+              <view class='page_lijingtix_model_content_text_title'>礼金：</view>
+              <view class='page_lijingtix_model_content_text_text'>0元</view>
+            </view>
+            <view class='page_lijingtix_model_content_text'>
+              <view class='page_lijingtix_model_content_text_title'>送礼次数：</view>
+              <view class='page_lijingtix_model_content_text_text'>0次</view>
+            </view>
+            <view class='page_lijingtix_model_content_text'>
+              <view class='page_lijingtix_model_content_text_title'>发起日期：</view>
+              <view class='page_lijingtix_model_content_text_text'>0元</view>
+            </view>
+            <view class='page_lijingtix_model_content_text'>
+              <view class='page_lijingtix_model_content_text_title'>已提金额：</view>
+              <view class='page_lijingtix_model_content_text_text'>￥0.00元</view>
+            </view>
+            <view class='page_lijingtix_model_content_text'>
+              <view class='page_lijingtix_model_content_text_title'>提现中的金额：</view>
+              <view class='page_lijingtix_model_content_text_text'>￥0元</view>
+            </view>
+            <view class='page_lijingtix_model_content_input'>
+              <view class='page_lijingtix_model_content_input_title'>收款人姓名：</view>
+              <view class='page_lijingtix_model_content_input_input'>
+                <input value='测试' placeholder='收款人姓名'></input>
+              </view>
+            </view>
+            <view class='page_lijingtix_model_content_input'>
+              <view class='page_lijingtix_model_content_input_title'>身份证：</view>
+              <view class='page_lijingtix_model_content_input_input'>
+                <input value='测试' placeholder='身份证'></input>
+              </view>
+            </view>
+            <view class='page_lijingtix_model_content_input'>
+              <view class='page_lijingtix_model_content_input_title'>收款人手机：</view>
+              <view class='page_lijingtix_model_content_input_input'>
+                <input value='测试' placeholder='收款人手机'></input>
+              </view>
+            </view>
+            <view class='page_lijingtix_model_content_input'>
+              <view class='page_lijingtix_model_content_input_title'>开户银行：</view>
+              <view class='page_lijingtix_model_content_input_input'>
+              <picker bindchange="bindPickerChange" value="{{index}}" range="{{bankArr}}">
+                <input value="{{bankArr[index]}}" placeholder='开户银行' />
+              </picker>
+              </view>
+            </view>
+            <view class='page_lijingtix_model_content_input'>
+              <view class='page_lijingtix_model_content_input_title'>银行名称：</view>
+              <view class='page_lijingtix_model_content_input_input'>
+                <input value='测试' placeholder='银行名称'></input>
+              </view>
+            </view>
+            <view class='page_lijingtix_model_content_input'>
+              <view class='page_lijingtix_model_content_input_title'>开户行地址：</view>
+              <view class='page_lijingtix_model_content_input_input'>
+                <input value='测试' placeholder='开户行地址'></input>
+              </view>
+            </view>
+            <view class='page_lijingtix_model_content_input'>
+              <view class='page_lijingtix_model_content_input_title'>银行卡号：</view>
+              <view class='page_lijingtix_model_content_input_input'>
+                <input value='测试' placeholder='银行卡号'></input>
+              </view>
+            </view>
+            <view class='page_lijingtix_model_content_input'>
+              <view class='page_lijingtix_model_content_input_title'>输入金额：</view>
+              <view class='page_lijingtix_model_content_input_input'>
+                <input value='测试' placeholder='输入金额'></input>
+              </view>
+              <view>￥</view>
+            </view>
+            <view class='page_lijingtix_model_content_input'>
+              <view class='page_lijingtix_model_content_input_title'></view>
+              <view style="color:#bbb;">当前可提现金额￥0.00元</view>
+            </view>
+          </view>
+
+          <view class='page_lijingtix_text'>
+            注：礼金7-30天内可申请1次50%以内的提现，30天后可申请剩余金额100%提现，为保障资金安全，请尽量自行申请提现
+          </view>
+
+          <view class='page_lijingtix_btn'>
+            <view class='page_lijingtix_btn_btn'>马上提现</view>
+            <view class='page_lijingtix_btn_btn'>提现记录</view>
+          </view>
+        </view>
+        
+        <view class='page_lijingtix_bg'></view>
+
+        <view class='page_lijingtix_model'>
+          <view class='page_lijingtix_model_title'>
+            <text>测试盐发起个人请柬630</text>
+            <text style='color:#0099ff;float:right;'>可提现</text>
+          </view>
+          <view class='page_lijingtix_model_content'>
+            <view class='page_lijingtix_model_content_text'>
+              <view class='page_lijingtix_model_content_text_title'>礼金：</view>
+              <view class='page_lijingtix_model_content_text_text'>0元</view>
+            </view>
+            <view class='page_lijingtix_model_content_text'>
+              <view class='page_lijingtix_model_content_text_title'>送礼次数：</view>
+              <view class='page_lijingtix_model_content_text_text'>0次</view>
+            </view>
+            <view class='page_lijingtix_model_content_text'>
+              <view class='page_lijingtix_model_content_text_title'>发起日期：</view>
+              <view class='page_lijingtix_model_content_text_text'>0元</view>
+            </view>
+            <view class='page_lijingtix_model_content_text'>
+              <view class='page_lijingtix_model_content_text_title'>已提金额：</view>
+              <view class='page_lijingtix_model_content_text_text'>￥0.00元</view>
+            </view>
+            <view class='page_lijingtix_model_content_text'>
+              <view class='page_lijingtix_model_content_text_title'>提现中的金额：</view>
+              <view class='page_lijingtix_model_content_text_text'>￥0元</view>
+            </view>
+            <view class='page_lijingtix_model_content_input'>
+              <view class='page_lijingtix_model_content_input_title'>收款人姓名：</view>
+              <view class='page_lijingtix_model_content_input_input'>
+                <input value='测试' placeholder='收款人姓名'></input>
+              </view>
+            </view>
+            <view class='page_lijingtix_model_content_input'>
+              <view class='page_lijingtix_model_content_input_title'>身份证：</view>
+              <view class='page_lijingtix_model_content_input_input'>
+                <input value='测试' placeholder='身份证'></input>
+              </view>
+            </view>
+            <view class='page_lijingtix_model_content_input'>
+              <view class='page_lijingtix_model_content_input_title'>收款人手机：</view>
+              <view class='page_lijingtix_model_content_input_input'>
+                <input value='测试' placeholder='收款人手机'></input>
+              </view>
+            </view>
+            <view class='page_lijingtix_model_content_input'>
+              <view class='page_lijingtix_model_content_input_title'>开户银行：</view>
+              <view class='page_lijingtix_model_content_input_input'>
+              <picker bindchange="bindPickerChange" value="{{index}}" range="{{bankArr}}">
+                <input value="{{bankArr[index]}}" placeholder='开户银行' />
+              </picker>
+              </view>
+            </view>
+            <view class='page_lijingtix_model_content_input'>
+              <view class='page_lijingtix_model_content_input_title'>银行名称：</view>
+              <view class='page_lijingtix_model_content_input_input'>
+                <input value='测试' placeholder='银行名称'></input>
+              </view>
+            </view>
+            <view class='page_lijingtix_model_content_input'>
+              <view class='page_lijingtix_model_content_input_title'>开户行地址：</view>
+              <view class='page_lijingtix_model_content_input_input'>
+                <input value='测试' placeholder='开户行地址'></input>
+              </view>
+            </view>
+            <view class='page_lijingtix_model_content_input'>
+              <view class='page_lijingtix_model_content_input_title'>银行卡号：</view>
+              <view class='page_lijingtix_model_content_input_input'>
+                <input value='测试' placeholder='银行卡号'></input>
+              </view>
+            </view>
+            <view class='page_lijingtix_model_content_input'>
+              <view class='page_lijingtix_model_content_input_title'>输入金额：</view>
+              <view class='page_lijingtix_model_content_input_input'>
+                <input value='测试' placeholder='输入金额'></input>
+              </view>
+              <view>￥</view>
+            </view>
+            <view class='page_lijingtix_model_content_input'>
+              <view class='page_lijingtix_model_content_input_title'></view>
+              <view style="color:#bbb;">当前可提现金额￥0.00元</view>
+            </view>
+          </view>
+
+          <view class='page_lijingtix_text'>
+            注：礼金7-30天内可申请1次50%以内的提现，30天后可申请剩余金额100%提现，为保障资金安全，请尽量自行申请提现
+          </view>
+
+          <view class='page_lijingtix_btn'>
+            <view class='page_lijingtix_btn_btn'>马上提现</view>
+            <view class='page_lijingtix_btn_btn'>提现记录</view>
+          </view>
+        </view>
+      </view>
+      <!-- 礼金提现  end -->
+    </view>
+    <!-- 内容  end-->
+</view>

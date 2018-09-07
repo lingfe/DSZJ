@@ -1,0 +1,24 @@
+/* pages/myDrippingWater/volunteerCenter/accountRegistration/accountRegistration.wxss */
+@import '/pages/index/largeIllnessRescue/largeIllnessRescue.wxss';
+
+.page_imageBg{
+    height: 260rpx;
+    background: #fff url(https://www.dishuihuzhu.cn/Public/images/tzz.jpg) no-repeat scroll center top/100%;
+}
+
+.page_text{
+  width: 94%;
+  font-size: 26rpx;
+  margin: auto;
+  margin-top:50rpx;
+
+}
+.red{
+  color: red;
+  margin-top:20rpx;
+
+}
+
+.weui-btn-area {
+  margin-top: 150rpx;
+}

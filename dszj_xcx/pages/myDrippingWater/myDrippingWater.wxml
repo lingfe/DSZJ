@@ -68,7 +68,8 @@
           <image src='/assets/images/my/zyzzx.png'></image>
         </view>
         <view class='page_caidang_caidang_title'>志愿者中心</view>
-        <view class='page_caidang_caidang_text'>成为爱心天使 ></view>
+        <navigator url="/pages/myDrippingWater/volunteerCenter/volunteerCenter?user_id={{info.id}}" 
+          class='page_caidang_caidang_text'>成为爱心天使 ></navigator>
       </view>
 
       <view class='page_caidang_caidang'>
@@ -76,7 +77,8 @@
           <image src='/assets/images/my/dsqt.png'></image>
         </view>
         <view class='page_caidang_caidang_title'>滴水请柬</view>
-        <view class='page_caidang_caidang_text'>请柬、礼单、礼金.. ></view>
+        <navigator url="/pages/myDrippingWater/dripInvitation/dripInvitation?user_id={{info.id}}" 
+          class='page_caidang_caidang_text'>请柬、礼单、礼金.. ></navigator>
       </view>
 
       <view class='page_caidang_caidang border-no'>
@@ -84,7 +86,8 @@
           <image src='/assets/images/my/hepl.png'></image>
         </view>
         <view class='page_caidang_caidang_title'>帮助中心</view>
-        <view class='page_caidang_caidang_text'>如何筹款、提现.. ></view>
+        <navigator url='/pages/dripLove/dripMutualAidDetails/webView/webView?url=https://www.dishuihuzhu.cn/Home/Plan/help_01.html' 
+          class='page_caidang_caidang_text'>如何筹款、提现.. ></navigator>
       </view>
     </view>
 

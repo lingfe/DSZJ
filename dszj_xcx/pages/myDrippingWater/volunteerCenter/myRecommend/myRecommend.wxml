@@ -1,0 +1,52 @@
+<!--pages/myDrippingWater/volunteerCenter/myRecommend/myRecommend.wxml-->
+<view class='page'>
+  <view class='page_title'>所有案例</view>
+  <view class='page_model'
+           bindtap='bindtap_rescueDetails'
+           wx:for="{{dsqz_list}}"
+           wx:key="*this" id='{{item.id}}'>
+            <view class='page_model_title'>
+              <view class='page_model_title_image'>
+                <image src='{{item.avatar}}'></image>
+              </view>
+              <view class='page_model_title_text'>{{item.mobile == ''?item.nickname:item.mobile}}</view>
+              <view class='page_model_title_text align_right'>
+                <span style="color: #0092ff;font-weight: 500;">{{item.verify_count}}</span> 人证实
+                <span class="shenghe_span" wx:if="{{item.if_renzheng == 0}}">未认证</span>
+                <span class="shenghe_span" wx:if="{{item.if_renzheng == 1}}">已认证</span>
+                <span class="shenghe_span" wx:if="{{item.if_renzheng == 2}}">认证失败</span>
+              </view>
+            </view>
+            <view class='page_model_content_right_title'>{{item.title}}</view>
+            <view class='page_model_content_left'>
+              <image mode='aspectFill' wx:for="{{item.pictures}}"  wx:for-item="img" wx:if="{{ index <3}}" src='{{imgPath}}{{img}}'></image>
+            </view>
+            <view class='page_model_border'></view>
+            <view class='page_model_content_right'>
+                <view class='page_model_content_right_text'>
+                  <view class='page_model_content_right_text_text'>
+                    目标<span class="text-danger">{{item.total_amount}}</span>元
+                  </view>
+                  <view class='page_model_content_right_text_text right_text' >
+                    已筹<span class="text-danger">{{item.total_money}}</span>元
+                  </view>
+                  <view class='page_model_content_right_text_text no-right'>
+                    <span class="text-danger" style="color:#0099ff;">{{item.total_num}}</span> 次支持
+                  </view>
+                </view>
+            </view>
+
+            <view class='page_model_param'>
+              <view class='page_model_param_text'>
+                <text>发起时间:  </text>
+                <span style="color:#0099ff;">09月12日</span>
+                <span class="right_span">修改手机号码</span>
+              </view>
+              <view class='page_model_param_text'>
+                <text>发起时间:  </text>
+                <span style="color:#0099ff;">131123456458</span>
+                <text>  (点击拨打)</text>
+              </view>
+            </view>
+  </view>
+</view>
