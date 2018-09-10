@@ -48,7 +48,8 @@
     "pages/myDrippingWater/volunteerCenter/volunteerCenter",
     "pages/myDrippingWater/volunteerCenter/accountRegistration/accountRegistration",
     "pages/myDrippingWater/volunteerCenter/myRecommend/myRecommend",
-    "pages/myDrippingWater/dripInvitation/dripInvitation"
+    "pages/myDrippingWater/dripInvitation/dripInvitation",
+    "pages/myDrippingWater/myPublication/myPublication"
   ],
   "window": {
     "navigationBarTextStyle": "white",
@@ -69,12 +70,6 @@
         "text": "首页",
         "iconPath": "assets/images/ico/index_1.png",
         "selectedIconPath": "assets/images/ico/index_2.png"
-      },
-      {
-        "pagePath": "pages/dripWaterRescue/dripWaterRescue",
-        "text": "滴水救助",
-        "iconPath": "assets/images/ico/dsjz_2.png",
-        "selectedIconPath": "assets/images/ico/dsjz_1.png"
       },
       {
         "pagePath": "pages/dripLove/dripLove",

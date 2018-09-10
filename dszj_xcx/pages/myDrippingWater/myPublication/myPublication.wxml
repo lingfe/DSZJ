@@ -1,0 +1,69 @@
+<!--pages/myDrippingWater/myPublication/myPublication.wxml-->
+<view class='page'>
+    <!-- 菜单  start -->
+    <view class="weui-navbar">
+      <block wx:for="{{tabs}}" wx:key="*this">
+        <view id="{{index}}" 
+        class="weui-navbar__item {{activeIndex == index ? 'select_text' : ''}}" 
+        data-name="{{item}}" bindtap="tabClick">
+          <view class="weui-navbar__title">{{item}}</view>
+        </view>
+      </block>
+      <view class="weui-navbar__slider" 
+      style="background-color:#0092ff;left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+    </view>
+    <!-- 菜单  end -->
+
+    <!-- 内容  start-->
+    <view class="weui-tab__panel">
+      <!-- 客服问答  start-->
+      <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+        <view class='view_border_bottom'></view>
+        <view wx:for="{{list}}" wx:key="*this" wx:for-item="st">
+          <view class='page_content' bindtap='bindtap_Info' id="{{st.id}}">
+            <view class='page_content_left _left'>
+              <view class='page_content_left_title'>{{st.title}}</view>
+              <view class='page_content_left_label' wx:if="{{st.is_top == 1}}">置顶</view>
+              <view class='page_content_left_text'>{{st.comment_count}}评论</view>
+              <view class='page_content_left_text'>{{st.time}}</view>
+              <view class='page_content_left_image'>
+                <image src='http://pic.yupoo.com/lingfe/648a9559/3cfc611a.png'></image>
+              </view>
+            </view>
+            <view class='page_content_right'>
+              <view wx:if="{{st.status == 0}}" class='page_content_right_image red'>审核中</view>
+              <view wx:if="{{st.status == 1}}" class='page_content_right_image dszj'>审核通过</view>
+              <view wx:if="{{st.status == 2}}" class='page_content_right_image'>不显示</view>
+            </view>
+          </view>
+          <view class='view_border_bottom'></view>
+        </view>
+      </view>
+      <!-- 客服问答  end -->
+
+      <!-- 感谢信  start-->
+      <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+        <view class='view_border_bottom'></view>
+        <view wx:for="{{list}}" wx:key="*this" wx:for-item="st">
+          <view class='page_content' bindtap='bindtap_Info' id="{{st.id}}">
+            <view class='page_content_left _left'>
+              <view class='page_content_left_title'>{{st.title}}</view>
+              <view class='page_content_left_label' wx:if="{{st.is_top == 1}}">置顶</view>
+              <view class='page_content_left_text'>{{st.comment_count}}评论</view>
+              <view class='page_content_left_text'>{{st.time}}</view>
+              <view class='page_content_left_image'>
+                <image src='http://pic.yupoo.com/lingfe/648a9559/3cfc611a.png'></image>
+              </view>
+            </view>
+            <view class='page_content_right'>
+              <view wx:if="{{st.status == 0}}" class='page_content_right_image red'>审核中</view>
+              <view wx:if="{{st.status == 1}}" class='page_content_right_image dszj'>审核通过</view>
+              <view wx:if="{{st.status == 2}}" class='page_content_right_image'>不显示</view>
+            </view>
+          </view>
+          <view class='view_border_bottom'></view>
+        </view>
+      </view>
+      <!-- 感谢信  end-->
+    </view>
+</view>

@@ -55,13 +55,13 @@ button{
   z-index: 100;
 }
 .sl{
-  width: 94%;
+  width: 70%;
   border-radius: 14rpx;
   background-color: #fff;
   margin: auto;
 }
 .image_sl_image{
-    width: 94%;
+    width: 70%;
   height: 700rpx;
   position: fixed;
   top: 200rpx;

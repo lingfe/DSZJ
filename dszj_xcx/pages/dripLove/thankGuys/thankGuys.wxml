@@ -2,18 +2,17 @@
 <!--pages/dripWaterRescue/customerService/customerService.wxml-->
 <view class='page'>
 
-  <view class='page_content' bindtap='bindtap_thankGuyslnDetails'>
-    <view class='page_content_title'>为了更好的服务用户，关于支付宝支付的问题？</view>
-    <view class='page_content_image'>
-        <image src='/assets/images/jpg/jz1.jpg'></image>
-        <image src='/assets/images/jpg/jz1.jpg'></image>
-        <image src='/assets/images/jpg/jz1.jpg'></image>
+  <view class='page_content' bindtap='bindtap_thankGuyslnDetails'
+    wx:for="{{list}}" wx:key="*this" wx:for-item="st" id="{{st.id}}">
+    <view class='page_content_title'>{{st.title}}</view>
+    <view class='page_content_image' wx:if="{{st.pictures.length!=0}}">
+        <image wx:for="{{st.pictures}}" wx:key="*this" wx:if="{{index<3}}" src='{{domain}}{{item}}'></image>
     </view>
     <view class='page_content_content'>
-      <view class='page_content_left_label'>置顶</view>
-      <view class='page_content_left_text'>滴水之家客服</view>
-      <view class='page_content_left_text'>15评论</view>
-      <view class='page_content_left_text'>95天前</view>
+      <view class='page_content_left_label'  wx:if="{{st.is_top == 1}}">置顶</view>
+      <view class='page_content_left_text'>{{st.nickname}}</view>
+      <view class='page_content_left_text'>{{st.comment_count}}评论</view>
+      <view class='page_content_left_text'>{{st.time}}</view>
       <view class='page_content_left_image'>
         <image src='/assets/images/jpg/jz1.jpg'></image>
       </view>

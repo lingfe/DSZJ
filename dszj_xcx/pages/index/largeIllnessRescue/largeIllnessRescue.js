@@ -34,7 +34,7 @@ Page({
       total_amount:null,    //	Double筹款金额。
       title:null,           //	String	求助标题。
       description:null,     //	String	描述。
-      pictures:null,             // 選項	Json项目图片。
+      pictures:null,        // 選項	Json项目图片。
       address:null,         // 選項	String	地址。
       qrcode:null,          // 選項	String	志愿者code。
     },

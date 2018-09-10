@@ -4,23 +4,20 @@
   <view class='page_bg'>
   <view class='page_title'>
     <view class='page_title_image'>
-      <image src='/assets/images/jpg/jz1.jpg'></image>
+      <image src='{{info.avatar}}'></image>
     </view>
     <view class='page_title_content'>
-      <view class='page_title_content_title'>滴水之家客服</view>
-      <view class='page_title_content_text'>2018-05-03 23:43:54</view>
+      <view class='page_title_content_title'>{{info.nickname}}</view>
+      <view class='page_title_content_text'>{{info.created_time}}</view>
     </view>
   </view>
   <view class='page_content'>
-    <view class='page_content_title'>滴水之家爱心款发放声明！</view>
+    <view class='page_content_title'>{{info.title}}</view>
     <view class='page_content_text'>
-      <rich-text nodes="滴水之家严正声明：凡是通过滴水之家上传并通过审核医疗求助案例，滴水之家不会以任何（如：转发次数不够、资料不齐等）理由影响求助人提取爱心款，凡求助人申请提现的爱心款，1-3个工作日必到达求助人指定银行卡上，请大家相互转告，并感谢所有用户对滴水之家的信任与支持！<br>近日，在网络上流传某些互联网公益平台在众筹项目上因转发次数不够，导致所筹爱心款无法到账的舆论传播，滴水之家在此向广大求助人及爱心人士郑重承诺：在滴水之家互联网公益平台上发起的爱心筹款求助项目，需要提交疾病证明等相关医疗证明等资料进行专业审核，资料审核通过后，即可成功发起求助。<br><br>为保证求助人正常快速提取爱心款，特作如下承诺：<br>1、所有求助项目只有资料通过审核后才能正常发起求助（注：所有发起案例审核承诺1个工作日全部审核完毕）。<br>2、求助人需配合滴水之家全国线下志愿者实地探访核实。<br>3、滴水之家只收取提前告知的维持平台基本运营成本的平台运营费，除此之外不收取任何费用（只有一定的运营费支撑，滴水之家才能帮助天下更多需要帮助的人）。<br>4、任何求助案例发起，滴水之家筹款客服专员均会在1个工作日内联系求助人，并为其提供筹款宣传服务，包括：通过滴水之家微信、QQ群、官方微博、博客、全国知名的媒体平台等，以帮助求助人增加筹款，最大化的帮助求助人度过难关。<br>5、筹款结束后，求助人申请提现1-3个工作日就能收到爱心款。<br>6、求助人申请提现，滴水之家绝对不会以资料审核未通过，转发次数不够等任何理由拖延求助人提现时间。<br>7、凡是求助人亲属告知病人去世，滴水之家均无需提供任何补充资料，直接快速申请提现。<br>8、对于想收取现金的求助人，滴水之家均可以提供爱心款现金送上门服务！<br>在此滴水之家严厉鄙视如下行为：<br>1、广告宣传不收取任何手续费，然求助人提取爱心款被扣手续费。<br>2、补贴求助人资料审核费，难道为用户提供服务还需要用户支付资料审核费吗？<br>3、求助案例证实费，为他人证实求助案例真实性，为什么要收费呢？<br>4、强制性捆绑消费，某些互联网公益平台求助人发起案例，必须先购买与之无关的产品服务。<br>5、不提前为求助人审核案例资料，让求助人先筹款，等求助人提现时才告知资料未审核，让慢慢等或者补充很多资料，耽误求助人提取爱心款时间。<br>6、告知求助人由于资料未审核通过，恶意将求助人的爱心款原路返还，不容求助人解释，让求助人欲哭无泪！<br>7、广告宣传可以随时提现，当求助人真正提现时，却是漫漫长路的开始！<br>滴水之家，立志做求助人贴心的互联网公益平台！<br>滴水之家互联网公益平台主体公司“遵义诚铭网络有限公司”成立于2007年，注册资本：1亿元，是国内最早的互联网公益平台运营企业；<br>滴水之家立志为求助人和爱心人士搭建贴心的公益桥梁！为爱心人士提供看得见的互联网公益平台！<br>滴水之家至上线以来，一直秉持公益初心，旨在帮助更多人不再因病致贫，因病返贫，为大病、重病困难家庭最大限度度过危机！<br>目前已帮助12881位大病、重病患者家庭发起个人求助；每一个求助案例的上线，都是我们提供贴心服务的开始，从求助案例上线-到筹款结束-提现完毕的回访，我们收获了太多真诚感谢和支持！这让我们觉得互联网公益这项工作让我们的生命每一天都极具意义和价值！<br>为了更好的帮助更多需要帮助的大病、重病困难家庭，滴水之家发起志愿者招募，深入各大医院协助大病、重病苦难家庭通过滴水之家发起求助，截止日前，滴水之家志愿者已覆盖全国120个大中城市，500余家三甲医院，未来滴水之家志愿者将覆盖更多的城市、更多的医院、请广大用户和爱心人士放心，滴水之家是看得见的公益，是经得起监督的互联网公益平台！<br>另外，滴水之家发出严正声明：任何散播、编辑、制作、诽谤滴水之家互联网公益平台的虚假信息行为，均属侵犯我平台声誉及违反法律行为，如今查实，将依法追究其法律责任。<br>滴水之家欢迎所有求助人、爱心人士提供服务建议、发展帮助等，我们相信言必践，行必果！<br><br>遵义诚铭网络有限公司滴水之家项目部<br>2018.3.18<br><br>" bindtap="tap"></rich-text>
+      <rich-text nodes="{{info.content}}" bindtap="tap"></rich-text>
     </view>
     <view class='page_content_image'>
-      <image src='/assets/images/jpg/jz1.jpg'></image>
-      <image src='/assets/images/jpg/jz1.jpg'></image>
-      <image src='/assets/images/jpg/jz1.jpg'></image>
-      <image src='/assets/images/jpg/jz1.jpg'></image>
+      <image wx:for="{{info.pictures}}" wx:key="*this" src='{{domain}}{{item}}'></image>
     </view>
   </view>
   </view>
@@ -57,39 +54,44 @@
       </view>
     </view>
 
-<view class='page_Allevaluate_evaluate'>
+    <!-- 有回复的 start-->
+    <view wx:for="{{comment_List}}" wx:key="*this" wx:for-item="st" class='page_Allevaluate_evaluate'>
       <view class='page_Allevaluate_evaluate_image'>
-        <image src='/assets/images/jpg/jz1.jpg'></image>
+        <image src='{{st.avatar}}http://pic.yupoo.com/lingfe/648a9559/3cfc611a.png'></image>
       </view>
       <view class='page_Allevaluate_evaluate_content'>
         <view class='page_Allevaluate_evaluate_content_title'>
-          <view class='page_Allevaluate_evaluate_content_title_name'>巴拉巴拉</view>
+          <view class='page_Allevaluate_evaluate_content_title_name'>看看{{st.nickname}}</view>
           <view class='page_Allevaluate_evaluate_content_title_image'>
             <image src='http://pic.yupoo.com/lingfe/af8da5a6/8e665dfb.png'></image>
           </view>
-          <view class='page_Allevaluate_evaluate_content_title_text'>1</view>
-          <view class='page_Allevaluate_evaluate_content_title_image'>
+          <view class='page_Allevaluate_evaluate_content_title_text'>{{st.like_count}}</view>
+          <view class='page_Allevaluate_evaluate_content_title_image' bindtap='huifuBtndtap' id="{{st.id}}">
             <image src='http://pic.yupoo.com/lingfe/6202e29e/d929793b.png'></image>
           </view>
         </view>
         <view class='page_Allevaluate_evaluate_content_text'>
-          祝你早日康复
+          {{st.content}}
         </view>
         <view class='page_Allevaluate_evaluate_content_canshu'>
-          <!-- <view class='page_content_left_label'>置顶</view> -->
-          <view class='page_content_left_text'>2楼</view>
-          <view class='page_content_left_text'>23天前</view>
+          <view class='page_content_left_text'>{{index+1}}楼</view>
+          <view class='page_content_left_text'>{{st.time}}</view>
           <view class='page_content_left_image'>
             <image src='http://pic.yupoo.com/lingfe/648a9559/3cfc611a.png'></image>
           </view>
         </view>
-        <view class='page_Allevaluate_evaluate_content_huifu'>
+        <!-- 回复内容 start -->
+        <view wx:for="{{st.comments}}" wx:key="*this" wx:for-item="huifu" class='page_Allevaluate_evaluate_content_huifu'>
           <view class='page_Allevaluate_evaluate_content_huifu_content'>
-            <span>滴水之家客服</span>:您加我们客服微信下YK1063130945客服会帮您处理的
+            <span wx:if="{{huifu.poster_type == 0}}">客服</span>
+            <span wx:else if="{{huifu.poster_type == 1}}">志愿者</span>
+            :{{huifu.content }}
           </view>
         </view>
+        <!-- 回复内容 end -->
       </view>
     </view>
+    <!-- 有回复的 end -->
   </view>
   <!-- 全部评价   end -->
 </view>
@@ -97,11 +99,16 @@
 
 <!-- 评价框框  start -->
 <view class='evaluate'>
-  <view class='evaluate_content'>
-    <textarea value='' placeholder='写评论..'></textarea>
-  </view>
-  <view class='evaluate_btn'>
-    <button>发表</button>
-  </view>
+  <form bindsubmit='setCommentHuifu'>
+    <view class='evaluate_content1' wx:if="{{isTextarea==false}}">
+      <textarea name="content" bindfocus='huifuBtndtap' focus="{{isTextarea}}" placeholder='写评论..'></textarea>
+    </view>
+    <view class='evaluate_content2' wx:if="{{isTextarea==true}}">
+      <textarea name="content" bindblur='blurBtndtap' focus="{{isTextarea}}" placeholder='写评论..'></textarea>
+    </view>
+    <view class='evaluate_btn'>
+      <button form-type='submit'>发表</button>
+    </view>
+  </form>
 </view>
 <!-- 评价框框  end -->

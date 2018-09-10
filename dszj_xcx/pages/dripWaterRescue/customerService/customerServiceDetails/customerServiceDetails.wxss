@@ -1,5 +1,4 @@
 /* pages/dripWaterRescue/customerService/customerServiceDetails/customerServiceDetails.wxss */
-
 page{
   background-color: #efeff4;
 }
@@ -82,6 +81,8 @@ rich-text{
   width: 100%;
   margin-top: 30rpx;
   background-color: #fff;
+  float:left;
+  padding-bottom:130rpx;
 }
 .page_Allevaluate_title{
   height: 80rpx;
@@ -94,7 +95,7 @@ rich-text{
 .page_Allevaluate_evaluate{
   width: 94%;
   margin: auto;
-  height: 300rpx;
+  height: auto;
   padding-top: 20rpx;
 }
 .page_Allevaluate_evaluate_image{
@@ -201,19 +202,35 @@ span{
   padding-top: 20rpx;
   padding-bottom: 20rpx;
   background-color: #F0F0F0;
+  display: block;
 }
-.evaluate_content{
+.evaluate_content1{
   width: 80%;
   margin-left: 20rpx;
   float: left;
 }
-.evaluate_content textarea{
+.evaluate_content1 textarea{
   width: 94%;
   height: 60rpx;
   border: 1rpx solid;
   padding-left: 20rpx;
   padding-top: 10rpx;
   background-color: #fff;
+  font-size: 30rpx;
+}
+.evaluate_content2{
+  width: 80%;
+  margin-left: 20rpx;
+  float: left;
+}
+.evaluate_content2 textarea{
+  width: 94%;
+  height: 160rpx;
+  border: 1rpx solid;
+  padding-left: 20rpx;
+  padding-top: 10rpx;
+  background-color: #fff;
+  font-size: 30rpx;
 }
 .evaluate_btn{
   width: 15%;

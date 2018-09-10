@@ -1,24 +1,26 @@
 <!--pages/dripWaterRescue/applicationVolunteer/applicationVolunteer.wxml-->
 <view class='page'>
+  <form bindsubmit='formSbmit'>
   <view class='page_from'>
     <view class='page_from_input'>
       <view class='page_from_input_title'>真实姓名:</view>
       <view class='page_from_input_input'>
-        <input placeholder='您的真实姓名'></input>
+        <input name="name" value='{{name}}' placeholder='您的真实姓名'></input>
       </view>
     </view>
 
     <view class='page_from_input'>
       <view class='page_from_input_title'>手机号码:</view>
       <view class='page_from_input_input'>
-        <input placeholder='您的手机号码'></input>
+        <input name="mobile" value='{{mobile}}' placeholder='您的手机号码'></input>
       </view>
     </view>
 
     <view class='page_from_btn'>
-      <button>提交申请</button>
+      <button form-type='submit'>提交申请</button>
     </view>
   </view>
+  </form>
 </view>
 
 

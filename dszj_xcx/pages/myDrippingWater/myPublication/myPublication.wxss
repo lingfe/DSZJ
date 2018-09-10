@@ -1,0 +1,34 @@
+/* pages/myDrippingWater/myPublication/myPublication.wxss */
+@import '/pages/index/largeIllnessRescue/largeIllnessRescue.wxss';
+@import '/pages/dripWaterRescue/customerService/customerService.wxss';
+
+page{
+  background-color: #fff;
+}
+._left{
+  width: 80%;
+}
+.page_content_left_title {
+  font-size: 36rpx;
+  overflow: hidden; 
+white-space: nowrap; 
+text-overflow: ellipsis; 
+}
+
+.page_content_right {
+  width: 20%;
+}
+
+.page_content_right_image  {
+  width:100%;
+  height:140rpx;
+  line-height: 140rpx;
+  font-size: 30rpx;
+}
+
+.red{
+  color: red;
+}
+.dszj{
+  color: #0099ff;
+}

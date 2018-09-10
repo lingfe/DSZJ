@@ -67,7 +67,7 @@
 
 /*发表*/
 .thank-letter-icon-float {
-    position: absolute;
+    position: fixed;
     right: 8px;
     bottom: 120px;
     cursor: pointer;
@@ -75,7 +75,7 @@
     height: 80rpx;
 }
 .publish-new-float {
-    position: absolute;
+    position: fixed;
     right: 10px;
     bottom: 70px;
     background: #FF9800;

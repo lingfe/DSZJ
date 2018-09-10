@@ -1,34 +1,36 @@
 <!--pages/dripWaterRescue/customerService/releaseProblem/releaseProblem.wxml-->
 <view class='page'>
+  <form bindsubmit='bindtapSubmit'>
   <view class='page_input'>
     <view class='page_input_input'>
-      <input type='text' bindinput='dataChange' placeholder='请输入您遇到的问题标题' maxlength='25'></input>
+      <input type='text' name="title" bindinput='dataChange' placeholder='请输入您遇到的问题标题' maxlength='25'></input>
     </view>
     <view class='page_input_text'>{{num}}/25</view>
   </view>
   <view class="page_remark">
       <textarea auto-focus="true" 
-      name="introduce" 
-      value="{{introduce}}"
+      name="content" 
+      value="{{form.content}}"
       placeholder="请详细描述您遇到的问题（不少于10个汉字）" 
       maxlength="801" class="text" />
   </view>
   <view class='page_image'>
     <view class="weui-uploader__files" id="uploaderFiles">
-                <block wx:for="{{files}}" wx:key="*this">
+                <block wx:for="{{arr}}" wx:key="*this">
                   <view wx:if="{{item !=null}}" class="weui-uploader__file" bindlongtap="previewImage" id="{{item}}">
                     <image class="img_tt" src="/assets/images/delete.png" bindtouchend="bindtapImageDelete" data-img="{{item}}" />
                     <image class="weui-uploader__img" src="{{item}}" mode="aspectFill" />
                   </view>
                 </block>
     </view>
-    <view class="weui-uploader__input-box" wx:if="{{files.length!=6}}">
+    <view class="weui-uploader__input-box" wx:if="{{arr.length!=6}}">
       <view class="weui-uploader__input" bindtap="chooseImage"></view>
     </view>
   </view>
   <!-- 下一步 start -->
   <view class="weui-btn-area">
-    <button class="weui-btn" bindtap='bindtapSubmit' formType="submit" type="primary">确定发表</button>
+    <button class="weui-btn" formType="submit" type="primary">确定发表</button>
   </view>
   <!-- 下一步  end -->
+  </form>
 </view>

@@ -1,4 +1,6 @@
 // pages/dripWaterRescue/customerService/releaseProblem/releaseProblem.js
+var app=getApp();
+
 Page({
 
   /**
@@ -13,6 +15,90 @@ Page({
     num:0,
   },
 
+  //确定发表
+  bindtapSubmit:function(e){
+    var that=this;
+    var form={};
+    //验证非空
+    if(app.checkInput(e.detail.value.title)){
+      app.showToast("标题不能为空!","none");
+      return;
+    }
+    if(app.checkInput(e.detail.value.content)){
+      app.showToast("请输入内容","none");
+      return;
+    }else{
+      form.type=1;//客服问答
+      form.title=e.detail.value.title;
+      form.content=e.detail.value.content;
+    }
+
+    //上传图片
+    var imageArray = [];
+    if (that.data.arr == null || that.data.arr.length == 0) {
+      app.showToast("请上传图片!", "none");
+      return;
+    } else {
+      imageArray = that.data.arr;
+    }
+    if (imageArray.length > 6) {
+      app.showToast("图片最多只能上传六张!", "none");
+      return;
+    }
+
+    //提示
+    app.showToast('正在保存', 'loading');
+
+    //上传图片数组
+    uploadimg(imageArray.splice(0, 1), [], imageArray);
+    //多张图片上传
+    function uploadimg(path, pathArr, dataArr) {
+      wx.uploadFile({
+        url: app.config.dszjPath_web + "api/UserPost/uploadPicture",//上传文章图片 开发者服务器 url
+        filePath: path[0],                          //要上传文件资源的路径
+        name: 'file',                                //文件对应的 key , 开发者在服务器端通过这个 key 可以获取到文件二进制内容
+        header: {                                   //HTTP 请求 Header , header 中不能设置 Referer
+          Token: wx.getStorageSync("token"),
+        },
+        formData: null,                             //参数(HTTP 请求中其他额外的 form data)
+        success: (resp) => {                         //接口调用成功的回调函数
+          var json = JSON.parse(resp.data);
+          if (json.code == "401") {
+            //验证状态
+            app.btnLogin(json.code);
+          } else {
+            pathArr.push(json.data[0].url);
+            if (dataArr.length > 0) {
+              //递归
+              uploadimg(dataArr.splice(0, 1), pathArr, dataArr);
+            } else {
+              form.pictures=pathArr;
+              //调用请求,保存
+              that.reqSetData(form);
+            }
+          }
+        }
+      });
+    }
+  },
+
+  //调用请求,保存
+  reqSetData:function(form){
+    var that=this;
+    wx.request({
+      url: app.config.dszjPath_web +'api/UserPost/add',
+      method: "POST",
+      header: {
+        Token: wx.getStorageSync("token")
+      },
+      data: form,
+      success:function(res){
+        console.log(res);
+        app.showToast(res.data.msg,"none");
+      }
+    })
+  },
+
   //获取值
   dataChange: function (e) {
     this.setData({
@@ -25,27 +111,17 @@ Page({
   bindtapImageDelete: function (e) {
     var img = e.currentTarget.dataset.img;
     var that = this;
-    var files = that.data.files;
+    var arr = that.data.arr;
 
-    for (var j = 0; j < files.length; j++) {
-      if (files[j] == img) {
-        files.splice(j, 1);
-      }
-    }
-
-    var imageArray = that.data.imageArray;
-    for (var j = 0; j < imageArray.length; j++) {
-      var strImg = __config.domainImage + imageArray[j];
-      if (strImg == img) {
-        imageArray.splice(j, 1);
+    for (var j = 0; j < arr.length; j++) {
+      if (arr[j] == img) {
+        arr.splice(j, 1);
       }
     }
 
     that.setData({
-      files: files,
-      imageArray: imageArray
+      arr: arr,
     });
-    return false;
   },
 
   //获取 图片
@@ -106,52 +182,4 @@ Page({
   
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

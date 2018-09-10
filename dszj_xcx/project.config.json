@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 37,
+			"current": 38,
 			"list": [
 				{
 					"id": -1,
@@ -266,7 +266,13 @@
 				{
 					"id": -1,
 					"name": "滴水请柬",
-					"pathName": "pages/myDrippingWater/dripInvitation/dripInvitation"
+					"pathName": "pages/myDrippingWater/dripInvitation/dripInvitation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的发表",
+					"pathName": "pages/myDrippingWater/myPublication/myPublication"
 				}
 			]
 		}

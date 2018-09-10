@@ -1,66 +1,183 @@
 
+var app=getApp();
 Page({
+  
   /**
    * 页面的初始数据
    */
   data: {
+    domain:app.config.domain,
+    //分页参数
+    pageSize: 10,
+    pageIndex: 1,
+    comment_List:[],
 
+    isTextarea:false,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that=this;
+    that.setData({id:options.id});
 
-
+    //获取文章详情
+    that.geDetail(that);
+    //获取文章评论分页列表
+    that.getPostComment(that);
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
+  //失去焦点
+  blurBtndtap: function (e) {
+    this.setData({
+      isTextarea: false,
+    });
+  },
+  //点击回复者,得到焦点也触发
+  huifuBtndtap: function (e) {
+    this.setData({
+      huifu_id: e.id,
+      isTextarea: true,
+    });
+  },
+
+  //评论或回复
+  setCommentHuifu: function (e) {
+    var that = this;
+    //验证非空
+    if (app.checkInput(e.detail.value.content)) {
+      app.showToast("评论内容不能为空!", "none");
+      return;
+    }
+
+    //发起请求
+    wx.request({
+      url: app.config.dszjPath_web + 'api/UserPost/comment',
+      method: "POST",
+      header: {
+        Token: wx.getStorageSync("token")
+      },
+      data: {
+        id: that.data.id,
+        commentId: that.data.huifu_id,
+        content: e.detail.value.content,
+      },
+      success: function (res) {
+        if (res.data.code == "401") {
+          //验证状态
+          app.btnLogin(res.data.code);
+        } else {
+          app.showModal(res.data.msg);
+          //获取文章评论分页列表
+          that.getPostComment(that);
+        }
+      }
+    })
+  },
   
+  //获取文章评论分页列表
+  getPostComment:function(that){
+    wx.request({
+      url: app.config.dszjPath_web + 'api/PostComment/paging',
+      method: "GET",
+      header: {
+        Token: wx.getStorageSync("token")
+      },
+      data: {
+        id: that.data.id,
+        //分页参数
+        pageSize: that.data.pageSize,
+        pageIndex: that.data.pageIndex
+      },
+      success: function (res) {
+        console.log(res);
+        var pageList = that.data.comment_List;
+        //得到数据
+        var list = res.data.data.Records;
+        if (list == null || list.length == 0) {
+          //提示
+          wx.showToast({
+            title: '没有更多了!',
+            icon: 'loading',
+            duration: 1000,
+          });
+          return;
+        }
+
+        //循环遍历操作
+        for (var i = 0, lenI = list.length; i < lenI; ++i) {
+          //添加到当前数组
+          pageList.push(list[i]);
+        }
+
+        that.setData({
+          comment_List: pageList,
+        });
+
+      }
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
+  //获取文章详情
+  geDetail:function(that){
+    wx.request({
+      url: app.config.dszjPath_web +'api/Post/detail',
+      method:"GET",
+      header:{
+        Token:wx.getStorageSync("token")
+      },
+      data:{
+        id:that.data.id,
+        is_from_seriousIllness:0,//客服问答
+      },
+      success:function(res){
+        console.log(res);
+        var info = res.data.data;
+        if (!app.checkInput(info.avatar)) {
+          //匹配是否包含http://
+          if (info.avatar.indexOf("http://") == -1) {
+            info.avatar = app.config.domain + info.avatar;
+          }
+        }
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
+        that.setData({
+          info:info,
+        });
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
+      }
+    })
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
+  //用户下拉动作
   onPullDownRefresh: function () {
-  
+    var that = this;
+    that.setData({
+      pageIndex: 1,         //所在页页码，从1开始
+      list: [],
+    });
+    //获取文章评论分页列表
+    that.getPostComment(that);
+
+    //下拉完成后执行回退
+    wx.stopPullDownRefresh();
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
+  //页面上拉触底事件的处理函数
   onReachBottom: function () {
-  
-  },
+    var that = this;
+    var num = that.data.pageIndex;
+    num++;
+    that.setData({
+      pageIndex: num,
+    });
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
+    //获取文章评论分页列表
+    that.getPostComment(that);
+    //提示
+    wx.showToast({
+      title: '正在加载..',
+      icon: 'loading',
+      duration: 2000,
+    });
+  },
 })

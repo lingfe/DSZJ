@@ -1,44 +1,23 @@
 <!--pages/dripWaterRescue/customerService/customerService.wxml-->
 <view class='page'>
-
-  <view class='page_content' bindtap='bindtap_Info'>
-    <view class='page_content_left _left'>
-      <view class='page_content_left_title'>滴水之家爱心款发放声明！</view>
-      <view class='page_content_left_label'>置顶</view>
-      <view class='page_content_left_text'>15评论</view>
-      <view class='page_content_left_text'>95天前</view>
-      <view class='page_content_left_image'>
-        <image src='http://pic.yupoo.com/lingfe/648a9559/3cfc611a.png'></image>
+  <view wx:for="{{list}}" wx:key="*this" wx:for-item="st">
+    <view class='page_content' bindtap='bindtap_Info' id="{{st.id}}">
+      <view class='page_content_left {{st.pictures.length == 0 ? "":"_left"}} '>
+        <view class='page_content_left_title'>{{st.title}}</view>
+        <view class='page_content_left_label' wx:if="{{st.is_top == 1}}">置顶</view>
+        <view class='page_content_left_text'>{{st.comment_count}}评论</view>
+        <view class='page_content_left_text'>{{st.time}}</view>
+        <view class='page_content_left_image'>
+          <image src='http://pic.yupoo.com/lingfe/648a9559/3cfc611a.png'></image>
+        </view>
+      </view>
+      <view class='page_content_right' wx:if="{{st.pictures.length != 0}}">
+        <view class='page_content_right_image'>
+          <image src='{{domain}}{{st.pictures[0]}}'></image>
+        </view>
       </view>
     </view>
-    <view class='page_content_right'>
-      <view class='page_content_right_image'>
-        <image src='/assets/images/jpg/jz1.jpg'></image>
-      </view>
-    </view>
-  </view>
-
-  <view class='page_content'>
-    <view class='page_content_left'>
-      <view class='page_content_left_title'>发起筹款项目需要哪些材料？</view>
-      <view class='page_content_left_label'>置顶</view>
-      <view class='page_content_left_text'>65评论</view>
-      <view class='page_content_left_text'>23天前</view>
-      <view class='page_content_left_image'>
-        <image src='http://pic.yupoo.com/lingfe/648a9559/3cfc611a.png'></image>
-      </view>
-    </view>
-  </view>
-
-  <view class='page_content'>
-    <view class='page_content_left'>
-      <view class='page_content_left_title'>再次感谢亲朋好友</view>
-      <view class='page_content_left_text'>0评论</view>
-      <view class='page_content_left_text'>23天前</view>
-      <view class='page_content_left_image'>
-        <image src='http://pic.yupoo.com/lingfe/648a9559/3cfc611a.png'></image>
-      </view>
-    </view>
+    <view class='view_border_bottom'></view>
   </view>
 </view>
 
