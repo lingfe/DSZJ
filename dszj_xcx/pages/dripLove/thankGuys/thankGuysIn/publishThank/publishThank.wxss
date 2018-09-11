@@ -1,2 +1,4 @@
 /* pages/dripLove/thankGuys/thankGuysIn/publishThank/publishThank.wxss */
-@import '/pages/dripWaterRescue/customerService/releaseProblem/releaseProblem.wxss'
+@import '/pages/dripWaterRescue/customerService/releaseProblem/releaseProblem.wxss';
+
+@import '/pages/dripLove/thankGuys/thankGuysIn/thankGuyslnDetails/thankGuyslnDetails.wxss';

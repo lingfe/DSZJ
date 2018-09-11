@@ -49,7 +49,8 @@
     "pages/myDrippingWater/volunteerCenter/accountRegistration/accountRegistration",
     "pages/myDrippingWater/volunteerCenter/myRecommend/myRecommend",
     "pages/myDrippingWater/dripInvitation/dripInvitation",
-    "pages/myDrippingWater/myPublication/myPublication"
+    "pages/myDrippingWater/myPublication/myPublication",
+    "pages/myDrippingWater/myPublication/edit/edit"
   ],
   "window": {
     "navigationBarTextStyle": "white",

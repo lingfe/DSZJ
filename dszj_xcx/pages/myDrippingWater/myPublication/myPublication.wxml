@@ -27,7 +27,9 @@
               <view class='page_content_left_text'>{{st.comment_count}}评论</view>
               <view class='page_content_left_text'>{{st.time}}</view>
               <view class='page_content_left_image'>
-                <image src='http://pic.yupoo.com/lingfe/648a9559/3cfc611a.png'></image>
+                <navigator url='/pages/myDrippingWater/myPublication/edit/edit?id={{st.id}}'>
+                  <image src='http://pic.yupoo.com/lingfe/634d4eb4/f44c72fa.png'></image>
+                </navigator>
               </view>
             </view>
             <view class='page_content_right'>
@@ -52,7 +54,9 @@
               <view class='page_content_left_text'>{{st.comment_count}}评论</view>
               <view class='page_content_left_text'>{{st.time}}</view>
               <view class='page_content_left_image'>
-                <image src='http://pic.yupoo.com/lingfe/648a9559/3cfc611a.png'></image>
+                <navigator url='/pages/myDrippingWater/myPublication/edit/edit?id={{st.id}}'>
+                  <image src='http://pic.yupoo.com/lingfe/634d4eb4/f44c72fa.png'></image>
+                </navigator>
               </view>
             </view>
             <view class='page_content_right'>

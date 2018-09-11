@@ -20,7 +20,11 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
-    that.setData({ id: options.id });
+    var is_from_seriousIllness=0;
+    if(!app.checkInput(options.yes)){
+      is_from_seriousIllness=options.yes
+    }
+    that.setData({ id: options.id, is_from_seriousIllness: is_from_seriousIllness });
 
     //获取文章详情
     that.geDetail(that);
@@ -34,6 +38,7 @@ Page({
       isTextarea: false,
     });
   },
+
   //点击回复者,得到焦点也触发
   huifuBtndtap: function (e) {
     this.setData({
@@ -129,11 +134,22 @@ Page({
       },
       data: {
         id: that.data.id,
-        is_from_seriousIllness: 0,//是否是救助项目的文章。
+        is_from_seriousIllness: that.data.is_from_seriousIllness,//是否是救助项目的文章。
       },
       success: function (res) {
         console.log(res);
+
         var info = res.data.data;
+
+        //验证是否为空
+        if(app.checkInput(info)){
+          //跳转到新增,id=项目id
+          wx.navigateTo({
+            url: '/pages/dripLove/thankGuys/thankGuysIn/publishThank/publishThank?pid='+that.data.id,
+          });
+          return;
+        }
+
         if (!app.checkInput(info.avatar)) {
           //匹配是否包含http://
           if (info.avatar.indexOf("http://") == -1) {

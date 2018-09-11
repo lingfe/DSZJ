@@ -1,0 +1,3 @@
+/* pages/myDrippingWater/myPublication/edit/edit.wxss */
+
+@import '/pages/dripWaterRescue/customerService/releaseProblem/releaseProblem.wxss';

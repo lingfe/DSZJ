@@ -72,7 +72,7 @@
      <view class="user-name">lingfe</view>
      <view class="love-amount"><span style="font-size:40rpx;">0</span>元</view>
     </view>
-    <navigator class='my_shangbang' url="/WxPay/pay?id=7191">我要上榜</navigator>
+    <navigator class='my_shangbang' bindtap='bindtapPay'>我要上榜</navigator>
    </view>
    <!-- 我要上榜 end -->
 </view>

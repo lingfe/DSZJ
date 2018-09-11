@@ -20,6 +20,14 @@ Page({
     that.getLoveRanking(that);
   },
 
+  //帮助ta
+  bindtapPay: function (e) {
+    var detailsData = wx.getStorageSync("detailsData");
+    wx.navigateTo({
+      url: "/pages/dripLove/rescueDetails/heplTaFundraising/heplTaFundraising?detailsData=" + JSON.stringify(detailsData),
+    })
+  },
+
   //获取救助项目爱心排行榜列表
   getLoveRanking:function(that){
     //请求地址

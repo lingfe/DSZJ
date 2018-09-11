@@ -171,7 +171,7 @@
       </view>
 
       <view class='page_choukuangdotai_buttons'>
-        <navigator url='/pages/dripLove/thankGuys/thankGuysIn/thankGuyslnDetails/thankGuyslnDetails?id={{detailsData.id}}' 
+        <navigator url='/pages/dripLove/thankGuys/thankGuysIn/thankGuyslnDetails/thankGuyslnDetails?id={{detailsData.id}}&yes=1' 
           class='page_choukuangdotai_buttons_btnThanks'>感谢亲们</navigator>
         <navigator url='/pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing?id={{detailsData.id}}' 
           class='page_choukuangdotai_buttons_weiTaQifu'>为Ta祈福</navigator>
@@ -244,21 +244,26 @@
 
 <!-- 客服信息  start-->
 <view class='fabiao'>
-  <image class='thank-letter-icon-float' bindtap='bindTab_Service' src='http://pic.yupoo.com/lingfe/8f4610c0/8d5340c2.png'/>
-  <image class="publish-new-float" bindtap='bindtap_publishThank' src='http://pic.yupoo.com/lingfe/b606071c/132e13b7.png'/>
+  <navigator url='/pages/dripWaterRescue/customerService/customerService'>
+    <image class='thank-letter-icon-float' src='http://pic.yupoo.com/lingfe/8f4610c0/8d5340c2.png'/>
+  </navigator>
+  <navigator url='/pages/dripLove/thankGuys/thankGuys'>
+    <image class="publish-new-float" src='http://pic.yupoo.com/lingfe/b606071c/132e13b7.png'/>
+  </navigator>
 </view>
 <!-- 客服信息  end-->
 
 
 <!-- 帮助ta  start-->
 <view class="button-box">
-    <view class="btnToThankLetter" bindtap='bindTab_GXQM'>
-      <image src='http://pic.yupoo.com/lingfe/f48be2a5/bd128165.png'></image>
+    <view class="btnToThankLetter" bindtap='bindTab_GXQM' >
+      <image bindtap='setUserSeriousIllness' wx:if="{{status == 0 }}" src='http://pic.yupoo.com/lingfe/f48be2a5/bd128165.png'></image>
+      <image bindtap='setUserSeriousIllness' wx:if="{{status == 1 }}" src='http://pic.yupoo.com/lingfe/b5f66aa6/f3eb8776.png'></image>
       <view class='btnToThankLetter_text'>{{count}}</view>
     </view>
     <view class="btnToThankLetter">
-      <image src='http://pic.yupoo.com/lingfe/865d5cf6/cc93a34e.png'></image>
-      <view class='btnToThankLetter_text'>{{detailsData.share_count}}</view>
+      <button open-type="share"><image src='http://pic.yupoo.com/lingfe/865d5cf6/cc93a34e.png'></image>
+      <view class='btnToThankLetter_text'>{{detailsData.share_count}}</view></button>
     </view>
     <view class="button-pray" bindtap='bindtapPay'>
       帮助TA

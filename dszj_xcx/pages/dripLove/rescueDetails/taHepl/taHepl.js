@@ -25,7 +25,7 @@ Page({
   //分页获取他的帮助
   getTaHepl:function(that){
     //请求地址
-    var url = app.config.dszjPath_web +"api/SeriousIllness/raiseFunds";
+    var url = app.config.dszjPath_web +"api/SeriousIllness/raiseFundsPaging";
     //参数
     var data={
       id:that.data.id,

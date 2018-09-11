@@ -1,22 +1,83 @@
-// pages/dripLove/thankGuys/thankGuysIn/publishThank/publishThank.js
-var app=getApp();
+// pages/myDrippingWater/myPublication/edit/edit.js
+var app = getApp();
+
 Page({
+
   /**
    * 页面的初始数据
    */
   data: {
-    files: [],                            //选择图片的数组，原始。包含完整的图片url，以及现在编辑数据，用于预览
-    arr: [],                              //选择图片的数组，预留。不包含编辑之前的数据，用于组装
-    isAgree: false,
-
-    imageArray: [],                       //图片数组，原始。不包含完整url，用于储存
+    arr: [],                              //选择图片的数组，预留。不包含编辑之前的数据
+    imageArr: [],//包含编辑之前的数据
     num: 0,
+    id:null,//id
+    imgPath: app.config.domain,//图片路径,本地
+    
+    //表单
+    form:{
+      id:null,
+      title:null,//标题
+      content:null,//内容
+      pictures:[],//文章图片
+      del_pictures: [],//删除图片列表。
+    }
   },
 
-  //确定发表
+  /**
+ * 生命周期函数--监听页面加载
+ */
+  onLoad: function (options) {
+    var that=this;
+    that.setData({
+      id:options.id,
+    });
+
+    //根据id得到详情
+    that.getWhereId(that);
+  },
+
+  //根据id得到详情
+  getWhereId: function (that) {
+    wx.request({
+      url: app.config.dszjPath_web + 'api/Post/detail',
+      method: "GET",
+      header: {
+        Token: wx.getStorageSync("token")
+      },
+      data: {
+        id: that.data.id,
+        is_from_seriousIllness: 0,
+      },
+      success: function (res) {
+        console.log(res);
+        var info = res.data.data;
+        if (!app.checkInput(info.avatar)) {
+          //匹配是否包含http://
+          if (info.avatar.indexOf("http://") == -1) {
+            info.avatar = app.config.domain + info.avatar;
+          }
+        }
+
+        //保存
+        that.setData({
+          info: info,
+          form:{
+            title:info.title,
+            content:info.content,
+            pictures: [],//文章图片
+          },
+          imageArr: info.pictures
+        });
+
+      }
+    })
+
+  },
+
+  //确定编辑
   bindtapSubmit: function (e) {
     var that = this;
-    var form = {};
+    var form = that.data.form;
     //验证非空
     if (app.checkInput(e.detail.value.title)) {
       app.showToast("标题不能为空!", "none");
@@ -26,26 +87,27 @@ Page({
       app.showToast("请输入内容", "none");
       return;
     } else {
-      form.type = 2;//发表感谢
-      //验证项目id是否为空
-      if(!app.checkInput(that.data.pid)){
-        form.pid=that.data.pid;
-      }
+      form.id=that.data.id;
       form.title = e.detail.value.title;
       form.content = e.detail.value.content;
     }
 
     //上传图片
     var imageArray = [];
-    if (that.data.arr == null || that.data.arr.length == 0) {
+    var length=that.data.arr.length+that.data.imageArr.length;
+
+    if (length == 0) {
       app.showToast("请上传图片!", "none");
       return;
     } else {
       imageArray = that.data.arr;
     }
-    if (imageArray.length > 6) {
+    if (length > 6) {
       app.showToast("图片最多只能上传六张!", "none");
       return;
+    }else{
+      //原来，未删除的图片
+      form.pictures = that.data.imageArr;
     }
 
     //提示
@@ -70,12 +132,14 @@ Page({
             app.btnLogin(json.code);
           } else {
             pathArr.push(json.data[0].url);
+            //现在，新增的图片
+            form.pictures.push(json.data[0].url);
             if (dataArr.length > 0) {
               //递归
               uploadimg(dataArr.splice(0, 1), pathArr, dataArr);
             } else {
-              form.pictures = pathArr;
-              //调用请求,保存
+              
+              //调用请求,编辑保存
               that.reqSetData(form);
             }
           }
@@ -84,11 +148,11 @@ Page({
     }
   },
 
-  //调用请求,保存
+  //调用请求,编辑保存
   reqSetData: function (form) {
     var that = this;
     wx.request({
-      url: app.config.dszjPath_web + 'api/UserPost/add',
+      url: app.config.dszjPath_web + 'api/UserPost/edit',
       method: "POST",
       header: {
         Token: wx.getStorageSync("token")
@@ -97,9 +161,6 @@ Page({
       success: function (res) {
         console.log(res);
         app.showToast(res.data.msg, "none");
-
-        //返回上一页
-        wx.navigateBack();
       }
     })
   },
@@ -108,7 +169,6 @@ Page({
   dataChange: function (e) {
     this.setData({
       num: e.detail.value.length,
-      teamIntroduction: e.detail.value
     });
   },
 
@@ -129,10 +189,27 @@ Page({
     });
   },
 
+  //删除图片，之前的
+  bindtapImageDelete_edit: function (e) {
+    var that = this;
+    var imageArr = that.data.imageArr;
+    var img = e.currentTarget.dataset.img;
+
+    for (var j = 0; j < imageArr.length; j++) {
+      if (imageArr[j] == img) {
+        imageArr.splice(j, 1);
+      }
+    }
+
+    that.setData({
+      imageArr:imageArr,
+    })
+  },
+
   //获取 图片
   chooseImage: function (e) {
     var that = this;
-    if (that.data.files.length >= 6) {
+    if (that.data.arr.length >= 6) {
       //弹出提示
       wx.showModal({
         content: '最多只能上传6张图片！',
@@ -149,7 +226,7 @@ Page({
       sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
       sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
       success: function (res) {
-        var imglength = res.tempFilePaths.length + that.data.files.length;
+        var imglength = res.tempFilePaths.length + that.data.arr.length;
         if (imglength > 6) {
           //弹出提示
           wx.showModal({
@@ -165,7 +242,6 @@ Page({
         }
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
         that.setData({
-          files: that.data.files.concat(res.tempFilePaths),
           arr: that.data.arr.concat(res.tempFilePaths)
         });
       }
@@ -179,15 +255,4 @@ Page({
       urls: this.data.files // 需要预览的图片http链接列表
     })
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    var that=this;
-    if (!app.checkInput(options.pid)){
-      that.setData({ pid: options.pid});
-    }
-  },
-
 })

@@ -222,6 +222,10 @@ rich-text{
   line-height: 80rpx;
   font-size: 36rpx;
   margin-top: 20rpx;
+  overflow: hidden; 
+white-space: nowrap; 
+text-overflow: ellipsis; 
+
 }
 .page_content_ziliaoZming_zhengming{
   background-image: url('http://pic.yupoo.com/lingfe/f81db0f3/25f4c034.png');
@@ -660,3 +664,12 @@ span{
   font-size: 26rpx;
 }
 /* 评论框框  end*/
+
+
+button {
+  padding: 0rpx;
+  display:initial;
+  text-align:center;
+  background-color:#fff;
+  line-height: normal;
+}

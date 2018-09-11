@@ -1,5 +1,6 @@
 // pages/myDrippingWater/myPublication/myPublication.js
 var app=getApp();
+
 Page({
 
   /**

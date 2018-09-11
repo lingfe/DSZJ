@@ -5,7 +5,7 @@
       <image src='https://www.dishuihuzhu.cn/Public/Images/head01.png'></image>
     </view>
     <view class='page_top_content'>
-      <view class='page_top_content_title'><span>139******74</span>项目发起人</view>
+      <view class='page_top_content_title'><span>{{detailsData.mobile}}</span>项目发起人</view>
       <view class='page_top_content_text'>{{detailsData.title}}</view>
     </view>
   </view>

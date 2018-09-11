@@ -1,25 +1,9 @@
-<!--pages/dripLove/thankGuys/thankGuysIn/publishThank/publishThank.wxml-->
+<!--pages/myDrippingWater/myPublication/edit/edit.wxml-->
 <view class='page'>
-
-  <!-- 项目信息 start -->
-  <view class="project-wrapper" wx:if="{{info.seriousillness != null }}">
-    <navigator url='/pages/dripLove/rescueDetails/rescueDetails?id={{info.seriousillness.id}}'>
-    <view class="project-header">
-      <span>TA正在寻求帮助</span>
-      <span>已获得<abbr>{{info.seriousillness.total_count}}</abbr>次爱心帮助</span>
-    </view>
-    <view class="project-box cursor-pointer">
-      <image src="{{domain}}{{info.seriousillness.pic}}" />
-      <span class="project-title">{{info.seriousillness.title}}</span>
-    </view>
-    </navigator>
-  </view>
-  <!-- 项目信息 end -->
-
   <form bindsubmit='bindtapSubmit'>
   <view class='page_input'>
     <view class='page_input_input'>
-      <input type='text' name="title" bindinput='dataChange' placeholder='请输入您遇到的问题标题' maxlength='25'></input>
+      <input type='text' name="title" value='{{form.title}}' bindinput='dataChange' placeholder='请输入您遇到的问题标题' maxlength='25'></input>
     </view>
     <view class='page_input_text'>{{num}}/25</view>
   </view>
@@ -32,6 +16,16 @@
   </view>
   <view class='page_image'>
     <view class="weui-uploader__files" id="uploaderFiles">
+                
+                <block wx:for="{{imageArr}}" wx:key="*this">
+                          <view wx:if="{{item !=null}}" class="weui-uploader__file" id="{{item}}" bindlongtap="previewImage" >
+                            <image class="img_tt" 
+                            src="/assets/images/delete.png" 
+                            bindtap="bindtapImageDelete_edit" data-img="{{item}}" />
+                            <image class="weui-uploader__img" src="{{imgPath}}{{item}}" mode="aspectFill" />
+                          </view>
+                </block>
+
                 <block wx:for="{{arr}}" wx:key="*this">
                   <view wx:if="{{item !=null}}" class="weui-uploader__file" bindlongtap="previewImage" id="{{item}}">
                     <image class="img_tt" src="/assets/images/delete.png" bindtouchend="bindtapImageDelete" data-img="{{item}}" />
@@ -39,14 +33,14 @@
                   </view>
                 </block>
     </view>
-    <view class="weui-uploader__input-box" wx:if="{{arr.length!=6}}">
+    <view class="weui-uploader__input-box" wx:if="{{imageArr.length+arr.length!=6}}">
       <view class="weui-uploader__input" bindtap="chooseImage"></view>
     </view>
   </view>
-  <!-- 下一步 start -->
+  <!-- 编辑 start -->
   <view class="weui-btn-area">
-    <button class="weui-btn" formType="submit" type="primary">确定发表</button>
+    <button class="weui-btn" formType="submit" type="primary">确定编辑</button>
   </view>
-  <!-- 下一步  end -->
+  <!-- 编辑  end -->
   </form>
 </view>

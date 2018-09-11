@@ -15,10 +15,12 @@ Page({
     pageIndex: 1,            //所在页页码，从1开始。
     list_hepl: [],           //ta的所以帮助信息  
 
+    isGzhu:false,
+
     zjlxsm_isDiaplay:false,  //是否显示资金流向说明
 
     info:null,             //我也来证明
-    infoContent:null       //内容
+    infoContent:null,       //内容
   },
 
   /**
@@ -35,6 +37,43 @@ Page({
     that.getTaHepl(that);
     //获取救助项目的关注数和当前用户的关注状态
     that.getCollectInfo(that);
+  },
+
+  //关注/取消关注救助项目
+  setUserSeriousIllness:function(e){
+    var that=this;
+    //请求
+    wx.request({
+      url: app.config.dszjPath_web +'api/UserSeriousIllness/collect',
+      header: {
+        Token: wx.getStorageSync("token")
+      },
+      method:"POST",
+      data:{
+        id:that.data.id,
+      },
+      success:function(res){
+        if (that.data.status == 0){
+          app.showToast("关注成功","none");
+          that.setData({isGzhu:true});
+        } else if (that.data.status == 1){
+          app.showToast("取消关注成功", "none");
+          that.setData({ isGzhu: false });
+        }
+
+        //获取救助项目的关注数和当前用户的关注状态
+        that.getCollectInfo(that);
+      }
+    })
+  },
+
+  //分享
+  onShareAppMessage: function (e) {
+    return {
+      title: '滴水救助',
+      desc: this.data.detailsData.title,
+      path: '/pages/dripLove/rescueDetails/rescueDetails?id=' + this.data.detailsData.id
+    }
   },
 
   //帮助ta
@@ -135,7 +174,7 @@ Page({
   //分页获取他的帮助
   getTaHepl: function (that) {
     //请求地址
-    var url = app.config.dszjPath_web + "api/SeriousIllness/raiseFunds";
+    var url = app.config.dszjPath_web + "api/SeriousIllness/raiseFundsPaging";
     //参数
     var data = {
       id: that.data.id,
@@ -209,6 +248,8 @@ Page({
       that.setData({
         detailsData:res.data.data
       });
+      //放入缓存中
+      wx.setStorageSync("detailsData", res.data.data);
       console.log(res);
     },function(res){
       console.log(res);

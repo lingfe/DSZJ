@@ -1,3 +1,62 @@
 /* pages/dripLove/thankGuys/thankGuysIn/thankGuyslnDetails/thankGuyslnDetails.wxss */
 
-@import '/pages/dripWaterRescue/customerService/customerServiceDetails/customerServiceDetails.wxss'
+@import '/pages/dripWaterRescue/customerService/customerServiceDetails/customerServiceDetails.wxss';
+
+.page_bg{
+  padding-bottom:30rpx;
+}
+
+/* 项目信息 start */
+.project-wrapper{
+  padding-top: 20px;
+  width: 90%;
+  margin: auto;
+}
+.project-header{
+  padding-bottom: 10px;
+    display: table;
+    width: 100%;
+    font-size: 12px;
+}
+.project-header span{
+      display: table-cell;
+    min-width: 88px;
+}
+.project-header span:last-of-type {
+    width: 100%;
+    text-align: right;
+    color: #979797;
+}
+
+.project-header span abbr {
+    color: red;
+}
+
+.project-box {
+    display: table;
+    width: 100%;
+    border: 1px solid #bbb;
+    padding: 10px 0;
+}
+.cursor-pointer {
+    cursor: pointer;
+    user-select: none;
+}
+.project-box image {
+    min-width: 60px;
+    max-width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+.project-box .project-title {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+    color: #101010;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 0 10px;
+    width: 100%;
+}
+/* 项目信息 start */
