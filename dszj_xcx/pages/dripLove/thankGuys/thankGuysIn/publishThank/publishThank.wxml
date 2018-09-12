@@ -2,15 +2,15 @@
 <view class='page'>
 
   <!-- 项目信息 start -->
-  <view class="project-wrapper" wx:if="{{info.seriousillness != null }}">
-    <navigator url='/pages/dripLove/rescueDetails/rescueDetails?id={{info.seriousillness.id}}'>
+  <view class="project-wrapper" wx:if="{{info != null }}">
+    <navigator url='/pages/dripLove/rescueDetails/rescueDetails?id={{pid}}'>
     <view class="project-header">
       <span>TA正在寻求帮助</span>
-      <span>已获得<abbr>{{info.seriousillness.total_count}}</abbr>次爱心帮助</span>
+      <span>已获得<abbr>{{info.total_count}}</abbr>次爱心帮助</span>
     </view>
     <view class="project-box cursor-pointer">
-      <image src="{{domain}}{{info.seriousillness.pic}}" />
-      <span class="project-title">{{info.seriousillness.title}}</span>
+      <image src="{{domain}}{{info.cover}}" />
+      <span class="project-title">{{info.title}}</span>
     </view>
     </navigator>
   </view>

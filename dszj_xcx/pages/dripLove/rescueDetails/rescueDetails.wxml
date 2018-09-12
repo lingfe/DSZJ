@@ -13,9 +13,9 @@
     <!-- 项目发布者信息 start -->
     <view class='page_title'>
       <view class='page_title_content_title_image'>
-          <image src='{{detailsData.member.headerpic}}'></image>
+          <image src='{{detailsData.avatar}}'></image>
       </view>
-      <view class='page_title_content_title_text'>{{detailsData.member.mobile}}</view>
+      <view class='page_title_content_title_text'>{{detailsData.nickname}}</view>
       <view class='page_title_content_title_text_last'>
           祈福<span style="color: #F25B4B;font-weight: 500;">{{detailsData.days}}</span>天
       </view>
@@ -24,7 +24,7 @@
 
     <!-- 项目内容 start -->
     <view class='page_content'>
-      <view class='page_content_title'>{{detailsData.title}}</view>
+      <view class='page_content_title1'>{{detailsData.title}}</view>
       <!-- 项目参数 start -->
       <view class='page_content_xmParam'>
         <!-- 金额 start -->
@@ -148,25 +148,33 @@
     <view class='page_choukuangdotai'>
       <view class='page_choukuangdotai_title'>筹款动态</view>
       
-      <view wx:for="{{detailsData.member}}" wx:key="*this" class='page_choukuangdotai_content'>
+      <view wx:for="{{detailsData.replies}}" wx:key="*this" class='page_choukuangdotai_content'>
         <view class='page_choukuangdotai_content_image'>
-          <image src='{{detailsData.member.headerpic}}'></image>
+          <image src='{{detailsData.avatar}}'></image>
         </view>
         <view class='page_choukuangdotai_content_content'>
-          <view class='page_choukuangdotai_content_content_title'>{{detailsData.member.mobile}}</view>
+          <view class='page_choukuangdotai_content_content_title'>{{item.mobile}}</view>
           <view class='page_choukuangdotai_content_content_text'>{{item.info}}</view>
-          <view class='page_choukuangdotai_content_content_text font_size_22'>08月20日  项目更新</view>
+          <view class='page_choukuangdotai_content_content_text font_size_22'>项目更新
+            <span bindtap='huifuBtndtap' id="{{item.uid}}" class="bg_span"></span>
+          </view>
+          <view class='page_content_left_image' style="float:right;" bindtap='huifuBtndtap' id="{{item.uid}}">
+            <image src='http://pic.yupoo.com/lingfe/64a27743/d4214f5b.png'></image>
+          </view>
         </view>
       </view>
 
       <view class='page_choukuangdotai_content'>
         <view class='page_choukuangdotai_content_image'>
-          <image src='{{detailsData.member.headerpic}}'></image>
+          <image src='{{detailsData.avatar}}'></image>
         </view>
         <view class='page_choukuangdotai_content_content'>
-          <view class='page_choukuangdotai_content_content_title'>{{detailsData.member.mobile}}</view>
+          <view class='page_choukuangdotai_content_content_title'>{{detailsData.mobile}}</view>
           <view class='page_choukuangdotai_content_content_text'>目标金额： <span style="color:red;">{{detailsData.total_amount}}</span></view>
-          <view class='page_choukuangdotai_content_content_text font_size_22'>{{detailsData.addtime}}  项目发起</view>
+          <view class='page_choukuangdotai_content_content_text font_size_22'>
+            {{detailsData.addtime}}  项目发起
+            <span bindtap='huifuBtndtap' id="{{detailsData.id}}" class="bg_span"></span>
+          </view>
         </view>
       </view>
 
@@ -209,7 +217,7 @@
             <image src='http://pic.yupoo.com/lingfe/7cf66693/4025569a.png'></image>
           </view>
           <view class='page_content_left_text'>{{st.money}}滴爱心记录</view>
-          <view class='page_content_left_image' style="float:right;">
+          <view class='page_content_left_image' style="float:right;" bindtap='huifuBtndtap' id="{{st.id}}">
             <image src='http://pic.yupoo.com/lingfe/64a27743/d4214f5b.png'></image>
           </view>
         </view>
@@ -272,13 +280,18 @@
 <!-- 帮助ta  end>
 
 <!-- 评价框框  start -->
-<view class='evaluate'>
-  <view class='evaluate_content'>
-    <textarea value='' placeholder='写评论..'></textarea>
-  </view>
-  <view class='evaluate_btn'>
-    <button>发表</button>
-  </view>
+<view class='evaluate' wx:if="{{isTextarea}}">
+  <form bindsubmit='setCommentHuifu'>
+    <view class='evaluate_content1' wx:if="{{isTextarea==false}}">
+      <textarea name="content" bindfocus='huifuBtndtap' focus="{{isTextarea}}" placeholder='写评论..'></textarea>
+    </view>
+    <view class='evaluate_content2' wx:if="{{isTextarea==true}}">
+      <textarea name="content" bindblur='blurBtndtap' focus="{{isTextarea}}" placeholder='写评论..'></textarea>
+    </view>
+    <view class='evaluate_btn'>
+      <button form-type='submit'>发表</button>
+    </view>
+  </form>
 </view>
 <!-- 评价框框  end -->
 

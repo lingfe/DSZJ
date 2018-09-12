@@ -1,0 +1,17 @@
+/* pages/index/largeIllnessRescue/dripPrayingForBlessing/forHimPFB/forHimPFB.wxss */
+
+@import '/pages/dripLove/rescueDetails/heplTaFundraising/heplTaFundraising.wxss';
+
+ .page_jindutiao{
+   width: 90%;
+   margin: auto;
+   margin-top: 30rpx;
+   border-top: 0rpx solid #bbb;
+   border-bottom: 0rpx solid #bbb;
+ } 
+.page_jindutiao_baifengbi{
+     width: 100%;
+   height: auto;
+   line-height: 40rpx;
+   font-size: 28rpx;
+}

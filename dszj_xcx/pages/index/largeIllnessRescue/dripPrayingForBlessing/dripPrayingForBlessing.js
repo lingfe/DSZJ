@@ -8,14 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    imgPath: app.config.domain
-  },
-
-  //跳转到感谢亲们页面
-  bindTab_GXQM: function () {
-    wx.navigateTo({
-      url: '/pages/dripWaterRescue/customerService/customerService',
-    })
+    imgPath: app.config.domain,
+    isTextarea: false,
   },
 
   /**
@@ -29,6 +23,65 @@ Page({
     that.getUserPrayDetail(that);
     //获取祈福记录分页列表
     that.getRrecordPaging(that);
+  },
+
+  //失去焦点
+  blurBtndtap: function (e) {
+    this.setData({
+      isTextarea: false,
+    });
+  },
+
+  //点击回复者,得到焦点也触发
+  huifuBtndtap: function (e) {
+    this.setData({
+      huifu_id: e.currentTarget.id,
+      isTextarea: true,
+    });
+  },
+
+  //评论项目
+  setCommentHuifu: function (e) {
+    var that = this;
+    //验证非空
+    if (app.checkInput(e.detail.value.content)) {
+      app.showToast("评论内容不能为空!", "none");
+      return;
+    }
+
+    //发起请求
+    wx.request({
+      url: app.config.dszjPath_web + 'api/UserSeriousIllness/comment',
+      method: "POST",
+      header: {
+        Token: wx.getStorageSync("token")
+      },
+      data: {
+        id: that.data.id,
+        project_type: 1,//0(救助项目), 1(个人/项目祈福)
+        type: 2,//0(项目发起), 1(项目动态), 2(筹款记录/祈福记录)
+        sub_id: that.data.huifu_id,
+        content: e.detail.value.content,
+      },
+      success: function (res) {
+        if (res.data.code == "401") {
+          //验证状态
+          app.btnLogin(res.data.code);
+          return;
+        } else {
+          app.showModal(res.data.msg);
+          //获取祈福记录分页列表
+          that.getRrecordPaging(that);
+        }
+      }
+    })
+  },
+
+  //跳转到感谢亲们页面
+  bindTab_GXQM: function () {
+    wx.navigateTo({
+      url: '/pages/dripWaterRescue/customerService/customerService',
+    })
   },
 
   //获取救助项目详情
@@ -74,7 +127,7 @@ Page({
       success:function(res){
         console.log(res);
         that.setData({
-          paging_list: res.data.Records
+          paging_list: res.data.data.Records
         });
       }
     })

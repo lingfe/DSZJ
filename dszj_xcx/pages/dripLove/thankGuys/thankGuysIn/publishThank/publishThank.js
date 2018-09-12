@@ -7,10 +7,44 @@ Page({
   data: {
     files: [],                            //选择图片的数组，原始。包含完整的图片url，以及现在编辑数据，用于预览
     arr: [],                              //选择图片的数组，预留。不包含编辑之前的数据，用于组装
+    domain: app.config.domain,            //图片地址
     isAgree: false,
 
     imageArray: [],                       //图片数组，原始。不包含完整url，用于储存
     num: 0,
+  },
+
+  /**
+ * 生命周期函数--监听页面加载
+ */
+  onLoad: function (options) {
+    var that = this;
+    if (!app.checkInput(options.pid)) {
+      that.setData({ pid: options.pid });
+    }
+
+    //获取新增文章项目详情
+    that.getSeriousIllness(that);
+  },
+
+  //获取新增文章项目详情
+  getSeriousIllness:function(that){
+    wx.request({
+      url: app.config.dszjPath_web+'api/UserPost/getSeriousIllness',
+      method:"GET",
+      header:{
+        Token:wx.getStorageSync("token")
+      },
+      data:{
+        id:that.data.pid,
+      },
+      success:function(res){
+        console.log(res);
+        that.setData({
+          info:res.data.data
+        });
+      }
+    })
   },
 
   //确定发表
@@ -179,15 +213,4 @@ Page({
       urls: this.data.files // 需要预览的图片http链接列表
     })
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    var that=this;
-    if (!app.checkInput(options.pid)){
-      that.setData({ pid: options.pid});
-    }
-  },
-
 })

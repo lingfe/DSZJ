@@ -50,7 +50,8 @@
     "pages/myDrippingWater/volunteerCenter/myRecommend/myRecommend",
     "pages/myDrippingWater/dripInvitation/dripInvitation",
     "pages/myDrippingWater/myPublication/myPublication",
-    "pages/myDrippingWater/myPublication/edit/edit"
+    "pages/myDrippingWater/myPublication/edit/edit",
+    "pages/index/largeIllnessRescue/dripPrayingForBlessing/forHimPFB/forHimPFB"
   ],
   "window": {
     "navigationBarTextStyle": "white",

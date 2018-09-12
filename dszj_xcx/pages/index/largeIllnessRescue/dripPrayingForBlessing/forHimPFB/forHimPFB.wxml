@@ -1,0 +1,38 @@
+<!--pages/index/largeIllnessRescue/dripPrayingForBlessing/forHimPFB/forHimPFB.wxml-->
+<view class='page'>
+
+  <!-- 标题 start -->
+  <view class="page_jindutiao">
+    <view class="page_jindutiao_baifengbi">
+      林华蓉正在与直肠中分化腺癌伴双肺转移病魔抗争，为了给TA增强治病信心，与滴水之家一起来为TA祈福吧！
+    </view>
+  </view>
+  <!-- 标题 end -->
+
+  <!-- 祝福语 start -->
+  <view class='page_zhufuyue'>
+    <view class="page_jindutiao_title">祝福语</view>
+    <view class='page_zhufuyue_textarea'>
+      <textarea bindinput='bindTextarea'  placeholder='对Ta说一句鼓励的话吧~'></textarea>
+    </view>
+  </view>
+  <!-- 祝福语 end -->
+
+  <!-- 选择金额 start -->
+  <view class='page_border'></view>
+  <view class="page_moneyItems">
+    <view bindtap='bindtapAmount' data-amount="{{item}}" wx:for="{{jingE_list}}" wx:key="*this"  class="page_moneyItems_item">{{item}}元</view>
+  </view>
+  <view class='page_input'>
+    <input bindinput='bindtapAmount' type='text' placeholder='其他金额'></input>
+    <span class="page_input_span">元</span>
+  </view>
+  <!-- 选择金额 end -->
+
+  <!-- 为ta祈福 start -->
+  <view class='payView'>
+    <view class='payView_text'>爱心金额:  {{jingE}}元</view>
+    <view class='payView_btn' bindtap='setUserPayOrder'>为ta祈福</view>
+  </view>
+  <!-- 为ta祈福 end -->
+</view>

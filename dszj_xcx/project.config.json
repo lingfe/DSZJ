@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 38,
+			"current": 39,
 			"list": [
 				{
 					"id": -1,
@@ -272,7 +272,13 @@
 				{
 					"id": -1,
 					"name": "我的发表",
-					"pathName": "pages/myDrippingWater/myPublication/myPublication"
+					"pathName": "pages/myDrippingWater/myPublication/myPublication",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "为ta祈福",
+					"pathName": "pages/index/largeIllnessRescue/dripPrayingForBlessing/forHimPFB/forHimPFB"
 				}
 			]
 		}

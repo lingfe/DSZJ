@@ -86,11 +86,11 @@
     <!-- 有回复的 start-->
     <view wx:for="{{paging_list}}" wx:key="*this" wx:for-item="st" class='page_Allevaluate_evaluate'>
       <view class='page_Allevaluate_evaluate_image'>
-        <image src='{{st.avatar}}'></image>
+        <image src='{{st.avatar}}http://pic.yupoo.com/lingfe/b5f66aa6/f3eb8776.png'></image>
       </view>
       <view class='page_Allevaluate_evaluate_content'>
         <view class='page_Allevaluate_evaluate_content_title'>
-          <view class='page_Allevaluate_evaluate_content_title_name'>{{st.nickname}}</view>
+          <view class='page_Allevaluate_evaluate_content_title_name'>lingfe{{st.nickname}}</view>
           <view class='page_Allevaluate_evaluate_content_title_text'>
             为ta献爱心: <abbr class="color-red">{{st.money}}</abbr>元
           </view>
@@ -105,7 +105,7 @@
             <image src='http://pic.yupoo.com/lingfe/7cf66693/4025569a.png'></image>
           </view>
           <view class='page_content_left_text'>{{st.money}}滴爱心记录</view>
-          <view class='page_content_left_image' style="float:right;">
+          <view class='page_content_left_image' style="float:right;"  bindtap='huifuBtndtap' id="{{st.id}}">
             <image src='http://pic.yupoo.com/lingfe/64a27743/d4214f5b.png'></image>
           </view>
         </view>
@@ -144,3 +144,19 @@
   <navigator url='/pages/dripLove/rescueDetails/rescueDetails?id={{info.id}}' class="button-right">为ta献爱心</navigator>
 </view>
 <!-- 为ta祈福  end>
+
+<!-- 评价框框  start -->
+<view class='evaluate' wx:if="{{isTextarea}}">
+  <form bindsubmit='setCommentHuifu'>
+    <view class='evaluate_content1' wx:if="{{isTextarea==false}}">
+      <textarea name="content" bindfocus='huifuBtndtap' focus="{{isTextarea}}" placeholder='写评论..'></textarea>
+    </view>
+    <view class='evaluate_content2' wx:if="{{isTextarea==true}}">
+      <textarea name="content" bindblur='blurBtndtap' focus="{{isTextarea}}" placeholder='写评论..'></textarea>
+    </view>
+    <view class='evaluate_btn'>
+      <button form-type='submit'>发表</button>
+    </view>
+  </form>
+</view>
+<!-- 评价框框  end -->

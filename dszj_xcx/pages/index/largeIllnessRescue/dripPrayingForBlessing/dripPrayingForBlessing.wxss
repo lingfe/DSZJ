@@ -202,6 +202,7 @@ page{
   padding-top: 20rpx;
   padding-bottom: 80rpx;
   border-top: 20rpx solid #efeff4;
+  float: left;
 }
 .page_tadeQfu_title{
     width: 90%;
@@ -276,32 +277,15 @@ abbr{
     text-align: center;
 }
 
-
-
+/* 分享按钮 start */
 button {
-  position:none;
-  display:block;
-  margin-left:0;
-  margin-right:0;
-  padding-left:0;
-  padding-right:0;
-  box-sizing:border-box;
-  font-size:0;
+  padding: 0rpx;
+  display:initial;
   text-align:center;
-  text-decoration:none;
-  line-height:0;
-  border-radius:none;
-  -webkit-tap-highlight-color:transparent;
-  overflow:none;
-  color:#000000;
   background-color:#fff;
-  border: none;
-  }
-  .button-hover {
-  color:rgba(0, 0, 0, 0.6);
-  background-color:#fff;
+  line-height: normal;
 }
-
+/* 分享按钮 end */
 
 /*为ta祈福  start*/
 .button-box {

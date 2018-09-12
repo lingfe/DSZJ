@@ -28,8 +28,6 @@ Page({
 
     //获取文章详情
     that.geDetail(that);
-    //获取文章评论分页列表
-    that.getPostComment(that);
   },
 
   //失去焦点
@@ -48,7 +46,7 @@ Page({
   },
 
   //评论或回复
-  setCommentHuifu: function (e) {
+  setCommentHuifu_to: function (e) {
     var that = this;
     //验证非空
     if (app.checkInput(e.detail.value.content)) {
@@ -64,7 +62,7 @@ Page({
         Token: wx.getStorageSync("token")
       },
       data: {
-        id: that.data.id,
+        id: that.data.info.id,
         commentId: that.data.huifu_id,
         content: e.detail.value.content,
       },
@@ -90,7 +88,7 @@ Page({
         Token: wx.getStorageSync("token")
       },
       data: {
-        id: that.data.id,
+        id: that.data.info.id,
         //分页参数
         pageSize: that.data.pageSize,
         pageIndex: that.data.pageIndex
@@ -98,6 +96,11 @@ Page({
       success: function (res) {
         console.log(res);
         var pageList = that.data.comment_List;
+        //非空
+        if(app.checkInput(res.data.data)){
+          return;
+        }
+
         //得到数据
         var list = res.data.data.Records;
         if (list == null || list.length == 0) {
@@ -152,7 +155,7 @@ Page({
 
         if (!app.checkInput(info.avatar)) {
           //匹配是否包含http://
-          if (info.avatar.indexOf("http://") == -1) {
+          if (info.avatar.indexOf("http") == -1) {
             info.avatar = app.config.domain + info.avatar;
           }
         }
@@ -161,6 +164,8 @@ Page({
           info: info,
         });
 
+        //获取文章评论分页列表
+        that.getPostComment(that);
       }
     })
   },

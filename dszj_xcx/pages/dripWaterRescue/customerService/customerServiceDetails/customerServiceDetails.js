@@ -34,6 +34,7 @@ Page({
       isTextarea: false,
     });
   },
+  
   //点击回复者,得到焦点也触发
   huifuBtndtap: function (e) {
     this.setData({
@@ -43,7 +44,7 @@ Page({
   },
 
   //评论或回复
-  setCommentHuifu: function (e) {
+  setCommentHuifu_to: function (e) {
     var that = this;
     //验证非空
     if (app.checkInput(e.detail.value.content)) {
@@ -148,6 +149,7 @@ Page({
       }
     })
   },
+
   //用户下拉动作
   onPullDownRefresh: function () {
     var that = this;

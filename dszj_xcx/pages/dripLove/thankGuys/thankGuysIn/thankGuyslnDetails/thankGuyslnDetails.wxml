@@ -28,7 +28,7 @@
       <span>已获得<abbr>{{info.seriousillness.total_count}}</abbr>次爱心帮助</span>
     </view>
     <view class="project-box cursor-pointer">
-      <image src="{{domain}}{{info.seriousillness.pic}}" />
+      <image src="{{domain}}{{info.seriousillness.cover}}" />
       <span class="project-title">{{info.seriousillness.title}}</span>
     </view>
     </navigator>
@@ -86,7 +86,7 @@
 
 <!-- 评价框框  start -->
 <view class='evaluate'>
-  <form bindsubmit='setCommentHuifu'>
+  <form bindsubmit='setCommentHuifu_to'>
     <view class='evaluate_content1' wx:if="{{isTextarea==false}}">
       <textarea name="content" bindfocus='huifuBtndtap' focus="{{isTextarea}}" placeholder='写评论..'></textarea>
     </view>

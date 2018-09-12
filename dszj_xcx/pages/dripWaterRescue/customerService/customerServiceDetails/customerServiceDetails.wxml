@@ -25,35 +25,6 @@
   <!-- 全部评价   start -->
   <view class='page_Allevaluate'>
     <view class='page_Allevaluate_title'>全部评价</view>
-    <view class='page_Allevaluate_evaluate'>
-      <view class='page_Allevaluate_evaluate_image'>
-        <image src='/assets/images/jpg/jz1.jpg'></image>
-      </view>
-      <view class='page_Allevaluate_evaluate_content'>
-        <view class='page_Allevaluate_evaluate_content_title'>
-          <view class='page_Allevaluate_evaluate_content_title_name'>一竿一线钓江湖</view>
-          <view class='page_Allevaluate_evaluate_content_title_image'>
-            <image src='http://pic.yupoo.com/lingfe/af8da5a6/8e665dfb.png'></image>
-          </view>
-          <view class='page_Allevaluate_evaluate_content_title_text'>1</view>
-          <view class='page_Allevaluate_evaluate_content_title_image'>
-            <image src='http://pic.yupoo.com/lingfe/6202e29e/d929793b.png'></image>
-          </view>
-        </view>
-        <view class='page_Allevaluate_evaluate_content_text'>
-          感谢您们建了这样一个平台帮了感谢您们建了这样一个平台帮了无助的人。感谢您们建了这样一个平台帮了无助的人。无助的人。
-        </view>
-        <view class='page_Allevaluate_evaluate_content_canshu'>
-          <!-- <view class='page_content_left_label'>置顶</view> -->
-          <view class='page_content_left_text'>1楼</view>
-          <view class='page_content_left_text'>23天前</view>
-          <view class='page_content_left_image'>
-            <image src='http://pic.yupoo.com/lingfe/648a9559/3cfc611a.png'></image>
-          </view>
-        </view>
-      </view>
-    </view>
-
     <!-- 有回复的 start-->
     <view wx:for="{{comment_List}}" wx:key="*this" wx:for-item="st" class='page_Allevaluate_evaluate'>
       <view class='page_Allevaluate_evaluate_image'>
@@ -99,7 +70,7 @@
 
 <!-- 评价框框  start -->
 <view class='evaluate'>
-  <form bindsubmit='setCommentHuifu'>
+  <form bindsubmit='setCommentHuifu_to'>
     <view class='evaluate_content1' wx:if="{{isTextarea==false}}">
       <textarea name="content" bindfocus='huifuBtndtap' focus="{{isTextarea}}" placeholder='写评论..'></textarea>
     </view>
