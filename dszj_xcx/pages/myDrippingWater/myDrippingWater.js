@@ -10,7 +10,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    is_bank: 0,//1,0。是否已绑定银行卡。
   },
 
   /**
@@ -20,6 +20,25 @@ Page({
     var that=this;
     //获取当前用户信息，比如:余额
     that.getUserInfo(that);
+    //获取用户是否已绑定银行卡
+    that.getis_bank(that);
+
+  },
+
+  //获取用户是否已绑定银行卡
+  getis_bank:function(that){
+    wx.request({
+      url: app.config.dszjPath_web +'api/User/hasBank',
+      method:"GET",
+      header:{
+        Token:wx.getStorageSync("token")
+      },
+      success:function(res){
+        that.setData({
+          is_bank:res.data.data
+        });
+      }
+    })
   },
 
   //获取爱心统计信息

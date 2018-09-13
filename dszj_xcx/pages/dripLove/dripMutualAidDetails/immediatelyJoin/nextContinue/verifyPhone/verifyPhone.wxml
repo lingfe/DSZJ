@@ -1,0 +1,50 @@
+<!--pages/dripLove/dripMutualAidDetails/immediatelyJoin/nextContinue/verifyPhone/verifyPhone.wxml-->
+<view class='page'>
+  <!-- 步骤 start  -->
+  <view class='step-wrap'>
+    <span>1.填写信息</span>
+    <em></em>
+    <span class="step-first">2.验证手机号并充值</span>
+    <em></em>
+    <span>3.成功</span>
+  </view>
+  <!-- 步骤 end  -->
+
+  <!-- 填写电话号码 start -->
+  <form bindsubmit='bindtapUpdatePhone'>
+    <view class="weui-search-bar" style="background-color:#fff;padding:10px 10px;">
+      <view class="bg_search">
+        <view class="weui-search-bar__box ">
+          <input type="number" maxlength='11' class="weui-search-bar__input" 
+          bindinput="bindinputValue" 
+          placeholder="请输入电话号码" 
+          name="mobile" bindinput="inputTypingPhone" />
+        </view>
+      </view>
+    </view>
+    <!-- 填写电话号码 end -->
+
+    <!-- 获取验证码 start -->
+    <view class="weui-search-bar" style="background-color:#fff;padding:10px 10px;">
+      <view class="bg_search">
+        <view class="weui-search-bar__box ">
+          <input type="text" class="weui-search-bar__input" 
+          bindinput="bindinputValue" 
+          placeholder="请输入验证码" 
+          name="code" bindinput="inputTypingYZM" />
+        </view>
+        <view class="VerificationCode">
+          <view style="display:{{selected  == true?'block':'none'}};" bindtap="countdown">{{second}}s后重新获取</view>
+          <view class='class_bj' style="display:{{selected1 == true?'block':'none'}};" bindtap="getphone">点击获取验证码</view>
+        </view>
+      </view>
+    </view>
+    <!-- 获取验证码 end -->
+
+    <!-- 提交按钮  start -->
+    <view class="weui-btn-area">
+      <button form-type="submit" class='button {{bg}}'>绑定</button>
+    </view>
+  </form>
+  <!-- 提交按钮  end -->
+</view>

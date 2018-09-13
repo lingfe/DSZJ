@@ -61,7 +61,8 @@
 
 /*推荐展示 start*/
 .page_tuijing{
-  width: 100%;
+  width: 94%;
+  margin: auto;
   height: 100rpx;
   background-color: #fff;
   margin-top: 20rpx;
@@ -71,7 +72,6 @@
   width: 40%;
   height: 100rpx;
   line-height: 100rpx;
-  text-align: center;
   font-size: 30rpx;
   float: left;
 }

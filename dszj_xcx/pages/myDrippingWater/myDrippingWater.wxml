@@ -67,7 +67,9 @@
           <image src='/assets/images/my/my_yhk.png'></image>
         </view>
         <view class='page_caidang_caidang_title'>我的银行卡</view>
-        <navigator url="/pages/myDrippingWater/myBank/myBank?user_id={{info.id}}" class='page_caidang_caidang_text'>未绑定 ></navigator>
+        <navigator url="/pages/myDrippingWater/myBank/myBank?user_id={{info.id}}" class='page_caidang_caidang_text'>
+          {{is_bank == 0?'未绑定 >':'已绑定 >'}}
+        </navigator>
       </view>
     </view>
 

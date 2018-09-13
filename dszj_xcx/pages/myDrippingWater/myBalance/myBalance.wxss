@@ -1,6 +1,9 @@
 /* pages/myDrippingWater/myBalance/myBalance.wxss */
 
 @import '/pages/myDrippingWater/myLaunch/verificationProject/verificationProject.wxss';
+@import '/pages/myDrippingWater/dripInvitation/dripInvitation.wxss';
+
+
 page{
   background-color: #efeff4;
 }

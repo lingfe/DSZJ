@@ -1,6 +1,7 @@
 <!--pages/myDrippingWater/myFollow/myFollow.wxml-->
 <view class='page'>
-  <view class='page_model' wx:for="{{list.Records}}" wx:key="*this">
+  <view class='page_model' wx:for="{{list}}" wx:key="{{item.id}}" 
+    bindtap='bindtapNato'  id='{{item.id}}' data-ifstop='{{item.if_stop}}'>
     <view class='page_model_image'>
       <image src='{{item.cover}}'></image>
     </view>
@@ -14,7 +15,7 @@
     </view>
   </view>
 
-  <view class='page_model'>
+  <view class='page_model' bindtap=''>
     <view class='page_model_image'>
       <image src='https://www.dishuihuzhu.cn/uploads/User_cert/20180827/s_1781335_5b8394c8d2988.jpg'></image>
     </view>

@@ -12,19 +12,19 @@
 
   <!-- 充值表单 start -->
   <view class='page_form'>
-    <form>
+    <form bindsubmit='setParamPay'>
       <view class="page_form_input">
         <label class='page_form_input_label'>真实姓名</label>
-        <input class='page_form_input_input' placeholder="与身份证姓名保持一致"  />
+        <input name="name" class='page_form_input_input' placeholder="与身份证姓名保持一致"  />
       </view>
 
       <view class="page_form_input">
         <label class='page_form_input_label'>身份证号</label>
-        <input class='page_form_input_input' placeholder="用于申请互助，会严格保密" />
+        <input name="sfz" class='page_form_input_input' placeholder="用于申请互助，会严格保密" />
       </view>
 
       <view class="page_form_button">
-        <button form-type='' >微信充值9.00元</button>
+        <button form-type='submit' >微信充值9.00元</button>
       </view>
     </form>
   </view>

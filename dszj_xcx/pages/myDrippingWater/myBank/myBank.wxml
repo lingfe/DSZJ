@@ -1,33 +1,35 @@
 <!--pages/myDrippingWater/myBank/myBank.wxml-->
 <view class='page'>
+  <form bindsubmit='bankForm'>
   <view class='page_input'>
     <view class='page_input_title'>收款人姓名：</view>
-    <view class='page_input_input'><input placeholder='收款人姓名' /></view>
+    <view class='page_input_input'><input name="card_name" value='{{bankInfo.card_name}}' placeholder='收款人姓名' /></view>
   </view>
 
   <view class='page_input'>
     <view class='page_input_title'>身份证：</view>
-    <view class='page_input_input'><input placeholder='身份证' /></view>
+    <view class='page_input_input'><input name="sfz" value='{{bankInfo.sfz}}' placeholder='身份证' /></view>
   </view>
 
   <view class='page_picker'>
-    <view class='page_input_title'>身份证：</view>
+    <view class='page_input_title'>开户银行：</view>
     <picker bindchange="bindPickerChange" value="{{index}}" range="{{bankArr}}">
-      <input value="{{bankArr[index]}}" placeholder='身份证' />
+      <input name="bank" value="{{bankInfo.bank== null? bankArr[index]:bankInfo.bank}}" placeholder='身份证' />
     </picker>
   </view>
 
   <view class='page_input'>
     <view class='page_input_title'>开户行地址：</view>
-    <view class='page_input_input'><input placeholder='如：贵州省遵义市珠海路支行' /></view>
+    <view class='page_input_input'><input name="card_address" value='{{bankInfo.cardAddress}}' placeholder='如：贵州省遵义市珠海路支行' /></view>
   </view>
 
   <view class='page_input'>
     <view class='page_input_title'>银行卡号：</view>
-    <view class='page_input_input'><input placeholder='银行卡号' /></view>
+    <view class='page_input_input'><input name="card_no" value='{{bankInfo.cardNo}}' placeholder='银行卡号' /></view>
   </view>
 
   <view class='page_button'>
-    <button>保存</button>
+    <button form-type='submit'>保存</button>
   </view>
+  </form>
 </view>

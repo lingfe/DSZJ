@@ -1,4 +1,6 @@
 // pages/myDrippingWater/myBank/myBank.js
+var app=getApp();
+
 Page({
 
   /**
@@ -10,6 +12,7 @@ Page({
       "贵阳银行","农业银行",
       "其他银行"
     ],
+    bankInfo:null,//银行卡信息
   },
 
   /**
@@ -29,12 +32,64 @@ Page({
 
     //得到银行卡信息
     that.getBankInfo(that);
+  },
 
+  //保存银行卡信息
+  bankForm:function(e){
+    var that=this;
+    var form = {};
+
+    //验证非空
+    if(app.checkInput(e.detail.value.card_name)){
+      app.showToast("持卡人不能为空!","none");
+      return;
+    }
+    if (app.checkInput(e.detail.value.sfz)){
+      app.showToast("身份证不能为空!","none");
+      return;
+    }
+    if (app.checkInput(e.detail.value.card_no)){
+      app.showToast("银行卡号不能为空!","none");
+      return;
+    }else{
+      //赋值
+      form.card_name=e.detail.value.card_name;
+      form.sfz=e.detail.value.sfz;
+      form.bank=e.detail.value.bank;
+      form.card_address = e.detail.value.card_address;
+      form.card_no = e.detail.value.card_no;
+    }
+
+    //请求
+    wx.request({
+      url: app.config.dszjPath_web +'api/User/editBank',
+      method:"POST",
+      header:{
+        Token:wx.getStorageSync("token")
+      },
+      data:form,
+      success:function(res){
+        app.showModal(res.data.msg);
+        //得到银行卡信息
+        that.getBankInfo(that);
+      }
+    })
   },
 
   //得到银行卡信息
   getBankInfo:function(that){
-    
+    wx.request({
+      url: app.config.dszjPath_web + 'api/User/bankInfo',
+      method: "GET",
+      header: {
+        Token: wx.getStorageSync("token")
+      },
+      success: function (res) {
+        that.setData({
+          bankInfo: res.data.data
+        });
+      }
+    })
   },
 
   //选择银行卡
@@ -44,53 +99,4 @@ Page({
       index: e.detail.value
     })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

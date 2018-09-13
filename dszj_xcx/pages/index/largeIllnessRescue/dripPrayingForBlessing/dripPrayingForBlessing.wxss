@@ -279,6 +279,7 @@ abbr{
 
 /* 分享按钮 start */
 button {
+  position:initial;
   padding: 0rpx;
   display:initial;
   text-align:center;
