@@ -1,0 +1,4 @@
+/* pages/myDrippingWater/dripInvitation/InvitationPresentAdd/InvitationPresentAdd.wxss */
+
+@import '/pages/index/largeIllnessRescue/largeIllnessRescue.wxss';
+

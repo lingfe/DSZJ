@@ -1,0 +1,72 @@
+<!--pages/myDrippingWater/dripInvitation/InvitationPresentAdd/InvitationPresentAdd.wxml-->
+<view class='page'>
+  <form bindsubmit='bindtapSubmit'>
+          <!-- 对方姓名   start-->
+          <view class='page_Fundraising_amount'>
+            <view class='page_Fundraising_title_text'>
+              <view class='page_Fundraising_title_text_title'>姓名</view>
+            </view>
+            <view class='page_Fundraising_amount_input'>
+              <input type='digit' name="name"  placeholder='请输入对方姓名'></input>
+            </view>
+          </view>
+          <!-- 对方姓名   end-->
+
+          <!-- 礼金金额   start-->
+          <view class='page_Fundraising_title'>
+            <view class='page_Fundraising_title_text'>
+              <view class='page_Fundraising_title_text_title'>礼金金额</view>
+            </view>
+            <view class='page_Fundraising_title_input input1'>
+              <input type='text' name="money" placeholder='请输入礼金金额'></input>
+            </view>
+          </view>
+          <!-- 礼金金额   end-->
+
+          <!-- 选择日期   start-->
+          <view class='page_Fundraising_amount'>
+            <view class='page_Fundraising_title_text'>
+              <view class='page_Fundraising_title_text_title'>选择日期</view>
+            </view>
+            <view class='page_Fundraising_amount_input'>
+              <picker mode="date" value="{{date}}" start="2018-09-14" end="2050-09-14" bindchange="bindDateChange">
+                <input  value='{{date}}' name="give_date"  placeholder='请选择日期'></input>
+              </picker>
+            </view>
+          </view>
+          <!-- 选择日期   end-->
+
+          <!-- 选择请柬   start-->
+          <view class='page_Fundraising_amount'>
+            <view class='page_Fundraising_title_text'>
+              <view class='page_Fundraising_title_text_title'>选择请柬</view>
+            </view>
+            <view class='page_Fundraising_amount_input'>
+              <input hidden='hidden' value='{{list_id[index]}}' name="id" />
+              <picker bindchange="bindPickerChange" value="{{index}}" range="{{list}}">
+                <input value='{{list[index]}}' placeholder='===请选择对应请柬==='></input>
+              </picker>
+            </view>
+          </view>
+          <!-- 选择请柬   end-->
+
+          <!-- 备注   start-->
+          <view class='page_Fundraising_textarea'>
+            <view class='page_Fundraising_title_text'>
+              <view class='page_Fundraising_title_text_title'>备注</view>
+            </view>
+            <view class='page_Fundraising_title_input_textarea'>
+              <textarea name="content" 
+              maxlength='1000'
+              placeholder='请输入备注'></textarea>
+            </view>
+          </view>
+          <!-- 备注   end-->
+
+          <!-- 下一步 start -->
+          <view class="weui-btn-area">
+            <button class="weui-btn" formType="submit" type="primary">确定</button>
+          </view>
+          <!-- 下一步  end -->
+  </form>
+</view>

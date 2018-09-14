@@ -22,100 +22,100 @@
     </view>
 
     <view wx:for="{{list}}" wx:key="{{item.id}}">
-        <view class='page_lijingtix_bg'></view>
-        <view class='page_lijingtix_model'>
-          <view class='page_lijingtix_model_title'>
-            <text>测试盐发起个人请柬630</text>
-            <text style='color:#0099ff;float:right;'>可提现</text>
-          </view>
-          <view class='page_lijingtix_model_content'>
-            <view class='page_lijingtix_model_content_text'>
-              <view class='page_lijingtix_model_content_text_title'>礼金：</view>
-              <view class='page_lijingtix_model_content_text_text'>0元</view>
+          <view class='page_lijingtix_bg'></view>
+          <view class='page_lijingtix_model'>
+            <view class='page_lijingtix_model_title'>
+              <text>{{item.title}}</text>
+              <text style='color:#0099ff;float:right;'>可提现</text>
             </view>
-            <view class='page_lijingtix_model_content_text'>
-              <view class='page_lijingtix_model_content_text_title'>送礼次数：</view>
-              <view class='page_lijingtix_model_content_text_text'>0次</view>
-            </view>
-            <view class='page_lijingtix_model_content_text'>
-              <view class='page_lijingtix_model_content_text_title'>发起日期：</view>
-              <view class='page_lijingtix_model_content_text_text'>0元</view>
-            </view>
-            <view class='page_lijingtix_model_content_text'>
-              <view class='page_lijingtix_model_content_text_title'>已提金额：</view>
-              <view class='page_lijingtix_model_content_text_text'>￥0.00元</view>
-            </view>
-            <view class='page_lijingtix_model_content_text'>
-              <view class='page_lijingtix_model_content_text_title'>提现中的金额：</view>
-              <view class='page_lijingtix_model_content_text_text'>￥0元</view>
-            </view>
-            <view class='page_lijingtix_model_content_input'>
-              <view class='page_lijingtix_model_content_input_title'>收款人姓名：</view>
-              <view class='page_lijingtix_model_content_input_input'>
-                <input value='测试' placeholder='收款人姓名'></input>
+            <view class='page_lijingtix_model_content'>
+              <view class='page_lijingtix_model_content_text'>
+                <view class='page_lijingtix_model_content_text_title'>礼金：</view>
+                <view class='page_lijingtix_model_content_text_text'>{{item.total_money}}元</view>
+              </view>
+              <view class='page_lijingtix_model_content_text'>
+                <view class='page_lijingtix_model_content_text_title'>送礼次数：</view>
+                <view class='page_lijingtix_model_content_text_text'>{{item.total_num}}次</view>
+              </view>
+              <view class='page_lijingtix_model_content_text'>
+                <view class='page_lijingtix_model_content_text_title'>发起日期：</view>
+                <view class='page_lijingtix_model_content_text_text'>{{item.created_time}}元</view>
+              </view>
+              <view class='page_lijingtix_model_content_text'>
+                <view class='page_lijingtix_model_content_text_title'>已提金额：</view>
+                <view class='page_lijingtix_model_content_text_text'>￥{{item.is_money}}元</view>
+              </view>
+              <view class='page_lijingtix_model_content_text'>
+                <view class='page_lijingtix_model_content_text_title'>提现中的金额：</view>
+                <view class='page_lijingtix_model_content_text_text'>￥{{item.run_money}}元</view>
+              </view>
+              <view class='page_lijingtix_model_content_input'>
+                <view class='page_lijingtix_model_content_input_title'>收款人姓名：</view>
+                <view class='page_lijingtix_model_content_input_input'>
+                  <input value='{{bank.card_name}}' placeholder='收款人姓名'></input>
+                </view>
+              </view>
+              <view class='page_lijingtix_model_content_input'>
+                <view class='page_lijingtix_model_content_input_title'>身份证：</view>
+                <view class='page_lijingtix_model_content_input_input'>
+                  <input value='{{bank.sfz}}' placeholder='身份证'></input>
+                </view>
+              </view>
+              <view class='page_lijingtix_model_content_input'>
+                <view class='page_lijingtix_model_content_input_title'>收款人手机：</view>
+                <view class='page_lijingtix_model_content_input_input'>
+                  <input value='{{bank.mobile}}' placeholder='收款人手机'></input>
+                </view>
+              </view>
+              <view class='page_lijingtix_model_content_input'>
+                <view class='page_lijingtix_model_content_input_title'>开户银行：</view>
+                <view class='page_lijingtix_model_content_input_input'>
+                <picker bindchange="bindPickerChange" value="{{index}}" range="{{bankArr}}">
+                  <input value="{{bank.bank ==null? bankArr[index]:bank.bank}}" placeholder='开户银行' />
+                </picker>
+                </view>
+              </view>
+              <view class='page_lijingtix_model_content_input'>
+                <view class='page_lijingtix_model_content_input_title'>银行名称：</view>
+                <view class='page_lijingtix_model_content_input_input'>
+                  <input value='{{bank.otherbank}}' placeholder='银行名称'></input>
+                </view>
+              </view>
+              <view class='page_lijingtix_model_content_input'>
+                <view class='page_lijingtix_model_content_input_title'>开户行地址：</view>
+                <view class='page_lijingtix_model_content_input_input'>
+                  <input value='{{bank.cardAddress}}' placeholder='开户行地址'></input>
+                </view>
+              </view>
+              <view class='page_lijingtix_model_content_input'>
+                <view class='page_lijingtix_model_content_input_title'>银行卡号：</view>
+                <view class='page_lijingtix_model_content_input_input'>
+                  <input value='{{bank.cardNo}}' placeholder='银行卡号'></input>
+                </view>
+              </view>
+              <view class='page_lijingtix_model_content_input'>
+                <view class='page_lijingtix_model_content_input_title'>输入金额：</view>
+                <view class='page_lijingtix_model_content_input_input'>
+                  <input value='0.00' placeholder='输入金额'></input>
+                </view>
+                <view>￥</view>
+              </view>
+              <view class='page_lijingtix_model_content_input'>
+                <view class='page_lijingtix_model_content_input_title'></view>
+                <view style="color:#bbb;">当前可提现金额￥{{item.withdraw_money}}元</view>
               </view>
             </view>
-            <view class='page_lijingtix_model_content_input'>
-              <view class='page_lijingtix_model_content_input_title'>身份证：</view>
-              <view class='page_lijingtix_model_content_input_input'>
-                <input value='测试' placeholder='身份证'></input>
-              </view>
-            </view>
-            <view class='page_lijingtix_model_content_input'>
-              <view class='page_lijingtix_model_content_input_title'>收款人手机：</view>
-              <view class='page_lijingtix_model_content_input_input'>
-                <input value='测试' placeholder='收款人手机'></input>
-              </view>
-            </view>
-            <view class='page_lijingtix_model_content_input'>
-              <view class='page_lijingtix_model_content_input_title'>开户银行：</view>
-              <view class='page_lijingtix_model_content_input_input'>
-              <picker bindchange="bindPickerChange" value="{{index}}" range="{{bankArr}}">
-                <input value="{{bankArr[index]}}" placeholder='开户银行' />
-              </picker>
-              </view>
-            </view>
-            <view class='page_lijingtix_model_content_input'>
-              <view class='page_lijingtix_model_content_input_title'>银行名称：</view>
-              <view class='page_lijingtix_model_content_input_input'>
-                <input value='测试' placeholder='银行名称'></input>
-              </view>
-            </view>
-            <view class='page_lijingtix_model_content_input'>
-              <view class='page_lijingtix_model_content_input_title'>开户行地址：</view>
-              <view class='page_lijingtix_model_content_input_input'>
-                <input value='测试' placeholder='开户行地址'></input>
-              </view>
-            </view>
-            <view class='page_lijingtix_model_content_input'>
-              <view class='page_lijingtix_model_content_input_title'>银行卡号：</view>
-              <view class='page_lijingtix_model_content_input_input'>
-                <input value='测试' placeholder='银行卡号'></input>
-              </view>
-            </view>
-            <view class='page_lijingtix_model_content_input'>
-              <view class='page_lijingtix_model_content_input_title'>输入金额：</view>
-              <view class='page_lijingtix_model_content_input_input'>
-                <input value='测试' placeholder='输入金额'></input>
-              </view>
-              <view>￥</view>
-            </view>
-            <view class='page_lijingtix_model_content_input'>
-              <view class='page_lijingtix_model_content_input_title'></view>
-              <view style="color:#bbb;">当前可提现金额￥0.00元</view>
-            </view>
-          </view>
 
-          <view class='page_lijingtix_text'>
-            注：礼金7-30天内可申请1次50%以内的提现，30天后可申请剩余金额100%提现，为保障资金安全，请尽量自行申请提现
-          </view>
+            <view class='page_lijingtix_text'>
+              注：礼金7-30天内可申请1次50%以内的提现，30天后可申请剩余金额100%提现，为保障资金安全，请尽量自行申请提现
+            </view>
 
-          <view class='page_lijingtix_btn'>
-            <view class='page_lijingtix_btn_btn'>马上提现</view>
-            <view class='page_lijingtix_btn_btn'>提现记录</view>
+            <view class='page_lijingtix_btn'>
+              <view class='page_lijingtix_btn_btn'>马上提现</view>
+              <view class='page_lijingtix_btn_btn'>提现记录</view>
+            </view>
           </view>
         </view>
-    </view>
   </view>
   <!-- 项目提现  end -->
 </view>

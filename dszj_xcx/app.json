@@ -52,7 +52,9 @@
     "pages/myDrippingWater/myPublication/myPublication",
     "pages/myDrippingWater/myPublication/edit/edit",
     "pages/index/largeIllnessRescue/dripPrayingForBlessing/forHimPFB/forHimPFB",
-    "pages/dripLove/dripMutualAidDetails/immediatelyJoin/nextContinue/verifyPhone/verifyPhone"
+    "pages/dripLove/dripMutualAidDetails/immediatelyJoin/nextContinue/verifyPhone/verifyPhone",
+    "pages/myDrippingWater/dripInvitation/InvitationPresentAdd/InvitationPresentAdd",
+    "pages/myDrippingWater/dripInvitation/dirpInvitationAdd/dirpInvitationAdd"
   ],
   "window": {
     "navigationBarTextStyle": "white",

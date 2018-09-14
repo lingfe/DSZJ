@@ -3,7 +3,7 @@
   <view class='page_imageBg'></view>
   <view class='page_titleBg'>志愿者帮助中心</view>
   <view class='page_image'>
-    <image src='https://www.dishuihuzhu.cn/uploads/volunteer/qrcode/qrcode_485352_8f0df57e41d7079485c44d36fd563579.png'></image>
+    <image src='{{teer.qrcode_path}}'></image>
   </view>
   <view class='page_text'>
     <text>用求助者手机微信扫描二维码\n或在右上角分享给求助者</text>

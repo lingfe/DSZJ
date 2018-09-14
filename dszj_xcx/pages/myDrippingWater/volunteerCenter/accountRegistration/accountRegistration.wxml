@@ -1,7 +1,7 @@
 <!--pages/myDrippingWater/volunteerCenter/accountRegistration/accountRegistration.wxml-->
 <view class='page'>
   <view class='page_imageBg'></view>
-  <form bindsubmit="qf_formSubmit">
+  <form bindsubmit="setRegisterUser">
 
             <!-- 手机号码  start-->
             <view class='page_Fundraising_title'>
@@ -9,7 +9,7 @@
                 <view class='page_Fundraising_title_text_title'>手机号码</view>
               </view>
               <view class='page_Fundraising_title_input input2'>
-                <input type='text' name="mobile" value='{{qf_form.mobile}}' placeholder='请输入手机号码'></input>
+                <input type='text' name="mobile" value='{{mobile}}' placeholder='请输入手机号码'></input>
               </view>
             </view>
             <!-- 手机号码   end-->
@@ -21,7 +21,7 @@
                 <view class='page_Fundraising_title_text_title'>确认手机号码</view>
               </view>
               <view class='page_Fundraising_title_input input2'>
-                <input type='text' name="mobile" value='{{qf_form.mobile}}' placeholder='请确认手机号码'></input>
+                <input type='text' name="mobile_confirm" value='{{mobile}}' placeholder='请确认手机号码'></input>
               </view>
             </view>
             <!-- 确认手机号码  end-->

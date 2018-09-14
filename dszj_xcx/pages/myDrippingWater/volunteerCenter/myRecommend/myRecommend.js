@@ -26,7 +26,7 @@ Page({
   //请求获取我的推荐数据，
   getQiuzhuInfo: function (that) {
     //url
-    var url = app.config.dszjPath_web + "api/UserSeriousIllness/paging";
+    var url = app.config.dszjPath_web + "api/Volunteer/projectPaging";
     //参数
     var data = {
       "pageSize": that.data.pageSize,
@@ -60,8 +60,6 @@ Page({
 
         //循环遍历操作
         for (var i = 0, lenI = list.length; i < lenI; ++i) {
-          if (!app.checkInput(list[i].cover))
-            list[i].cover = app.config.domain + list[i].cover.split(',')[0];
           if (!app.checkInput(list[i].avatar)) {
             //匹配是否包含http://
             if (list[i].avatar.indexOf("http") == -1) {
@@ -82,4 +80,35 @@ Page({
     });
   },
 
+  //用户下拉动作
+  onPullDownRefresh: function () {
+    var that = this;
+    that.setData({
+      pageIndex: 1,         //所在页页码，从1开始
+      dsqz_list: [],
+    });
+    //请求获取我的推荐数据，
+    that.getQiuzhuInfo(that);
+    //下拉完成后执行回退
+    wx.stopPullDownRefresh();
+  },
+
+  //页面上拉触底事件的处理函数
+  onReachBottom: function () {
+    var that = this;
+    var num = that.data.pageIndex;
+    num++;
+    that.setData({
+      pageIndex: num,
+    });
+
+    //请求获取我的推荐数据，
+    that.getQiuzhuInfo(that);
+    //提示
+    wx.showToast({
+      title: '正在加载..',
+      icon: 'loading',
+      duration: 2000,
+    });
+  },
 })
