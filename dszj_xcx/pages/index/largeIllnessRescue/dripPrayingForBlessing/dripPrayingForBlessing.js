@@ -64,6 +64,10 @@ Page({
         content: e.detail.value.content,
       },
       success: function (res) {
+        if (res.data.code == 0) {
+          app.showModal(res.data.msg);
+          return;
+        }
         if (res.data.code == "401") {
           //验证状态
           app.btnLogin(res.data.code);

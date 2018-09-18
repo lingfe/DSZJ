@@ -14,6 +14,13 @@ Page({
     mobile:null,
   },
 
+  //拨打客服电话号码
+  bodaPhone: function (e) {
+    wx.makePhoneCall({
+      phoneNumber: '4006063400',
+    });
+  },
+
   //输入电话号码
   bindinputPhone:function(e){
     this.setData({

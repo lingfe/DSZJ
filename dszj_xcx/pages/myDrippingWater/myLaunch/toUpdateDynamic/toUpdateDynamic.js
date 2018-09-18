@@ -7,7 +7,7 @@ Page({
    */
   data: {
     arr: [],                              //选择图片的数组，预留。不包含编辑之前的数据，用于组装
-    info_type:0,//0=救助详情，1=祈福详情
+    info_type:0,//0=救助详情，1=祈福详情，2=请柬详情
     id: null,//救助项目id/祈福项目Id。
   },
 
@@ -91,8 +91,14 @@ Page({
   //发送请求，保存
   reqSetData: function (form){
     var that=this;
+    var url = app.config.dszjPath_web + 'api/UserSeriousIllness/addDynamic';
+    //是否是请柬
+    if (that.data.info_type == 2){
+      //新增请柬动态
+      url = app.config.dszjPath_web +"api/UserInvitation/addDynamic";
+    }
     wx.request({
-      url: app.config.dszjPath_web +'api/UserSeriousIllness/addDynamic',
+      url: url,
       header:{
         Token:wx.getStorageSync('token')
       },
@@ -100,14 +106,23 @@ Page({
       method:"POST",
       success:function(res){
         console.log(res);
+        if(res.data.code == 0){
+          app.showModal(res.data.msg);
+          return;
+        }
         //跳转到详情
         if (that.data.info_type == 0){
           //救助详情
           wx.navigateTo({
             url: '/pages/dripLove/rescueDetails/rescueDetails?id='+that.data.id,
           })
-        }else{
+        }else if(that.data.info_type == 1){
           //祈福详情
+          wx.navigateTo({
+            url: '/pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing?id=' + that.data.id,
+          })
+        } else if (that.data.info_type == 2) {
+          //请柬详情
           wx.navigateTo({
             url: '/pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing?id=' + that.data.id,
           })

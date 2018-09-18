@@ -37,7 +37,7 @@
     <view class='kuaishuTianxie_input'>
       <view class='kuaishuTianxie_input_title'>收款人手机号</view>
       <view class='kuaishuTianxie_input_input'>
-        <input type='text' name="mobile" value='{{form.mobile}}' placeholder='收款人手机号'></input>
+        <input type='number' name="mobile" value='{{form.mobile}}' placeholder='收款人手机号'></input>
       </view>
     </view>
   </view>

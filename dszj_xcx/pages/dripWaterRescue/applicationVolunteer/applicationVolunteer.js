@@ -9,9 +9,18 @@ Page({
    * 页面的初始数据
    */
   data: {
-    is_display:true,
+    is_display:false,//隐藏
     name:null,
     mobile:null,
+  },
+
+  //加载
+  onLoad:function(options){
+    wx.showModal({
+      title: '志愿者须知',
+      showCancel: false,
+      content: '1.申请后请等待审核,期间请保持电话畅通，如有疑问请咨询400-6063-400。\n2.审核通过后系统自动为其生成志愿者专属二维码和专属链接。\n3. 通过自己的二维码或专属链接帮助求助者可以获得滴水之家高额助人奖励金。',
+    });
   },
 
   //申请志愿者

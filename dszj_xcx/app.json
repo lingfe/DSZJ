@@ -54,7 +54,8 @@
     "pages/index/largeIllnessRescue/dripPrayingForBlessing/forHimPFB/forHimPFB",
     "pages/dripLove/dripMutualAidDetails/immediatelyJoin/nextContinue/verifyPhone/verifyPhone",
     "pages/myDrippingWater/dripInvitation/InvitationPresentAdd/InvitationPresentAdd",
-    "pages/myDrippingWater/dripInvitation/dirpInvitationAdd/dirpInvitationAdd"
+    "pages/myDrippingWater/dripInvitation/dirpInvitationAdd/dirpInvitationAdd",
+    "pages/myDrippingWater/dripInvitation/dirpInvitationUpdate/dirpInvitationUpdate"
   ],
   "window": {
     "navigationBarTextStyle": "white",

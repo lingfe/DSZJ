@@ -7,9 +7,9 @@
         <view class='page_content_left_label' wx:if="{{st.is_top == 1}}">置顶</view>
         <view class='page_content_left_text'>{{st.comment_count}}评论</view>
         <view class='page_content_left_text'>{{st.time}}</view>
-        <view class='page_content_left_image'>
+        <navigator url="/pages/index/largeIllnessRescue/largeIllnessRescue" class='page_content_left_image'>
           <image src='http://pic.yupoo.com/lingfe/648a9559/3cfc611a.png'></image>
-        </view>
+        </navigator>
       </view>
       <view class='page_content_right' wx:if="{{st.pictures.length != 0}}">
         <view class='page_content_right_image'>

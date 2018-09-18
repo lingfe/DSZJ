@@ -28,15 +28,15 @@
     <!-- 有回复的 start-->
     <view wx:for="{{comment_List}}" wx:key="*this" wx:for-item="st" class='page_Allevaluate_evaluate'>
       <view class='page_Allevaluate_evaluate_image'>
-        <image src='{{st.avatar}}http://pic.yupoo.com/lingfe/648a9559/3cfc611a.png'></image>
+        <image src='{{st.avatar}}'></image>
       </view>
       <view class='page_Allevaluate_evaluate_content'>
         <view class='page_Allevaluate_evaluate_content_title'>
-          <view class='page_Allevaluate_evaluate_content_title_name'>看看{{st.nickname}}</view>
-          <view class='page_Allevaluate_evaluate_content_title_image'>
+          <view class='page_Allevaluate_evaluate_content_title_name'>{{st.nickname}}</view>
+          <view wx:if="{{1 == 2}}" class='page_Allevaluate_evaluate_content_title_image'>
             <image src='http://pic.yupoo.com/lingfe/af8da5a6/8e665dfb.png'></image>
           </view>
-          <view class='page_Allevaluate_evaluate_content_title_text'>{{st.like_count}}</view>
+          <view wx:if="{{1 == 2}}" class='page_Allevaluate_evaluate_content_title_text'>{{st.like_count}}</view>
           <view class='page_Allevaluate_evaluate_content_title_image' bindtap='huifuBtndtap' id="{{st.id}}">
             <image src='http://pic.yupoo.com/lingfe/6202e29e/d929793b.png'></image>
           </view>
@@ -47,9 +47,9 @@
         <view class='page_Allevaluate_evaluate_content_canshu'>
           <view class='page_content_left_text'>{{index+1}}楼</view>
           <view class='page_content_left_text'>{{st.time}}</view>
-          <view class='page_content_left_image'>
+          <navigator url="/pages/index/largeIllnessRescue/largeIllnessRescue" class='page_content_left_image'>
             <image src='http://pic.yupoo.com/lingfe/648a9559/3cfc611a.png'></image>
-          </view>
+          </navigator>
         </view>
         <!-- 回复内容 start -->
         <view wx:for="{{st.comments}}" wx:key="*this" wx:for-item="huifu" class='page_Allevaluate_evaluate_content_huifu'>

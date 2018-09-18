@@ -86,11 +86,11 @@
     <!-- 有回复的 start-->
     <view wx:for="{{paging_list}}" wx:key="*this" wx:for-item="st" class='page_Allevaluate_evaluate'>
       <view class='page_Allevaluate_evaluate_image'>
-        <image src='{{st.avatar}}http://pic.yupoo.com/lingfe/b5f66aa6/f3eb8776.png'></image>
+        <image src='{{st.avatar}}'></image>
       </view>
       <view class='page_Allevaluate_evaluate_content'>
         <view class='page_Allevaluate_evaluate_content_title'>
-          <view class='page_Allevaluate_evaluate_content_title_name'>lingfe{{st.nickname}}</view>
+          <view class='page_Allevaluate_evaluate_content_title_name'>{{st.nickname}}</view>
           <view class='page_Allevaluate_evaluate_content_title_text'>
             为ta献爱心: <abbr class="color-red">{{st.money}}</abbr>元
           </view>
@@ -140,7 +140,8 @@
 
 <!-- 为ta祈福,为ta献爱心  start-->
 <view class="button-box" wx:if="{{info.type==0}}">
-  <navigator class="button-left">为TA祈福</navigator>
+  <navigator url='/pages/index/largeIllnessRescue/dripPrayingForBlessing/forHimPFB/forHimPFB?id={{info.id}}' class="button-left">
+    为TA祈福</navigator>
   <navigator url='/pages/dripLove/rescueDetails/rescueDetails?id={{info.id}}' class="button-right">为ta献爱心</navigator>
 </view>
 <!-- 为ta祈福  end>

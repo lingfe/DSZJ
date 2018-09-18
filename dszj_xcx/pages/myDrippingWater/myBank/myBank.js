@@ -8,10 +8,7 @@ Page({
    */
   data: {
     index:0,
-    bankArr:[
-      "贵阳银行","农业银行",
-      "其他银行"
-    ],
+    bankArr:app.dahuoData.bank_list,
     bankInfo:null,//银行卡信息
   },
 

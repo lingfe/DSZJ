@@ -68,6 +68,7 @@ Page({
         Token: wx.getStorageSync('token')
       },
       data: {
+        code: that.data.yzm,
         mobile: that.data.phone,
       },
       method:"GET",
@@ -92,6 +93,11 @@ Page({
               if(res2.data.code == 1){
                 app.showToast(res2.data.msg,"none");
               }
+
+              //返回上一个的上一个页面
+              wx.navigateBack({
+                delta: 2
+              })
             }
           })
 

@@ -11,12 +11,6 @@ Page({
   data:{
     userInfo:{}
   },
-  //用户手机号码
-  getPhoneNumber: function (e) {
-    console.log(e.detail.errMsg)
-    console.log(e.detail.iv)
-    console.log(e.detail.encryptedData)
-  } ,
 
   //获取用户信息,button
   getUserInfo: function (e) {
@@ -45,8 +39,7 @@ Page({
         }
 
         //发送请求
-        app.request.reqGet(url,  data,
-        function(res){
+        app.request.reqGet(url,  data,function(res){
           console.log(res);
           //得到token
           var token = res.data.data.token;
@@ -69,19 +62,16 @@ Page({
                   wx.navigateTo({
                     url: '/pages/bindingPhone/bindingPhone',
                   })
-                  return;
+                }else{
+                  //返回上一页
+                  wx.navigateBack();
                 }
               }
             });
+          }else{
+            //返回上一页
+            wx.navigateBack();
           }
-
-          //返回上一页
-          //得到打开的页面
-          var pages = getCurrentPages();
-          var currPage = pages[pages.length - 1];  //当前页面
-          var prevPage = pages[pages.length - 2]; //上一个页面
-          //返回上一页
-          wx.navigateBack();
 
         },function (res) {
           console.log(res);
@@ -90,12 +80,5 @@ Page({
         console.log(res);
       }
     });
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    var that= this;
   },
 })

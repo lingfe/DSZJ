@@ -45,11 +45,11 @@
             </view>
 
             <view class='page_model_content_caozhou'>
-                <navigator url="/pages/myDrippingWater/myLaunch/toUpdateDynamic/toUpdateDynamic?id={{item.id}}&type=1"
+                <navigator url="/pages/myDrippingWater/myLaunch/toUpdateDynamic/toUpdateDynamic?id={{item.id}}&type=2"
                   class='page_model_content_caozhou_image'>
                   <image src='http://pic.yupoo.com/lingfe/ca1b87ed/3aa061c2.png'></image>
                 </navigator>
-                <navigator url="/pages/myDrippingWater/myLaunch/qfEdit/qfEdit?id={{item.id}}"
+                <navigator url="/pages/myDrippingWater/dripInvitation/dirpInvitationUpdate/dirpInvitationUpdate?id={{item.id}}"
                   class='page_model_content_caozhou_image'>
                   <image src='http://pic.yupoo.com/lingfe/1cba13fe/c4231efc.png'></image>
                 </navigator>

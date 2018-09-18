@@ -41,6 +41,13 @@ Page({
     that.getCollectInfo(that);
   },
 
+  //拨打客服电话号码
+  bodaPhone: function (e) {
+    wx.makePhoneCall({
+      phoneNumber: '4006063400',
+    });
+  },
+
   //失去焦点
   blurBtndtap: function (e) {
     this.setData({
@@ -80,6 +87,10 @@ Page({
         content: e.detail.value.content,
       },
       success: function (res) {
+        if (res.data.code == 0) {
+          app.showModal(res.data.msg);
+          return;
+        }
         if (res.data.code == "401") {
           //验证状态
           app.btnLogin(res.data.code);

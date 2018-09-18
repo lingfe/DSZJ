@@ -53,6 +53,6 @@
 .weui-btn{
   background-color: #0092ff;
   color: #fff;
-  width: 30%;
+  width: 40%;
 }
 /*按钮  end*/

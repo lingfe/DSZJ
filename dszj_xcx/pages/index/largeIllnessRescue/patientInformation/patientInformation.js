@@ -54,19 +54,28 @@ Page({
       app.showToast("真实姓名不能为空!", "none");
       return false;
     }
+    
     if (that.data.form.aided_id_type == 1) {
       if (app.checkInput(e.detail.value.aided_id)) {
         app.showToast("请输入身份证号!", "none");
         return;
-      } else {
+      }else {
         that.data.form.aided_id = e.detail.value.aided_id;
       }
-    } else {
+      if (app.checkInput(that.data.arr.img1)) {
+        app.showToast("请选择身份证照片!", "none");
+        return;
+      }
+    } else if (that.data.form.aided_id_type == 2) {
       if (app.checkInput(e.detail.value.born_id)) {
         app.showToast("请输入出生证号!", "none");
         return;
       } else {
         that.data.form.born_id = e.detail.value.born_id;
+      }
+      if (app.checkInput(that.data.arr.img2)) {
+        app.showToast("请选择出生证照片!", "none");
+        return;
       }
     }
     if (app.checkInput(e.detail.value.disease)) {
@@ -77,14 +86,7 @@ Page({
     }
     that.data.form.hospital_name = e.detail.value.hospital_name;
 
-    if (app.checkInput(that.data.arr.img1)) {
-      app.showToast("请选择身份证照片!", "none");
-      return;
-    }
-    if (app.checkInput(that.data.arr.img2)) {
-      app.showToast("请选择出生证照片!", "none");
-      return;
-    }
+    
     if (app.checkInput(that.data.arr.img3)) {
       app.showToast("请上传医疗诊断证明照片!", "none");
       return;

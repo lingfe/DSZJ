@@ -8,7 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    Account_opening_bank:["请选择","建设银行","招商银行","贵阳银行"],
+    Account_opening_bank: app.dahuoData.bank_list,
     index:0,
   },
 
@@ -77,10 +77,14 @@ Page({
     //发起请求
     app.request.reqPost(url, header, data, function (res) {
       console.log(res);
-      //跳转到项目详情
-      wx.navigateTo({
-        url: '/pages/dripLove/rescueDetails/rescueDetails?id='+res.data.data,
-      })
+      if(res.data.code == 1){
+        //跳转到项目详情
+        wx.navigateTo({
+          url: '/pages/dripLove/rescueDetails/rescueDetails?id=' + res.data.data,
+        })
+      }else{
+        app.showToast(res.data.msg,"none");
+      }
     }, function (res) {
       console.log(res);
     })

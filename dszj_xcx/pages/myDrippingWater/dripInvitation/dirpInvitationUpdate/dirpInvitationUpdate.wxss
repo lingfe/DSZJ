@@ -1,0 +1,3 @@
+/* pages/myDrippingWater/dripInvitation/dirpInvitationUpdate/dirpInvitationUpdate.wxss */
+
+@import '/pages/myDrippingWater/dripInvitation/dirpInvitationAdd/dirpInvitationAdd.wxss';

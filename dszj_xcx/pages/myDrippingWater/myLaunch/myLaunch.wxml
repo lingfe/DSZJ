@@ -74,7 +74,8 @@
                 </navigator>
             </view>
             
-            <view class='page_model_content_btn'>请务必点击此处获得您的转发链接页面</view>
+            <navigator url='/pages/dripLove/rescueDetails/rescueDetails?id={{item.id}}' class='page_model_content_btn'>
+              请务必点击此处获得您的转发链接页面</navigator>
         </view>
       </view>
       <!-- 大病救助项目信息  end>

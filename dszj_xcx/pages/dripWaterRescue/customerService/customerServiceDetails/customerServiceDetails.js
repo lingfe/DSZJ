@@ -38,7 +38,7 @@ Page({
   //点击回复者,得到焦点也触发
   huifuBtndtap: function (e) {
     this.setData({
-      huifu_id: e.id,
+      huifu_id: e.currentTarget.id,
       isTextarea: true,
     });
   },
@@ -65,6 +65,22 @@ Page({
         content: e.detail.value.content,
       },
       success: function (res) {
+        if(res.data.code == 0){
+          app.showModal(res.data.msg);
+          return;
+        }
+        var list = {
+          avatar: res.data.data.avatar,
+          id: res.data.data.id,
+          mobile: res.data.data.mobile,
+          nickname: res.data.data.nickname,
+          poster_type: res.data.data.poster_type,
+          content: e.detail.value.content,
+          time: '刚刚',
+        }
+        that.data.comment_List = [];
+        that.data.comment_List.push(list);
+
         if (res.data.code == "401") {
           //验证状态
           app.btnLogin(res.data.code);
@@ -103,7 +119,6 @@ Page({
             icon: 'loading',
             duration: 1000,
           });
-          return;
         }
 
         //循环遍历操作

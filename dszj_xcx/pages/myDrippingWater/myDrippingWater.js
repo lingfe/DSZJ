@@ -91,6 +91,8 @@ Page({
    */
   onShow: function () {
     var that = this;
+    //获取当前用户信息，比如:余额
+    that.getUserInfo(that);
     //获取爱心统计信息
     that.gethelpInfo(that);
   },
@@ -101,5 +103,8 @@ Page({
 
     //获取当前用户信息，比如:余额
     that.getUserInfo(that);
+
+    //下拉完成后执行回退
+    wx.stopPullDownRefresh();
   },
 })

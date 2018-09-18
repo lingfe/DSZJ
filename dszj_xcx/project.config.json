@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 39,
+			"current": 41,
 			"list": [
 				{
 					"id": -1,
@@ -278,7 +278,19 @@
 				{
 					"id": -1,
 					"name": "为ta祈福",
-					"pathName": "pages/index/largeIllnessRescue/dripPrayingForBlessing/forHimPFB/forHimPFB"
+					"pathName": "pages/index/largeIllnessRescue/dripPrayingForBlessing/forHimPFB/forHimPFB",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "大病救助 - 第3步",
+					"pathName": "pages/index/largeIllnessRescue/patientInformation/receivablesInformation/receivablesInformation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "大病救助 - 第2步",
+					"pathName": "pages/index/largeIllnessRescue/patientInformation/patientInformation"
 				}
 			]
 		}

@@ -31,6 +31,5 @@
   <!-- 相关条款  end -->
   <view class="weui-btn-area">
     <button class="weui-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo"  >确定登录</button>
-    <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号码</button>  -->
   </view>
 </view>

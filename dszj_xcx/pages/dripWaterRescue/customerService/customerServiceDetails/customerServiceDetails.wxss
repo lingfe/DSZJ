@@ -129,7 +129,7 @@ rich-text{
 .page_Allevaluate_evaluate_content_title_image{
   width: 10%;
   height: 40rpx;
-  float: left;
+  float: right;
 }
 .page_Allevaluate_evaluate_content_title_image image{
   height: 40rpx;

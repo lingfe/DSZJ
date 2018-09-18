@@ -47,6 +47,7 @@
             <view class='page_Fundraising_title_input input1'>
               <input type='text' 
               value='{{form.title}}' 
+              maxlength='30'
               bindinput='bindinput_title' 
               placeholder='好的标题可以增加筹款金额（限30字）'></input>
             </view>
@@ -168,7 +169,7 @@
               <view class='page_Fundraising_title_text_title'>祈福人手机号</view>
             </view>
             <view class='page_Fundraising_title_input input2'>
-              <input type='text' name="mobile" value='{{qf_form.mobile}}' placeholder='请输入祈福人手机号'></input>
+              <input type='number' name="mobile" value='{{qf_form.mobile}}' placeholder='请输入祈福人手机号'></input>
             </view>
           </view>
           <!-- 祈福人手机号   end-->

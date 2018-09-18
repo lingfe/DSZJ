@@ -29,13 +29,13 @@
             <view class='page_tuijing_title'>推荐展示</view>
             <view class='page_tuijing_text'>
               <view class='page_tuijing_text_image'>
-                <image src='/assets/images/dripWaterRescue/Thank.png'></image>
+                <image src='/assets/images/yysm.png'></image>
               </view>
               <view class='page_tuijing_text_text' bindtap='tuijingshouming'>推荐说明</view>
             </view>
             <view class='page_tuijing_text'>
               <view class='page_tuijing_text_image'>
-                <image src='/assets/images/dripWaterRescue/Thank.png'></image>
+                <image src='/assets/images/ico/dsfz_2.png'></image>
               </view>
               <view class='page_tuijing_text_text' bindtap='applicationVolunteer'>申请志愿者</view>
             </view>
