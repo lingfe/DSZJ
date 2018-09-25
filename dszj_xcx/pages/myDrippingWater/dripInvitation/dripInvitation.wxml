@@ -18,8 +18,8 @@
     <view class="weui-tab__panel">
       <!-- 滴水请柬  start-->
       <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
-        <view wx:for="{{list}}" wx:key="{{item.id}}" 
-          url='/pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing?id={{item.id}}'>
+        <navigator wx:for="{{list}}" wx:key="{{item.id}}" 
+          url='/pages/myDrippingWater/dripInvitation/dripInvitationDetail/dripInvitationDetail?id={{item.id}}'>
           <view class='dripQifu_page_model' >
             <view class='page_model_title'>
               <view class='page_model_title_image'>
@@ -51,9 +51,9 @@
                 </navigator>
                 <navigator url="/pages/myDrippingWater/dripInvitation/dirpInvitationUpdate/dirpInvitationUpdate?id={{item.id}}"
                   class='page_model_content_caozhou_image'>
-                  <image src='http://pic.yupoo.com/lingfe/1cba13fe/c4231efc.png'></image>
+                  <image src='/assets/images/png/edit_qj.png' mode='aspectFill'></image>
                 </navigator>
-                <navigator url="/pages/myDrippingWater/myLaunch/advanceEnd/advanceEnd?id={{item.id}}&zt={{item.if_renzheng}}" 
+                <navigator url="/pages/myDrippingWater/myLaunch/advanceEnd/advanceEnd?id={{item.id}}&zt={{item.status}}&type=qj" 
                   class='page_model_content_caozhou_image'>
                   <image src='http://pic.yupoo.com/lingfe/b8689e16/2a1262bd.png'></image>
                 </navigator>
@@ -61,7 +61,7 @@
 
             <view class='page_model_content_btn'>请务必点击此处获得您的转发链接页面</view>
           </view>
-        </view>
+        </navigator>
         <view class='page_text text_bottom'>
           没有更多了
         </view>
@@ -227,6 +227,7 @@
         
         <view wx:for="{{list}}" wx:key="{{item.id}}">
           <view class='page_lijingtix_bg'></view>
+          <form bindsubmit='setApplicationForPresentation'>
           <view class='page_lijingtix_model'>
             <view class='page_lijingtix_model_title'>
               <text>{{item.title}}</text>
@@ -256,51 +257,53 @@
               <view class='page_lijingtix_model_content_input'>
                 <view class='page_lijingtix_model_content_input_title'>收款人姓名：</view>
                 <view class='page_lijingtix_model_content_input_input'>
-                  <input value='{{bank.card_name}}' placeholder='收款人姓名'></input>
+                  <input hidden='hidden' value='{{item.id}}' name="id" />
+                  <input hidden='hidden' value='{{item.days}}' name="days" />
+                  <input value='{{bank.card_name}}' name="card_name" placeholder='收款人姓名'></input>
                 </view>
               </view>
               <view class='page_lijingtix_model_content_input'>
                 <view class='page_lijingtix_model_content_input_title'>身份证：</view>
                 <view class='page_lijingtix_model_content_input_input'>
-                  <input value='{{bank.sfz}}' placeholder='身份证'></input>
+                  <input value='{{bank.sfz}}' name="sfz" placeholder='身份证'></input>
                 </view>
               </view>
               <view class='page_lijingtix_model_content_input'>
                 <view class='page_lijingtix_model_content_input_title'>收款人手机：</view>
                 <view class='page_lijingtix_model_content_input_input'>
-                  <input value='{{bank.mobile}}' placeholder='收款人手机'></input>
+                  <input value='{{bank.mobile}}' name="mobile" placeholder='收款人手机'></input>
                 </view>
               </view>
               <view class='page_lijingtix_model_content_input'>
                 <view class='page_lijingtix_model_content_input_title'>开户银行：</view>
                 <view class='page_lijingtix_model_content_input_input'>
                 <picker bindchange="bindPickerChange" value="{{index}}" range="{{bankArr}}">
-                  <input value="{{bank.bank ==null? bankArr[index]:bank.bank}}" placeholder='开户银行' />
+                  <input name="bank" value="{{bankArr[index]}}" placeholder='开户银行' />
                 </picker>
                 </view>
               </view>
-              <view class='page_lijingtix_model_content_input'>
+              <view class='page_lijingtix_model_content_input' wx:if="{{ banKArr[index] == '其他银行'}}">
                 <view class='page_lijingtix_model_content_input_title'>银行名称：</view>
                 <view class='page_lijingtix_model_content_input_input'>
-                  <input value='{{bank.otherbank}}' placeholder='银行名称'></input>
+                  <input value='{{bank.otherbank}}' name="other_bank" placeholder='银行名称'></input>
                 </view>
               </view>
               <view class='page_lijingtix_model_content_input'>
                 <view class='page_lijingtix_model_content_input_title'>开户行地址：</view>
                 <view class='page_lijingtix_model_content_input_input'>
-                  <input value='{{bank.cardAddress}}' placeholder='开户行地址'></input>
+                  <input value='{{bank.cardAddress}}' name="bank_address" placeholder='开户行地址'></input>
                 </view>
               </view>
               <view class='page_lijingtix_model_content_input'>
                 <view class='page_lijingtix_model_content_input_title'>银行卡号：</view>
                 <view class='page_lijingtix_model_content_input_input'>
-                  <input value='{{bank.cardNo}}' placeholder='银行卡号'></input>
+                  <input value='{{bank.cardNo}}' name="card_no" placeholder='银行卡号'></input>
                 </view>
               </view>
               <view class='page_lijingtix_model_content_input'>
                 <view class='page_lijingtix_model_content_input_title'>输入金额：</view>
                 <view class='page_lijingtix_model_content_input_input'>
-                  <input value='0.00' placeholder='输入金额'></input>
+                  <input value='0.00' name="money" placeholder='输入金额'></input>
                 </view>
                 <view>￥</view>
               </view>
@@ -315,10 +318,12 @@
             </view>
 
             <view class='page_lijingtix_btn'>
-              <view class='page_lijingtix_btn_btn'>马上提现</view>
-              <view class='page_lijingtix_btn_btn'>提现记录</view>
+              <button form-type='submit' class='page_lijingtix_btn_btn'>马上提现</button>
+              <navigator url="/pages/myDrippingWater/dripInvitation/presentRecord/presentRecord?id={{item.id}}&type=1" 
+                class='page_lijingtix_btn_btn'>提现记录</navigator>
             </view>
           </view>
+          </form>
         </view>
 
         <view class='page_lijingtix_bg'></view>

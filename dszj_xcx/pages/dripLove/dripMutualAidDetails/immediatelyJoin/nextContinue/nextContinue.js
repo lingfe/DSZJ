@@ -26,6 +26,12 @@ Page({
 
   //保存下单参数
   setParamPay:function(e){
+
+    //页面跳转
+    wx.navigateTo({
+      url: '/pages/dripLove/rescueDetails/heplTaFundraising/paymentSuccess/paymentSuccess?',
+    })
+
     var that=this;
     var form=that.data.form;
     //验证非空

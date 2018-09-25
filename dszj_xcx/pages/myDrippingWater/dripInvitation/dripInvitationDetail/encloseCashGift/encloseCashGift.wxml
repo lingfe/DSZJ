@@ -1,0 +1,38 @@
+<!--pages/myDrippingWater/dripInvitation/dripInvitationDetail/encloseCashGift/encloseCashGift.wxml-->
+<view class='page'>
+
+  <!-- 选择金额 start -->
+  <view class="page_moneyItems">
+    <view bindtap='bindtapAmount' data-amount="{{item}}" wx:for="{{jingE_list}}" wx:key="*this"  class="page_moneyItems_item">{{item}}元</view>
+  </view>
+  <view class='page_input'>
+    <input name="" type='text' placeholder='其他金额'></input>
+    <span class="page_input_span">元</span>
+  </view>
+  <view class='page_input'>
+    <input type='text' placeholder='姓名'></input>
+  </view>
+  <!-- 选择金额 end -->
+
+  <!-- 祝福语 start -->
+  <view class='page_zhufuyue'>
+    <view class="page_jindutiao_title">祝福语</view>
+    <view class='page_zhufuyue_textarea'>
+      <textarea bindinput='bindTextarea'  placeholder='对Ta说一句鼓励的话吧~'></textarea>
+    </view>
+  </view>
+  <!-- 祝福语 end -->
+
+  <!-- 是否匿名 start -->
+  <view class="page_checkbox">
+    <checkbox value="name"  bindtap='bindtapCheckbox' checked='{{checkbox}}' /><span>是否匿名</span>
+  </view>
+  <!-- 是否匿名 end -->
+
+  <!-- 奉上礼金 start -->
+  <view class='payView'>
+    <view class='payView_text'>礼金金额:  {{jingE}}元</view>
+    <view class='payView_btn' bindtap='setUserPayOrder'>奉上礼金</view>
+  </view>
+  <!-- 奉上礼金 end -->
+</view>

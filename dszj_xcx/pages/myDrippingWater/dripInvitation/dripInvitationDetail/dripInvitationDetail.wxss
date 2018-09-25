@@ -1,0 +1,28 @@
+/* pages/myDrippingWater/dripInvitation/dripInvitationDetail/dripInvitationDetail.wxss */
+
+@import '/pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing.wxss';
+
+
+.page_tadeQfu {
+  border-top:0rpx solid #efeff4;
+}
+.page_tadeQfu_text_title {
+  width: 100%;
+  text-align: center;
+}
+
+/* 分享按钮 start */
+button {
+  position:relative;
+  padding: 0rpx;
+  display:inherit;
+  text-align:center;
+  background-color:#fff;
+}
+button::after{
+  border: none;
+}
+.button-hover{
+  background-color:#fff;
+}
+/* 分享按钮 end */

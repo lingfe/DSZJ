@@ -1,0 +1,24 @@
+/* pages/myDrippingWater/dripInvitation/presentRecord/presentRecord.wxss */
+
+.page_model{
+  width: 90%;
+  margin: auto;
+  height: 100rpx;
+  border-bottom: 1rpx solid #bbb;
+  margin-top: 20rpx;
+}
+
+.page_model_title{
+  font-size: 30rpx;
+}
+.page_model_dateTime{
+  font-size: 26rpx;
+}
+
+.page_text{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 36rpx;
+}

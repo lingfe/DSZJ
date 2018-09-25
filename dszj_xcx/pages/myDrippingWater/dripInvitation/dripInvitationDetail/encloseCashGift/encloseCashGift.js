@@ -1,5 +1,5 @@
-// pages/index/largeIllnessRescue/dripPrayingForBlessing/forHimPFB/forHimPFB.js
-var app=getApp();
+// pages/myDrippingWater/dripInvitation/dripInvitationDetail/encloseCashGift/encloseCashGift.js
+var app = getApp();
 
 Page({
 

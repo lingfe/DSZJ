@@ -28,6 +28,7 @@ page{
   line-height: 80rpx;
   text-align: center;
   font-size: 30rpx;
+  color: #fff;
 }
 .page_myUserInfo_caozou{
   width: 100%;

@@ -19,17 +19,21 @@ Page({
     that.setData({
       id:options.id,
       zt:options.zt,
+      type:options.type,
     });
   },
 
   //提前结束发送请求
   reqSetData: function (e) {
     var that = this;
-
+    var url = app.config.dszjPath_web + 'api/UserSeriousIllness/over';
     //验证项目状态
     if(that.data.zt==0){
       app.showToast("该项目未认证","none");
       return;
+    }
+    if(that.data.type=="qj"){
+      url = app.config.dszjPath_web + 'api/UserInvitation/over';
     }
     //验证内容非空
     if (app.checkInput(e.detail.value.description)){
@@ -39,7 +43,7 @@ Page({
 
     //请求
     wx.request({
-      url: app.config.dszjPath_web + 'api/UserSeriousIllness/over',
+      url: url,
       header: {
         Token: wx.getStorageSync('token')
       },

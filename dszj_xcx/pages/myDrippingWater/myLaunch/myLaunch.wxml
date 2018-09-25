@@ -36,7 +36,8 @@
               </view>
             </view>
             <view class='page_model_content_left'>
-              <image mode='aspectFill' wx:for="{{item.pictures}}"  wx:for-item="img" wx:if="{{ index <3}}" src='{{imgPath}}{{img}}'></image>
+              <image mode='aspectFill' wx:for="{{item.pictures}}" wx:key="*this"  
+              wx:for-item="img" wx:if="{{ index <3}}" src='{{imgPath}}{{img}}'></image>
             </view>
 
             <view class='page_model_content_right'>
@@ -100,10 +101,9 @@
             <view class='dripQifu_page_model_content'>
               <view class='dripQifu_page_model_content_right_title'>{{item.title}}</view>
               <view class='dripQifu_page_model_content_left'>
-                <image wx:for="{{item.pictures}}"  wx:for-item="img" wx:if="{{ index <3}}" src='{{imgPath}}{{img}}'></image>
+                <image wx:for="{{item.pictures}}" wx:key="*this" wx:for-item="img" wx:if="{{ index <3}}" src='{{imgPath}}{{img}}'></image>
               </view>
               <view class='dripQifu_page_model_content_right'>
-
                 <view class='dripQifu_page_model_content_right_text'>
                   <view class='dripQifu_page_model_content_right_text_text'>
                     {{item.addtime}}

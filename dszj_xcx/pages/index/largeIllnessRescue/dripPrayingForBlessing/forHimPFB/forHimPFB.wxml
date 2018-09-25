@@ -19,7 +19,6 @@
   <!-- 祝福语 end -->
 
   <!-- 选择金额 start -->
-  <view class='page_border'></view>
   <view class="page_moneyItems">
     <view bindtap='bindtapAmount' data-amount="{{item}}" wx:for="{{jingE_list}}" wx:key="*this"  class="page_moneyItems_item">{{item}}元</view>
   </view>

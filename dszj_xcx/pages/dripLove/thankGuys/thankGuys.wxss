@@ -68,7 +68,7 @@
 /*发表*/
 .thank-letter-icon-float {
     position: fixed;
-    right: 8px;
+    right: 10px;
     bottom: 120px;
     cursor: pointer;
     width: 80rpx;

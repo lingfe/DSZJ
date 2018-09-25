@@ -32,12 +32,19 @@ Page({
     var that=this;
     var info = JSON.parse(options.detailsData);
     that.setData({
+      id:info.id,
       detailsData: info
     });
   },
 
   //支付订单
   setUserPayOrder:function(e){
+
+    //页面跳转
+    wx.navigateTo({
+      url: '/pages/dripLove/rescueDetails/heplTaFundraising/paymentSuccess/paymentSuccess?',
+    })
+
     var that=this;
     //验证非空
     if (app.checkInput(that.data.jingE)){
@@ -85,7 +92,11 @@ Page({
             },
             success:function(resPay){
               console.log(resPay);
-
+              
+              //页面跳转
+              wx.navigateTo({
+                url: '/pages/dripLove/rescueDetails/heplTaFundraising/paymentSuccess/paymentSuccess?code=' + resPay.data.code,
+              })
             }
           })
 

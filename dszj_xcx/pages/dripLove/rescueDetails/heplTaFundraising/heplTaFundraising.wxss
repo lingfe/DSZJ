@@ -138,7 +138,7 @@
   padding: 10rpx;
   background-color: #f0f0f0;
   box-shadow: 0px 0px 4px 0px #aaa;
-  border: 1px solid #bbb;
+  border: 1px  dashed #bbb;
   resize: none;
   line-height: 1.4;
 }

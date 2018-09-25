@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 41,
+			"current": 43,
 			"list": [
 				{
 					"id": -1,
@@ -290,7 +290,20 @@
 				{
 					"id": -1,
 					"name": "大病救助 - 第2步",
-					"pathName": "pages/index/largeIllnessRescue/patientInformation/patientInformation"
+					"pathName": "pages/index/largeIllnessRescue/patientInformation/patientInformation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "支付成功",
+					"pathName": "pages/dripLove/rescueDetails/heplTaFundraising/paymentSuccess/paymentSuccess",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "提现记录",
+					"pathName": "pages/myDrippingWater/dripInvitation/presentRecord/presentRecord",
+					"query": ""
 				}
 			]
 		}

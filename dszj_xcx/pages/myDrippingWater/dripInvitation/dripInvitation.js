@@ -50,6 +50,59 @@ Page({
     });
   },
 
+  //申请提现
+  setApplicationForPresentation:function(e){
+    var that=this;
+
+    //验证非空
+    if (app.checkInput(e.detail.value.card_name)){
+      app.showToast("姓名不能为空!","none");
+      return;
+    }
+    if(app.checkInput(e.detail.value.sfz)){
+      app.showToast("身份证不能为空!","none");
+      return;
+    }
+    if (app.checkInput(e.detail.value.bank)){
+      app.showToast("请输入开户银行!","none");
+      return;
+    }
+    if (app.checkInput(e.detail.value.card_no)){
+      app.showToast("银行卡号不能为空!","none");
+      return;
+    }
+    if (app.checkInput(e.detail.value.money)){
+      app.showToast("金额不能为空!",none);
+      return;
+    }
+
+    //发送请求
+    wx.request({
+      url: app.config.dszjPath_web +'api/UserInvitationWithdraw/apply',
+      method:"POST",
+      header:{
+        Token:wx.getStorageSync("token")
+      },
+      data:{
+        id:e.detail.value.id,//请柬id
+        days: e.detail.value.days,//提现还需等待N天。
+        card_name: e.detail.value.card_name,//姓名
+        sfz:e.detail.value.sfz,//身份证
+        mobile:e.detail.value.mobile,//电话号码
+        bank:e.detail.value.bank,//开户银行
+        other_bank:e.detail.value.other_bank,//其他银行
+        bank_address: e.detail.value.bank_address,//开户行地址
+        card_no:e.detail.value.card_no,//卡号
+        money:e.detail.value.money,//金额
+      },
+      success:function(res){
+        console.log(res);
+        app.showModal(res.data.msg);
+      }
+    })
+  },
+
+
   //获取用户礼单分页列表
   getUserInvitationPresentPaging:function(that){
     wx.request({

@@ -55,7 +55,11 @@
     "pages/dripLove/dripMutualAidDetails/immediatelyJoin/nextContinue/verifyPhone/verifyPhone",
     "pages/myDrippingWater/dripInvitation/InvitationPresentAdd/InvitationPresentAdd",
     "pages/myDrippingWater/dripInvitation/dirpInvitationAdd/dirpInvitationAdd",
-    "pages/myDrippingWater/dripInvitation/dirpInvitationUpdate/dirpInvitationUpdate"
+    "pages/myDrippingWater/dripInvitation/dirpInvitationUpdate/dirpInvitationUpdate",
+    "pages/myDrippingWater/dripInvitation/dripInvitationDetail/dripInvitationDetail",
+    "pages/dripLove/rescueDetails/heplTaFundraising/paymentSuccess/paymentSuccess",
+    "pages/myDrippingWater/dripInvitation/dripInvitationDetail/encloseCashGift/encloseCashGift",
+    "pages/myDrippingWater/dripInvitation/presentRecord/presentRecord"
   ],
   "window": {
     "navigationBarTextStyle": "white",
@@ -69,7 +73,7 @@
   "tabBar": {
     "color": "#C4C4C4",
     "backgroundColor": "#fff",
-    "selectedColor": "#5E7E88",
+    "selectedColor": "#0099ff",
     "list": [
       {
         "pagePath": "pages/index/index",

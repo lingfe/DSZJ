@@ -38,7 +38,7 @@
 
       <view class='page_caidang_caidang'>
         <view class='page_caidang_caidang_image'>
-          <image src='http://pic.yupoo.com/lingfe/648a9559/3cfc611a.png'></image>
+          <image src='/assets/images/my/fabiao.png'></image>
         </view>
         <view class='page_caidang_caidang_title'>我的发表</view>
         <navigator url="/pages/myDrippingWater/myPublication/myPublication?user_id={{info.id}}" class='page_caidang_caidang_text'>
@@ -103,5 +103,6 @@
     </view>
 
   </view>
+  
 </view>
 

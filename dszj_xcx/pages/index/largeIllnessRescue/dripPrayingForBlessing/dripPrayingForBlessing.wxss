@@ -184,7 +184,7 @@ page{
 .page_dynamic_text_image{
   width: 60%;
   height: 50rpx;
-  float: left;
+  float: right;
   text-align: right;
 }
 .page_dynamic_text_image image{
@@ -279,12 +279,15 @@ abbr{
 
 /* 分享按钮 start */
 button {
-  position:initial;
+  position:relative;
   padding: 0rpx;
   display:initial;
   text-align:center;
   background-color:#fff;
   line-height: normal;
+}
+button::after{
+  border: none;
 }
 /* 分享按钮 end */
 

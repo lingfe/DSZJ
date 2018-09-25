@@ -1,0 +1,7 @@
+<!--pages/dripLove/rescueDetails/heplTaFundraising/paymentSuccess/paymentSuccess.wxml-->
+<view class='page'>
+  <view class='page_title'>{{msg}}</view>
+  <view class='page_image'>
+    <image src='/assets/images/png/security.png'></image>
+  </view>
+</view>

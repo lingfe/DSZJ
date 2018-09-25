@@ -22,12 +22,13 @@
     </view>
 
     <view wx:for="{{list}}" wx:key="{{item.id}}">
-          <view class='page_lijingtix_bg'></view>
-          <view class='page_lijingtix_model'>
-            <view class='page_lijingtix_model_title'>
-              <text>{{item.title}}</text>
-              <text style='color:#0099ff;float:right;'>可提现</text>
-            </view>
+      <view class='page_lijingtix_bg'></view>
+      <view class='page_lijingtix_model'>
+        <view class='page_lijingtix_model_title'>
+          <text>{{item.title}}</text>
+          <text style='color:#0099ff;float:right;'>可提现</text>
+        </view>
+        <form bindsubmit='setApplicationForPresentation'>
             <view class='page_lijingtix_model_content'>
               <view class='page_lijingtix_model_content_text'>
                 <view class='page_lijingtix_model_content_text_title'>礼金：</view>
@@ -55,6 +56,7 @@
                   <input value='{{bank.card_name}}' placeholder='收款人姓名'></input>
                 </view>
               </view>
+
               <view class='page_lijingtix_model_content_input'>
                 <view class='page_lijingtix_model_content_input_title'>身份证：</view>
                 <view class='page_lijingtix_model_content_input_input'>
@@ -111,11 +113,13 @@
             </view>
 
             <view class='page_lijingtix_btn'>
-              <view class='page_lijingtix_btn_btn'>马上提现</view>
-              <view class='page_lijingtix_btn_btn'>提现记录</view>
+              <button open-type='submit' class='page_lijingtix_btn_btn'>马上提现</button>
+              <navigator url="/pages/myDrippingWater/dripInvitation/presentRecord/presentRecord?id={{item.id}}&type=2" 
+                class='page_lijingtix_btn_btn'>提现记录</navigator>
             </view>
-          </view>
-        </view>
+        </form>
+      </view>
+    </view>
   </view>
   <!-- 项目提现  end -->
 </view>
