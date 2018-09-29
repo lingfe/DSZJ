@@ -35,7 +35,7 @@ page{
   margin: auto;
   height: 120rpx;
   background-color: #fff;
-  padding: 10rpx;
+  /* padding: 10rpx; */
 }
 .page_myUserInfo_caozou_caozou{
   width: 33.3%;

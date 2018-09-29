@@ -83,8 +83,7 @@
 
       <!-- 发起祈福项目信息  start-->
       <view class="weui-tab__content" hidden="{{activeIndex != 1}}">        
-        <navigator wx:for="{{qf_list}}" wx:key="*this" 
-          url='/pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing?id={{item.id}}'>
+        <view wx:for="{{qf_list}}" wx:key="*this" >
           <view class='dripQifu_page_model' >
             <view class='page_model_title'>
               <view class='page_model_title_image'>
@@ -133,9 +132,10 @@
                 </navigator>
             </view>
 
-            <view class='page_model_content_btn'>请务必点击此处获得您的转发链接页面</view>
+            <navigator url='/pages/index/largeIllnessRescue/dripPrayingForBlessing/dripPrayingForBlessing?id={{item.id}}' 
+            class='page_model_content_btn'>请务必点击此处获得您的转发链接页面</navigator>
           </view>
-        </navigator>
+        </view>
       </view>
       <!-- 发起祈福项目信息  end-->
     </view>

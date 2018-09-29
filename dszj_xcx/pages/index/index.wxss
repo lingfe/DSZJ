@@ -61,13 +61,11 @@ page{
   background-color:rgb(0, 146, 255);
 }
 .page_widget_content{
-  width: 100%;
-  margin: 0 auto;
+  width: 90%;
+  margin:  auto;
   height: 70rpx;
   text-align: center;
- position:relative;
- top:16%;
- left:4%;
+  padding-top: 15rpx;
 }
 .page_widget_content_text{
   line-height: 60rpx;

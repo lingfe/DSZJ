@@ -66,4 +66,13 @@ Page({
       url: '../logs/logs'
     })
   },
+
+  //分享
+  onShareAppMessage: function (e) {
+    return {
+      title: '首页',
+      desc: this.data.detailsData.title,
+      path: '/pages/index/index'
+    }
+  },
 })
